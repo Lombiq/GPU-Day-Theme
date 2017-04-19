@@ -8,18 +8,18 @@
       "strictUnits": false,
       "relativeUrls": true,
       "rootPath": "",
-      "sourceMapRoot": "",
-      "sourceMapBasePath": "",
+      "soruceMapRoot": null,
+      "soruceMapBasePath": null,
       "sourceMap": false
     },
     "sass": {
-      "includePath": "",
+      "includePath": null,
       "indentType": "space",
       "indentWidth": 2,
       "outputStyle": "nested",
       "Precision": 5,
       "relativeUrls": true,
-      "sourceMapRoot": "",
+      "soruceMapRoot": null,
       "sourceMap": false
     },
     "stylus": {
@@ -36,7 +36,7 @@
   },
   "minifiers": {
     "css": {
-      "enabled": false,
+      "enabled": true,
       "termSemicolons": true,
       "gzip": false
     },

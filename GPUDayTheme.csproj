@@ -103,28 +103,7 @@
     <Content Include="Images\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Layout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Insertions.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Resources.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Document.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\AdditionalResources.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\AdditionalInsertions.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Styles\site.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Branding.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Styles\structure.less" />
@@ -160,9 +139,6 @@
     <Content Include="Styles\breadcrumbs.less" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Analytics.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Styles\media.less" />
   </ItemGroup>
   <ItemGroup>
@@ -174,11 +150,11 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="Views\AdditionalTopResources.cshtml" />
     <Content Include="Styles\icon-fonts.less" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scripts\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
