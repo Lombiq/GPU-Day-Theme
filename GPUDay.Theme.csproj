@@ -75,13 +75,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\favicon.ico" />
-    <Content Include="Styles\icon-fonts.css">
-      <DependentUpon>icon-fonts.less</DependentUpon>
-    </Content>
-    <Content Include="Styles\site.css">
-      <DependentUpon>site.less</DependentUpon>
-    </Content>
     <Content Include="Web.config" />
     <Content Include="Styles\Web.config" />
     <Content Include="Theme.txt" />
@@ -103,58 +96,13 @@
     <Content Include="Images\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Styles\site.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\structure.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\reset.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\navigation.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\common.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\type.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\forms.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\general.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\variables.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\misc.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\pagination.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\breadcrumbs.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\media.less" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="compilerconfig.json" />
-    <None Include="compilerconfig.json.defaults">
-      <DependentUpon>compilerconfig.json</DependentUpon>
-    </None>
-    <Content Include="Styles\icon-fonts.less" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Scripts\" />
     <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Web.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
