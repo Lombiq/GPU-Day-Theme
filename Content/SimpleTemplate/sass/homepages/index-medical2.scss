@@ -1,0 +1,126 @@
+/* Homepages - Index Medical 2 */
+@import '../mixins';
+@import '../variables';
+
+.overlay-container {
+	.overlay {
+		opacity:0.18;
+	}
+}
+
+.fullscreen,
+.fullheight {
+	&.vertical-center {
+		
+		.vcenter-content {
+			h1 {
+				margin-bottom:20px;
+
+				@media (min-width: $minmqxs) {
+					font-size:40px;
+					margin-bottom:13px;
+				}
+
+				@media (min-width: $minmqsm) {
+					font-size:48px;
+					margin-bottom:15px;
+				}
+
+				@media (min-width: $minmqmd) {
+					font-size:56px;
+					margin-bottom:16px;
+				}
+
+				@media (min-width: $minmqlg) {
+					font-size:62px;
+					margin-bottom:17px;
+				}
+			}
+
+			p {
+				@media (min-width: $minmqxs) {
+					font-size:14px;
+					margin-bottom:20px;
+				}
+
+				@media (min-width: $minmqsm) {
+					font-size:15px;
+					margin-bottom:25px;
+				}
+
+				@media (min-width: $minmqmd) {
+					font-size:16px;
+					margin-bottom:30px;
+				}
+			}
+		}
+	}
+}
+
+.table-cell.cell-content {
+	textarea.form-control,
+	.form-control {
+		margin-bottom: 10px;
+		background-color: rgba(255, 255, 255, 0.2);
+		border-color: rgba(255, 255, 255, 0.2);
+
+		color: #fff;
+
+		&::placeholder {
+			color: #fff;
+		}
+	}
+
+	textarea.form-control {
+		min-height:120px;
+	}
+
+	.form-control {
+		option {
+			color: #222;
+		}
+	}
+
+	.btn {
+		@media (min-width: $minmqmd) {
+			margin-top: 20px;
+		}
+	}
+
+}
+
+.medical-gallery-container {
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+
+.quick-gallery-showcase  {
+	.portfolio-item {
+		margin:0;
+		width:50%;
+
+		@media (min-width: $minmqxs) {
+			width: 33.3%;
+		}
+	}
+}
+
+.widget.hours-widget {
+	ul {
+		li {
+			padding-bottom:4px;
+			margin-bottom:4px;
+			border-bottom:1px dotted rgba(255, 255, 255, 0.2);
+			em {
+				float:right;
+			}
+
+			&:after {
+				content: '';
+				display: table;
+				clear:both;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,14 @@
+/*
+	Simple Theme
+	Skin Name: Purple
+	First-color: #9C27B0
+	Second-color: #FFEB3B
+*/
+
+@import '../variables';
+@import '../mixins';
+
+$first-color: #9C27B0;
+$second-color: #FFEB3B;
+
+@import 'skin';

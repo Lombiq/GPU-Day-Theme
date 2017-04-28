@@ -1,0 +1,20 @@
+/*Side Menu - Dark */
+.header.dark {
+	.side-menu {
+		li {
+			a {
+				color: #eee;
+			}
+
+			&.active,
+			&:hover,
+			&:focus {
+				> a,
+				> a:hover,
+				> a:focus {
+					color: $first-color;
+				}
+			}
+		}
+	}
+}

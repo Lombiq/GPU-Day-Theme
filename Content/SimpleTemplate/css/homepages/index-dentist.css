@@ -1,0 +1,84 @@
+/* Homepages - Index Dentist */
+.slider-container-dentist {
+  background-color: #0069b0;
+}
+
+@media (min-width: 1200px) {
+  .slider-container-dentist {
+    height: 600px;
+  }
+}
+
+.slider-container-dentist .tp-caption strong {
+  font-weight: 700 !important;
+}
+
+.services-group {
+  margin-bottom: 0;
+}
+
+blockquote {
+  background-color: transparent;
+  border: 2px solid #f0f0f0;
+}
+
+.quick-form-container .form-control {
+  margin-bottom: 10px;
+  background-color: #0075c4;
+  border-color: #007bcf;
+  color: #eee;
+}
+
+.quick-form-container .form-control::-webkit-input-placeholder {
+  color: #eee;
+}
+
+.quick-form-container .form-control:-ms-input-placeholder {
+  color: #eee;
+}
+
+.quick-form-container .form-control::placeholder {
+  color: #eee;
+}
+
+@media (min-width: 992px) {
+  .quick-form-container .btn {
+    margin-top: 26px;
+  }
+}
+
+#portfolio-item-container .portfolio-item {
+  margin-bottom: 0;
+}
+
+.departments-section .department-action {
+  max-width: 540px;
+}
+
+.text-block.hover-bg {
+  border: 2px solid #fff;
+  padding-top: 21px;
+  padding-bottom: 17px;
+  margin-bottom: 20px;
+}
+
+.text-block.hover-bg img {
+  background-color: #0069b0;
+  outline: 5px solid #0069b0;
+}
+
+.widget.hours-widget ul li {
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+}
+
+.widget.hours-widget ul li em {
+  float: right;
+}
+
+.widget.hours-widget ul li:after {
+  content: '';
+  display: table;
+  clear: both;
+}

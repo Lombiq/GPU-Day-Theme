@@ -1,0 +1,260 @@
+/* Index Shop 2*/
+.slider-container-shop2 {
+	background-color: $dark;
+	height: 100vh;
+
+	.tp-caption {
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}
+
+.nav.nav-tabs, .nav.nav-pills{
+	&.style2 {
+		background-color: #e4e4ea;
+		border-bottom: 1px solid #e0e0ea;
+		> li > a {
+
+			@media (min-width: $minmqmd) {
+				font-size: 14px;
+				padding-top: 11px;
+				padding-bottom: 11px;
+			}
+		}
+
+		&.nav-justified {
+			> li {
+				border-bottom: 1px solid #fff;
+
+				&:last-child {
+					border-bottom:none;
+				}
+
+				@media (min-width: $minmqsm) {
+					border-bottom: none;
+					border-right: 1px solid #fff;
+
+					&:last-child {
+						border-right:none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.shop-newsletter {
+	color: #fff;
+
+	h2 {
+		font-family: $second-font-family;
+		color: #fff;
+		text-transform: uppercase;
+		font-size:24px;
+
+		@media (min-width: $minmqsm) {
+			font-size:28px;
+		}
+
+		@media (min-width:$minmqmd) {
+			font-size:32px;
+		}
+	}
+
+	form {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 420px;
+
+		&:after {
+			content: '';
+			clear: both;
+			display: table;
+		}
+	}
+
+	p {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom:30px;
+		max-width: 540px;
+
+		@media (min-width: $minmqsm) {
+			margin-bottom:36px;
+		}
+	}
+
+	.form-control {
+		margin-bottom:0;
+		float: left;
+		width: calc(100% - 104px);
+	}
+
+	.btn {
+		width: 100px;
+		margin-left:4px;
+	}
+}
+
+/* Info Boxes */
+.info-boxes-container {
+	width: 100%;
+	background-color: #f1f1fa;
+	border-top: 1px solid #e3e3ea;
+	border-bottom: 1px solid #e3e3ea;
+	margin-bottom:30px;
+
+	> .container,
+	> .container-fluid {
+		@media (min-width: $minmqsm) {
+			display: table;
+			table-layout: fixed;
+			border-collapse: collapse;
+		}
+
+		@media (max-width: $maxmqsm) {
+			padding: 0;
+		}
+	}
+
+	> .container-fluid {
+		width: 100%;
+	}
+
+	.info-box {
+		display: block;
+		font-size:0;
+		padding: 12px 15px 9px;
+		border-bottom: 1px solid #f0f0fa;
+		position: relative;
+
+		&:nth-child(2n) {
+			background-color: #f8f8fa;
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		.info-box-wrapper {
+			position: relative;
+			display:inline-block;
+			padding-left:38px;
+		}
+
+		@media (min-width: $minmqsm) {
+			display: table-cell;
+			width: 33%;
+			border-bottom: none;
+			border-right: 1px solid #e3e3ea;
+
+			&:last-child {
+				border-right: none;
+			}
+		}
+
+		&.text-center {
+			@media (max-width: $maxmqsm) {
+				text-align: left !important;
+			}
+
+			.info-box-content {
+				text-align: left;
+			}
+		}
+	}
+
+	.info-box-icon {
+		display:inline-block;
+		font-size: 25px;
+		position: absolute;
+		left:0;
+		top:50%;
+		transform: translateY(-50%);
+		vertical-align: middle;
+		color: #3a3a3a;
+	}
+
+	.info-box-content {
+		display:inline-block;
+		font-size:12px;
+		color: #7e7e7e;
+		line-height:1.2;
+		vertical-align: middle;
+	}
+
+	.info-box-title {
+		font-size: 14px;
+		font-weight: 700;
+		margin-bottom: 2px;
+		text-transform: uppercase;
+		line-height: 1;
+		color: #333;
+		letter-spacing:0.01em;
+	}
+
+	p {
+		margin-bottom:0;
+	}
+
+	/* Dark Color */
+	&.dark {
+		background-color: $darker;
+		border-color: lighten($dark, 7%);
+
+		.info-box {
+			border-color: lighten($dark, 7%);
+
+			@media (min-width: $minmqsm) {
+				border-color: lighten($dark, 7%);
+			}
+
+			&:nth-child(2n) {
+				background-color: lighten($dark, 1.5%);
+			}
+		}
+
+		.info-box-icon {
+			color: #eee;
+		}
+
+		.info-box-content {
+			color: #8e8e8e;
+		}
+
+		.info-box-title {
+			color: #f0f0f0;
+		}
+	}
+
+	/* Custom Color */
+	&.custom {
+		background-color: $first-color;
+		border-color: lighten($first-color, 7%);
+
+		.info-box {
+			border-color: lighten($first-color, 7%);
+
+			@media (min-width: $minmqsm) {
+				border-color: lighten($first-color, 7%);
+			}
+
+			&:nth-child(2n) {
+				background-color: darken($first-color, 4%);
+			}
+		}
+
+		.info-box-icon {
+			color: #f0f0f0;
+		}
+
+		.info-box-content {
+			color: lighten($first-color, 24%);
+		}
+
+		.info-box-title {
+			color: #f0f0f0;
+		}
+	}
+}

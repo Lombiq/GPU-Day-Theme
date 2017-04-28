@@ -1,0 +1,337 @@
+/* Homepages - Index Restaurant  */
+.slider-container-restaurant {
+  background-color: #111;
+}
+
+@media (min-width: 1200px) {
+  .slider-container-restaurant {
+    height: 600px;
+  }
+}
+
+.slider-container-restaurant .tp-caption strong {
+  font-weight: 700 !important;
+}
+
+.fancy-subtitle {
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 5px;
+  color: #e53935;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 700;
+}
+
+h1, .h1 {
+  font-size: 28px;
+}
+
+h2, .h2 {
+  font-size: 24px;
+}
+
+h3, .h3 {
+  font-size: 21px;
+}
+
+h4, .h4 {
+  font-size: 17px;
+}
+
+h5, .h5 {
+  font-size: 15px;
+}
+
+.service .service-title {
+  font-size: 16px;
+}
+
+.service.service-box {
+  background-color: #f6f6f6 !important;
+}
+
+.service.service-box:hover {
+  color: inherit;
+  background-color: #eee !important;
+}
+
+.service.service-box:hover .service-title {
+  color: inherit;
+}
+
+.title {
+  padding-bottom: 18px;
+}
+
+.title:after, .title:before {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 1px;
+  position: absolute;
+  left: 50%;
+  background-color: #cdcdcd;
+}
+
+.title.text-white:after, .title.text-white:before, .title.white-lines:after, .title.white-lines:before {
+  background-color: #fff;
+}
+
+.title:before {
+  bottom: 6px;
+  margin-left: -50px;
+}
+
+.title:after {
+  bottom: 0;
+  margin-left: -20px;
+}
+
+.title-block p {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  max-width: 860px;
+}
+
+blockquote {
+  border: 2px solid #f0f0f0;
+  background-color: #fafafa;
+}
+
+.testimonial blockquote {
+  border: none;
+  background-color: transparent;
+}
+
+.about-gallery-grid {
+  position: relative;
+}
+
+.about-gallery-grid .portfolio-item {
+  margin-bottom: 20px;
+}
+
+.about-gallery-grid .row:last-child .portfolio-item {
+  margin-bottom: 0;
+}
+
+.about-gallery-grid .gallery-grid-btn {
+  background-color: #e53935;
+  width: 100px;
+  height: 100px;
+  padding-top: 29px;
+  line-height: 1.3;
+  font-size: 16px;
+  font-family: "Dancing Script", cursive;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 99;
+  margin-top: -50px;
+  margin-left: -50px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.4s;
+  border: none;
+  outline: none;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-gallery-grid .gallery-grid-btn:hover, .about-gallery-grid .gallery-grid-btn:focus {
+  background-color: #e2231e;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.menu-col {
+  margin-bottom: 40px;
+}
+
+.menu-item {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.menu-item:nth-child(2n) {
+  background-color: #ebebeb;
+}
+
+.menu-item + .menu-item {
+  margin-top: 8px;
+}
+
+.menu-item .menu-item-content,
+.menu-item .menu-item-price {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+.menu-item .menu-item-price {
+  vertical-align: bottom;
+  width: 80px;
+  font-size: 17px;
+  line-height: 1;
+  padding: 3px 0;
+  text-align: right;
+  font-weight: 700;
+  color: #e53935;
+}
+
+.menu-item .menu-item-price > span {
+  display: block;
+  text-decoration: line-through;
+  font-size: 80%;
+  font-weight: 400;
+  margin-bottom: 4px;
+  color: #6e6e6e;
+}
+
+.menu-item h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.menu-item a {
+  color: #333;
+}
+
+.menu-item a:hover, .menu-item a:focus {
+  color: #e53935;
+}
+
+.menu-item p {
+  margin-bottom: 2px;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.col-title-wrapper {
+  position: relative;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.col-title-wrapper:after, .col-title-wrapper:before {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background-color: #fff;
+  vertical-align: middle;
+}
+
+.menu-col-title {
+  display: inline-block;
+  padding-bottom: 12px;
+  margin: 0;
+  position: relative;
+  padding: 7px 15px;
+  border: 2px solid #e53935;
+  color: #fff;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+#portfolio-filter {
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#portfolio-filter li:before {
+  height: 1px;
+  top: auto;
+  bottom: 0;
+}
+
+.portfolio-item {
+  margin: 0;
+}
+
+.more-btn-section {
+  margin-top: -1px;
+  padding: 0;
+}
+
+.more-btn-section .btn {
+  display: block !important;
+  padding: 18px 15px;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  width: 100%;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  border-radius: 0 !important;
+}
+
+.testimonails-container {
+  padding: 0 0 130px;
+}
+
+.testimonial {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.testimonial:hover {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.testimonial cite {
+  color: #fff;
+  font-size: 15px;
+}
+
+.btn {
+  border-radius: 6px;
+}
+
+.form-control {
+  background-color: #f0f0f0;
+  border-color: #f0f0f0;
+  border-radius: 6px;
+}
+
+.form-control:focus {
+  background-color: #e1e1e1;
+  border-color: #e1e1e1;
+}
+
+textarea.form-control {
+  min-height: 140px;
+}
+
+.contact-address label {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+#map {
+  margin-bottom: 0;
+}
+
+.widget.hours-widget ul li {
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+}
+
+.widget.hours-widget ul li em {
+  float: right;
+}
+
+.widget.hours-widget ul li:after {
+  content: '';
+  display: table;
+  clear: both;
+}

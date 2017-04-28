@@ -1,0 +1,14 @@
+/* Homepages - Index Agency 6 */
+.slider-container-agency6 {
+  background-color: #171717;
+}
+
+@media (min-width: 1200px) {
+  .slider-container-agency6 {
+    height: 540px;
+  }
+}
+
+.slider-container-agency6 .tp-caption strong {
+  font-weight: 700 !important;
+}

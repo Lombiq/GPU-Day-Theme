@@ -1,0 +1,35 @@
+/* Homepages - Index Portfolio */
+.portfolio-header {
+	padding:40px 0 45px;
+	font:400 20px/1.2 $font-family;
+
+	@media (min-width: $minmqsm) {
+		padding-top: 60px;
+		padding-bottom: 70px;
+		font-size: 28px;
+	}
+
+	@media (min-width: $minmqmd) {
+		font-size: 36px;
+		padding-bottom:75px;
+		padding-top:65px;
+	}
+
+	&.as-block {
+		padding-bottom: 30px;
+	}
+}
+
+.typed-cursor{
+	opacity: 1;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+.morphext > .animated {
+    display: inline-block;
+}

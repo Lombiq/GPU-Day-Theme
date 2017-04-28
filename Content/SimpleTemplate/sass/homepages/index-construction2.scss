@@ -1,0 +1,24 @@
+/* Homepages - Index Construction 2 */
+@import '../mixins';
+@import '../variables';
+
+.slider-container-construction2 {
+	background-color: $dark;
+	height: 100vh;
+
+	.tp-caption {
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}
+
+.text-block.hover-bg {
+	margin-bottom:0;
+	padding:25px 15px;
+	box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+.portfolio-item {
+	margin-bottom:0;
+}

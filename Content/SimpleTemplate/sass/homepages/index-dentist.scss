@@ -1,0 +1,91 @@
+/* Homepages - Index Dentist */
+@import '../mixins';
+@import '../variables';
+
+.slider-container-dentist {
+	background-color: $first-color;
+
+	@media (min-width: $minmqlg) {
+		height: 600px;
+	}
+
+	.tp-caption {
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}
+
+.services-group {
+	margin-bottom:0;
+}
+
+blockquote {
+	background-color: transparent;
+	border:2px solid $gray;
+}
+
+.quick-form-container {
+	.form-control {
+		margin-bottom: 10px;
+		background-color: lighten($first-color, 4%);
+		border-color: lighten($first-color, 6%);
+		color: #eee;
+
+		&::placeholder {
+			color: #eee;
+		}
+	}
+
+	.btn {
+		@media (min-width: $minmqmd) {
+			margin-top: 26px;
+		}
+	}
+
+}
+
+#portfolio-item-container {
+	.portfolio-item {
+		margin-bottom:0;
+	}
+}
+
+.departments-section {
+	.department-action {
+		max-width: 540px;
+	}
+}
+
+
+.text-block.hover-bg {
+	border:2px solid #fff;
+	padding-top:21px;
+	padding-bottom:17px;
+	margin-bottom:20px;
+
+	img {
+		background-color: $first-color;
+		outline: 5px solid $first-color;
+	}
+}
+
+.widget.hours-widget {
+	ul {
+		li {
+			padding-bottom:4px;
+			margin-bottom:4px;
+			border-bottom:1px dotted rgba(255, 255, 255, 0.2);
+			em {
+				float:right;
+			}
+
+			&:after {
+				content: '';
+				display: table;
+				clear:both;
+			}
+		}
+
+	}
+}

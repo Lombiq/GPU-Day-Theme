@@ -1,0 +1,14 @@
+/* Index Shop 3*/
+.slider-container-shop3 {
+	background-color: $dark;
+	
+	@media (min-width: $minmqlg) {
+		height: 520px;
+	}
+
+	.tp-caption {
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}

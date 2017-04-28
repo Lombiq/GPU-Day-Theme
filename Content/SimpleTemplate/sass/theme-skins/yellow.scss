@@ -1,0 +1,14 @@
+/*
+	Simple Theme
+	Skin Name: Yellow
+	First-color: #f7c500
+	Second-color: #29B6F6
+*/
+
+@import '../variables';
+@import '../mixins';
+
+$first-color: #f7c500;
+$second-color: #29B6F6;
+
+@import 'skin';

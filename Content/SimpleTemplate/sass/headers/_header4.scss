@@ -1,0 +1,46 @@
+/* Header Version 4 */
+.header4 {
+	.header-inner {
+		.menu-toggle {
+			float:right;
+			margin: 34px 0;
+			margin-left:40px;
+
+			@media (max-width: $maxmqsm) {
+				padding-top:8px;
+				padding-bottom:8px;
+				margin:36px 0 36px 20px;
+			}
+
+			.toggle-text {
+				@media (max-width: $maxmqsm) {
+					display:none;
+				}
+			}
+
+			.icon-bar {
+				width:20px;
+			}
+
+			&.jicon {
+				padding-top:8px;
+				padding-bottom:8px;
+				margin-top:36px;
+				margin-bottom:36px;
+
+				.toggle-text {
+					display:none;
+				}
+			}
+
+			&.pull-left {
+				margin-left:0;
+				margin-right:25px;
+
+				@media (max-width: $maxmqsm) {
+					margin-right:20px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,154 @@
+/* Homepages - Index Shop */
+.slider-container-shop {
+	background-color: #e1e1e1;
+
+	@media (min-width: $minmqlg) {
+		height: 560px;
+	}
+
+	.tp-caption {
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}
+
+.banner {
+	position: relative;
+
+	a {
+		display:block;
+	}
+
+	img {
+		display:block;
+		width:100%;
+		height: auto;
+	}
+}
+
+.shop-text {
+	p {
+		margin-bottom:8px;
+		text-indent: 20px;
+	}
+
+	.learn-more {
+		float:right;
+		font-weight:600;
+
+		@media (min-width: $minmqsm) {
+			margin-right:25px;
+		}
+
+		@media (min-width: $minmqmd) {
+			margin-right:35px;
+		}
+	}
+}
+
+/* Clear product and entry margins for carousel */
+.owl-carousel {
+	.product {
+		margin-bottom:6px;
+	}
+}
+.owl-carousel {	.entry,
+	.entry.entry-grid {
+		margin-bottom:0;
+	}
+}
+
+.sidebar.shop-sidebar {
+	
+	&.home-shop-sidebar {
+		padding-top:12px;
+	}
+
+	.widget {
+		.widget-title {
+			border-bottom:1px solid #eee;
+			padding-bottom: 10px;
+		}
+
+		&.category-widget {
+			ul {
+				li {
+					margin-bottom:10px;
+
+					a {
+						font-weight:600;
+						display:block;
+					}
+
+					ul {
+						padding-left:10px;
+						padding-top:6px;
+
+						li {
+							margin-bottom:4px;
+
+							a {
+								font-weight: 400;
+
+								i {
+									float:none;
+									margin-right: 4px;
+									margin-top:0;
+									font-size: 90%;
+									color: #9e9e9e;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.brands-widget {
+			ul {
+				li {
+					margin-bottom:4px;
+
+					a {
+						font-weight: 400;
+
+						i {
+							float:none;
+							margin-right: 4px;
+							margin-top:0;
+							font-size: 90%;
+							color: #9e9e9e;
+						}
+					}
+				}
+			}
+		}
+
+		.product.product-sm {
+			padding-bottom:0;
+			margin-bottom:16px;
+		}
+
+		.banner-widget-slider {
+			.banner {
+				border: 1px solid #eee;
+			}
+
+			.owl-dots {
+				margin:0;
+				line-height:0;
+				position: absolute;
+				left:0;
+				right:0;
+				bottom:18px;
+				z-index:99;
+
+				.owl-dot:not(.active) {
+					background-color: #fff;
+					border-color: #fff;
+				}
+			}
+		}
+	}
+}

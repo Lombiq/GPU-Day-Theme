@@ -1,0 +1,229 @@
+/* Homepages - Index Gym */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6,
+.sidebar .widget .widget-title,
+.footer .widget .widget-title {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+h1, .h1 {
+  font-size: 28px;
+}
+
+h2, .h2 {
+  font-size: 24px;
+}
+
+h3, .h3 {
+  font-size: 20px;
+}
+
+h4, .h4 {
+  font-size: 15px;
+}
+
+.service .service-title,
+.portfolio-item .portfolio-title,
+.footer .widget .widget-title,
+.count-title {
+  font-size: 16px;
+}
+
+.vcenter-content h1 {
+  font-family: "Open Sans", Arial, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.nav-pills-gray.nav-pills {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 0;
+}
+
+@media (max-width: 767px) {
+  .nav-pills-gray.nav-pills {
+    margin-bottom: 30px;
+  }
+}
+
+.nav-pills-gray.nav-pills > li {
+  float: none;
+  display: inline-block;
+  min-width: 170px;
+  font-size: 13px;
+}
+
+@media (min-width: 992px) {
+  .nav-pills-gray.nav-pills > li {
+    min-width: 185px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav-pills-gray.nav-pills > li {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-pills-gray.nav-pills > li {
+    display: block;
+    width: 100%;
+  }
+}
+
+.nav-pills-gray.nav-pills > li + li {
+  margin: 0;
+}
+
+.nav-pills-gray.nav-pills > li + li > a {
+  border-left-color: #fff;
+}
+
+.nav-pills-gray.nav-pills > li > a {
+  position: relative;
+  color: #222;
+  background-color: #ebebeb;
+  border-left: 1px solid transparent;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .nav-pills-gray.nav-pills > li > a {
+    display: block;
+    width: 100%;
+    max-width: none !important;
+  }
+}
+
+.nav-pills-gray.nav-pills > li > a:hover, .nav-pills-gray.nav-pills > li > a:focus {
+  color: #111;
+  background-color: #e1e1e1;
+}
+
+.nav-pills-gray.nav-pills > li > a:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -6px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6px 8px 6px;
+  border-color: transparent transparent transparent transparent;
+}
+
+.nav-pills-gray.nav-pills > li:first-child > a {
+  border-left: none;
+}
+
+.nav-pills-gray.nav-pills > li.active > a,
+.nav-pills-gray.nav-pills > li.active > a:hover,
+.nav-pills-gray.nav-pills > li.active > a:focus {
+  color: #111;
+  background-color: #d7d7d7;
+}
+
+.nav-pills-gray.nav-pills > li.active > a:after,
+.nav-pills-gray.nav-pills > li.active > a:hover:after,
+.nav-pills-gray.nav-pills > li.active > a:focus:after {
+  border-bottom-color: #fff;
+}
+
+.class-part {
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #aeaeae;
+}
+
+.class-part h4, .class-part h3 {
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+
+.class-part .class-time {
+  font-weight: 600;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.class-part .class-meta {
+  color: #7e7e7e;
+  line-height: 1.5;
+}
+
+.class-part .class-meta .class-meta-left {
+  float: left;
+}
+
+.class-part .class-meta .btn.btn-sm {
+  float: right;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 12px !important;
+  margin-top: 10px;
+  border-width: 1px;
+}
+
+.form-control {
+  background-color: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
+.form-control:focus {
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+
+.widget.hours-widget ul li {
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+}
+
+.widget.hours-widget ul li em {
+  float: right;
+}
+
+.widget.hours-widget ul li:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.btn-rounded {
+  border-radius: 18px !important;
+}
+
+#map-gym {
+  border-top: 2px solid #e1e1e1;
+  height: 250px;
+  background-color: #171717;
+}
+
+@media (min-width: 768px) {
+  #map-gym {
+    height: 330px;
+  }
+}
+
+@media (min-width: 992px) {
+  #map-gym {
+    height: 400px;
+  }
+}
+
+#map-gym address {
+  line-height: 1.7;
+  padding: 10px 5px 2px;
+  margin: 0;
+}

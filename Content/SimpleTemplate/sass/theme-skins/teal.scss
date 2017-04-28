@@ -1,0 +1,14 @@
+/*
+	Simple Theme
+	Skin Name: Teal
+	First-color: #009688
+	Second-color: #00695C
+*/
+
+@import '../variables';
+@import '../mixins';
+
+$first-color: #009688;
+$second-color: #00695C;
+
+@import 'skin';
