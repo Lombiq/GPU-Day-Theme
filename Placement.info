@@ -1,0 +1,21 @@
+﻿<Placement>
+    <Match ContentType ="Talk">
+        <Place
+            Parts_Common_Metadata_Summary="-"
+        />
+    </Match>
+    
+    <Match ContentType ="GPUDay">
+        <Place
+            Parts_Common_Metadata="-"
+            Fields_DateTime ="-"
+        />
+    </Match>
+    
+    <Match ContentType ="AboutGPUDay">
+        <Place
+            Parts_Common_Metadata="-"
+            Parts_Title ="-"
+        />
+    </Match>
+</Placement>
