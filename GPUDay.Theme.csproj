@@ -1062,6 +1062,7 @@
     <Content Include="gulpfile.js" />
     <Content Include="Images\page-header-bg.jpg" />
     <Content Include="Scripts\jquery.plugin.min.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\plugins.js" />
     <Content Include="Scripts\plugins.min.js" />
     <Content Include="Styles\css\plugins.css" />
@@ -1108,6 +1109,7 @@
     <None Include="Views\Content-GPUDay.Detail.liquid">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Views\Content-Sponsor.Summary.liquid" />
     <None Include="Views\Layougft.liquid">
       <SubType>Designer</SubType>
     </None>
@@ -1115,6 +1117,7 @@
     <Content Include="Views\Parts.Title-GPUDay.liquid">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Views\Widget-Name-Sponsors.liquid" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\Web.config" />
@@ -1128,7 +1131,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Fields.Common.Text-SponsorPart-Sponsorname.liquid" />
-    <Content Include="Views\Zone-Content3.liquid" />
     <Content Include="Views\Zone-Hfsdeader.liquid" />
   </ItemGroup>
   <ItemGroup>
