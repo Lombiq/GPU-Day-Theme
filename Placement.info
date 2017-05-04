@@ -11,12 +11,11 @@
             Fields_DateTime ="-"
         />
     </Match>
-    
-    <Match ContentType ="AboutGPUDay">
+ 
+    <Match ContentType="ContactUs">
         <Place
-            Parts_Common_Metadata="-"
-            Parts_Title ="-"
+            Fields_Common_Text-ContactBox="Content: 9"
+            Fields_Common_Text-TravelingByPublicTransport="Content: after"
         />
     </Match>
-    
 </Placement>
