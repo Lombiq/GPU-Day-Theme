@@ -1433,8 +1433,7 @@
           marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[i][1], locations[i][2]),
             map: map,
-            animation: google.maps.Animation.DROP,
-            icon: 'Images/pin.png'
+            animation: google.maps.Animation.DROP
           });
 
           google.maps.event.addListener(marker, 'click', (function (marker, i) {
