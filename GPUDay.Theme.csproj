@@ -1097,10 +1097,6 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Views\Header.liquid" />
-    <Content Include="Views\Fields.DateTime-GPUDay-Fromdafsate.liquid" />
-    <Content Include="Views\Fields.DateTime-GPUDay-Tofasdate.liquid">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Views\Content-AboutGPUDay.Detail.liquid">
       <SubType>Designer</SubType>
     </Content>
