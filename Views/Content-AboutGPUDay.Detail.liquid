@@ -6,17 +6,14 @@
                     About the <span class="light highlight dark">GPU Day</span>
                 </h2>
 
-                <!--Lead text-->
                 {% if Model.ContentItem.AboutGPUDayPart.LeadText.Value != null %}
                 <p class="lead smaller">{{ Model.ContentItem.AboutGPUDayPart.LeadText.Value }}</p>
                 {% endif %}
 
-                <!--About text-->
                 {% if Model.ContentItem.AboutGPUDayPart.About.Value != null %}
                 {{ Model.ContentItem.AboutGPUDayPart.About.Value }}
                 {% endif %}
 
-                <!--Bullet points-->
                 {% if Model.ContentItem.AboutGPUDayPart.BulletPoints.Value != null %}
                 <p>
                     <ul class="fa-ul">
@@ -26,21 +23,15 @@
                 {% endif %}
 
                 <div class="mb5"></div>
-                <!-- margin -->
             </div>
-            <!-- End .col-sm-6 -->
             
             {% if Model.ContentItem.AboutGPUDayPart.EmbeddedVideoURL.Value != null %}
             <div class="col-sm-6">
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="{{ Model.ContentItem.AboutGPUDayPart.EmbeddedVideoURL.Value }}" width="500" height="281" allowfullscreen=""></iframe>
                 </div>
-                <!-- End .embed-responsive -->
             </div>
             {% endif %}
-            <!-- End .col-sm-6 -->
         </div>
-        <!-- End .row -->
     </div>
-    <!-- End .container -->
 </div>
