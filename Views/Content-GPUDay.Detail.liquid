@@ -1,6 +1,6 @@
 ﻿<div class ="main">
     <div class="fullscreen vertical-center bg-image overlay-container text-center"
-         style="background-image:url(Images/page-header-bg.jpg)">
+         style="background-image:url(../Images/page-header-bg.jpg)">
         <div class="overlay dark"></div>
 
         <div class="vcenter-content">
@@ -9,23 +9,23 @@
                     {{ Model.ContentItem.TitlePart.Title }}
                 </h1>
                 <div class="event-countdown is-countdown">
-                    <span class="countdown-row countdown-show2">
+                    <span class="countdown-row countdown-show1">
                         <span class="countdown-section">
                             <span class="countdown-amount">
-                                {{ Model.ContentItem.GPUDayPart.Fields[0].DateTime }}
-                            </span>
-                        </span>
-                        <span class="countdown-section">
-                            <span class="countdown-amount">
-                                {{ Model.ContentItem.GPUDayPart.Fields[1].DateTime }}
+                                {% assign GPUDayMonth = Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "%M" %}
+                                {% if GPUDayMonth.size == 1 %}
+                                {{ Model.ContentItem.GPUDayPart.FromDate.DateTime | Date: "%d" }}{{ Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "-%d 0%M 20%y" }}
+                                {% else %}
+                                {{ Model.ContentItem.GPUDayPart.FromDate.DateTime | Date: "%d" }}{{ Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "-%d %M 20%y" }}
+                                {% endif %}
                             </span>
                         </span>
                     </span>
                 </div>
-
-                <a href="#" class="btn btn-custom btn-lg min-width-lg">Register</a>
+                {% if Model.ContentItem.GPUDayPart.IndicoRegistrationFormURL.Value != null %}
+                <a href="{{ Model.ContentItem.GPUDayPart.IndicoRegistrationFormURL.Value }}" target="_blank" class="btn btn-custom btn-lg min-width-lg">Register</a>
+                {% endif %}
             </div>
-
         </div>
         <div class="mb60"></div>
     </div>
