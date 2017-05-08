@@ -1101,7 +1101,6 @@
     </Content>
     <Content Include="Views\Content-GoogleMaps.Detail.liquid" />
     <Content Include="Views\Content-ContactUs.Detail.liquid" />
-    <Content Include="Content\SimpleTemplate\sass\_fonts.scss" />
     <None Include="Views\Content-GPUDay.Detail.liquid">
       <SubType>Designer</SubType>
     </None>

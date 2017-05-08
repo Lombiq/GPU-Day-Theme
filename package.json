@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "my-project",
+  "name": "GPUDay.Theme",
   "private": true,
   "devDependencies": {
     "browser-sync": "^2.14.3",
