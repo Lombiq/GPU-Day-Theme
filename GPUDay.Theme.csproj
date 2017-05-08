@@ -1060,6 +1060,7 @@
     <Content Include="Content\SimpleTemplate\php\index.php" />
     <Content Include="Content\SimpleTemplate\php\mail.php" />
     <Content Include="gulpfile.js" />
+    <Content Include="Images\wigner_logo.png" />
     <Content Include="Scripts\jquery.plugin.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\plugins.js" />
@@ -1098,9 +1099,9 @@
     <Content Include="Views\Content-AboutGPUDay.Detail.liquid">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Styles\sass\site.scss" />
     <Content Include="Views\Content-GoogleMaps.Detail.liquid" />
     <Content Include="Views\Content-ContactUs.Detail.liquid" />
+    <Content Include="Content\SimpleTemplate\sass\_fonts.scss" />
     <None Include="Views\Content-GPUDay.Detail.liquid">
       <SubType>Designer</SubType>
     </None>
@@ -1124,9 +1125,6 @@
   <ItemGroup>
     <Content Include="package.json" />
     <Content Include="Placement.info" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Styles\sass\general.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\SimpleTemplate\fonts\fontawesome-webfont.eot" />
