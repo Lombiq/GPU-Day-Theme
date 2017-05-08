@@ -1,36 +1,38 @@
-﻿<div class ="main">
-    <div class="fullscreen vertical-center bg-image overlay-container text-center"
-         style="background-image:url(../Images/page-header-bg.jpg)">
-        <div class="overlay dark"></div>
+﻿<div id="wrapper">
+    <div class ="main">
+        <div class="fullscreen vertical-center bg-image overlay-container text-center"
+             style="background-image:url({{ Model.ContentItem.GPUDayPart.HeaderPhoto.FirstMediaUrl }})">
+            <div class="overlay dark"></div>
 
-        <div class="vcenter-content">
-            <div class="container">
-                <h1 class="text-white">
-                    {{ Model.ContentItem.TitlePart.Title }}
-                </h1>
-                <div class="event-countdown is-countdown">
-                    <span class="countdown-row countdown-show1">
-                        <span class="countdown-section">
-                            <span class="countdown-amount">
-                                {% assign GPUDayMonth = Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "%M" %}
-                                {% if GPUDayMonth.size == 1 %}
-                                {{ Model.ContentItem.GPUDayPart.FromDate.DateTime | Date: "%d" }}{{ Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "-%d 0%M 20%y" }}
-                                {% else %}
-                                {{ Model.ContentItem.GPUDayPart.FromDate.DateTime | Date: "%d" }}{{ Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "-%d %M 20%y" }}
-                                {% endif %}
+            <div class="vcenter-content">
+                <div class="container">
+                    <h1 class="text-white">
+                        {{ Model.ContentItem.TitlePart.Title }}
+                    </h1>
+                    <div class="event-countdown is-countdown">
+                        <span class="countdown-row countdown-show1">
+                            <span class="countdown-section">
+                                <span class="countdown-amount">
+                                    {% assign GPUDayMonth = Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "%M" %}
+                                    {% if GPUDayMonth.size == 1 %}
+                                    {{ Model.ContentItem.GPUDayPart.FromDate.DateTime | Date: "%d" }}{{ Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "-%d 0%M 20%y" }}
+                                    {% else %}
+                                    {{ Model.ContentItem.GPUDayPart.FromDate.DateTime | Date: "%d" }}{{ Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "-%d %M 20%y" }}
+                                    {% endif %}
+                                </span>
                             </span>
                         </span>
-                    </span>
+                    </div>
+                    {% if Model.ContentItem.GPUDayPart.IndicoRegistrationFormURL.Value != null %}
+                    <a href="{{ Model.ContentItem.GPUDayPart.IndicoRegistrationFormURL.Value }}" target="_blank" class="btn btn-custom btn-lg min-width-lg">Register</a>
+                    {% endif %}
                 </div>
-                {% if Model.ContentItem.GPUDayPart.IndicoRegistrationFormURL.Value != null %}
-                <a href="{{ Model.ContentItem.GPUDayPart.IndicoRegistrationFormURL.Value }}" target="_blank" class="btn btn-custom btn-lg min-width-lg">Register</a>
-                {% endif %}
             </div>
+            <div class="mb60"></div>
         </div>
-        <div class="mb60"></div>
+        {{ Model.Content | Display }}
+        <a id="scroll-top" href="#top" title="Scroll top" class="fixed">
+            <i class="fa fa-angle-up"></i>
+        </a>
     </div>
-    {{ Model.Content | Display }}
-    <a id="scroll-top" href="#top" title="Scroll top" class="fixed">
-        <i class="fa fa-angle-up"></i>
-    </a>
 </div>

@@ -1060,7 +1060,6 @@
     <Content Include="Content\SimpleTemplate\php\index.php" />
     <Content Include="Content\SimpleTemplate\php\mail.php" />
     <Content Include="gulpfile.js" />
-    <Content Include="Images\page-header-bg.jpg" />
     <Content Include="Scripts\jquery.plugin.min.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\plugins.js" />

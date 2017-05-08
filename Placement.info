@@ -12,6 +12,7 @@
             Parts_Common_Metadata="-"
             Fields_DateTime ="-"
             Fields_Link ="-"
+            Fields_MediaLibraryPicker="-"
         />
     </Match>
 
