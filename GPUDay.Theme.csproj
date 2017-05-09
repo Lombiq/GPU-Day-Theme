@@ -1061,14 +1061,12 @@
     <Content Include="Content\SimpleTemplate\php\mail.php" />
     <Content Include="gulpfile.js" />
     <Content Include="Images\wigner_logo.png" />
-    <Content Include="Scripts\jquery.plugin.min.js" />
     <Content Include="Scripts\main.js" />
-    <Content Include="Scripts\plugins.js" />
+    <Content Include="Scripts\main.min.js" />
     <Content Include="Scripts\plugins.min.js" />
-    <Content Include="Styles\css\plugins.css" />
-    <Content Include="Styles\css\plugins.min.css" />
-    <Content Include="Styles\css\style.css" />
-    <Content Include="Styles\sass\index-event.css" />
+    <Content Include="Styles\index-event.min.css" />
+    <Content Include="Styles\plugins.min.css" />
+    <Content Include="Styles\style.min.css" />
     <Content Include="Web.config" />
     <Content Include="Styles\Web.config" />
     <Content Include="Theme.txt" />
@@ -1274,6 +1272,7 @@
     <Content Include="Content\SimpleTemplate\sass\_variables.scss" />
     <Content Include="Content\Web.config" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
