@@ -1,0 +1,16 @@
+/* Homepages - Index Agency 6 */
+@import '../mixins';
+@import '../variables';
+.slider-container-agency6 {
+	background-color: $dark;
+	
+	@media (min-width: $minmqlg) {
+		height: 540px;
+	}
+
+	.tp-caption {
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}

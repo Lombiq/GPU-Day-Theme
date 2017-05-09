@@ -1,0 +1,13 @@
+/* Homepages - Index10 */
+.slider-container10 {
+	background-color: #121212;
+
+	@media (min-width: $minmqlg) {
+		height: 600px;
+	}
+}
+.vertial-phone-img {
+	@media (min-width: $minmqlg) {
+		margin-top:-40px;
+	}
+}

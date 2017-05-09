@@ -1,0 +1,118 @@
+/* Elements Collapses */
+.panel-group {
+	.panel + .panel {
+		margin-top: 4px;
+	}
+
+	.panel-heading + .panel-collapse > .panel-body {
+		border-top: none;
+	}
+}
+
+.panel {
+	background-color: transparent;
+	margin-bottom: 40px;
+	border-radius: 0;
+	border: none;
+	box-shadow: none;
+
+	.panel-heading {
+		padding:0;
+		border-radius: 0;
+		border:none;
+
+		.panel-title {
+			font-weight:400;
+			position: relative;
+			font-size: 13px;
+			font-family: $font-family;
+
+			a {
+				border: 1px solid transparent;
+				display: block;
+				padding: 12px 16px;
+				color: #333;
+				transition: all 0.4s;
+
+				&:before {
+					display: inline-block;
+					min-width: 15px;
+					font-family: 'FontAwesome';
+					content: "\f107";
+				}
+
+				&.collapsed {
+					&:before {
+						content: "\f105";
+					}
+				}
+			}
+		}
+	}
+
+	.panel-body {
+		padding: 16px 0;
+
+		p {
+			margin-bottom: 13px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	/* Panel Default */
+	&.panel-default {
+		.panel-heading {
+			a {
+				color: #333;
+				background-color: #f6f6fa;
+				border-color: #f0f0fa;
+
+				&:hover,
+				&:focus {
+					color: #333;
+					background-color: #eee;
+					border-color: #e8e8e8;
+				}
+			}
+		}
+	}
+
+	/* Panel Inverse */
+	&.panel-inverse {
+		.panel-heading {
+			a {
+				background-color: #222;
+				border-color: #101010;
+				color:#fff;
+
+				&:hover,
+				&:focus {
+					color:#fff;
+					background-color: #101010;
+					border-color: #000;
+				}
+			}
+		}
+	}
+
+	/* Panel Custom */
+	&.panel-custom {
+		.panel-heading {
+			a {
+				background-color: $first-color;
+				border-color: darken($first-color, 5%);
+				color:#fff;
+
+				&:hover,
+				&:focus {
+					color: #fff;
+					background-color: darken($first-color, 5%);
+					border-color: darken($first-color, 10%);
+				}
+			}
+		}
+	}
+}

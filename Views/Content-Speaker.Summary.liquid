@@ -1,0 +1,25 @@
+﻿<div class="col-md-3 col-xs-6 col-xss-12">
+    {% assign speakerName = Model.ContentItem.TitlePart.Title %}
+    <a id="{{ speakerName | Replace: " ","_" }}"></a>
+    <div class="member text-center">
+        <div class="member-top">
+            <figure>
+                <img src="{{ Model.ContentItem.SpeakerPart.SpeakerPhoto.FirstMediaUrl }}" alt="{{ speakerName }}">
+            </figure>
+            <div class="social-icons">
+                <label>Contact:</label>
+                {% if Model.ContentItem.SpeakerPart.SpeakerEmailAddress.Value != null %}
+                    <a href="mailto:{{ Model.ContentItem.SpeakerPart.SpeakerEmailAddress.Value }}" target="_top" class="social-icon" title="E-mail"><i class="fa fa-envelope"></i></a>
+                {% endif %}
+                {% if Model.ContentItem.SpeakerPart.SpeakerWebsite.Value != null %}
+                    <a href="{{ Model.ContentItem.SpeakerPart.SpeakerWebsite.Value }}" target="_blank" class="social-icon" title="Website"><i class="fa fa-user"></i></a>
+                {% endif %}
+                {% if Model.ContentItem.SpeakerPart.SpeakerLinkedInProfile.Value != null %}
+                    <a href="{{ Model.ContentItem.SpeakerPart.SpeakerLinkedInProfile.Value }}" target="_blank" class="social-icon" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                {% endif %}
+            </div>
+        </div>
+        <h3 class="member-title">{{ speakerName }} <small>{{ Model.ContentItem.SpeakerPart.SpeakerCompany.Value }}</small></h3>
+        <p>{{ Model.ContentItem.SpeakerPart.AboutTheSpeaker.Value }}</p>
+    </div>
+</div>

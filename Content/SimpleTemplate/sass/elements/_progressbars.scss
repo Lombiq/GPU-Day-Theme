@@ -1,0 +1,97 @@
+/* Elements Progress Bars */
+/* 2- Progress Bars */
+.progress-container {
+	position: relative;
+	margin-bottom:25px;
+
+	.progress-title {
+		font-weight:400;
+		font-size:14px;
+		line-height:1.2;
+		font-weight: 600;
+		color: $first-color;
+		margin-bottom:10px;
+
+		&.dark {
+			color: $heading-color;
+		}
+
+		> span {
+			float:right;
+			font-weight:400;
+		}
+	}
+}
+
+.progress {
+	height:24px;
+	margin-bottom:0;
+	background-color: #e5e7f0;
+	padding:4px;
+	box-shadow: none;
+	border-radius:0;
+
+	&.progress-xs {
+		height:8px;
+		padding:0;
+	}
+
+	.progress-bar {
+		box-shadow: none;
+		background-color: $first-color;
+
+		.progress-bar-wrapper {
+			position: relative;
+			height:100%;
+		}
+
+		&.gradient1 {
+			@include ltrGradient($first-color, $second-color);
+		}
+
+		&.gradient2 {
+			@include ltrGradient($second-color, $first-color);
+		}
+
+		&.dark {
+			background-color: #101010;
+		}
+
+		&.custom {
+			background-color: $first-color;
+		}
+
+		&.custom2 {
+			background-color: $second-color;
+		}
+
+		&.gray {
+			background-color: #c7c7c7;
+		}
+
+		&.darkgray {
+			background-color: #9e9e9e;
+		}
+
+		&.white {
+			background-color: #fff;
+		}
+	}
+
+	&.dark {
+		background-color: #101010;
+
+		.dark {
+			background-color: #4a4a4a;
+		}
+	}
+
+	&.bordered {
+		background-color: transparent;
+		border:1px solid #eaeaea;
+
+		.white {
+			background-color: #f1f1f1;
+		}
+	}
+}

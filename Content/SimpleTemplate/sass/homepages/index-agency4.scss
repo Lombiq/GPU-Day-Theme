@@ -1,0 +1,118 @@
+/* Homepages - Index Agency 4 */
+@import '../mixins';
+@import '../variables';
+
+$font-family: 'Raleway', sans-serif;
+$second-font-family: 'Playfair Display', serif;
+
+$body-bg: #f9f9fe;
+$body-text-color: #766957;
+
+$heading-color: #3b3227;
+
+body,
+#wrapper {
+	background-color: $body-bg
+}
+
+body {
+	color: $body-text-color;
+	font-family: $font-family;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: $heading-color;
+}
+
+
+h1,.h1 {
+	font-size: 28px;
+}
+
+h2,.h2{
+	font-size: 24px;
+}
+
+h3,.h3 {
+	font-size: 20px;
+}
+
+h4,.h4 {
+	font-size: 17px;
+}
+
+h1,h2,h3,h4,h5,h6,
+.sidebar .widget .widget-title,
+.footer .widget .widget-title,
+.page-header h1 {
+	font-family: $second-font-family;
+	letter-spacing: 0.015em;
+}
+
+.slider-container-agency4 {
+	background-color: $dark;
+
+	@media (min-width: $minmqlg) {
+		height: 600px;
+	}
+
+	.tp-caption {
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}
+
+.service {
+	.service-title {
+		font-size:18px;
+	}
+
+	p {
+		max-width: 290px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&.icon-left {
+		.service-title {
+			font-size:15px;
+		}
+	}
+}
+
+.portfolio-item {
+	.portfolio-title {
+		font-size:16px;
+	}
+}
+
+.count-title {
+	font-size:15px;
+}
+
+.footer .widget .widget-title {
+	font-size:17px;
+}
+
+.member.text-center {
+	p {
+		max-width: 290px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.table-row {
+	+ .table-row {
+		border-top: none !important;
+	}
+
+	&.no-border-bottom {
+		border-bottom: none;
+	}
+}
+
+#map {
+	margin-bottom:30px;
+}

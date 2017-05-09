@@ -1,0 +1,440 @@
+/* Countdown 1 */
+.coming-soon {
+	min-height: 100vh;
+	width:100%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding: 80px 0;
+
+	.site-logo {
+		float:none;
+		display:inline-block;
+		margin: 0 0 15px;
+
+		@media (min-width: $minmqsm) {
+			margin-bottom: 20px;
+		}
+	}
+
+	h1 {
+		font-family: $second-font-family;
+		font-size:32px;
+		margin-bottom: 20px;
+
+		@media (min-width: $minmqsm) {
+			font-size:48px;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size:64px;
+			margin-bottom: 25px;
+		}
+	}
+
+	h2 {
+		font-family: $font-family;
+		font-weight:300;
+		font-size: 20px;
+		letter-spacing: -0.02em;
+		color: #555;
+		margin-bottom:20px;
+
+		@media (min-width: $minmqsm) {
+			font-size:26px;
+			margin-bottom: 25px;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size: 32px;
+			margin-bottom: 30px;
+		}
+	}
+
+	p {
+		font-size:14px;
+		line-height:1.5;
+		max-width: 620px;
+		margin: 0 auto 25px;
+		color: #5e5e5e;
+
+		@media (min-width: $minmqsm) {
+			font-size:15px;
+			margin-bottom: 35px;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size: 16px;
+			margin-bottom: 45px;
+		}
+	}
+
+	.soon-countdown {
+		max-width: 600px;
+		margin: 0 auto 25px;
+
+		@media (min-width: $minmqsm) {
+			margin-bottom: 35px;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size: 16px;
+			margin-bottom: 40px;
+		}
+	}
+
+	.countdown-amount {
+		font-family: $second-font-family;
+	    font-size: 28px;
+	    font-weight:700;
+	    color: #2e2e2e;
+	    line-height: 0.8;
+
+	    @media (min-width: $minmqsm) {
+			font-size:36px;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size: 44px;
+		}
+	}
+
+	.countdown-period {
+	    font-size:13px;
+	    font-weight: 600;
+	    color: #555;
+	    line-height:1.4;
+
+	    @media (min-width: $minmqsm) {
+			font-size:14px;
+	    	line-height:1.6;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size: 15px;
+	    	line-height:1.7;
+		}
+	}
+
+	.soon-newsletter {
+		max-width: 380px;
+		margin: 0 auto;
+
+		h3 {
+			font-size: 16px;
+			margin-bottom:12px;
+
+			@media (min-width: $minmqsm) {
+				font-size:18px;
+				margin-bottom:15px;
+			}
+		}
+	}
+
+	form {
+		position: relative;
+
+		.form-control {
+			padding-right: 110px;
+			margin-bottom:0;
+		}
+
+		.btn {
+			position: absolute;
+			right:0;
+			top:0;
+		}
+	}
+}
+
+.soon-nav-container {
+	position: fixed;
+	left:15px;
+	top:10px;
+	z-index:999;
+
+	@media (min-width: $minmqsm) {
+		top:15px;
+	}
+
+	@media (min-width: $minmqmd) {
+		left:40px;
+		top:40px;
+	}
+
+	.soon-menu-toggle {
+		display:inline-block;
+		position: relative;
+		padding: 10px 12px;
+		margin: 0 0 15px;
+		line-height: 0;
+		background-image: none;
+		border:none;
+		border-radius: 0;
+		user-select: none;
+		transition: all 0.35s ease;
+		border-radius: 50%;
+		background-color: transparent;
+		border:1px solid #222;
+		cursor: pointer;
+
+		@media (min-width: $minmqmd) {
+			padding: 14.5px 12px;
+		}
+
+		.icon-bar {
+			display: block;
+			width: 20px;
+			height: 2px;
+			margin:11px 0;
+			border-radius: 0;
+			position: relative;
+
+			@media (min-width: $minmqmd) {
+				width:30px;
+			}
+
+			&,
+			&:before,
+			&:after {
+				display: inline-block;
+				width: 20px;
+				height: 2px;
+				background-color: #222;
+				border-radius: 4px;
+				transition: all 0.35s ease;
+
+				@media (min-width: $minmqmd) {
+					width:30px;
+				}
+			}
+
+			&:before,
+			&:after {
+				content: '';
+			    position: absolute;
+			    left: 0;
+			}
+
+			&:before {
+			    top: 7px;
+			}
+
+			&:after {
+			    top: -7px;
+			}
+		}
+
+		&:hover {
+			background-color: rgba(0,0,0, 0.55);
+			border-color: #222;
+
+			.icon-bar {
+				&,
+				&:before,
+				&:after {
+					background-color: #fff;
+				}
+			}
+		}
+		
+		&.open {
+			.icon-bar {
+				background: transparent !important;
+
+				&:before,
+				&:after {
+				    transform-origin: 50% 50%;
+				    top: 0;
+				}
+
+				&:before {
+				    transform: rotate3d(0, 0, 1, 45deg);
+				}
+
+				&:after {
+					transform: rotate3d(0, 0, 1, -45deg);
+				}
+			}
+		}
+	}
+
+	.soon-nav {
+		display:none;
+
+		.soon-menu {
+			li {
+				display:block;
+				a {
+					display: inline-block;
+					color: #222;
+					font-size:14px;
+					font-weight:600;
+					padding:6px 13px;
+					background-color: rgba(255, 255, 255, 0.88);
+					transition: all 0.4s;
+				}
+
+				& + li {
+					margin-top: 2px;
+				}
+				
+				&:hover,
+				&:focus {
+					a {
+						color: #fff;
+						background-color: rgba(0, 0, 0, 0.84);
+					}
+				}
+				&.active {
+					a {
+						color: #fff;
+						@include background-opacity($first-color, $opacity: 0.84);
+					}
+				}
+			}
+		}
+	}
+}
+
+.close-sections-btn {
+	display:none;
+	position: absolute;
+	right:25px;
+	top:20px;
+	z-index:999;
+	color: #222;
+	background-color: #f1f1f6;
+	padding:4px 11px;
+	transition: all 0.4s;
+
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: $first-color;
+	}
+}
+
+.soon-section {
+	position: fixed;
+	right:0;
+	top:0;
+	bottom:0;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.96);
+	z-index:900;
+	opacity: 0;
+	visibility: hidden;
+	transition: transform 0.5s ease, opacity 0.55s, visibility 0.8s;
+	transform: translateX(60%);
+	overflow-y: auto;
+
+	@media (min-width: $minmqmd) {
+		width:50%;
+	}
+
+	.soon-section-wrapper {
+		position: relative;
+		padding: 70px 15px 40px;
+		min-height: 100%;
+
+		@media (min-width: $minmqmd) {
+			padding: 60px 25px;
+		}
+	}
+
+
+	h2 {
+		font-family: $second-font-family;
+		font-size:24px;
+
+		@media (min-width: $minmqmd) {
+			font-size:28px;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size:32px;
+		}
+	}
+
+	h3 {
+		font-size:18px;
+		font-weight: 700;
+		margin-bottom: 22px;
+
+		@media (min-width: $minmqmd) {
+			font-size:20px;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size:22px;
+		}
+	}
+
+	&.active {
+		opacity:1;
+		visibility: visible;
+		transform: translateX(0);
+
+		.close-sections-btn {
+			display:block;
+		}
+	}
+}
+
+/* jQuery Countdown styles 2.0.0. */
+.countdown-section {
+	display: block;
+	float: left;
+	text-align: center;
+}
+
+.countdown-period {
+    display: block;
+}
+
+.countdown-descr {
+	display: block;
+	width: 100%;
+}
+
+.countdown-row {
+	clear: both;
+	width: 100%;
+	padding: 0px;
+	text-align: center;
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+.countdown-show1 .countdown-section {
+	width: 98%;
+}
+
+.countdown-show2 .countdown-section {
+	width: 48%;
+}
+
+.countdown-show3 .countdown-section {
+	width: 32.5%;
+}
+
+.countdown-show4 .countdown-section {
+	width: 24.5%;
+}
+
+.countdown-show5 .countdown-section {
+	width: 19.5%;
+}
+
+.countdown-show6 .countdown-section {
+	width: 16.25%;
+}
+
+.countdown-show7 .countdown-section {
+	width: 14%;
+}

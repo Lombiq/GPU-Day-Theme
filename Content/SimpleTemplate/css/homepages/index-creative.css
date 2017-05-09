@@ -1,0 +1,66 @@
+/* Homepages - Index Creative */
+#particles-js {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.fullscreen.vertical-center .vcenter-content h1,
+.fullheight.vertical-center .vcenter-content h1 {
+  font-size: 38px;
+  font-family: "Permanent Marker", cursive;
+}
+
+@media (min-width: 481px) {
+  .fullscreen.vertical-center .vcenter-content h1,
+  .fullheight.vertical-center .vcenter-content h1 {
+    font-size: 54px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fullscreen.vertical-center .vcenter-content h1,
+  .fullheight.vertical-center .vcenter-content h1 {
+    font-size: 72px;
+  }
+}
+
+@media (min-width: 992px) {
+  .fullscreen.vertical-center .vcenter-content h1,
+  .fullheight.vertical-center .vcenter-content h1 {
+    font-size: 96px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fullscreen.vertical-center .vcenter-content h1,
+  .fullheight.vertical-center .vcenter-content h1 {
+    font-size: 120px;
+  }
+}
+
+.fullscreen.vertical-center .vcenter-content p,
+.fullheight.vertical-center .vcenter-content p {
+  font-weight: 300;
+}
+
+.video-box-section-wrapper {
+  max-width: 540px;
+}
+
+.testimonials-container {
+  margin-top: -1px;
+}
+
+.form-control {
+  background-color: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
+.form-control:focus {
+  background-color: #e1e1e1;
+  border-color: #e1e1e1;
+}

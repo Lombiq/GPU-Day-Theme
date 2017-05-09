@@ -1,0 +1,177 @@
+// services.html
+.testimonials-wrapper {
+	max-width:680px;
+	margin: 0 auto;
+}
+
+.testimonial {
+	max-width:680px;
+	margin: 0;
+	color: #101010;
+	background-color: rgba(255, 255, 255, 0.3);
+	transition: background 0.5s ease;
+
+	.text-white & {
+		color: inherit;
+	}
+
+	&.transparent {
+		background-color: transparent !important;
+	}
+
+	&.dark {
+		background-color: rgba(0,0,0, 0.4) !important;
+	}
+
+	blockquote {
+		background-color:transparent;
+		margin:0; 
+	}
+
+	figure {
+		display: inline-block;
+		max-width:66px;
+		margin-bottom: 10px;
+		border-radius:50%;
+		border:3px solid rgba(0, 0, 0, 0.15);
+
+		.bg-image & {
+			border-color: rgba(255, 255, 255, 0.4);
+		}
+
+		img {
+			display:block;
+			width:100;
+			height:auto;
+			border-radius:50%;
+		}
+	}
+
+	cite {
+		color: #222;
+		font-weight: 600;
+
+		.text-white & {
+			color: inherit;
+		}
+	}
+
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.55);
+	}
+}
+.testimonials-container {
+	color: #fff;
+	.owl-dot {
+		background-color: #fff;
+		border:1px solid #fff;
+		opacity: 0.45;
+
+		&:hover,
+		&:focus {
+			opacity:1;
+		}
+
+		&.active {
+			background-color: $first-color !important;
+			border-color:$first-color !important;
+			opacity:1;
+		}
+	}
+
+	&.bg-gray {
+		.owl-dot {
+			background-color: #b7b7b7;
+			border-color: #b7b7b7;
+		}
+	}
+
+	&.bg-dark,
+	&.bg-darker,
+	&.bg-custom,
+	&.bg-custom2 {
+		.testimonial {
+			background-color: transparent;
+			color:#b7b7b7;
+
+			figure {
+				border-color: rgba(255, 255, 255, 0.3);
+			}
+
+			blockquote cite {
+				color:#fff;
+			}
+		}
+	}
+
+
+	&.bg-custom {
+
+		.testimonial {
+			color: lighten($first-color, 25%);
+		}
+
+		.owl-dot.active {
+			background-color: darken($first-color, 10%) !important;
+			border-color: darken($first-color, 10%) !important;
+		}
+	}
+
+	&.bg-custom2 {
+		.testimonial {
+			color: lighten($second-color, 25%);
+		}
+
+		.owl-dot.active {
+			background-color: darken($second-color, 10%) !important;
+			border-color: darken($second-color, 10%) !important;
+		}
+	}
+}
+
+
+.client {
+	display:block;
+	border:1px solid #f2f2f2;
+	transition: border 0.4s;
+	img {
+		display:block;
+		width:100%;
+		height:auto;
+	}
+
+	&:hover,
+	&:focus {
+		border-color: #eaeaea;
+	}
+
+	&.dark {
+		border-color: #6e6e6e;
+
+		&:hover,
+		&:focus {
+			border-color: #222;
+		}
+	}
+
+	&.no-border {
+		border:none !important;
+	}
+}
+
+.bg-image,
+.parallax,
+.bg-custom,
+.bg-custom2,
+.bg-dark,
+.bg-darker {
+	.client:not(.dark) {
+		border:1px solid rgba(255, 255, 255, 0.2);
+
+		&:hover,
+		&:focus {
+			border-color: #fff;
+		}
+	}
+
+}

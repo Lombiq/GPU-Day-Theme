@@ -1,0 +1,46 @@
+/////////* Simple Variables *////////////
+$font-family: 'Open Sans', Arial, sans-serif;
+$second-font-family: 'Montserrat', Arial, sans-serif;
+
+// Body
+$body-text-color: #323232;
+$body-font-size: 13px;
+$body-line-height: 1.7;
+$body-bg-color: #9a9a9a; // You will see this only boxed or boxed-long layout
+
+$heading-color: #222;
+
+// Wrapper elem for body
+$wrapper-bg-color: #fff; // Background color for content
+
+$dark: #171717;
+$darker: #101010;
+
+$dark-bg: #171717;
+$darker-bg: #101010;
+
+$lightgray:#f8f8f8;
+$gray: #f0f0f0;
+$gray2: #e1e1e1;
+
+// Color Scheme
+// first 0069b0 
+// second c00f3c
+$first-color: #0069b0;
+$second-color: #c00f3c;
+
+// Media Queries 
+// (Max - Min Media Queries - All related to the Bootstrap)
+// Max Media Queries
+$maxmqxss: 360px;
+$maxmqxs: 480px;
+$maxmqsm: 767px;
+$maxmqmd: 991px;
+$maxmqlg: 1199px;
+
+// Min Media Queries
+$minmqxs: 481px;
+$minmqsm: 768px;
+$minmqmd: 992px;
+$minmqlg: 1200px;
+$minmqxlg:  1600px;

@@ -1,0 +1,229 @@
+/* Homepages - Index Gym */
+@import '../mixins';
+@import '../variables';
+
+$second-font-family: 'Oswald', sans-serif;
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 700;
+}
+
+h1,h2,h3,h4,h5,h6,
+.sidebar .widget .widget-title,
+.footer .widget .widget-title {
+	font-family: $second-font-family;
+	letter-spacing:0.02em;
+}
+
+h1,.h1 {
+	font-size: 28px;
+}
+
+h2,.h2{
+	font-size: 24px;
+}
+
+h3,.h3 {
+	font-size: 20px;
+}
+
+h4,.h4 {
+	font-size: 15px;
+}
+
+.service .service-title,
+.portfolio-item .portfolio-title,
+.footer .widget .widget-title,
+.count-title {
+	font-size:16px;
+}
+
+.vcenter-content {
+	h1 {
+		font-family: $font-family;
+		letter-spacing: -0.02em;
+	}
+}
+
+.nav-pills-gray.nav-pills {
+	margin-bottom: 40px;
+	text-align:center;
+	font-size:0;
+
+	@media (max-width: $maxmqsm) {
+		margin-bottom: 30px;
+	}
+
+	> li {
+		float:none;
+		display:inline-block;
+		min-width:170px;
+		font-size:13px;
+
+		@media (min-width: $minmqmd) {
+			min-width:185px;
+		}
+
+		@media (min-width: $minmqlg) {
+			min-width:200px;
+		}
+
+		@media (max-width: $maxmqsm) {
+			display:block;
+			width:100%;
+		}
+
+		+ li {
+			margin:0;
+
+			> a {
+				border-left-color:#fff;
+			}
+		}
+
+		> a {
+			position: relative;
+			color: #222;
+			background-color: darken($gray, 2%);
+			border-left:1px solid transparent;
+			font-weight:700;
+			text-transform: uppercase;
+
+			@media (max-width: $maxmqsm) {
+				display:block;
+				width:100%;
+				max-width: none !important;
+			}
+
+			&:hover,
+			&:focus {
+				color: #111;
+				background-color: $gray2;
+			}
+
+			&:after {
+				content:'';
+				position: absolute;
+				left:50%;
+				bottom:0;
+				margin-left: -6px;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 6px 8px 6px;
+				border-color: transparent transparent transparent transparent;
+
+			}
+		}
+
+		&:first-child {
+			> a {
+				border-left: none;
+			}
+		}
+
+		&.active {
+			> a,
+			> a:hover,
+			> a:focus {
+				color: #111;
+				background-color: darken($gray2, 4%);
+
+				&:after {
+					border-bottom-color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.class-part {
+	padding-bottom:15px;
+	margin-bottom:20px;
+	border-bottom:1px dashed #aeaeae;
+
+	h4,h3 {
+		margin-bottom:6px;
+		letter-spacing: 0.03em;
+	}
+
+	.class-time {
+		font-weight:600;
+		font-style: italic;
+		color: #666;
+		margin-bottom: 5px;
+	}
+
+	.class-meta {
+		color: #7e7e7e;
+		line-height:1.5;
+		.class-meta-left {
+			float:left;
+		}
+
+		.btn.btn-sm {
+			float:right;
+			padding-top:4px;
+			padding-bottom:4px;
+			padding-left:11px;
+			padding-right:11px;
+			border-radius: 12px !important;
+			margin-top:10px;
+			border-width:1px;
+		}
+	}
+}
+
+.form-control {
+	background-color: $gray;
+	border-color: $gray;
+
+	&:focus {
+		background-color: darken($gray, 4%);
+		border-color: darken($gray, 4%);
+	}
+}
+
+.widget.hours-widget {
+	ul {
+		li {
+			padding-bottom:4px;
+			margin-bottom:4px;
+			border-bottom:1px dotted rgba(255, 255, 255, 0.2);
+			em {
+				float:right;
+			}
+
+			&:after {
+				content: '';
+				display: table;
+				clear:both;
+			}
+		}
+
+	}
+}
+
+.btn-rounded {
+	border-radius:18px !important;
+}
+
+#map-gym {
+	border-top:2px solid $gray2;
+	height:250px;
+	background-color: $dark;
+
+	@media (min-width: $minmqsm) {
+		height: 330px;
+	}
+
+	@media (min-width: $minmqmd) {
+		height: 400px;
+	}
+
+	address {
+		line-height:1.7;
+		padding: 10px 5px 2px;
+		margin:0;
+	}
+}

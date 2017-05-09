@@ -1,0 +1,106 @@
+/* Homepages - Index Cafe 2 */
+@import '../mixins';
+@import '../variables';
+
+$first-color: #607D8B;
+$second-color: #37474F;
+
+.container-fluid {
+	@media (min-width: $minmqlg) {
+		max-width: 1070px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left:30px;
+		padding-right:30px;
+	}
+}
+
+.slider-container-onepage4 {
+	background-color: #111;
+	height: 100vh;
+
+	.tp-caption {
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}
+
+.section {
+	padding: 55px 0 40px;
+
+	&#contact {
+		padding-bottom:65px;
+	}
+
+	&#pricing {
+		padding-bottom:25px;
+	}
+
+	&#home {
+		padding:0;
+	}
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight:400;
+	color: $first-color;
+}
+
+.section-title {
+	font-size:30px;
+	font-weight: 300;
+	margin-bottom:35px;
+	color: #222;
+
+	@media (min-width: $minmqxs) {
+		font-size:36px;
+	}
+
+	@media (min-width: $minmqsm) {
+		font-size:44px;
+		margin-bottom:45px;
+	}
+
+	@media (min-width: $minmqmd) {
+		font-size:52px;
+		margin-bottom:60px;
+	}
+}
+
+.testimonials-container {
+	background-color: #f1f1f1;
+	border: 1px solid #e1e1e1;
+	padding: 25px 15px;
+
+	.testimonial {
+		background-color: transparent;
+		padding-top:0;
+		padding-bottom:0;
+	}
+
+	.owl-dots {
+		margin-top:10px;
+
+		.owl-dot:not(.active) {
+			background-color: #999;
+			border-color: #999;
+		}
+	}
+}
+
+.more-btn-section {
+	background-color: $dark;
+	max-width:340px;
+	margin: 0 auto 35px;
+
+		.btn {
+			display:block;
+			width:100%;
+			padding-top:15px;
+			padding-bottom:15px;
+			font-weight:400;
+			font-size:15px;
+			text-align:center;
+		}
+}

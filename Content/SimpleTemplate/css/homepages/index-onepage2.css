@@ -1,0 +1,224 @@
+/* Homepages - Index Cafe 2 */
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.sidebar .widget .widget-title,
+.footer .widget .widget-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+
+h1, .h1 {
+  font-size: 34px;
+}
+
+h2, .h2 {
+  font-size: 30px;
+}
+
+h3, .h3 {
+  font-size: 26px;
+}
+
+h4, .h4 {
+  font-size: 22px;
+}
+
+.portfolio-item .portfolio-title {
+  font-size: 16px;
+}
+
+.entry .entry-title {
+  font-weight: 400;
+}
+
+.count-title {
+  font-size: 16px;
+}
+
+.callout h3 {
+  font-size: 20px;
+}
+
+.callout h3 strong {
+  font-weight: 600;
+}
+
+.slider-container-onepage2 {
+  background-color: #171717;
+  height: 100vh;
+}
+
+.slider-container-onepage2 .tp-caption strong {
+  font-weight: 700 !important;
+}
+
+.section {
+  padding: 100px 0 100px;
+}
+
+.section#home {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.section-edge {
+  position: relative;
+}
+
+.section-edge::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='140' width='2800' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,0 2800,140 2800,0'%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: 140px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  bottom: -140px;
+}
+
+.section-edge.top-edge {
+  position: relative;
+}
+
+.section-edge.top-edge::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='140' width='2800' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,140 2800,140 0,0'%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: 140px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  bottom: 0;
+}
+
+.section-edge.bg-gray {
+  position: relative;
+}
+
+.section-edge.bg-gray::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='140' width='2800' fill='rgb(240,240,240)' fill-opacity='1'%3E%3Cpolygon points='0,0 2800,140 2800,0'%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: 140px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  bottom: -140px;
+}
+
+.section-edge.bg-gray.top-edge {
+  position: relative;
+}
+
+.section-edge.bg-gray.top-edge::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='140' width='2800' fill='rgb(240,240,240)' fill-opacity='1'%3E%3Cpolygon points='0,140 2800,140 0,0'%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: 140px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  bottom: 0;
+}
+
+.section-edge.section {
+  padding-bottom: 40px;
+}
+
+.section-edge.section#about {
+  padding-bottom: 30px;
+}
+
+.section-edge + .section {
+  padding-top: 160px;
+}
+
+.section-edge + .footer {
+  padding-top: 100px;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 35px;
+}
+
+@media (min-width: 481px) {
+  .section-title {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 44px;
+    margin-bottom: 45px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-title {
+    font-size: 52px;
+    margin-bottom: 60px;
+  }
+}
+
+.testimonials-container {
+  background-color: #f6f6fa;
+  border: 1px solid #eaeaea;
+  padding: 25px 15px;
+}
+
+.testimonials-container .testimonial {
+  background-color: transparent;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.testimonials-container .owl-dots {
+  margin-top: 10px;
+}
+
+.testimonials-container .owl-dots .owl-dot:not(.active) {
+  background-color: #999;
+  border-color: #999;
+}
+
+.more-btn-section {
+  background-color: #171717;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.more-btn-section .btn {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 300;
+  font-size: 15px;
+  text-align: center;
+}
+
+.bg-gray .contact-box {
+  background-color: #f0f0f0;
+}
+
+.bg-gray .contact-box h3 {
+  border-color: #ddd;
+}

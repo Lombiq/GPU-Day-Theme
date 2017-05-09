@@ -1,0 +1,119 @@
+/* Homepages - Index Agency 5 */
+.slider-container-agency5 {
+  background-color: #171717;
+  height: 100vh;
+}
+
+.slider-container-agency5 .tp-caption strong {
+  font-weight: 700 !important;
+}
+
+.portfolio-item {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1200px) {
+  .man-jump2-img {
+    margin-top: -70px;
+    margin-left: -30px;
+  }
+}
+
+.testimonial blockquote cite {
+  margin-top: 9px;
+}
+
+.agency-contact-edge {
+  padding-top: 110px;
+  padding-bottom: 120px;
+  position: relative;
+  position: relative;
+}
+
+.agency-contact-edge::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='140' width='2800' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,0 2800,140 2800,0'%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: 140px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
+
+.agency-contact-edge::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='140' width='2800' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,140 2800,140 2800,0'%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: 140px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  bottom: 0;
+}
+
+@media (min-width: 1200px) {
+  .agency-contact-edge {
+    padding-top: 140px;
+  }
+}
+
+.agency-testimonials-edge {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  position: relative;
+  position: relative;
+}
+
+.agency-testimonials-edge::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='140' width='2800' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,0 2800,140 2800,0'%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: 140px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
+
+.agency-testimonials-edge::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='140' width='2800' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,140 2800,140 2800,0'%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: 140px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  bottom: 0;
+}
+
+.agency-counter-edge {
+  padding-top: 140px;
+  position: relative;
+}
+
+.agency-counter-edge::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='140' width='2800' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,0 2800,140 2800,0'%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: 140px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
