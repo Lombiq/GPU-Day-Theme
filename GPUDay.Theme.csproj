@@ -1092,7 +1092,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Views\Header.liquid" />
     <Content Include="Views\Content-AboutGPUDay.Detail.liquid">
       <SubType>Designer</SubType>
     </Content>
@@ -1114,6 +1113,7 @@
     <Content Include="Views\Fields.ContentPicker-Talk-TalkPart-Speaker.liquid" />
     <Content Include="Views\Widget-Name-FirstDayTalks.liquid" />
     <Content Include="Views\Widget-Name-SecondDayTalks.liquid" />
+    <Content Include="Views\Layout.liquid" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\Web.config" />
