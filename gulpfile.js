@@ -14,8 +14,8 @@ var plugins = require("gulp-load-plugins")({
 // JS compilation
 gulp.task("js-min-plugins", function () {
     return gulp.src([
-        "Content/SimpleTemplate/js/modernizr.js",
-        "Content/SimpleTemplate/js/plugins/owl.carousel.min.js"])
+        "NotDeployed/SimpleTemplate/js/modernizr.js",
+        "NotDeployed/SimpleTemplate/js/plugins/owl.carousel.min.js"])
         .pipe(plugins.concat("plugins.js"))
         .pipe(plugins.rename({ suffix: ".min" }))
         .pipe(plugins.uglify())
@@ -34,7 +34,7 @@ gulp.task("js-min-main", function () {
 // Concat + Minifiy Css Files and move to vendor folder
 gulp.task("css-min-plugins", function () {
     return gulp.src([
-        "Content/SimpleTemplate/css/plugins/vspacing.min.css"])
+        "NotDeployed/SimpleTemplate/css/plugins/vspacing.min.css"])
         .pipe(plugins.concat("plugins.css"))
         .pipe(plugins.rename({ suffix: ".min" }))
         .pipe(plugins.cssmin({ keepBreaks: true, keepSpecialComments: "*" }))
@@ -43,7 +43,7 @@ gulp.task("css-min-plugins", function () {
 
 // Sass
 gulp.task("sass-min-style", function () {
-    return gulp.src("Content/SimpleTemplate/sass/style.scss")
+    return gulp.src("NotDeployed/SimpleTemplate/sass/style.scss")
         .pipe(plugins.sass({ outputStyle: "expanded" })) // expanded - compressed - compact - nested
         .pipe(plugins.autoprefixer({
             browsers: ["last 2 versions", "ie 9"],
@@ -57,7 +57,7 @@ gulp.task("sass-min-style", function () {
 
 // Sass index-event file
 gulp.task("sass-index-event", function () {
-    return gulp.src("Content/SimpleTemplate/sass/homepages/index-event.scss")
+    return gulp.src("NotDeployed/SimpleTemplate/sass/homepages/index-event.scss")
         .pipe(plugins.sass({ outputStyle: "expanded" })) // expanded - compressed - compact - nested
         .pipe(plugins.autoprefixer({
             browsers: ["last 2 versions", "ie 9"],
