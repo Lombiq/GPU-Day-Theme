@@ -3,6 +3,9 @@
 {% StyleRequire "Bootstrap" %}
 {% ScriptRequire "jQuery" %}
 
+BASEURL
+{{ Model.WorkContext.CurrentSite.BaseUrl }}
+
 {% if Model.WorkContext.CurrentSite.BaseUrl == "https://gpuday.dotnest.com" %}
     {% Style "//dotneststatic.com/media/gpuday/MediaTheme/Styles/plugin.min.css" %}
     {% Style "//dotneststatic.com/media/gpuday/MediaTheme/Styles/style.min.css" %}
@@ -17,12 +20,6 @@
     {% Script "../Scripts/main.min.css" %}
 {% endif %}
 
-{% StyleRequire "Plugins" %}
-{% StyleRequire "Site" %}
-{% StyleRequire "Index-Event" %}
-
-{% ScriptRequire "Plugins" %}
-{% ScriptRequire "Main" %}
 <div id="page">
     <div id="main">
         <div id="content-wrapper">
