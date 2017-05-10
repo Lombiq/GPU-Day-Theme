@@ -1,12 +1,26 @@
 ﻿{% Style "http://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:300,300i,400,400i,600,600i,700,800" %}
 {% StyleRequire "FontAwesome" %}
 {% StyleRequire "Bootstrap" %}
+{% ScriptRequire "jQuery" %}
+
+{% if Model.WorkContext.CurrentSite.BaseUrl == "https://gpuday.dotnest.com" %}
+    {% Style "//dotneststatic.com/media/gpuday/MediaTheme/Styles/plugin.min.css" %}
+    {% Style "//dotneststatic.com/media/gpuday/MediaTheme/Styles/style.min.css" %}
+    {% Style "//dotneststatic.com/media/gpuday/MediaTheme/Styles/index-event.min.css" %}
+    {% Script "//dotneststatic.com/media/gpuday/MediaTheme/Scripts/plugins.min.js" %}
+    {% Script "//dotneststatic.com/media/gpuday/MediaTheme/Scripts/main.min.js" %}
+{% else %}
+    {% Style "../Styles/plugin.min.css" %}
+    {% Style "../Styles/style.min.css" %}
+    {% Style "../Styles/index-event.min.css" %}
+    {% Script "../Scripts/plugins.min.js" %}
+    {% Script "../Scripts/main.min.css" %}
+{% endif %}
 
 {% StyleRequire "Plugins" %}
 {% StyleRequire "Site" %}
 {% StyleRequire "Index-Event" %}
 
-{% ScriptRequire "jQuery" %}
 {% ScriptRequire "Plugins" %}
 {% ScriptRequire "Main" %}
 <div id="page">
