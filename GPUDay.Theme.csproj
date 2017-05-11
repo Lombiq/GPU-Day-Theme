@@ -6,12 +6,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{49662914-E643-4175-BDA6-653AEDE1D559}</ProjectGuid>
+    <ProjectGuid>{169085AE-4C26-4A32-B433-191C1A878EFA}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lombiq.PrettyGoodBootstrapBaseTheme</RootNamespace>
-    <AssemblyName>Lombiq.PrettyGoodBootstrapBaseTheme</AssemblyName>
+    <RootNamespace>GpuDay.Theme</RootNamespace>
+    <AssemblyName>GpuDay.Theme</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews Condition=" '$(BuildViews)' == 'true' ">true</MvcBuildViews>
     <FileUpgradeFlags>
@@ -1079,16 +1079,13 @@
       <Private>false</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\Orchard.Core.csproj">
-      <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
+      <Project>{169085AE-4C26-4A32-B433-191C1A878EFA}</Project>
       <Name>Orchard.Core</Name>
       <Private>false</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
