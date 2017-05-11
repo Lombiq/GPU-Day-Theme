@@ -30,6 +30,16 @@ gulp.task("js-min-main", function () {
         .pipe(gulp.dest("Scripts/"));
 });
 
+gulp.task("js-site-head-min", function () {
+    return gulp.src([
+        "Scripts/plugins.min.js",
+        "Scripts/main.min.js"])
+        .pipe(plugins.concat("site-head.js"))
+        .pipe(plugins.rename({ suffix: ".min" }))
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest("Scripts/"));
+});
+
 // Css
 // Concat + Minifiy Css Files and move to vendor folder
 gulp.task("css-min-plugins", function () {
@@ -68,10 +78,24 @@ gulp.task("sass-index-event", function () {
         .pipe(gulp.dest("Styles/"));
 });
 
+gulp.task("css-site-min", function () {
+    return gulp.src([
+        "Styles/plugins.min.css",
+        "Styles/style.min.css",
+        "Styles/index-event.min.css"])
+        .pipe(plugins.autoprefixer({
+            browsers: ["last 2 versions", "ie 9"]
+        }))
+        .pipe(plugins.concat("site.css"))
+        .pipe(plugins.rename({ suffix: ".min" }))
+        .pipe(plugins.cssmin({ keepBreaks: true, keepSpecialComments: "*" }))
+        .pipe(gulp.dest("Styles/"));
+});
 
 // Watcher task.
 gulp.task("watch", function () {
     watch("Scripts/main.js", batch(function (events, done) {
         gulp.start("js-min-main", done);
+        gulp.start("js-site-head-min", done);
     }));
 });
