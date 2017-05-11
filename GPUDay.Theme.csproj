@@ -95,6 +95,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\wigner-logo.png" />
     <Content Include="NotDeployed\SimpleTemplate\css\closedhand.cur" />
     <Content Include="NotDeployed\SimpleTemplate\css\font-awesome.css" />
     <Content Include="NotDeployed\SimpleTemplate\css\fotorama%402x.png" />
@@ -1060,7 +1061,6 @@
     <Content Include="NotDeployed\SimpleTemplate\php\index.php" />
     <Content Include="NotDeployed\SimpleTemplate\php\mail.php" />
     <Content Include="gulpfile.js" />
-    <Content Include="Images\wigner_logo.png" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\main.min.js" />
     <Content Include="Scripts\plugins.min.js" />
