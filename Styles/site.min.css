@@ -2536,8 +2536,6 @@ body.side-menu-body.reverse{padding-left:0;padding-right:280px}
 .sidebar.faqs-sidebar .widget .faqs-cat-list li:before{font-weight:600;content:counter(count-faqs);font-size:18px;color:#d7d7d7;margin-right:6px;vertical-align:middle}
 .sidebar.faqs-sidebar .widget .faqs-cat-list li a{color:#333;vertical-align:middle}
 .footer-bottom .copyright a,.sidebar.faqs-sidebar .widget .faqs-cat-list li a:focus,.sidebar.faqs-sidebar .widget .faqs-cat-list li a:hover{color:#0069b0}
-.footer,.footer a{color:#9a9a9a}
-.footer{background-color:#171717}
 .footer>.container,.footer>.container-fluid{padding-top:75px;padding-bottom:15px}
 .footer hr{margin:27px 0 21px;border-top-color:#3e3e3e}
 .footer a:focus,.footer a:hover{color:#fff}
@@ -2847,3 +2845,5 @@ h1,h2,h3,h4,h5,h6{font-weight:700}
 .contact-box h3,.form-control:focus{border-color:#e1e1e1}
 .form-control:focus{background-color:#e1e1e1}
 .contact-box{background-color:#f0f0f0}
+.footer,.footer a{color:#fff}
+.footer{background-color:transparent}
