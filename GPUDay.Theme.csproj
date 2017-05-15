@@ -1069,6 +1069,7 @@
     <Content Include="Styles\index-event.min.css" />
     <Content Include="Styles\plugins.min.css" />
     <Content Include="Styles\site.min.css" />
+    <Content Include="Styles\style.min.css" />
     <Content Include="Web.config" />
     <Content Include="Styles\Web.config" />
     <Content Include="Theme.txt" />
