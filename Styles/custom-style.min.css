@@ -1,2 +1,5 @@
 .footer,.footer a{color:#fff}
+.modal .modal-body,.modal .modal-body h3{font-family:"Times New Roman",Times,serif}
 .footer{background-color:transparent}
+.modal .modal-body{max-height:85vh;overflow-y:auto}
+.modal .modal-body sub,.modal .modal-body sup{font-family:Arial,Helvetica,sans-serif}

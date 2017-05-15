@@ -53,7 +53,7 @@ gulp.task("css-min-plugins", function () {
 
 // Sass
 gulp.task("sass-min-style", function () {
-    return gulp.src("NotDeployed/SimpleTemplate/sass/style.scss")
+    return gulp.src("Styles/style.scss")
         .pipe(plugins.sass({ outputStyle: "expanded" })) // expanded - compressed - compact - nested
         .pipe(plugins.autoprefixer({
             browsers: ["last 2 versions", "ie 9"],
@@ -115,6 +115,11 @@ gulp.task("watch", function () {
 
     watch("Styles/custom-style.scss", batch(function (events, done) {
         gulp.start("sass-custom-style", done);
+        gulp.start("css-site-min", done);
+    }));
+
+    watch("Styles/style.scss", batch(function (events, done) {
+        gulp.start("sass-min-style", done);
         gulp.start("css-site-min", done);
     }));
 });

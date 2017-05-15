@@ -1069,7 +1069,6 @@
     <Content Include="Styles\index-event.min.css" />
     <Content Include="Styles\plugins.min.css" />
     <Content Include="Styles\site.min.css" />
-    <Content Include="Styles\style.min.css" />
     <Content Include="Web.config" />
     <Content Include="Styles\Web.config" />
     <Content Include="Theme.txt" />
@@ -1098,6 +1097,7 @@
     <Content Include="Views\Content-GoogleMaps.Detail.liquid" />
     <Content Include="Views\Content-ContactUs.Detail.liquid" />
     <Content Include="Styles\custom-style.scss" />
+    <Content Include="Styles\style.scss" />
     <None Include="Views\Content-GPUDay.Detail.liquid">
       <SubType>Designer</SubType>
     </None>
