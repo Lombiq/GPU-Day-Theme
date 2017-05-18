@@ -95,6 +95,32 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\favicons\android-icon-144x144.png" />
+    <Content Include="Images\favicons\android-icon-192x192.png" />
+    <Content Include="Images\favicons\android-icon-36x36.png" />
+    <Content Include="Images\favicons\android-icon-48x48.png" />
+    <Content Include="Images\favicons\android-icon-72x72.png" />
+    <Content Include="Images\favicons\android-icon-96x96.png" />
+    <Content Include="Images\favicons\apple-icon-114x114.png" />
+    <Content Include="Images\favicons\apple-icon-120x120.png" />
+    <Content Include="Images\favicons\apple-icon-144x144.png" />
+    <Content Include="Images\favicons\apple-icon-152x152.png" />
+    <Content Include="Images\favicons\apple-icon-180x180.png" />
+    <Content Include="Images\favicons\apple-icon-57x57.png" />
+    <Content Include="Images\favicons\apple-icon-60x60.png" />
+    <Content Include="Images\favicons\apple-icon-72x72.png" />
+    <Content Include="Images\favicons\apple-icon-76x76.png" />
+    <Content Include="Images\favicons\apple-icon-precomposed.png" />
+    <Content Include="Images\favicons\apple-icon.png" />
+    <Content Include="Images\favicons\browserconfig.xml" />
+    <Content Include="Images\favicons\favicon-16x16.png" />
+    <Content Include="Images\favicons\favicon-32x32.png" />
+    <Content Include="Images\favicons\favicon-96x96.png" />
+    <Content Include="Images\favicons\ms-icon-144x144.png" />
+    <Content Include="Images\favicons\ms-icon-150x150.png" />
+    <Content Include="Images\favicons\ms-icon-310x310.png" />
+    <Content Include="Images\favicons\ms-icon-70x70.png" />
     <Content Include="Images\wigner-logo.png" />
     <Content Include="NotDeployed\SimpleTemplate\css\closedhand.cur" />
     <Content Include="NotDeployed\SimpleTemplate\css\font-awesome.css" />
@@ -1099,6 +1125,7 @@
     <Content Include="Views\Content-ContactUs.Detail.liquid" />
     <Content Include="Styles\custom-style.scss" />
     <Content Include="Styles\style.scss" />
+    <Content Include="Images\favicons\manifest.json" />
     <None Include="Views\Content-GPUDay.Detail.liquid">
       <SubType>Designer</SubType>
     </None>
