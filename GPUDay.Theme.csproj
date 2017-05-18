@@ -1116,6 +1116,7 @@
     <Content Include="Views\Widget-Name-FirstDayTalks.liquid" />
     <Content Include="Views\Widget-Name-SecondDayTalks.liquid" />
     <Content Include="Views\Layout.liquid" />
+    <Content Include="Views\Metas.liquid" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\Web.config" />
