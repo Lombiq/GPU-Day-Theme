@@ -43,3 +43,20 @@
 {
     border-bottom: none;
 }
+
+.credits
+{
+    background-color: #121212;
+    text-align: right;
+
+    .poweredby
+    {
+        margin-right: 10%;
+        color: #fff;
+
+        a
+        {
+            color: #0069b0;
+        }
+    }
+}
