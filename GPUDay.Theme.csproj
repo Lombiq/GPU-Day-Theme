@@ -1133,15 +1133,12 @@
     <Content Include="Views\Content-Speaker.Summary.liquid" />
     <Content Include="Views\Fields.Common.Text-ContactUs-ContactUsPart-ContactBox.liquid" />
     <Content Include="Views\Fields.Common.Text-ContactUs-ContactUsPart-TravelingByPublicTransport.liquid" />
-    <Content Include="Views\Widget-Name-Sponsors.liquid" />
     <Content Include="Views\User.liquid" />
-    <Content Include="Views\Widget-Name-Speakers.liquid" />
     <Content Include="Views\Widget-Name-GPUDays.liquid" />
     <Content Include="Views\Content-GPUDay.Summary.liquid" />
     <Content Include="Views\Content-Talk.Summary.liquid" />
     <Content Include="Views\Fields.ContentPicker-Talk-TalkPart-Speaker.liquid" />
-    <Content Include="Views\Widget-Name-FirstDayTalks.liquid" />
-    <Content Include="Views\Widget-Name-SecondDayTalks.liquid" />
+    <Content Include="Views\Widget-ProjectionWidget.liquid" />
     <Content Include="Views\Layout.liquid" />
     <Content Include="Views\Metas.liquid" />
   </ItemGroup>
