@@ -1365,7 +1365,48 @@ body.side-menu-body.reverse{padding-left:0;padding-right:280px}
 .header4.sticky-header.fixed .menu-toggle{margin-top:11px;margin-bottom:11px}
 .header4.sticky-header.fixed .menu-toggle.jicon{margin-top:13px;margin-bottom:13px}
 }
-#map{height:340px;background-color:#171717;position:relative;margin-bottom:50px}
+.member{margin-bottom:30px}
+.member .member-top{position:relative;background-color:#0069b0;margin-bottom:20px}
+.member .member-top figure{position:relative;z-index:1;transition:all .4s}
+.member .member-top figure img{display:block;width:100%;height:auto}
+.member .member-top .social-icons{position:absolute;bottom:0;left:0;z-index:0;padding:7px 15px}
+#map,.testimonials-inline .testimonial{position:relative}
+.member .member-top .social-icons label{color:#f2f2f2;font-weight:400;margin-right:4px;font-size:12px}
+.member .member-top .social-icons .social-icon{color:#eee;padding:3px 2px}
+.member .member-top .social-icons .social-icon:focus,.member .member-top .social-icons .social-icon:hover{color:#c00f3c}
+.member .member-title{font-size:17px;margin-bottom:15px}
+.member .member-title small{float:right;display:inline-block;font-size:70%;background-color:#f4f4fa;color:#0069b0;padding:2px 3px 3px;font-weight:600}
+.member .member-title:after{content:'';clear:both;display:table}
+.member.text-center .member-top .social-icons{right:0}
+.member.text-center .member-title{margin-bottom:10px}
+.member.text-center .member-title small{float:none;display:block;margin-top:8px;background-color:transparent}
+.member span{color:#0069b0}
+.member:hover .member-top figure{-ms-transform:translateY(-44px);transform:translateY(-44px)}
+.owl-carousel .member{margin-bottom:0}
+.team-carousel-wrapper{overflow:hidden}
+.team-carousel-wrapper .owl-stage-outer{overflow:visible}
+.testimonials-inline .testimonial blockquote{background-color:#f0f0f0;border-color:#ebebeb;padding:22px 18px 18px}
+.bg-gray .testimonials-inline .testimonial blockquote{background-color:#e6e6e6;border-color:#dedede}
+.testimonials-inline .testimonial blockquote figure{float:left;display:inline-block;max-width:66px;margin-bottom:10px;border-radius:50%;border:3px solid rgba(0,0,0,.15);margin-right:19px}
+.testimonials-inline .testimonial blockquote figure img{display:block;width:100;height:auto;border-radius:50%}
+.testimonials-inline .testimonial.transparent,.testimonials-inline .testimonial.transparent blockquote{background-color:transparent!important;border:none!important;color:inherit}
+.testimonials-inline .testimonial blockquote cite,.testimonials-inline .testimonial blockquote p{margin-left:85px}
+@media (max-width:767px){.testimonials-inline .testimonial blockquote figure{float:none}
+.testimonials-inline .testimonial blockquote cite,.testimonials-inline .testimonial blockquote p{margin-left:0}
+}
+.testimonials-inline .testimonial blockquote:after{content:'';clear:both;display:table}
+.testimonials-inline .testimonial.transparent blockquote{padding:0}
+.testimonials-inline .testimonial.transparent blockquote cite{color:inherit}
+.testimonials-inline .owl-nav{margin-top:15px}
+.sync-carousel.owl-carousel .owl-item img{border:1px solid transparent}
+.sync-carousel.owl-carousel .owl-item.center img{border-color:#0069b0}
+.aboutme-section-container{overflow:hidden}
+.aboutme-section{margin-bottom:35px}
+@media (min-width:768px){.aboutme-section{margin-bottom:45px}
+}
+.aboutme-section p:last-child{margin-bottom:0}
+.aboutme-img{display:block;max-width:100%;height:auto;margin:-10px auto 0}
+#map{height:340px;background-color:#171717;margin-bottom:50px}
 @media (min-width:768px){#map{height:420px;margin-bottom:60px}
 #map.vertical{height:490px;margin-bottom:0}
 }
