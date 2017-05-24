@@ -1976,6 +1976,6 @@ h1,h2,h3,h4,h5,h6{font-weight:700}
 .footer{background-color:transparent}
 .modal .modal-body{max-height:85vh;overflow-y:auto}
 .modal .modal-body sub,.modal .modal-body sup{font-family:Arial,Helvetica,sans-serif}
-.main .table{margin-bottom:0;min-width:0;display:table}
-.main .table>.row{margin-right:0;margin-left:0}
+.main .schedule{margin-bottom:0;min-width:0;display:table}
+.main .schedule>.row{margin-right:0;margin-left:0}
 .last .event-part{border-bottom:none}
