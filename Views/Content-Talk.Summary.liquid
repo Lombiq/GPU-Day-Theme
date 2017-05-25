@@ -1,8 +1,9 @@
 ﻿<div class="row">
     <div class="col-sm-12">
         <div class="event-part">
+            
             <div class="row">
-                <div class="event-time col-sm-2">
+                <div class="event-time col-sm-3">
                     {% assign startOfTalkMinute = Model.ContentItem.TalkPart.StartOfTalk.DateTime | Date: "%m" %}
                     {% if startOfTalkMinute.size == 1 %}
                     {{ Model.ContentItem.TalkPart.StartOfTalk.DateTime | Date: "%H:%0m" }}
@@ -17,7 +18,7 @@
                     {{ Model.ContentItem.TalkPart.EndOfTalk.DateTime | Date: "%H:%m" }}
                     {% endif %}
                 </div>
-                <div class="col-sm-10">
+                <div class="col-sm-9">
                     <strong>
                         {% if Model.ContentItem.TalkPart.AbstractText.Value != null %}
                         <a href="#" data-toggle="modal" data-target=".bs-modal-lg-{{ Model.ContentItem.TalkPart.Id }}">{{ Model.ContentItem.TitlePart.Title }}</a>
@@ -35,7 +36,7 @@
                     <a href="{{ Model.ContentItem.TalkPart.Slides.FirstMediaUrl }}" target="_blank"><i class="fa fa-file-o" aria-hidden="true"></i></a>
                     {% endif %}
                 </div>
-                <div class="event-meta col-sm-12 col-sm-offset-2">
+                <div class="event-meta col-sm-12 col-sm-offset-3">
                     <div class="event-meta-left">
                         {{ Model.Content.Items[1] | Display }}
                     </div>
