@@ -29,7 +29,7 @@
                     <a href="{{ Model.ContentItem.TalkPart.Abstract.FirstMediaUrl }}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
                     {% endif %}
                     {% if Model.ContentItem.TalkPart.Recording.Value != null %}
-                    <a href="{{ Model.ContentItem.TalkPart.Recording.Value }}" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    <a href="#" id="video" data-id="{{ Model.ContentItem.TalkPart.Recording.Value }}" data-toggle="modal" data-target=".bs-modal-lg-{{ Model.ContentItem.TalkPart.Id }}-video"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                     {% endif %}
                     {% if Model.ContentItem.TalkPart.Slides.FirstMediaUrl != null %}
                     <a href="{{ Model.ContentItem.TalkPart.Slides.FirstMediaUrl }}" target="_blank"><i class="fa fa-file-o" aria-hidden="true"></i></a>
@@ -52,6 +52,21 @@
                 </div>
                 <div class="modal-body">
                     {{ Model.ContentItem.TalkPart.AbstractText.Value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bs-modal-lg-{{ Model.ContentItem.TalkPart.Id }}-video embedYouTubeModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title">Recording</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
