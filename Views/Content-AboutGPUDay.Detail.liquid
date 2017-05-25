@@ -1,9 +1,11 @@
 ﻿<div class="bg-gray2 border pt60 pb45">
     <div class="container">
         <div class="row">
-            <h2 class="title dark mb25">
-                About the <span class="light highlight dark">GPU Day</span>
-            </h2>
+            <div class ="col-sm-6">
+                <h2 class="title dark mb25">
+                    About the <span class="light highlight dark">GPU Day</span>
+                </h2>
+            </div>
 
             {% if Model.ContentItem.AboutGPUDayPart.EmbeddedVideoURL.Value == null or if Model.ContentItem.AboutGPUDayPart.PromotionImage.FirstMediaUrl == null %}
             <div class="col-sm-12">
