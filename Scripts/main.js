@@ -89,9 +89,7 @@
             });
         },
         owlCarousels: function () {
-
-            /* Clients/Partners Carousel */
-            $(".clients-carousel.owl-carousel").owlCarousel({
+            var options = {
                 loop: true,
                 margin: 20,
                 responsiveClass: true,
@@ -117,8 +115,16 @@
                         items: 5
                     }
                 }
-            });
+            };
 
+            var clients = $(".clients-carousel .client");
+
+            if (clients.length < 5) {
+                options.loop = false;
+                options.center = true;
+            }
+            
+            $(".clients-carousel.owl-carousel").owlCarousel(options);
         },
         scrollBtnAppear: function () {
             if ($(window).scrollTop() >= 400) {
