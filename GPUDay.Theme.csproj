@@ -1141,6 +1141,7 @@
     <Content Include="Views\Widget-ProjectionWidget.liquid" />
     <Content Include="Views\Layout.liquid" />
     <Content Include="Views\Metas.liquid" />
+    <Content Include="Views\Fields.ContentPicker-Talk-TalkPart-Cospeaker.liquid" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\Web.config" />
