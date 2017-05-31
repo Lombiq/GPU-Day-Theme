@@ -37,7 +37,7 @@
                 </div>
                 <div class="event-meta col-sm-12 col-sm-offset-3">
                     <div class="event-meta-left">
-                        {% if Model.Content.Items[0] != null %}
+                        {% if Model.ContentItem.TalkPart.Speaker.ContentItems.size > 0 %}
                         {{ Model.Content.Items[0] | Display }}
                         {% endif %}
                     </div>
