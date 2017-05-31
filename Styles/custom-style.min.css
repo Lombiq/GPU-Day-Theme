@@ -7,7 +7,7 @@ body{font-size:15px}
 .main .schedule{margin-bottom:0;min-width:0;display:table}
 .main .schedule>.row{margin-right:0;margin-left:0}
 .last .event-part{border-bottom:none}
-.event-part{min-height:8vh}
+.event-part{min-height:9vh}
 .credits{background-color:#121212;text-align:right}
 .credits .poweredby{margin-right:10%;color:#fff}
 .credits .poweredby a{color:#0069b0}
