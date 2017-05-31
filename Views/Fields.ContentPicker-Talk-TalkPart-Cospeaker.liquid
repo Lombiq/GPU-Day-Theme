@@ -1,4 +1,2 @@
-﻿<div class="event-speaker">
-    {% assign speakerName = Model.ContentField.ContentItems[0].TitlePart.Title %}
-    <a href="#{{ speakerName | Replace: " ","_" }}">{{ speakerName }}</a>
-</div>
+﻿{% assign speakerName = Model.ContentField.ContentItems[0].TitlePart.Title %}
+<a href="#{{ speakerName | Replace: " ","_" }}">{{ speakerName }}</a>

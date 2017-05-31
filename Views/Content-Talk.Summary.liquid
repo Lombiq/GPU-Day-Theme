@@ -37,12 +37,14 @@
                 </div>
                 <div class="event-meta col-sm-12 col-sm-offset-3">
                     <div class="event-meta-left">
-                        {% if Model.ContentItem.TalkPart.Speaker.ContentItems.size > 0 %}
-                        {{ Model.Content.Items[0] | Display }}
-                        {% endif %}
-                        {% if Model.ContentItem.TalkPart.Cospeaker.ContentItems.size > 0 %}
-                        , {{ Model.Content.Items[1] | Display }}
-                        {% endif %}
+                        <div class="event-speaker">
+                            {% if Model.ContentItem.TalkPart.Speaker.ContentItems.size > 0 %}
+                            {{ Model.Content.Items[0] | Display }}
+                            {% endif %}
+                            {% if Model.ContentItem.TalkPart.Cospeaker.ContentItems.size > 0 %}
+                            , {{ Model.Content.Items[1] | Display }}
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
