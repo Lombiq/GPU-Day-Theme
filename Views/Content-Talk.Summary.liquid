@@ -1,7 +1,6 @@
 ﻿<div class="row">
     <div class="col-sm-12">
         <div class="event-part">
-            
             <div class="row">
                 <div class="event-time col-sm-3">
                     {% assign startOfTalkMinute = Model.ContentItem.TalkPart.StartOfTalk.DateTime | Date: "%m" %}
@@ -38,7 +37,7 @@
                 </div>
                 <div class="event-meta col-sm-12 col-sm-offset-3">
                     <div class="event-meta-left">
-                        {{ Model.Content.Items[1] | Display }}
+                        {{ Model.Content.Items[0] | Display }}
                     </div>
                 </div>
             </div>
