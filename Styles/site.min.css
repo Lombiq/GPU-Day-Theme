@@ -1961,7 +1961,7 @@ h1,h2,h3,h4,h5,h6{font-weight:700}
 .nav-pills-gray.nav-pills>li:first-child>a{border-left:none}
 .nav-pills-gray.nav-pills>li.active>a,.nav-pills-gray.nav-pills>li.active>a:focus,.nav-pills-gray.nav-pills>li.active>a:hover{color:#111;background-color:#d7d7d7}
 .nav-pills-gray.nav-pills>li.active>a:after,.nav-pills-gray.nav-pills>li.active>a:focus:after,.nav-pills-gray.nav-pills>li.active>a:hover:after{background-color:#fff}
-.event-part{padding-bottom:15px;margin-bottom:20px;border-bottom:1px dashed #dedede}
+.event-part{padding-bottom:15px;margin-bottom:20px;border-bottom:1px dashed #dedede;min-height:8vh}
 .event-part h3,.event-part h4{margin-bottom:5px}
 .event-part .event-time{font-weight:600;font-style:italic;color:#666;margin-bottom:5px}
 .event-part .event-meta{color:#7e7e7e;line-height:1.5}

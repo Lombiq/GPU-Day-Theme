@@ -29,7 +29,7 @@
 .main .schedule
 {
     margin-bottom: 0px;
-    min-width: 0;
+    min-width: 0px;
     display: table;
 
     > .row
@@ -42,6 +42,11 @@
 .last .event-part
 {
     border-bottom: none;
+}
+
+.event-part
+{
+    min-height: 8vh;
 }
 
 .credits
