@@ -1,4 +1,10 @@
-﻿.footer 
+﻿body
+{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+}
+
+.footer 
 {
     background-color: transparent;
     color: white;
@@ -13,7 +19,6 @@
 {
     max-height: 85vh;
     overflow-y: auto;
-    font-family: "Times New Roman", Times, serif;
 
     h3
     {
