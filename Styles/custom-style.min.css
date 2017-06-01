@@ -1,4 +1,4 @@
-.modal .modal-body h3,body{font-family:"Times New Roman",Times,serif}
+.modal .modal-body,.modal .modal-body h3{font-family:"Times New Roman",Times,serif}
 .footer,.footer a{color:#fff}
 body{font-size:15px}
 .footer{background-color:transparent}
