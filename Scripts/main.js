@@ -32,7 +32,7 @@
         convertEmailAddresses: function () {
             $(".speakerEmail").on("click", function () {
                 var obfuscatedMailAddress = $(this).attr("href");
-                var mailAddress = obfuscatedMailAddress.replace("(_dot_)", "@");
+                var mailAddress = obfuscatedMailAddress.replace("(_at_)", "@");
                 $(this).attr("href", mailAddress);
             });
         },
