@@ -21,12 +21,20 @@
             this.menuOnClick();
             this.scrollToTop();
             this.scrollAnimations();
+            this.convertEmailAddresses();
 
             /* Call function if Owl Carousel plugin is included */
             if ($.fn.owlCarousel) {
                 this.owlCarousels();
             }
 
+        },
+        convertEmailAddresses: function () {
+            $(".speakerEmail").on("click", function () {
+                var obfuscatedMailAddress = $(this).attr("href");
+                var mailAddress = obfuscatedMailAddress.replace("(_dot_)", "@");
+                $(this).attr("href", mailAddress);
+            });
         },
         checkMobile: function () {
             /* Mobile Detect*/
