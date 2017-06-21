@@ -32,6 +32,9 @@
                     {% if Model.ContentItem.GPUDayPart.IndicoRegistrationFormURL.Value != null %}
                     <a href="{{ Model.ContentItem.GPUDayPart.IndicoRegistrationFormURL.Value }}" target="_blank" class="btn btn-custom btn-lg min-width-lg">Register</a>
                     {% endif %}
+                    {% if Model.ContentItem.GPUDayPart.DetailsButton.Value == "True" %}
+                    <a id="scheduleButton" href="#schedule" class="btn btn-custom btn-lg min-width-lg">Schedule</a>
+                    {% endif %}
                 </div>
             </div>
             <div class="mb60"></div>

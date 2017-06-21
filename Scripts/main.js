@@ -19,6 +19,7 @@
             this.stopYouTubeVideoOnModalHidden();
             this.mobileMenuDropdownFix();
             this.menuOnClick();
+            this.scrollToSchedule();
             this.scrollToTop();
             this.scrollAnimations();
             this.convertEmailAddresses();
@@ -145,6 +146,14 @@
             $("#scroll-top").on("click", function (e) {
                 $("html, body").animate({
                     "scrollTop": 0
+                }, 1200);
+                e.preventDefault();
+            });
+        },
+        scrollToSchedule: function () {
+            $("#scheduleButton").on("click", function (e) {
+                $("html, body").animate({
+                    "scrollTop": $("#schedule").offset().top
                 }, 1200);
                 e.preventDefault();
             });
