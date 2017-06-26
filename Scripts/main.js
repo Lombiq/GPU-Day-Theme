@@ -45,7 +45,7 @@
                 this.mobile = false;
             }
         },
-        convertYouTubeUrlToEmbedMarkup: function() {
+        convertYouTubeUrlToEmbedMarkup: function () {
             $(".event-part").find("#video").on("click", function () {
                 var youTubeUrl = $(this).data("id");
                 var modalWindowId = $(this).data("target");
@@ -132,7 +132,7 @@
                 options.loop = false;
                 options.center = true;
             }
-            
+
             $(".clients-carousel.owl-carousel").owlCarousel(options);
         },
         scrollBtnAppear: function () {

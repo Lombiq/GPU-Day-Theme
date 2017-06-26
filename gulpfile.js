@@ -23,8 +23,7 @@ gulp.task("js-min-plugins", function () {
 });
 
 gulp.task("js-min-main", function () {
-    return gulp.src([
-        "Scripts/main.js"])
+    return gulp.src("Scripts/main.js")
         .pipe(plugins.rename({ suffix: ".min" }))
         .pipe(plugins.uglify())
         .pipe(gulp.dest("Scripts/"));
@@ -43,8 +42,7 @@ gulp.task("js-site-head-min", function () {
 // Css
 // Concat + Minifiy Css Files and move to vendor folder
 gulp.task("css-min-plugins", function () {
-    return gulp.src([
-        "NotDeployed/SimpleTemplate/css/plugins/vspacing.min.css"])
+    return gulp.src("NotDeployed/SimpleTemplate/css/plugins/vspacing.min.css")
         .pipe(plugins.concat("plugins.css"))
         .pipe(plugins.rename({ suffix: ".min" }))
         .pipe(plugins.cssmin({ keepBreaks: true, keepSpecialComments: "*" }))

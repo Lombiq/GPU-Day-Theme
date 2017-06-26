@@ -8,15 +8,17 @@
             </figure>
             <div class="social-icons">
                 <label>Contact:</label>
+
                 {% if Model.ContentItem.SpeakerPart.SpeakerEmailAddress.Value != null %}
-                    <a href="mailto:{{ Model.ContentItem.SpeakerPart.SpeakerEmailAddress.Value | Replace: "@", "(_at_)" }}" target="_top" class="social-icon speakerEmail" title="E-mail"><i class="fa fa-envelope"></i></a>
+                <a href="mailto:{{ Model.ContentItem.SpeakerPart.SpeakerEmailAddress.Value | Replace: "@", "(_at_)" }}" target="_top" class="social-icon speakerEmail" title="E-mail"><i class="fa fa-envelope"></i></a>
                 {% endif %}
                 {% if Model.ContentItem.SpeakerPart.SpeakerWebsite.Value != null %}
-                    <a href="{{ Model.ContentItem.SpeakerPart.SpeakerWebsite.Value }}" target="_blank" class="social-icon" title="Website"><i class="fa fa-user"></i></a>
+                <a href="{{ Model.ContentItem.SpeakerPart.SpeakerWebsite.Value }}" target="_blank" class="social-icon" title="Website"><i class="fa fa-user"></i></a>
                 {% endif %}
                 {% if Model.ContentItem.SpeakerPart.SpeakerLinkedInProfile.Value != null %}
-                    <a href="{{ Model.ContentItem.SpeakerPart.SpeakerLinkedInProfile.Value }}" target="_blank" class="social-icon" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                <a href="{{ Model.ContentItem.SpeakerPart.SpeakerLinkedInProfile.Value }}" target="_blank" class="social-icon" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
                 {% endif %}
+
             </div>
         </div>
         <h3 class="member-title">{{ speakerName }} <small>{{ Model.ContentItem.SpeakerPart.SpeakerCompany.Value }}</small></h3>
