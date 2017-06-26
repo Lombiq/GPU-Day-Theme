@@ -19,11 +19,14 @@
                         <span class="countdown-row countdown-show1">
                             <span class="countdown-section">
                                 <span class="countdown-amount">
+                                    {% assign year = Model.ContentItem.GPUDayPart.FromDate.DateTime | Date: "%y" %}
+                                    {% if year != 1 %}
                                     {% assign GPUDayMonth = Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "%M" %}
                                     {% if GPUDayMonth.size == 1 %}
                                     {{ Model.ContentItem.GPUDayPart.FromDate.DateTime | Date: "%d" }}{{ Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "-%d 0%M 20%y" }}
                                     {% else %}
                                     {{ Model.ContentItem.GPUDayPart.FromDate.DateTime | Date: "%d" }}{{ Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "-%d %M 20%y" }}
+                                    {% endif %}
                                     {% endif %}
                                 </span>
                             </span>
