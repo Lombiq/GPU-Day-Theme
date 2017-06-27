@@ -3,21 +3,30 @@
         <div class="fullscreen vertical-center bg-image overlay-container text-center"
              style="background-image:url({{ Model.ContentItem.GPUDayPart.HeaderPhoto.FirstMediaUrl }})">
             <div class="overlay dark"></div>
-            <img src="https://dotneststatic.com/media/gpuday/MediaTheme/Images/wigner_logo.png" class="overlay-container"/>
+            <div class ="overlay-container">
+                <div class="overlay light"></div>
+                <img src="{% Href "~/Themes/GpuDay.Theme/Images/wigner-logo.png" %}" class="overlay-container"/>
+            </div>
             <div class="vcenter-content">
                 <div class="container">
                     <h1 class="text-white">
                         {{ Model.ContentItem.TitlePart.Title }}
                     </h1>
+                    <h2 class="text-white">
+                        The Future of Many-Core Computing in Science
+                    </h2>
                     <div class="event-countdown is-countdown">
                         <span class="countdown-row countdown-show1">
                             <span class="countdown-section">
                                 <span class="countdown-amount">
+                                    {% assign year = Model.ContentItem.GPUDayPart.FromDate.DateTime | Date: "%y" %}
+                                    {% if year != 1 %}
                                     {% assign GPUDayMonth = Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "%M" %}
                                     {% if GPUDayMonth.size == 1 %}
                                     {{ Model.ContentItem.GPUDayPart.FromDate.DateTime | Date: "%d" }}{{ Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "-%d 0%M 20%y" }}
                                     {% else %}
                                     {{ Model.ContentItem.GPUDayPart.FromDate.DateTime | Date: "%d" }}{{ Model.ContentItem.GPUDayPart.ToDate.DateTime | Date: "-%d %M 20%y" }}
+                                    {% endif %}
                                     {% endif %}
                                 </span>
                             </span>
@@ -25,6 +34,9 @@
                     </div>
                     {% if Model.ContentItem.GPUDayPart.IndicoRegistrationFormURL.Value != null %}
                     <a href="{{ Model.ContentItem.GPUDayPart.IndicoRegistrationFormURL.Value }}" target="_blank" class="btn btn-custom btn-lg min-width-lg">Register</a>
+                    {% endif %}
+                    {% if Model.ContentItem.GPUDayPart.DetailsButton.Value == true %}
+                    <a id="scheduleButton" href="#schedule" class="btn btn-custom btn-lg min-width-lg">Schedule</a>
                     {% endif %}
                 </div>
             </div>

@@ -23,8 +23,17 @@ gulp.task("js-min-plugins", function () {
 });
 
 gulp.task("js-min-main", function () {
+    return gulp.src("Scripts/main.js")
+        .pipe(plugins.rename({ suffix: ".min" }))
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest("Scripts/"));
+});
+
+gulp.task("js-site-head-min", function () {
     return gulp.src([
-        "Scripts/main.js"])
+        "Scripts/plugins.min.js",
+        "Scripts/main.min.js"])
+        .pipe(plugins.concat("site-head.js"))
         .pipe(plugins.rename({ suffix: ".min" }))
         .pipe(plugins.uglify())
         .pipe(gulp.dest("Scripts/"));
@@ -33,8 +42,7 @@ gulp.task("js-min-main", function () {
 // Css
 // Concat + Minifiy Css Files and move to vendor folder
 gulp.task("css-min-plugins", function () {
-    return gulp.src([
-        "NotDeployed/SimpleTemplate/css/plugins/vspacing.min.css"])
+    return gulp.src("NotDeployed/SimpleTemplate/css/plugins/vspacing.min.css")
         .pipe(plugins.concat("plugins.css"))
         .pipe(plugins.rename({ suffix: ".min" }))
         .pipe(plugins.cssmin({ keepBreaks: true, keepSpecialComments: "*" }))
@@ -43,7 +51,7 @@ gulp.task("css-min-plugins", function () {
 
 // Sass
 gulp.task("sass-min-style", function () {
-    return gulp.src("NotDeployed/SimpleTemplate/sass/style.scss")
+    return gulp.src("Styles/style.scss")
         .pipe(plugins.sass({ outputStyle: "expanded" })) // expanded - compressed - compact - nested
         .pipe(plugins.autoprefixer({
             browsers: ["last 2 versions", "ie 9"],
@@ -68,10 +76,48 @@ gulp.task("sass-index-event", function () {
         .pipe(gulp.dest("Styles/"));
 });
 
+// Custom-style scss file
+gulp.task("sass-custom-style", function () {
+    return gulp.src("Styles/custom-style.scss")
+        .pipe(plugins.sass({ outputStyle: "expanded" })) // expanded - compressed - compact - nested
+        .pipe(plugins.autoprefixer({
+            browsers: ["last 2 versions", "ie 9"],
+            cascade: false
+        }))
+        .pipe(plugins.rename({ suffix: ".min" }))
+        .pipe(plugins.cssmin({ keepBreaks: true, keepSpecialComments: "*" }))
+        .pipe(gulp.dest("Styles/"));
+});
+
+gulp.task("css-site-min", function () {
+    return gulp.src([
+        "Styles/plugins.min.css",
+        "Styles/style.min.css",
+        "Styles/index-event.min.css",
+        "Styles/custom-style.min.css"])
+        .pipe(plugins.autoprefixer({
+            browsers: ["last 2 versions", "ie 9"]
+        }))
+        .pipe(plugins.concat("site.css"))
+        .pipe(plugins.rename({ suffix: ".min" }))
+        .pipe(plugins.cssmin({ keepBreaks: true, keepSpecialComments: "*" }))
+        .pipe(gulp.dest("Styles/"));
+});
 
 // Watcher task.
 gulp.task("watch", function () {
     watch("Scripts/main.js", batch(function (events, done) {
         gulp.start("js-min-main", done);
+        gulp.start("js-site-head-min", done);
+    }));
+
+    watch("Styles/custom-style.scss", batch(function (events, done) {
+        gulp.start("sass-custom-style", done);
+        gulp.start("css-site-min", done);
+    }));
+
+    watch("Styles/style.scss", batch(function (events, done) {
+        gulp.start("sass-min-style", done);
+        gulp.start("css-site-min", done);
     }));
 });

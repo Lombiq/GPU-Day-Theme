@@ -6,12 +6,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{49662914-E643-4175-BDA6-653AEDE1D559}</ProjectGuid>
+    <ProjectGuid>{169085AE-4C26-4A32-B433-191C1A878EFA}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lombiq.PrettyGoodBootstrapBaseTheme</RootNamespace>
-    <AssemblyName>Lombiq.PrettyGoodBootstrapBaseTheme</AssemblyName>
+    <RootNamespace>GpuDay.Theme</RootNamespace>
+    <AssemblyName>GpuDay.Theme</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews Condition=" '$(BuildViews)' == 'true' ">true</MvcBuildViews>
     <FileUpgradeFlags>
@@ -95,6 +95,33 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\favicons\android-icon-144x144.png" />
+    <Content Include="Images\favicons\android-icon-192x192.png" />
+    <Content Include="Images\favicons\android-icon-36x36.png" />
+    <Content Include="Images\favicons\android-icon-48x48.png" />
+    <Content Include="Images\favicons\android-icon-72x72.png" />
+    <Content Include="Images\favicons\android-icon-96x96.png" />
+    <Content Include="Images\favicons\apple-icon-114x114.png" />
+    <Content Include="Images\favicons\apple-icon-120x120.png" />
+    <Content Include="Images\favicons\apple-icon-144x144.png" />
+    <Content Include="Images\favicons\apple-icon-152x152.png" />
+    <Content Include="Images\favicons\apple-icon-180x180.png" />
+    <Content Include="Images\favicons\apple-icon-57x57.png" />
+    <Content Include="Images\favicons\apple-icon-60x60.png" />
+    <Content Include="Images\favicons\apple-icon-72x72.png" />
+    <Content Include="Images\favicons\apple-icon-76x76.png" />
+    <Content Include="Images\favicons\apple-icon-precomposed.png" />
+    <Content Include="Images\favicons\apple-icon.png" />
+    <Content Include="Images\favicons\browserconfig.xml" />
+    <Content Include="Images\favicons\favicon-16x16.png" />
+    <Content Include="Images\favicons\favicon-32x32.png" />
+    <Content Include="Images\favicons\favicon-96x96.png" />
+    <Content Include="Images\favicons\ms-icon-144x144.png" />
+    <Content Include="Images\favicons\ms-icon-150x150.png" />
+    <Content Include="Images\favicons\ms-icon-310x310.png" />
+    <Content Include="Images\favicons\ms-icon-70x70.png" />
+    <Content Include="Images\wigner-logo.png" />
     <Content Include="NotDeployed\SimpleTemplate\css\closedhand.cur" />
     <Content Include="NotDeployed\SimpleTemplate\css\font-awesome.css" />
     <Content Include="NotDeployed\SimpleTemplate\css\fotorama%402x.png" />
@@ -1060,12 +1087,14 @@
     <Content Include="NotDeployed\SimpleTemplate\php\index.php" />
     <Content Include="NotDeployed\SimpleTemplate\php\mail.php" />
     <Content Include="gulpfile.js" />
-    <Content Include="Images\wigner_logo.png" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\main.min.js" />
     <Content Include="Scripts\plugins.min.js" />
+    <Content Include="Scripts\site-head.min.js" />
+    <Content Include="Styles\custom-style.min.css" />
     <Content Include="Styles\index-event.min.css" />
     <Content Include="Styles\plugins.min.css" />
+    <Content Include="Styles\site.min.css" />
     <Content Include="Styles\style.min.css" />
     <Content Include="Web.config" />
     <Content Include="Styles\Web.config" />
@@ -1079,7 +1108,7 @@
       <Private>false</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\Orchard.Core.csproj">
-      <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
+      <Project>{169085AE-4C26-4A32-B433-191C1A878EFA}</Project>
       <Name>Orchard.Core</Name>
       <Private>false</Private>
     </ProjectReference>
@@ -1088,15 +1117,17 @@
     <Content Include="Images\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Content-AboutGPUDay.Detail.liquid">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Content-GoogleMaps.Detail.liquid" />
     <Content Include="Views\Content-ContactUs.Detail.liquid" />
+    <Content Include="Styles\custom-style.scss" />
+    <Content Include="Styles\style.scss" />
+    <Content Include="Images\favicons\manifest.json" />
     <None Include="Views\Content-GPUDay.Detail.liquid">
       <SubType>Designer</SubType>
     </None>
@@ -1104,23 +1135,24 @@
     <Content Include="Views\Content-Speaker.Summary.liquid" />
     <Content Include="Views\Fields.Common.Text-ContactUs-ContactUsPart-ContactBox.liquid" />
     <Content Include="Views\Fields.Common.Text-ContactUs-ContactUsPart-TravelingByPublicTransport.liquid" />
-    <Content Include="Views\Widget-Name-Sponsors.liquid" />
     <Content Include="Views\User.liquid" />
-    <Content Include="Views\Widget-Name-Speakers.liquid" />
     <Content Include="Views\Widget-Name-GPUDays.liquid" />
     <Content Include="Views\Content-GPUDay.Summary.liquid" />
     <Content Include="Views\Content-Talk.Summary.liquid" />
     <Content Include="Views\Fields.ContentPicker-Talk-TalkPart-Speaker.liquid" />
-    <Content Include="Views\Widget-Name-FirstDayTalks.liquid" />
-    <Content Include="Views\Widget-Name-SecondDayTalks.liquid" />
+    <Content Include="Views\Widget-ProjectionWidget.liquid" />
     <Content Include="Views\Layout.liquid" />
+    <Content Include="Views\Metas.liquid" />
+    <Content Include="Views\Fields.ContentPicker-Talk-TalkPart-Cospeaker.liquid" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="package.json" />
-    <Content Include="Placement.info" />
+    <Content Include="Placement.info">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="NotDeployed\SimpleTemplate\fonts\fontawesome-webfont.eot" />
