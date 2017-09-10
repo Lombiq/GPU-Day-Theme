@@ -28,11 +28,11 @@
                     {% if Model.ContentItem.TalkPart.Abstract.FirstMediaUrl != null %}
                     <a href="{{ Model.ContentItem.TalkPart.Abstract.FirstMediaUrl }}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
                     {% endif %}
-                    {% if Model.ContentItem.TalkPart.Recording.Value != null %}
-                    <a href="#" id="video" data-id="{{ Model.ContentItem.TalkPart.Recording.Value }}" data-toggle="modal" data-target=".bs-modal-lg-{{ Model.ContentItem.TalkPart.Id }}-video"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-                    {% endif %}
                     {% if Model.ContentItem.TalkPart.Slides.FirstMediaUrl != null %}
                     <a href="{{ Model.ContentItem.TalkPart.Slides.FirstMediaUrl }}" target="_blank"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+                    {% endif %}
+                    {% if Model.ContentItem.TalkPart.Recording.Value != null %}
+                    <a href="#" id="video" data-id="{{ Model.ContentItem.TalkPart.Recording.Value }}" data-toggle="modal" data-target=".bs-modal-lg-{{ Model.ContentItem.TalkPart.Id }}-video"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                     {% endif %}
                 </div>
                 <div class="event-meta col-sm-12 col-sm-offset-3">
