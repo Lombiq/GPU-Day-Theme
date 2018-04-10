@@ -1980,4 +1980,4 @@ body{font-size:14px}
 .credits .poweredby{margin-right:10%;color:#fff}
 .credits .poweredby a{color:#0069b0}
 .message-Information{background-color:#dff08d;border-color:#d6e9c6;color:#3c763d;text-align:center}
-.rc-anchor-aria-status{display:block;position:absolute;}
+div#recaptcha-accessible-status{display:block;position:absolute}
