@@ -12,9 +12,7 @@
         <div id="content-wrapper">
             {% if Model.Messages != null %}
             <div id="messages">
-                <div class="container">
-                    {{ Model.Messages | Display }}
-                </div>
+                {{ Model.Messages | Display }}
             </div>
             {% endif %}
             <div id="content">
