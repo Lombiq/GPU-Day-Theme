@@ -34,6 +34,7 @@
         validateReCaptcha: function () {
             $("#contactUsButton").on("click", function (e) {
                 var status = $("#recaptcha-accessible-status").text();
+                alert(status);
                 if (status !== "You are verified") {
                     e.preventDefault();
                 }
