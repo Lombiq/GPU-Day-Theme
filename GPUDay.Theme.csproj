@@ -1091,11 +1091,15 @@
     <Content Include="Scripts\main.min.js" />
     <Content Include="Scripts\plugins.min.js" />
     <Content Include="Scripts\site-head.min.js" />
-    <Content Include="Styles\custom-style.min.css" />
+    <Content Include="Styles\custom-style.min.css">
+      <DependentUpon>custom-style.scss</DependentUpon>
+    </Content>
     <Content Include="Styles\index-event.min.css" />
     <Content Include="Styles\plugins.min.css" />
     <Content Include="Styles\site.min.css" />
-    <Content Include="Styles\style.min.css" />
+    <Content Include="Styles\style.min.css">
+      <DependentUpon>style.scss</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Styles\Web.config" />
     <Content Include="Theme.txt" />
