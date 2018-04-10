@@ -10,6 +10,13 @@
 <div id="page">
     <div id="main">
         <div id="content-wrapper">
+            {% if Model.Messages != null %}
+            <div id="messages">
+                <div class="container">
+                    {{ Model.Messages | Display }}
+                </div>
+            </div>
+            {% endif }
             <div id="content">
                 {{ Model.Content | Display }}
             </div>
