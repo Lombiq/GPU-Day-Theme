@@ -23,12 +23,21 @@
             this.scrollToTop();
             this.scrollAnimations();
             this.convertEmailAddresses();
+            this.validateReCaptcha();
 
             /* Call function if Owl Carousel plugin is included */
             if ($.fn.owlCarousel) {
                 this.owlCarousels();
             }
 
+        },
+        validateReCaptcha: function () {
+            $("#contactUsButton").on("click", function (e) {
+                var status = $("#recaptcha-accessible-status").text();
+                if (status !== "You are verified") {
+                    e.preventDefault();
+                }
+            });
         },
         convertEmailAddresses: function () {
             $(".speakerEmail").on("click", function () {
