@@ -1,67 +1,61 @@
-﻿body
-{
+﻿body {
     font-size: 14px;
 }
 
-.footer
-{
+.footer {
     background-color: transparent;
     color: white;
 
-    a
-    {
+    a {
         color: white;
     }
 }
 
-.modal .modal-body
-{
+.modal .modal-body {
     max-height: 85vh;
     overflow-y: auto;
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 15px;
 
-    h3
-    {
+    h3 {
         font-family: "Open Sans", Arial, sans-serif;
     }
 }
 
-.main .schedule
-{
+.main .schedule {
     margin-bottom: 0px;
     min-width: 0px;
     display: table;
 
-    > .row
-    {
+    > .row {
         margin-right: 0px;
         margin-left: 0px;
     }
 }
 
-.last .event-part
-{
+.last .event-part {
     border-bottom: none;
 }
 
-.event-part
-{
+.event-part {
     min-height: 10vh;
+
+    .event-speaker {
+        .comma {
+            margin-left: -4px;
+        }
+    }
 }
 
-.credits
-{
+.credits {
     background-color: #121212;
     text-align: right;
 
-    .poweredby
-    {
+    .poweredby {
         margin-right: 10%;
         color: #fff;
 
-        a
-        {
+        a {
             color: #0069b0;
         }
     }

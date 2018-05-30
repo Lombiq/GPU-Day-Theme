@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 .pt0{padding-top:0}
 .pt5{padding-top:5px}
 .pt10{padding-top:10px}
@@ -1976,6 +1976,7 @@ body{font-size:14px}
 .main .schedule{margin-bottom:0;min-width:0;display:table}
 .main .schedule>.row{margin-right:0;margin-left:0}
 .last .event-part{border-bottom:none}
+.event-part .event-speaker .comma{margin-left:-4px}
 .credits{background-color:#121212;text-align:right}
 .credits .poweredby{margin-right:10%;color:#fff}
 .credits .poweredby a{color:#0069b0}
