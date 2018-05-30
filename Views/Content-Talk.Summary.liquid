@@ -39,7 +39,7 @@
                     <div class="event-meta-left">
                         <div class="event-speaker">
                             {% if Model.ContentItem.TalkPart.Speaker.ContentItems.size > 0 %}
-                            {{ Model.Content.Items[2] | Display }}
+                            {{ Model.Content.Items[0] | Display }}
                             {% endif %}
                             {% if Model.ContentItem.TalkPart.Cospeaker.ContentItems.size > 0 %}
                             <span class="comma">,</span> {{ Model.Content.Items[1] | Display }}
