@@ -22,7 +22,7 @@
                 <div class="col-sm-9">
                     <strong>
                         {% if Model.ContentItem.TalkPart.AbstractText.Value != null %}
-                        <a href="{{ Model.WorkContext.HttpContext.Request.Url.AbsoluteUri }}#{{ talkPartId }}" id="{{ talkPartId }}" data-toggle="modal" data-target=".bs-modal-lg-{{ talkPartId }}">{{ Model.ContentItem.TitlePart.Title }}</a>
+                        <a href="#{{ talkPartId }}" id="{{ talkPartId }}" data-toggle="modal" data-target=".bs-modal-lg-{{ talkPartId }}">{{ Model.ContentItem.TitlePart.Title }}</a>
                         {% else %}
                         {{ Model.ContentItem.TitlePart.Title }}
                         {% endif %}
