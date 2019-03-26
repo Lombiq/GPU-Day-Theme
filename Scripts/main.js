@@ -23,22 +23,12 @@
             this.scrollToTop();
             this.scrollAnimations();
             this.convertEmailAddresses();
-            this.validateReCaptcha();
 
             /* Call function if Owl Carousel plugin is included */
             if ($.fn.owlCarousel) {
                 this.owlCarousels();
             }
 
-        },
-        validateReCaptcha: function () {
-            //$("#contactUsButton").on("click", function (e) {
-                //var status = $("#recaptcha-accessible-status").text();
-                //alert(status);
-                //if (status !== "You are verified") {
-                //    e.preventDefault();
-                //}
-            //});
         },
         convertEmailAddresses: function () {
             $(".speakerEmail").on("click", function () {
@@ -64,7 +54,7 @@
                 var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
                 var match = youTubeUrl.match(regExp);
 
-                if (match && match[2].length == 11) {
+                if (match && match[2].length === 11) {
                     $("." + modalWindowId).find(".embed-responsive-item").prop("src", "https://www.youtube.com/embed/" + match[2]);
                 }
             });
@@ -202,15 +192,15 @@
         // Map pin coordinates and content of pin box
         var locations = [
             [
-                "<address><strong>Address:</strong> 29-33, Konkoly-Thege Miklos u, 1121 - Budapest, Hungary</address>",
-                47.487416,
-                18.954929
+                "<address><strong>Address:</strong> 1c, Pazmany Peter stny., 1117 - Budapest, Hungary</address>",
+                47.4721298,
+                19.0604447
             ]
         ];
 
         var map = new google.maps.Map(document.getElementById("map"), {
             zoom: 14,
-            center: new google.maps.LatLng(47.487416, 18.954929), // Map Center coordinates
+            center: new google.maps.LatLng(47.4721298, 19.0604447), // Map Center coordinates
             scrollwheel: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
@@ -231,7 +221,7 @@
                 return function () {
                     infowindow.setContent(locations[i][0]);
                     infowindow.open(map, marker);
-                }
+                };
             })(marker, i));
         }
     }
