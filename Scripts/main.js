@@ -185,44 +185,4 @@
     $(window).on("scroll", function () {
         Simple.scrollBtnAppear();
     });
-
-
-    // Google Map api v3 - Map for contact pages
-    if (document.getElementById("map") && typeof google === "object") {
-        // Map pin coordinates and content of pin box
-        var locations = [
-            [
-                "<address><strong>Address:</strong> 1c, Pazmany Peter stny., 1117 - Budapest, Hungary</address>",
-                47.4721298,
-                19.0604447
-            ]
-        ];
-
-        var map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 14,
-            center: new google.maps.LatLng(47.4721298, 19.0604447), // Map Center coordinates
-            scrollwheel: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        });
-
-        var infowindow = new google.maps.InfoWindow();
-
-
-        var marker, i;
-
-        for (i = 0; i < locations.length; i++) {
-            marker = new google.maps.Marker({
-                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                map: map,
-                animation: google.maps.Animation.DROP
-            });
-
-            google.maps.event.addListener(marker, "click", (function (marker, i) {
-                return function () {
-                    infowindow.setContent(locations[i][0]);
-                    infowindow.open(map, marker);
-                };
-            })(marker, i));
-        }
-    }
 })(jQuery);
