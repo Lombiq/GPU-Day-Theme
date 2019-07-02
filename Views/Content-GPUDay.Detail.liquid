@@ -47,8 +47,8 @@
         {{ Model.Content | Display }}
         {% if Model.ContentItem.GPUDayPart.FooterPhoto.FirstMediaUrl != null %}
             <div class="mb30"></div>
-                <img src="{{ Model.ContentItem.GPUDayPart.FooterPhoto.FirstMediaUrl }}" alt="{{ Model.ContentItem.TitlePart.Title }}">
-            <div class="mb30"></div>
+            <img src="{{ Model.ContentItem.GPUDayPart.FooterPhoto.FirstMediaUrl }}" alt="{{ Model.ContentItem.TitlePart.Title }}"
+                class="img-responsive center-block" style="width: 100%">
         {% endif %}
         <a id="scroll-top" href="#top" title="Scroll top" class="fixed">
             <i class="fa fa-angle-up"></i>
