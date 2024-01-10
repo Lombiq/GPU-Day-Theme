@@ -1,0 +1,14 @@
+.modal .modal-body,.modal .modal-body h3{font-family:"Open Sans",Arial,sans-serif}
+.footer,.footer a{color:#fff}
+body{font-size:14px}
+.footer{background-color:transparent}
+.modal .modal-body{max-height:85vh;overflow-y:auto;font-size:15px}
+.main .schedule{margin-bottom:0;min-width:0;display:table}
+.main .schedule>.row{margin-right:0;margin-left:0}
+.last .event-part{border-bottom:none}
+.event-part{min-height:10vh}
+.event-part .event-speaker .comma{margin-left:-4px}
+.credits{background-color:#121212;text-align:right}
+.credits .poweredby{margin-right:10%;color:#fff}
+.credits .poweredby a{color:#0069b0}
+.message-Information{background-color:#dff08d;border-color:#d6e9c6;color:#3c763d;text-align:center;}

@@ -1,0 +1,246 @@
+/* Homepages - Index Veterinary */
+.main-top-slider {
+  margin: 0;
+  position: relative;
+}
+
+.main-top-slider .owl-nav {
+  margin: 0;
+  position: static;
+}
+
+.main-top-slider .owl-next,
+.main-top-slider .owl-prev {
+  position: absolute;
+  top: aut;
+  bottom: 0;
+  display: block;
+  height: 42px;
+  margin-top: 0;
+  width: 30px;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  line-height: 42px;
+  color: #222;
+  background-color: #fff;
+  z-index: 1000;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .main-top-slider .owl-next,
+  .main-top-slider .owl-prev {
+    display: block;
+    height: 56px;
+    margin-top: 0;
+    width: 42px;
+    font-size: 22px;
+    line-height: 58px;
+  }
+}
+
+.main-top-slider .owl-next:hover, .main-top-slider .owl-next:focus,
+.main-top-slider .owl-prev:hover,
+.main-top-slider .owl-prev:focus {
+  background-color: #0069b0;
+  color: #fff;
+}
+
+.main-top-slider .owl-prev {
+  left: 50%;
+  margin-left: -255px;
+}
+
+@media (min-width: 992px) {
+  .main-top-slider .owl-prev {
+    margin-left: -267px;
+  }
+}
+
+.main-top-slider .owl-next {
+  left: auto;
+  right: 50%;
+  margin-right: -255px;
+}
+
+@media (min-width: 992px) {
+  .main-top-slider .owl-next {
+    margin-right: -267px;
+  }
+}
+
+.main-top-slider .owl-dots {
+  position: absolute;
+  margin: 0;
+  bottom: 15px;
+  left: 15px;
+  text-align: center;
+  right: 15px;
+  line-height: 1;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-top-slider .owl-dots {
+    display: block;
+  }
+}
+
+.main-top-slider .owl-dots .owl-dot {
+  border-radius: 0;
+  width: 16px;
+  height: 3px;
+}
+
+.main-slide figure img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .main-slide figure img {
+    height: 240px !important;
+    width: auto !important;
+  }
+}
+
+.main-slide .main-slide-content {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 12px 15px 10px;
+  transition: all 0.4s;
+  z-index: 20;
+  background-color: #fff;
+  color: #222;
+  max-width: 450px;
+  width: 70%;
+}
+
+@media (min-width: 481px) {
+  .main-slide .main-slide-content {
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-slide .main-slide-content {
+    padding: 20px 25px 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-slide .main-slide-content {
+    padding: 27px 35px 25px;
+  }
+}
+
+.main-slide .main-slide-content h2 {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .main-slide .main-slide-content h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-slide .main-slide-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+.main-slide .main-slide-content h2 a {
+  color: #222;
+}
+
+.main-slide .main-slide-content h2 a:hover, .main-slide .main-slide-content h2 a:focus {
+  color: #0069b0;
+}
+
+.main-slide .main-slide-content .main-slide-tags {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-slide .main-slide-content .main-slide-tags {
+    display: block;
+  }
+}
+
+.main-slide .main-slide-content .main-slide-tags a {
+  color: #6e6e6e;
+}
+
+.main-slide .main-slide-content .main-slide-tags a:hover, .main-slide .main-slide-content .main-slide-tags a:focus {
+  color: #0069b0;
+}
+
+.services-group {
+  margin-bottom: 50px;
+}
+
+blockquote {
+  background-color: transparent;
+  border: 2px solid #f0f0f0;
+}
+
+.quick-form-container .form-control {
+  margin-bottom: 10px;
+  background-color: #0075c4;
+  border-color: #007bcf;
+  color: #eee;
+}
+
+.quick-form-container .form-control::-webkit-input-placeholder {
+  color: #eee;
+}
+
+.quick-form-container .form-control:-ms-input-placeholder {
+  color: #eee;
+}
+
+.quick-form-container .form-control::placeholder {
+  color: #eee;
+}
+
+@media (min-width: 992px) {
+  .quick-form-container .btn {
+    margin-top: 26px;
+  }
+}
+
+#portfolio-item-container .portfolio-item {
+  margin-bottom: 0;
+}
+
+.text-block {
+  margin-bottom: 40px;
+}
+
+.widget.hours-widget ul li {
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+}
+
+.widget.hours-widget ul li em {
+  float: right;
+}
+
+.widget.hours-widget ul li:after {
+  content: '';
+  display: table;
+  clear: both;
+}

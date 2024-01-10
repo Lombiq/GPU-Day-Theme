@@ -1,0 +1,17 @@
+﻿<div class="bg-gray2 border pt60 pb45">
+    <div class="container">
+        <div class="row">
+            <div class ="col-sm-6">
+                <h2 class="title dark mb25">
+                    About the <span class="light highlight dark">GPU Day</span>
+                </h2>
+            </div>
+            <div class="col-sm-12">
+                {% if Model.ContentItem.AboutGPUDayPart.About.Value != null %}
+                {{ Model.ContentItem.AboutGPUDayPart.About.Value }}
+                {% endif %}
+                <div class="mb5"></div>
+            </div>
+        </div>
+    </div>
+</div>

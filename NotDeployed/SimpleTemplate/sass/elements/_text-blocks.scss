@@ -1,0 +1,310 @@
+/* Elements Text Blocks */
+.text-block {
+	margin-bottom: 30px;
+
+	@media (min-width: $minmqsm) {
+		margin-bottom: 40px;
+	}
+
+	@media (min-width: $minmqsm) {
+		margin-bottom: 50px;
+	}
+
+	.block-title {
+		font-weight:400;
+		margin-bottom:9px;
+		font-size:18px;
+
+		a {
+			color:#222;
+
+			&:hover,
+			&:focus {
+				color: $first-color;
+			}
+		}
+
+		& + .readmore {
+			margin-top: 4px;
+		}
+	}
+
+	img {
+		display:inline-block;
+		max-width:100%;
+		height: auto;
+		margin-bottom:18px;
+	}
+
+	.block-icon {
+		dispay:inline-block;
+		width:48px;
+		height:48px;
+		text-align:center;
+		font-size:18px;
+		line-height:48px;
+		color:#222;
+		background-color: #eee;
+		box-shadow: 0 1px 1px rgba(0,0,0, 0.2);
+		margin-bottom:18px;
+
+		&.custom {
+			color:#fff;
+			background-color: $first-color;
+		}
+
+		&.custom2 {
+			color:#fff;
+			background-color: $second-color;
+		}
+
+		&.dark {
+			color:#fff;
+			background-color: $dark;
+		}
+
+		&.circle {
+			border-radius: 50%;
+		}
+	}
+
+	figure {
+		position: relative;
+		margin-bottom:16px;
+
+		a {
+			position: relative;
+			display:block;
+
+			&:after {
+				content:'';
+				display:block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top:0;
+				bottom: 0;
+				background-color: rgba(255, 255, 255, 0.29);
+				transition: all 0.4s;
+				visibility: hidden;
+				opacity:0;
+				z-index:10;
+			}
+		}
+
+		img {
+			display:block;
+			max-width:100%;
+			height: auto;
+			transition: all 0.4s;
+		}
+
+		
+		.block-icon {
+			position: absolute;
+			right:24px;
+			bottom:-14px;
+			z-index: 99;
+			margin-bottom:0;
+
+			&.top {
+				right: auto;
+				bottom: auto;
+				top: -14px;
+				left:24px;
+			}
+
+			&.top-right {
+				bottom: auto;
+				top: -14px;
+			}
+		}
+	}
+
+	p {
+		margin-bottom: 12px;
+	}
+
+	.fa-ul {
+		margin-top:-2px;
+		margin-left:17px;
+		margin-bottom:12px;
+
+		li {
+			.fa-li {
+				margin-bottom:4px;
+				left:-17px;
+			}
+
+			a {
+				color: #222;
+				text-decoration: underline;
+
+				&:hover,
+				&:focus {
+					color: $first-color;
+				}
+			}
+		}
+	}
+
+	.readmore {
+		display: inline-block;
+		font-size:11px;
+		font-weight: 600;
+		padding:5px 13px;
+		background-color: #eaeaea;
+		color:#222;
+		transition: all 0.4s;
+		border-radius: 4px;
+
+		&:hover,
+		&:focus,
+		&.custom {
+			background-color: $first-color;
+			color:#fff;
+		}
+
+		&.custom {
+			&:hover,
+			&:focus {
+				background-color: darken($first-color, 5%);
+				color:#fff;
+			}
+		}
+
+		&.custom2 {
+			background-color: $second-color;
+			color:#fff;
+
+			&:hover,
+			&:focus {
+				background-color: darken($second-color, 5%);
+				color:#fff;
+			}
+		}
+
+		&.dark {
+			background-color: $dark;
+			color:#f1f1f1;
+
+			&:hover,
+			&:focus {
+				background-color: lighten($dark, 10%);
+				color:#fff;
+			}
+		}
+	}
+
+	&:after {
+		content:'';
+		display: table;
+		clear: both;
+	}
+
+	&:hover {
+		figure {
+			a:after {
+				opacity:1;
+				visibility: visible;
+			}
+		}
+	}
+
+
+	/* Table Style */
+	&.block-table {
+		@media (min-width: $minmqsm) {
+			display: table;
+			table-layout: fixed;
+			width: 100%;
+		}
+
+		.block-cell {
+			@media (min-width: $minmqsm) {
+				display: table-cell;
+				vertical-align: middle;
+				width:50%;
+
+				&.cell-image {
+					padding-right: 20px;
+					margin-bottom:0;
+				}
+			}
+		}
+	}
+
+	/* Show bg image on mouseover */
+	&.hover-bg {
+		padding:15px;
+		background-size: cover;
+		background-position: center center;
+		transition: all 0.4s;
+		position: relative;
+
+		* {
+			position: relative;
+			z-index:5;
+		}
+
+		&:after {
+			content:'';
+			display:block;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top:0;
+			bottom: 0;
+			background-color: $first-color;
+			transition: all 0.4s;
+			visibility: hidden;
+			opacity:0;
+			z-index:2;
+		}
+
+		&.dark {
+			&:after {
+				background-color: $dark;
+			}
+		}
+
+		&.custom2 {
+			&:after {
+				background-color: $second-color;
+			}
+		}
+
+		&:hover,
+		&:focus {
+
+			&:after {
+				visibility: visible;
+				opacity: 0.5;
+
+			}
+		}
+
+		&.light,
+		&:hover,
+		&:focus {
+			color:#fff;
+
+			.block-title {
+				color: #fff;
+			}
+
+			.block-title {
+				color: #fff;
+			}
+			
+			a:not(.readmore) {
+				color:#fff;
+
+				&:hover,
+				&:focus {
+					color: $second-color;
+				}
+			}
+		}
+	}
+}

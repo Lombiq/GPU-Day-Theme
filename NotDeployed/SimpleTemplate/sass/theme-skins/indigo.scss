@@ -1,0 +1,14 @@
+/*
+	Simple Theme
+	Skin Name: Indigo
+	First-color: #3F51B5
+	Second-color: #FDD835
+*/
+
+@import '../variables';
+@import '../mixins';
+
+$first-color: #3F51B5;
+$second-color: #FDD835;
+
+@import 'skin';

@@ -1,0 +1,14 @@
+/*
+	Simple Theme
+	Skin Name: Blue
+	First-color: #2196F3
+	Second-color: #FDD835
+*/
+
+@import '../variables';
+@import '../mixins';
+
+$first-color: #2196F3;
+$second-color: #FDD835;
+
+@import 'skin';

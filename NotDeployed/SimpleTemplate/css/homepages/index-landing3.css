@@ -1,0 +1,210 @@
+/* Homepages - Index Agency 2 */
+@media (max-width: 991px) and (min-width: 768px) {
+  .header.header2 .navbar-collapse {
+    float: right !important;
+    width: auto;
+  }
+  .header.header2 .navbar-collapse .navbar-nav > li {
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    font-weight: 400;
+  }
+}
+
+.header.header2.transparent,
+.header.header2.transparent {
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.section {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.section .section-image {
+  display: block;
+  max-width: 150px;
+  height: auto;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .section .section-image {
+    max-width: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section .section-image {
+    max-width: 100%;
+    margin-top: -95px;
+    margin-bottom: 0;
+    transition: all 1s;
+    -ms-transform: translateY(200px);
+    transform: translateY(200px);
+    opacity: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .section .section-content {
+    transition: all 1s;
+    -ms-transform: translateY(-200px);
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+}
+
+.section .section-content h1, .section .section-content h2, .section .section-content h3, .section .section-content h4 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .section .section-content h1, .section .section-content h2 {
+    font-size: 24px;
+    margin-bottom: 13px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section .section-content h1, .section .section-content h2 {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section .section-content h1, .section .section-content h2 {
+    font-size: 32px;
+    margin-bottom: 17px;
+  }
+}
+
+.section .section-content p {
+  display: none;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .section .section-content p {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section .section-content p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section .section-content p {
+    font-size: 16px;
+    margin-bottom: 27px;
+  }
+}
+
+.section .section-content .btn {
+  border-radius: 28px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .section .section-content .btn {
+    font-size: 13px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    min-width: 150px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section .section-content .btn {
+    font-size: 14px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    min-width: 170px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section .section-content.reverse {
+    text-align: right;
+  }
+}
+
+@media (min-width: 992px) {
+  .section.active .section-image,
+  .section.active .section-content {
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer {
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+  }
+}
+
+.footer .social-icon {
+  color: #f1f1f1;
+  padding: 3px 2px;
+}
+
+@media (min-width: 992px) {
+  .footer .social-icon {
+    color: #222;
+  }
+}
+
+.footer .social-icon:hover, .footer .social-icon:focus {
+  color: #0069b0;
+}
+
+@media (min-width: 992px) {
+  .footer .footer-bottom {
+    background-color: transparent;
+    padding: 20px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: 992px) {
+  .footer .footer-bottom .social-icons {
+    float: left;
+  }
+}
+
+.footer .footer-bottom .footer-menu a {
+  color: #f1f1f1;
+}
+
+@media (min-width: 992px) {
+  .footer .footer-bottom .footer-menu a {
+    color: #222;
+  }
+}
+
+.footer .footer-bottom .footer-menu a:hover, .footer .footer-bottom .footer-menu a:focus {
+  color: #0069b0;
+}

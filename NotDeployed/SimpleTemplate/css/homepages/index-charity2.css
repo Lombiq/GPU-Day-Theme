@@ -1,0 +1,157 @@
+/* Homepages - Index Charity 2 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6,
+.sidebar .widget .widget-title,
+.footer .widget .widget-title {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.03em;
+}
+
+h1, .h1 {
+  font-size: 26px;
+}
+
+h2, .h2 {
+  font-size: 22px;
+}
+
+h3, .h3 {
+  font-size: 18px;
+}
+
+h4, .h4 {
+  font-size: 14px;
+}
+
+.service .service-title,
+.footer .widget .widget-title,
+.count-title {
+  font-size: 16px;
+}
+
+.overlay-container .overlay.custom {
+  opacity: 0.3;
+}
+
+.vertical-center .social-icons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  text-align: center;
+  z-index: 99;
+}
+
+.vertical-center .social-icons .social-icon {
+  font-size: 14px;
+  color: #fff;
+  margin: 0 3px 3px;
+  min-width: 28px;
+  line-height: 28px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .vertical-center .social-icons .social-icon {
+    margin: 0 5px 5px;
+  }
+}
+
+.vertical-center .social-icons .social-icon:hover, .vertical-center .social-icons .social-icon:focus {
+  color: #4CAF50;
+  background-color: #fff;
+}
+
+.cause {
+  margin-bottom: 35px;
+}
+
+.cause figure {
+  margin-bottom: 18px;
+  background-color: #f0f0f0;
+}
+
+.cause figure a {
+  display: block;
+}
+
+.cause figure img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.cause .cause-title {
+  font-size: 16px;
+  margin-bottom: 13px;
+  line-height: 1.25;
+}
+
+.cause .cause-title a {
+  color: #222;
+}
+
+.cause .cause-title a:hover, .cause .cause-title a:focus {
+  color: #4CAF50;
+}
+
+.cause p {
+  margin-bottom: 10px;
+}
+
+.cause .list-inline {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7e7e7e;
+  margin-bottom: 12px;
+}
+
+.cause .list-inline strong {
+  color: #4CAF50;
+}
+
+.cause .progress {
+  height: 3px;
+  padding: 0;
+  margin-bottom: 18px;
+  background-color: #d9d9d9;
+}
+
+.cause .cause-action {
+  font-size: 0;
+}
+
+.cause .cause-action .btn {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.cause .cause-action .btn + .btn {
+  margin-left: 8px;
+}
+
+.cause .cause-action .btn.btn-border {
+  border-width: 1px;
+}
+
+.quick-gallery-showcase .portfolio-item {
+  margin: 0;
+  width: 50%;
+}
+
+@media (min-width: 481px) {
+  .quick-gallery-showcase .portfolio-item {
+    width: 33.3%;
+  }
+}
+
+@media (min-width: 768px) {
+  .quick-gallery-showcase .portfolio-item {
+    width: 25%;
+  }
+}

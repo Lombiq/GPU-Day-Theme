@@ -1,0 +1,176 @@
+/* 
+Template Name: Simple - Multipurpose Premium Html5 Template
+Template URI: http://www.eonythemes.com
+Description: Multipurpose Html5 Template
+Author: Eon
+
+-------- # Table Of Contents # -------- //
+-------- 1-  General
+-------- 2-  Typography
+-------- 3-  Elements
+-------- 4-  Pricing
+-------- 5-  Headers
+-------- 6-  Homepages
+-------- 7-  About
+-------- 8-  Services Pages
+-------- 9-  Blog
+-------- 10- Portfolio
+-------- 11- Category(Shop) - Product
+-------- 12- Cart
+-------- 13- Compare
+-------- 14- Checkout
+-------- 15- Contact
+-------- 16- 404
+-------- 17- FaQs
+-------- 18- Footers
+-------- 19- Owl Carousel
+-------- 20- Coming Soon
+-------- # Table Of Contents # ------- //
+*/
+
+
+@import 'mixins';
+@import 'variables';
+
+
+@import 'page-loader';
+/* ----------- 1.General --------------
+--------------------------------------*/
+@import 'general';
+
+
+/* ----------- 2.Typography -----------
+--------------------------------------*/
+@import 'typography';
+
+
+/* ----------- 3.Elements ------------
+--------------------------------------*/
+@import 'elements/titles';
+@import 'elements/pageheaders';
+@import 'elements/collapses';
+@import 'elements/tabs';
+@import 'elements/buttons';
+@import 'elements/forms';
+@import 'elements/progressbars';
+@import 'elements/services';
+@import 'elements/text-blocks';
+@import 'elements/tables';
+@import 'elements/callouts';
+@import 'elements/alerts';
+@import 'elements/counters';
+@import 'elements/more';
+@import 'elements/pagination';
+
+
+/* ----------- 4.Pricing --------------
+--------------------------------------*/
+@import 'pricing';
+
+
+/* ----------- 5.Headers ---------------
+--------------------------------------*/
+@import 'headers/header';
+@import 'headers/menu';
+@import 'headers/header2';
+@import 'headers/header3';
+@import 'headers/header4';
+@import 'headers/overlaymenu';
+@import 'headers/overlaymenu-dark';
+@import 'headers/header5';
+@import 'headers/sidemenu';
+@import 'headers/sidemenu-dark';
+@import 'headers/header-colors';
+@import 'headers/sticky-header';
+
+
+/* ----------- 6.Homepages -------------
+--------------------------------------*/
+@import 'homepages/index';
+@import 'homepages/index2';
+@import 'homepages/index3';
+@import 'homepages/index4';
+@import 'homepages/index5';
+@import 'homepages/index6';
+@import 'homepages/index7';
+@import 'homepages/index8';
+@import 'homepages/index9';
+@import 'homepages/index10';
+@import 'homepages/index-shop';
+@import 'homepages/index-shop2';
+@import 'homepages/index-shop3';
+@import 'homepages/index-portfolio';
+@import 'homepages/index-photography';
+@import 'homepages/index-blog';
+
+
+/* ----------- 7.About -----------------
+--------------------------------------*/
+@import 'about';
+
+
+/* -------- 8.Services Pages -----------
+--------------------------------------*/
+@import 'services-pages';
+
+
+/* ----------- 9.Blog -----------------
+--------------------------------------*/
+@import 'blog';
+
+
+/* ----------- 10.Portfolio -------------
+--------------------------------------*/
+@import 'portfolio';
+
+
+/* --------- 11.Category(Shop) - Product
+--------------------------------------*/
+@import 'products';
+@import 'category';
+
+
+/* ----------- 12.Cart  ---------------
+--------------------------------------*/
+@import 'cart';
+
+
+/* ----------- 13.Compare ---------------
+--------------------------------------*/
+@import 'compare';
+
+
+/* ----------- 14.Checkout -------------
+--------------------------------------*/
+@import 'checkout';
+
+
+/* ----------- 15.Contact  ------------
+--------------------------------------*/
+@import 'contact';
+
+
+/* ----------- 16.404 -----------------
+--------------------------------------*/
+@import '404';
+
+
+/* ---------- 17.FaQS -----------------
+--------------------------------------*/
+@import 'faqs';
+
+
+/* ----------- 18.Footers ---------------
+--------------------------------------*/
+@import 'footers';
+
+
+/* --------- 19.Owl Carousel -----------
+--------------------------------------*/
+@import 'owl-carousel';
+
+
+/* --------- 20.Coming Soon -----------
+--------------------------------------*/
+@import 'coming-soon';
+@import 'coming-soon2';

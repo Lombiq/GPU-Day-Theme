@@ -1,0 +1,83 @@
+﻿{% capture talkPartId %}{{ Model.ContentItem.TalkPart.Id }}{% endcapture %}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="event-part">
+            <div class="row">
+                <div class="event-time col-sm-3">
+                    {% assign startOfTalkMinute = Model.ContentItem.TalkPart.StartOfTalk.DateTime | Date: "%m" %}
+                    {% if startOfTalkMinute.size == 1 %}
+                    {{ Model.ContentItem.TalkPart.StartOfTalk.DateTime | Date: "%H:%0m" }}
+                    {% else %}
+                    {{ Model.ContentItem.TalkPart.StartOfTalk.DateTime | Date: "%H:%m" }}
+                    {% endif %}
+                    -
+                    {% assign endOfTalkMinute = Model.ContentItem.TalkPart.EndOfTalk.DateTime | Date: "%m" %}
+                    {% if endOfTalkMinute.size == 1 %}
+                    {{ Model.ContentItem.TalkPart.EndOfTalk.DateTime | Date: "%H:%0m" }}
+                    {% else %}
+                    {{ Model.ContentItem.TalkPart.EndOfTalk.DateTime | Date: "%H:%m" }}
+                    {% endif %}
+                </div>
+                <div class="col-sm-9">
+                    <strong>
+                        {% if Model.ContentItem.TalkPart.AbstractText.Value != null %}
+                        <a href="#{{ talkPartId }}" id="{{ talkPartId }}" data-toggle="modal" data-target=".bs-modal-lg-{{ talkPartId }}">{{ Model.ContentItem.TitlePart.Title }}</a>
+                        {% else %}
+                        {{ Model.ContentItem.TitlePart.Title }}
+                        {% endif %}
+                    </strong>
+                    {% if Model.ContentItem.TalkPart.Abstract.FirstMediaUrl != null %}
+                    <a href="{{ Model.ContentItem.TalkPart.Abstract.FirstMediaUrl }}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+                    {% endif %}
+                    {% if Model.ContentItem.TalkPart.Slides.FirstMediaUrl != null %}
+                    <a href="{{ Model.ContentItem.TalkPart.Slides.FirstMediaUrl }}" target="_blank"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+                    {% endif %}
+                    {% if Model.ContentItem.TalkPart.Recording.Value != null %}
+                    <a href="#" id="video" data-id="{{ Model.ContentItem.TalkPart.Recording.Value }}" data-toggle="modal" data-target=".bs-modal-lg-{{ talkPartId }}-video"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    {% endif %}
+                </div>
+                <div class="event-meta col-sm-12 col-sm-offset-3">
+                    <div class="event-meta-left">
+                        <div class="event-speaker">
+                            {% if Model.ContentItem.TalkPart.Speaker.ContentItems.size > 0 %}
+                            {{ Model.Content.Items[0] | Display }}
+                            {% endif %}
+                            {% if Model.ContentItem.TalkPart.Cospeaker.ContentItems.size > 0 %}
+                            <span class="comma">,</span> {{ Model.Content.Items[1] | Display }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bs-modal-lg-{{ talkPartId }}" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title">Abstract</h2>
+                </div>
+                <div class="modal-body">
+                    {{ Model.ContentItem.TalkPart.AbstractText.Value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bs-modal-lg-{{ talkPartId }}-video embedYouTubeModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title">Recording</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

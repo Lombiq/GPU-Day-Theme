@@ -1,0 +1,4 @@
+﻿{% if Model.ContentField.ContentItems.size > 0 %}
+    {% assign speakerName = Model.ContentField.ContentItems[0].TitlePart.Title %}
+    <a href="#{{ speakerName | Replace: " ","_" }}">{{ speakerName }}</a>
+{% endif %}

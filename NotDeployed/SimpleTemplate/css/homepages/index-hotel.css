@@ -1,0 +1,249 @@
+/* Homepages - Index Hotel */
+body {
+  font-family: "Open Sans", serif;
+}
+
+#wrapper {
+  background-color: #f8f8f8;
+}
+
+h1, h2, h3, h4, h5, h6,
+.sidebar .widget .widget-title,
+.footer .widget .widget-title {
+  font-family: "Raleway", serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.text-block .block-title {
+  font-weight: 500;
+}
+
+.title:after {
+  height: 1px;
+}
+
+.btn.btn-sm.btn-border,
+.btn.btn-border,
+.btn.btn-lg.btn-border {
+  border-width: 1px;
+}
+
+.fullscreen.vertical-center .vcenter-content h1,
+.fullheight.vertical-center .vcenter-content h1 {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 18px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0;
+}
+
+.fullscreen.vertical-center .vcenter-content h1 .text-light,
+.fullheight.vertical-center .vcenter-content h1 .text-light {
+  font-weight: 200 !important;
+}
+
+@media (min-width: 481px) {
+  .fullscreen.vertical-center .vcenter-content h1,
+  .fullheight.vertical-center .vcenter-content h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fullscreen.vertical-center .vcenter-content h1,
+  .fullheight.vertical-center .vcenter-content h1 {
+    font-size: 46px;
+    margin-bottom: 13px;
+  }
+}
+
+@media (min-width: 992px) {
+  .fullscreen.vertical-center .vcenter-content h1,
+  .fullheight.vertical-center .vcenter-content h1 {
+    font-size: 54px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fullscreen.vertical-center .vcenter-content h1,
+  .fullheight.vertical-center .vcenter-content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+}
+
+.booking-form-section {
+  position: relative;
+  z-index: 99;
+  padding: 25px 15px 20px;
+  margin-top: -60px;
+  border: 1px solid #313131;
+}
+
+@media (min-width: 768px) {
+  .booking-form-section {
+    margin-top: -70px;
+  }
+}
+
+@media (min-width: 992px) {
+  .booking-form-section {
+    margin-top: -80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.booking-form-section .form-control,
+.booking-form-section .input-group {
+  margin-bottom: 10px;
+}
+
+.booking-form-section .btn {
+  margin-top: 27px;
+}
+
+.room {
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .room {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .room {
+    margin-bottom: 40px;
+  }
+}
+
+.room figure {
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.room figure a {
+  display: block;
+}
+
+.room figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 0.4s;
+}
+
+.room:hover figure img {
+  -ms-transform: scale(1.1) rotate(5deg);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.room .room-title {
+  font-size: 14px;
+  margin-bottom: 1px;
+  font-weight: 600;
+}
+
+.room .room-title a {
+  color: #222;
+}
+
+.room .room-title a:hover, .room .room-title a:focus {
+  color: #0069b0;
+}
+
+.room .room-meta .rmeta-left {
+  float: left;
+}
+
+.room .room-meta .btn {
+  float: right;
+  border-radius: 18px;
+}
+
+.room .room-meta .btn.btn-sm {
+  margin-top: 6px;
+  padding: 4px 9px;
+}
+
+.room .room-meta:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.room .room-price {
+  color: #8e8e8e;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.room .room-price span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6e6e6e;
+}
+
+.portfolio-item {
+  margin-bottom: 0;
+}
+
+.bg-dark .entry.entry-list-sm {
+  color: #777;
+}
+
+.bg-dark .entry.entry-list-sm .entry-title {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.bg-dark .entry.entry-list-sm .entry-title a {
+  color: #aeaeae;
+}
+
+.bg-dark .entry.entry-list-sm .entry-title a:hover, .bg-dark .entry.entry-list-sm .entry-title a:focus {
+  color: #f1f1f1;
+}
+
+.widget.hours-widget ul li {
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+}
+
+.widget.hours-widget ul li em {
+  float: right;
+}
+
+.widget.hours-widget ul li:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+#map-hotel {
+  height: 260px;
+}
+
+@media (min-width: 768px) {
+  #map-hotel {
+    height: 360px;
+  }
+}
+
+@media (min-width: 768px) {
+  #map-hotel {
+    height: 440px;
+  }
+}
+
+#map-hotel address {
+  margin: 0;
+  padding: 10px 5px 2px;
+  line-height: 1.7;
+}

@@ -1,0 +1,14 @@
+/*
+	Simple Theme
+	Skin Name: Deep purple
+	First-color: #673AB7
+	Second-color: #FDD835
+*/
+
+@import '../variables';
+@import '../mixins';
+
+$first-color: #673AB7;
+$second-color: #FDD835;
+
+@import 'skin';
