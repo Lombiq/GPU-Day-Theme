@@ -1,0 +1,247 @@
+/* Homepages - Index Hotel */
+@import '../mixins';
+@import '../variables';
+
+$font-family: 'Open Sans', serif;
+$second-font-family: 'Raleway', serif;
+
+body {
+	font-family: $font-family;
+}
+
+#wrapper {
+	background-color: $lightgray;
+}
+
+h1,h2,h3,h4,h5,h6,
+.sidebar .widget .widget-title,
+.footer .widget .widget-title {
+	font-family: $second-font-family;
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6,
+.text-block .block-title {
+	font-weight: 500;
+}
+
+.title:after {
+	height:1px;
+}
+
+.btn.btn-sm.btn-border,
+.btn.btn-border,
+.btn.btn-lg.btn-border {
+	border-width: 1px;
+}
+
+.fullscreen,
+.fullheight {
+	&.vertical-center {
+		.vcenter-content {
+			h1 {
+				font-weight:700;
+				font-size:32px;
+				margin-bottom:18px;
+				text-shadow: 0 2px 5px rgba(0,0,0, 0.2);
+				letter-spacing:0;
+
+				.text-light {
+					font-weight:200 !important
+				}
+
+				@media (min-width: $minmqxs) {
+					font-size:38px;
+					margin-bottom:10px;
+				}
+
+				@media (min-width: $minmqsm) {
+					font-size:46px;
+					margin-bottom:13px;
+				}
+
+				@media (min-width: $minmqmd) {
+					font-size:54px;
+					margin-bottom:16px;
+				}
+
+				@media (min-width: $minmqlg) {
+					font-size:60px;
+					margin-bottom:20px;
+				}
+			}
+		}
+	}
+}
+
+.booking-form-section {
+	position: relative;
+	z-index:99;
+	padding: 25px 15px 20px;
+	margin-top: -60px;
+	border:1px solid lighten($dark, 10%);
+
+	@media (min-width: $minmqsm) {
+		margin-top: -70px;
+	}
+
+	@media (min-width: $minmqmd) {
+		margin-top: -80px;
+		padding-left:20px;
+		padding-right:20px;
+	}
+
+	.form-control,
+	.input-group {
+		margin-bottom:10px;
+	}
+
+	.btn {
+		margin-top:27px;
+	}
+}
+
+.room {
+	margin-bottom:25px;
+
+	@media (min-width: $minmqsm) {
+		margin-bottom: 30px;
+	}
+
+	@media (min-width: $minmqmd) {
+		margin-bottom: 40px;
+	}
+
+	figure {
+		margin-bottom:15px;
+		overflow: hidden;
+
+		a {
+			display:block;
+		}
+
+		img {
+			display:block;
+			width:100%;
+			height: auto;
+			transition: all 0.4s;
+		}
+	}
+
+	&:hover {
+		figure img {
+			transform: scale(1.1) rotate(5deg);
+		}
+	}
+
+	.room-title {
+		font-size:14px;
+		margin-bottom:1px;
+		font-weight:600;
+		
+		a {
+			color: #222;
+
+			&:hover,
+			&:focus {
+				color: $first-color;
+			}
+		}
+	}
+
+	.room-meta {
+		.rmeta-left {
+			float:left;
+		}
+
+		.btn {
+			float:right;
+			border-radius:18px;
+
+			&.btn-sm {
+				margin-top:6px;
+				padding:4px 9px;
+			}
+		}
+
+		&:after {
+			content:'';
+			display: table;
+			clear: both;
+		}
+	}
+
+	.room-price {
+		color: #8e8e8e;
+		font-size:12px;
+		font-style: italic;
+
+		span {
+			font-size: 14px;
+			font-weight:600;
+			color: #6e6e6e;
+		}
+	}
+}
+
+.portfolio-item {
+	margin-bottom:0;
+}
+
+.bg-dark {
+	.entry.entry-list-sm {
+		color: #777;
+
+		.entry-title {
+			font-weight:500;
+			font-size:14px;
+
+			a {
+				color: #aeaeae;
+
+				&:hover,
+				&:focus {
+					color: #f1f1f1;
+				}
+			}
+		}
+	}
+}
+
+.widget.hours-widget {
+	ul {
+		li {
+			padding-bottom:4px;
+			margin-bottom:4px;
+			border-bottom:1px dotted rgba(255, 255, 255, 0.2);
+			em {
+				float:right;
+			}
+
+			&:after {
+				content: '';
+				display: table;
+				clear:both;
+			}
+		}
+
+	}
+}
+
+#map-hotel {
+	height:260px;
+
+	@media (min-width: $minmqsm) {
+		height:360px;
+	}
+
+	@media (min-width: $minmqsm) {
+		height:440px;
+	}
+
+	address {
+		margin: 0;
+		padding:10px 5px 2px;
+		line-height:1.7;
+	}
+}

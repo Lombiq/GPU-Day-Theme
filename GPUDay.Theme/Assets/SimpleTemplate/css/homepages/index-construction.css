@@ -1,0 +1,70 @@
+/* Homepages - Index Construction */
+.slider-container-construction {
+  background-color: #e1e1e1;
+}
+
+@media (min-width: 1200px) {
+  .slider-container-construction {
+    height: 680px;
+  }
+}
+
+.slider-container-construction .tp-caption strong {
+  font-weight: 700 !important;
+}
+
+@media (min-width: 992px) {
+  .services-group {
+    margin-top: -100px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .services-group {
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 991px) {
+  .services-group {
+    margin-bottom: 40px;
+  }
+}
+
+.quick-gallery-showcase .portfolio-item {
+  margin: 0;
+  width: 50%;
+}
+
+@media (min-width: 481px) {
+  .quick-gallery-showcase .portfolio-item {
+    width: 33.3%;
+  }
+}
+
+@media (min-width: 768px) {
+  .quick-gallery-showcase .portfolio-item {
+    width: 25%;
+  }
+}
+
+textarea.form-control {
+  min-height: 120px;
+}
+
+.widget.hours-widget ul li {
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+}
+
+.widget.hours-widget ul li em {
+  float: right;
+}
+
+.widget.hours-widget ul li:after {
+  content: '';
+  display: table;
+  clear: both;
+}

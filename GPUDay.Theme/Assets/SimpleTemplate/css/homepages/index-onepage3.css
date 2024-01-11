@@ -1,0 +1,270 @@
+/* Homepages - Index Cafe 2 */
+body,
+#wrapper {
+  background-color: #fff;
+}
+
+body {
+  color: #333;
+  font-size: 14px;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6,
+.sidebar .widget .widget-title,
+.footer .widget .widget-title {
+  font-family: "Oswald", Arial, sans-serif;
+}
+
+h1,
+.h1 {
+  font-size: 30px;
+}
+
+h2,
+.h2 {
+  font-size: 26px;
+}
+
+h3,
+.h3 {
+  font-size: 22px;
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+}
+
+.count-title,
+.service .service-title,
+.portfolio-item .portfolio-title {
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+
+.btn,
+.form-control {
+  font-size: 14px;
+}
+
+.header.header2.transparent.dark {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.section {
+  padding: 100px 0 80px;
+}
+
+.section#about {
+  padding-bottom: 70px;
+}
+
+.section#contact {
+  padding-bottom: 100px;
+}
+
+.section#home {
+  padding-top: 170px;
+  padding-bottom: 100px;
+}
+
+@media (min-width: 481px) {
+  .section#home {
+    padding-top: 180px;
+    padding-bottom: 120px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section#home {
+    padding-top: 210px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section#home {
+    padding-top: 220px;
+    padding-bottom: 150px;
+  }
+}
+
+.section:not(.parallax) {
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+#home .home-text {
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+@media (min-width: 481px) {
+  #home .home-text {
+    font-size: 44px;
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: 768px) {
+  #home .home-text {
+    font-size: 56px;
+    margin-bottom: 35px;
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 992px) {
+  #home .home-text {
+    font-size: 68px;
+    margin-bottom: 40px;
+    max-width: 740px;
+  }
+}
+
+#home .btn {
+  border-radius: 28px;
+}
+
+@media (min-width: 768px) {
+  #home .btn {
+    font-size: 16px;
+    min-width: 320px;
+  }
+}
+
+@media (min-width: 992px) {
+  #home .btn {
+    font-size: 18px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    min-width: 280px;
+  }
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+@media (min-width: 481px) {
+  .section-title {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 50px;
+    margin-bottom: 45px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-title {
+    font-size: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.progress-container .progress-title {
+  color: #000;
+}
+
+#services.bg-dark {
+  color: #8e8e8e;
+}
+
+#services.bg-dark .section-title,
+#services.bg-dark .count-title,
+#services.bg-dark .service-title,
+#services.bg-dark h1, #services.bg-dark h2, #services.bg-dark h3, #services.bg-dark h4, #services.bg-dark h5, #services.bg-dark h6 {
+  color: #fff;
+}
+
+#services.bg-dark .testimonial {
+  color: #8e8e8e;
+}
+
+#services.bg-dark .testimonial cite {
+  color: #d7d7d7;
+}
+
+#services.bg-dark .owl-prev, #services.bg-dark .owl-next {
+  border-color: #4e4e4e;
+  border-width: 2px;
+  line-height: 32px;
+}
+
+#services.bg-dark .owl-prev:hover, #services.bg-dark .owl-prev:focus, #services.bg-dark .owl-next:hover, #services.bg-dark .owl-next:focus {
+  border-color: #9C27B0;
+}
+
+.testimonials-container {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.testimonials-container .testimonial {
+  background-color: transparent;
+  border: 2px solid #4e4e4e;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.testimonials-container .testimonial blockquote {
+  background-color: transparent;
+}
+
+.testimonials-container .owl-dots {
+  margin-top: 10px;
+}
+
+.testimonials-container .owl-dots .owl-dot:not(.active) {
+  background-color: #999;
+  border-color: #999;
+}
+
+.more-btn-section {
+  margin-top: -1px;
+  background-color: #171717;
+  margin-bottom: 30px;
+}
+
+.more-btn-section .btn {
+  display: block;
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+}
+
+.social-icons.side-big .social-icon {
+  color: #c7c7c7;
+  font-size: 20px;
+  margin: 0 10px 0 0;
+}
+
+@media (min-width: 992px) {
+  .social-icons.side-big .social-icon {
+    display: block;
+    text-align: center;
+    float: none;
+    font-size: 26px;
+    margin-bottom: 3px;
+    margin-right: 0;
+  }
+}
+
+.social-icons.side-big .social-icon:hover, .social-icons.side-big .social-icon:focus {
+  color: #9C27B0;
+}

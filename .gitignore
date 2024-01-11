@@ -1,0 +1,16 @@
+.vs/
+.idea/
+.vscode/
+obj/
+bin/
+artifacts/
+wwwroot/
+node_modules/
+*.user
+.pnpm-debug.log
+
+# Mac
+.DS_Store
+
+GPUDay.Theme/Recipes/GPUDay.MediaTheme.recipe.json
+GPUDay.Theme/Recipes/_MediaTheme/

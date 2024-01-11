@@ -1,0 +1,242 @@
+/* Navbar Nav - Overlay Menu */
+.navbar-container {
+	position: fixed;
+	z-index: 9999;
+	left:0;
+	right:0;
+	bottom: 0;
+	top:0;
+	background-color: rgba(248, 248, 248, 0.82);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding:40px 15px;
+	text-align: center;
+	overflow-y:auto;
+	opacity:0;
+	visibility: hidden;
+	transition:opacity 0.7s, visibility 0s 0.6s;
+
+	@media (min-width: $minmqsm) {
+		padding-top:50px;
+		padding-bottom: 50px;
+	}
+
+	&.nav-open {
+		opacity:1;
+		visibility: visible;
+		transition:opacity 0.7s;
+		-webkit-transition:opacity 0.7s;
+	}
+
+	.social-icons {
+		display: block;
+		margin-top:40px;
+		text-align:center;
+
+		label {
+			font-size:13px;
+			text-transform: uppercase;
+			display:block;
+			margin: 0 0 7px;
+			font-weight:700;
+			color: #777;
+		}
+
+		.social-icon {
+			color: #222;
+			background-color: #e3e3e6;
+			min-width:30px;
+			line-height:30px;
+			margin: 0 2px;
+			transition: all 0.4s;
+			
+			&:hover,
+			&:focus {
+				color: #fff;
+				background-color: $first-color;
+			}
+		}
+	}
+
+	.menu-toggle {
+		float:none !important;
+		margin: 0 0 20px !important;
+
+		.toggle-text {
+			margin-right:5px;
+		}
+
+		i {
+			font-size:13px;
+			vertical-align: middle;
+		}
+	}
+}
+
+/* Overlay Menu */
+.navbar-nav.nav-overlay {
+	max-width:360px;
+	margin-left:auto;
+	margin-right: auto;
+	background-color: transparent !important;
+
+	.header & a {
+		color: #222;
+	}
+
+	+ .social-icons {
+		margin-top: 20px;
+	}
+
+	> li {
+		float:none !important;
+		margin-bottom:8px;
+
+		>  a {
+			padding-top:9px;
+			padding-bottom: 9px;
+			font-weight: 700;
+			font-size:18px;
+			text-transform: uppercase;
+
+			&:before {
+				display: none;
+			}
+
+			.tip {
+				top: -11px;
+				margin-right: -42px;
+			}
+		}
+	}
+
+	li {
+
+		i {
+			font-size: 90%;
+		}
+
+		a {
+			display: inline-block;
+			padding:6px 0;
+		}
+
+		li {
+			> a {
+				font-size:16px;
+				font-weight: 600;
+			}
+
+			.tip {
+				margin-left:20px;
+			}
+
+			li {
+				a {
+					font-size: 14px;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+
+	li:hover,
+	li.open,
+	li.active {
+		> a {
+			color: $first-color !important;
+			background-color: transparent !important;
+
+			&:hover,
+			&:focus {
+				color: $first-color !important;
+				background-color: transparent !important;
+			}
+		}
+	}
+
+	.dropdown-menu > li > a {
+		&:hover,
+		&:focus {
+			color: inherit;
+			background-color:  inherit;
+		}
+	}
+
+	.angle {
+		float: none;
+		font-size: 90%;
+		
+		&:before {
+			content: "\f107";
+		}
+	}
+
+	.open  {
+		> a {
+			> .angle {
+				&:before {
+					content: "\f106";
+				}
+			}
+		}
+	}
+
+	.dropdown-menu {
+		padding-top:3px;
+		padding-bottom: 8px;
+		float:none;
+		background: transparent !important;
+		box-shadow: none !important;
+		text-align: center;
+
+		.dropdown-menu {
+			display: none;
+		}
+
+		.open > .dropdown-menu {
+			display: block;
+		}
+	}
+
+	.open .dropdown-menu {
+		position: relative !important;
+		top:auto;
+		bottom:auto;
+		left:auto;
+		right:auto;
+	}
+
+	.search-dropdown {
+		> a > span {
+			vertical-align: middle;
+
+			& + i {
+				margin-left:6px;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+/* Add animation to first level elements */
+.navbar-nav.nav-overlay.each-anim {
+	> li {
+		visibility: hidden;
+		opacity: 0;
+		transform: translateY(20px);
+		transition: all 0.4s;
+		
+		.nav-open  & {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+
+			// Add transition delay for each
+			@for $i from 1 through 10 {
+			  &:nth-child(#{$i}) { transition-delay: 0.05s * $i; }
+			}
+		}
+	}
+}

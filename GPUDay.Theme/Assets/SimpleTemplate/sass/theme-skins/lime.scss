@@ -1,0 +1,14 @@
+/*
+	Simple Theme
+	Skin Name: Lime
+	First-color: #AFB42B
+	Second-color: #FDD835
+*/
+
+@import '../variables';
+@import '../mixins';
+
+$first-color: #AFB42B;
+$second-color: #FDD835;
+
+@import 'skin';

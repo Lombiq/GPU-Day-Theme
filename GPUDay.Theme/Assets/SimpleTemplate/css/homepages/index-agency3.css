@@ -1,0 +1,156 @@
+/* Homepages - Index Agency 2 */
+@media (max-width: 991px) and (min-width: 768px) {
+  .header.header2 .navbar-collapse {
+    float: right !important;
+    width: auto;
+  }
+  .header.header2 .navbar-collapse .navbar-nav > li {
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+}
+
+.header.header2.custom,
+.header.header2.dark {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.ms-section {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.ms-section .graduated {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  vertical-align: middle;
+  text-align: center;
+  opacity: 0.75;
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, transparent 0%, transparent 54%, black 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.ms-left .ms-section {
+  background-position: left center;
+}
+
+.ms-right .ms-section {
+  background-position: right center;
+}
+
+.ms-section .ms-section-content {
+  position: relative;
+  color: #f1f1f1;
+  padding: 0 15px;
+  posinter-events: none;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .ms-section .ms-section-content {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.ms-section .ms-section-content h1, .ms-section .ms-section-content h2, .ms-section .ms-section-content h3, .ms-section .ms-section-content h4 {
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.ms-section .ms-section-content h1, .ms-section .ms-section-content h2 {
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .ms-section .ms-section-content h1, .ms-section .ms-section-content h2 {
+    font-size: 24px;
+    margin-bottom: 11px;
+  }
+}
+
+@media (min-width: 992px) {
+  .ms-section .ms-section-content h1, .ms-section .ms-section-content h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ms-section .ms-section-content h1, .ms-section .ms-section-content h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+  }
+}
+
+.ms-section .ms-section-content p {
+  display: none;
+  font-size: 14px;
+  line-height: 1.5;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .ms-section .ms-section-content p {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .ms-section .ms-section-content p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ms-section .ms-section-content p {
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+}
+
+.ms-section .ms-section-content .btn {
+  border-radius: 28px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+  .ms-section .ms-section-content .btn {
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-width: 160px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .ms-section .ms-section-content .btn {
+    font-size: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    min-width: 190px;
+  }
+}
+
+.ms-section .ms-section-content.reverse {
+  float: right;
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  #multiscroll-nav {
+    display: none !important;
+  }
+}

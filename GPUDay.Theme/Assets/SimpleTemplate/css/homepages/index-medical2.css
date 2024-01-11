@@ -1,0 +1,134 @@
+/* Homepages - Index Medical 2 */
+.overlay-container .overlay {
+  opacity: 0.18;
+}
+
+.fullscreen.vertical-center .vcenter-content h1,
+.fullheight.vertical-center .vcenter-content h1 {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 481px) {
+  .fullscreen.vertical-center .vcenter-content h1,
+  .fullheight.vertical-center .vcenter-content h1 {
+    font-size: 40px;
+    margin-bottom: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fullscreen.vertical-center .vcenter-content h1,
+  .fullheight.vertical-center .vcenter-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .fullscreen.vertical-center .vcenter-content h1,
+  .fullheight.vertical-center .vcenter-content h1 {
+    font-size: 56px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .fullscreen.vertical-center .vcenter-content h1,
+  .fullheight.vertical-center .vcenter-content h1 {
+    font-size: 62px;
+    margin-bottom: 17px;
+  }
+}
+
+@media (min-width: 481px) {
+  .fullscreen.vertical-center .vcenter-content p,
+  .fullheight.vertical-center .vcenter-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fullscreen.vertical-center .vcenter-content p,
+  .fullheight.vertical-center .vcenter-content p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .fullscreen.vertical-center .vcenter-content p,
+  .fullheight.vertical-center .vcenter-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+}
+
+.table-cell.cell-content textarea.form-control,
+.table-cell.cell-content .form-control {
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.table-cell.cell-content textarea.form-control::-webkit-input-placeholder,
+.table-cell.cell-content .form-control::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.table-cell.cell-content textarea.form-control:-ms-input-placeholder,
+.table-cell.cell-content .form-control:-ms-input-placeholder {
+  color: #fff;
+}
+
+.table-cell.cell-content textarea.form-control::placeholder,
+.table-cell.cell-content .form-control::placeholder {
+  color: #fff;
+}
+
+.table-cell.cell-content textarea.form-control {
+  min-height: 120px;
+}
+
+.table-cell.cell-content .form-control option {
+  color: #222;
+}
+
+@media (min-width: 992px) {
+  .table-cell.cell-content .btn {
+    margin-top: 20px;
+  }
+}
+
+.medical-gallery-container {
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.quick-gallery-showcase .portfolio-item {
+  margin: 0;
+  width: 50%;
+}
+
+@media (min-width: 481px) {
+  .quick-gallery-showcase .portfolio-item {
+    width: 33.3%;
+  }
+}
+
+.widget.hours-widget ul li {
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+}
+
+.widget.hours-widget ul li em {
+  float: right;
+}
+
+.widget.hours-widget ul li:after {
+  content: '';
+  display: table;
+  clear: both;
+}

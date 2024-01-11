@@ -1,0 +1,63 @@
+#map {
+	height:340px;
+	background-color: #171717;
+	position: relative;
+	margin-bottom:50px;
+
+
+	@media (min-width: $minmqsm) {
+		height: 420px;
+		margin-bottom:60px;
+
+		&.vertical {
+			height: 490px;
+			margin-bottom:0;
+		}
+	}
+
+	address {
+		font-size:13px;
+		margin:0;
+		padding:15px 10px 10px;
+		line-height: 1.5;
+	}
+}
+
+.contact-box {
+	padding:18px 20px;
+	background-color: #f8f6fa;
+	margin-bottom:30px;
+
+	@media (max-width: $maxmqsm) {
+		padding:15px;
+	}
+
+	strong {
+		font-weight:600;
+		color: #222;
+	}
+
+	h3 {
+		font-size:16px;
+		margin-bottom:13px;
+		padding-bottom:13px;
+		border-bottom:1px solid #eaeaea;
+	}
+
+	&:last-child {
+		margin-bottom:0;
+	}
+
+	.social-icons {
+		display: inline-block;
+	}
+
+	.social-icon {
+		color: #222;
+
+		&:hover,
+		&:focus {
+			color: $first-color;
+		}
+	}
+}

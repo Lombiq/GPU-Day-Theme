@@ -1,0 +1,215 @@
+/* Header Version 2 */
+.header.header2 {
+	&:after {
+		content:'';
+		display:table;
+		clear:both;
+	}
+
+	.header-inner {
+		.container {
+			@media (min-width: $minmqsm) {
+				position: relative;
+			}
+		}
+	}
+
+	.navbar-collapse {
+		@media (min-width: $minmqsm) {
+			float:right;
+			position: static !important;
+		}
+
+		@media (min-width: $minmqsm) and (max-width: $maxmqmd) {
+			display:block;
+			float:left;
+			width:100%;
+		}
+	}
+
+	.dropdown.header-dropdown {
+		.dropdown-menu {
+			border-color: #f0f0f6;
+		}
+	}
+
+	.dropdown.cart-dropdown {
+		> a {
+			@media (max-width: $maxmqsm) {
+				padding-left:15px;
+			}
+		}
+	}
+
+	.navbar-nav {
+		> li {
+			@media (min-width: $minmqsm) {
+				padding-bottom:8px;
+			}
+
+			@media (min-width: $minmqmd) {
+				padding-top:33px;
+				padding-bottom:33px;
+			}
+			> a {
+				@media (min-width: $minmqsm) {
+					border-radius:20px;
+					padding-top:8px;
+					padding-bottom:8px;
+					position: relative;
+
+					&:before {
+						display:none;
+					}
+				}
+			}
+
+			&.open,
+			&.active {
+				> a {
+					&,
+					&:hover,
+					&:focus, {
+						background: #f0f0f6;
+					}
+				}
+			}
+		}
+		
+		.dropdown-menu {
+			@media (min-width: $minmqsm) {
+				border-top:1px solid #f0f0f6;
+			}
+		}
+
+		.dropdown-menu.megamenu {
+			@media (min-width: $minmqsm) {
+				left:15px;
+			}
+		}
+
+		.dropdown.cart-dropdown {
+			> a {
+				font-size: 20px;
+				color: inherit;
+
+				.dcart-total-count {
+					bottom: -2px;
+					left: auto;
+					right:-6px;
+					transform: none;
+					background-color: $first-color;
+					color:#fff;
+				}
+			}
+		}
+	}
+
+	.navbar-toggle {
+		margin-top: 35px;
+		margin-bottom: 35px;
+		float:right;
+		padding:4px 5px;
+
+		.toggle-text {
+			margin-right:5px;
+		}
+
+		.icon-bar {
+			width: 20px;
+		}
+	}
+}
+
+// Prevent fallin to a new line on min-width 768px and max-width 991px
+// Add this if you have 5-6 menu items and if you are sure that it won't overflow
+.header.header2.header-nocollapse-sm .navbar-collapse {
+	@media (max-width: $maxmqmd) and (min-width: $minmqsm) {
+		float:right !important;
+		width: auto;
+
+		.navbar-nav > li {
+			padding-top: 33px;
+			padding-bottom: 33px;
+		}
+	}
+}
+
+// No bg absolute position over elements 
+.header.header2.transparent {
+	background-color: transparent;
+	position: absolute;
+	left:0;
+	top:0;
+	right:0;
+	z-index:999;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+
+	&.light {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+		.navbar-nav {
+			> li {
+				> a {
+					@media (min-width: $minmqsm) {
+						color: #fff;
+					}
+				}
+				&.open,
+				&.active {
+					> a {
+						&,
+						&:hover,
+						&:focus, {
+							@media (min-width: $minmqsm) {
+								background: #fff;
+								color: $first-color;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Header Boxed Absolute position */
+.header-container > .container {
+	position: relative;
+}
+
+.header.header2.header-boxed {
+	position: absolute;
+	left:15px;
+	top:25px;
+	right: 15px;
+	z-index:999;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-shadow: 0 3px 9px rgba(0,0,0, 0.2);
+
+	@media (min-width: $minmqsm) {
+		top:40px;
+	}
+
+	&.header-inner {
+		content:'';
+		display: table;
+		clear: both;
+	}
+
+	.navbar-nav .dropdown-menu.megamenu {
+		@media (min-width: $minmqsm) {
+			left:0;
+		}
+	}
+
+	&.radius {
+		border-radius: 60px;
+
+		@media (min-width: $minmqsm) {
+			padding-left:20px;
+			padding-right:20px;
+		}
+	}
+}

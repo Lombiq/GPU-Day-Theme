@@ -1,0 +1,14 @@
+/*
+	Simple Theme
+	Skin Name: Red
+	First-color: #e53935
+	Second-color: #2196F3
+*/
+
+@import '../variables';
+@import '../mixins';
+
+$first-color: #e53935;
+$second-color: #2196F3;
+
+@import 'skin';

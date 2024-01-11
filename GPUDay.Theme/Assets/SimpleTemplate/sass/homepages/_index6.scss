@@ -1,0 +1,14 @@
+/* Homepages - Index6 */
+.slider-container6 {
+	background-color: #e1e1e1;
+
+	@media (min-width: $minmqlg) {
+		height: 520px;
+	}
+
+	.tp-caption {
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}

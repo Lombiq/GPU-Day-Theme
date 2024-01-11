@@ -1,0 +1,14 @@
+/*
+	Simple Theme
+	Skin Name: Pink 2
+	First-color: #C2185B
+	Second-color: #9C27B0
+*/
+
+@import '../variables';
+@import '../mixins';
+
+$first-color: #C2185B;
+$second-color: #9C27B0;
+
+@import 'skin';

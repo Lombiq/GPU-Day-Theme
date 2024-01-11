@@ -1,0 +1,513 @@
+.footer {
+	background-color: #171717;
+	color: #9a9a9a;
+	
+	> .container,
+	> .container-fluid {
+		padding-top: 75px;
+		padding-bottom: 15px;
+	}
+
+	hr {
+		margin:27px 0 21px;
+		border-top-color:#3e3e3e;
+	}
+
+	a {
+		color: #9a9a9a;
+
+		&:hover,
+		&:focus {
+			color: #fff;
+		}
+	}
+
+	.widget {
+		margin-bottom: 60px;
+
+		.widget-title {
+			font: 400 15px/1.1 $second-font-family;
+			margin: 2px 0 25px;
+			text-transform: uppercase;
+			color: #fff;
+		}
+
+		&.about-widget {
+			img {
+				display: inline-block;
+				max-width:100%;
+				height:auto;
+			}
+		}
+
+		.fa-ul {
+			li {
+				margin-bottom: 9px;
+
+				.fa-li {
+					font-size:85%;
+				}
+			}
+		}
+		
+		.tweet_list {
+			li {
+				padding:7px 10px 7px 10px;
+				position: relative;
+				margin-bottom:14px;
+				background-color: #141414;
+				transition: all 0.4s;
+
+				.twitter-icon {
+					position: absolute;
+					right:12px;
+					bottom:6px;
+					font-size:20px;
+					line-height:1;
+					color: #0e0e0e;
+					text-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+				}
+
+				.tweet_time {
+					display: block;
+					position: relative;
+					font-size:12px;
+					font-style:italic;
+					color:#6a6a6a;
+					margin-top:9px;
+					padding-top:3px;
+
+					&:after {
+						content:'';
+						display:block;
+						width:28px;
+						height:1px;
+						background-color: #4e4e4e;
+						position: absolute;
+						top:0;
+						left:0
+					}
+
+					a {
+						color:#6a6a6a;
+
+						&:hover,
+						&:focus {
+							color:#fff;
+						}
+					}
+				}
+
+				&:hover {
+					background-color: #101010;
+				}
+
+				&:last-child {
+					margin-bottom:0;
+				}
+			}
+		}
+
+		form {
+			> .row {
+				margin-left:-8px;
+				margin-right:-8px;
+
+				[class*="col-"] {
+				 	padding-left:8px;
+				 	padding-right:8px;
+				}
+			}
+		}
+
+		.form-group {
+			margin-bottom:16px;
+		}
+
+		.form-control {
+			background-color: #131313;
+			border-radius:0;
+			font-size:13px;
+			padding:7px 12px;
+			height:auto;
+			color:#9a9a9a;
+			border-color:#111;
+			margin-bottom:12px;
+
+			&::-moz-placeholder {
+			  color: #9a9a9a;
+			}
+
+			&:-ms-input-placeholder {
+			  color: #9a9a9a;
+			}
+
+			&::-webkit-input-placeholder {
+			  color: #9a9a9a;
+			}
+
+			&:focus,
+			&:hover {
+				background-color: #111;
+				border-color:#101010;
+				color:#fff;
+			}
+		}
+
+		textarea {
+			&.form-control {
+				min-height:110px;
+			}
+		}
+
+		.btn {
+			font-weight:400;
+			font-size:13px;
+			border-radius:0;
+			padding:5px 12px;
+		}
+
+		&.newsletter-widget {
+			form {
+				margin-bottom:14px;
+			}
+
+			p:last-child {
+				font-size:12px;
+				color:#6a6a6a;
+				margin-bottom:0;
+			}
+		}
+
+		.tagcloud {
+			a {
+				display: block;
+				float:left;
+				padding:4px 9px;
+				background-color: #131313;
+				color:#9a9a9a;
+				margin:0 6px 6px 0;
+				transition: background 0.45s;
+
+				&:hover,
+				&:focus {
+					background-color: $first-color;
+					color:#fff;
+				}
+			}
+
+			&:after {
+				content:'';
+				display:table;
+				clear:both;
+			}
+		}
+
+		.posts-list {
+			li {
+				margin-bottom:12px;
+				padding:6px;
+				background-color: #141414;
+				transition: all 0.4s;
+
+				figure {
+					max-width:52px;
+					float:left;
+
+					a {
+						display: block;
+					}
+
+					img {
+						display: block;
+						width:100%;
+						height:auto;
+					}
+				}
+
+				h5,span {
+					display: block;
+					margin-left:62px;
+				}
+
+				h5 {
+					font-size:13px;
+					font-weight:600;
+					margin-top:6px;
+					margin-bottom:4px;
+				}
+
+				span {
+					font-style:italic;
+					font-size:12px;
+				}
+
+				&:after {
+					content:'';
+					display: table;
+					clear:both;
+				}
+
+				&:hover {
+					background-color: #101010;
+				}
+			}
+		}
+
+		&.flickr-widget {
+			.row {
+				margin-left:-4px;
+				margin-right:-4px;
+			}
+			
+			.flickr-widget-list {
+				list-style:none;
+					li {
+				    display:block;
+				    float:left;
+				    margin:0 3px 6px;
+				    padding:0;
+				    width: calc( 25% - 6px );
+				    max-width: 60px;
+				    overflow:hidden;
+
+				    a {
+					    display:block;
+					    position:relative;
+					    width:100%;
+					    height:100%;
+
+					    img {
+					    	display: block;
+					    	width:100%;
+					    	height:auto;
+					    }
+					}
+				}
+			}
+		}
+		
+		.about-list {
+			li {
+				padding-bottom:15px;
+				margin-bottom:15px;
+				border-bottom:1px solid #222;
+
+				i {
+					float:left;
+					font-size:14px;
+					margin-top:2px;
+					min-width:32px;
+					height:32px;
+					line-height:32px;
+					text-align:center;
+					background-color: #141414;
+					border-radius:50%;
+				}
+
+				.about-list-content {
+					margin-left: 44px;
+				}
+
+				label {
+					margin-bottom:2px;
+				}
+
+				&:after {
+					content:'';
+					display: table;
+					clear:both;
+				}
+
+				&:last-child {
+					padding-bottom:0;
+					margin-bottom:0;
+					border-bottom:none;
+				}
+			}
+		}
+		
+		&.instagram-widget {
+			position: relative;
+			margin:0;
+
+			.btn.btn-follow {
+				display: block;
+				padding:3px 14px;
+				min-width:170px;
+				font-size:12px;
+				margin-left:-85px;
+				text-align:center;
+				position: absolute;
+				left:50%;
+				bottom:0;
+				z-index: 99;
+				border-radius:5px 5px 0 0;
+				color:#fff;
+				transition: all 0.4s;
+				background-color: $first-color;
+				border-color: $first-color;
+				opacity: 0.8;
+
+				&:hover,
+				&:focus {
+					opacity:1;
+					color:#fff;
+					background-color: $first-color;
+					border-color: $first-color;
+				}
+			}
+
+			#instafeed {
+				img {
+					display: block;
+					width: 100%;
+					height:auto;
+				}
+
+				a {
+					display: block;
+					position: relative;
+					&:after {
+						content:'';
+						position: absolute;
+						left:0;
+						right:0;
+						top:0;
+						bottom:0;
+						transition:all 0.75s ease;
+						-webkit-transition:all 0.75s ease;
+						opacity:0;
+						visibility: hidden;
+						background-color: rgba(255, 255, 255, 0.4);
+					}
+
+					&:focus:after,
+					&:hover:after {
+						opacity:1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+		
+	}
+
+	address {
+		margin-bottom:0;
+	}
+
+	label {
+		font-weight:700;
+		margin-right:3px;
+	}
+}
+
+.footer-bottom {
+	background-color: #121212;
+	padding:35px 0;
+
+	.footer-right {
+		margin-bottom:8px;
+	}
+
+	@media (min-width: $minmqmd) {
+		padding: 40px 0;
+
+		.footer-right {
+			float:right;
+			margin-bottom:0;
+		}
+	}
+
+	@media (max-width: $maxmqmd) {
+		text-align:center;
+	}
+ 
+	.copyright {
+		margin-bottom: 0;
+		
+		a {
+			color: $first-color;
+
+			&:hover,
+			&:focus {
+				color: darken($first-color, 10%);
+			}
+		}
+	}
+
+	.footer-menu {
+		font-size:0;
+
+		li {
+			font-size:13px;
+			display: inline;
+
+			& + li:before {
+				content: '•';
+				margin:0 8px;
+			}
+
+			&.active a {
+				color: $first-color;
+			}
+		}
+
+		a {
+			display: inline-block;
+		}
+	}
+}
+
+.social-icons {
+	font-size:0;
+	
+	label {
+		font-size:13px;
+	}
+
+	.social-icon {
+		display: inline-block;
+		font-size:13px;
+		margin:0 5px;
+	}
+}
+
+/* -------- Scroll Top Button  -------*/
+#scroll-top {
+	position:fixed;
+	bottom:70px;
+	right:30px;
+	display:block;
+	visibility:hidden;
+	cursor:pointer;
+	z-index:999;
+	width:36px;
+	height:36px;
+	line-height:36px;
+	font-size: 18px;
+	opacity:0;
+	transition: all 0.4s;
+	transform: translateY(75px);
+	text-align:center;
+	color:#fff;
+	background-color: $first-color;
+
+	&.fixed {
+		opacity:1;
+		visibility:visible;
+		transform: translateY(0);
+	}
+
+	&:hover,
+	&:focus {
+		background-color: darken($first-color, 10%);
+	}
+
+	@media (max-width: $maxmqsm) {
+		display:none;
+		visibility:hidden;
+		opacity:0;
+	}
+}

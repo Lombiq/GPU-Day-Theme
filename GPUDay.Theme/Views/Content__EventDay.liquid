@@ -1,0 +1,90 @@
+{% assign eventDate = Model.ContentItem.Content.EventDay.Date.Value %}
+{% assign talks = Queries.TalksByDate | query: EventDate: eventDate %}
+<div class="mb20"></div>
+<div class="span-6 cell col-md-6">
+    <h2 class="title text-center mb25">{{ Model.ContentItem.DisplayText }}</h2>
+    {% for item in talks %}
+        {% assign talkPartId = item.ContentItemId %}
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="event-part">
+                    <div class="row">
+                        <div class="event-time col-sm-3">
+                            {{ item.Content.Talk.StartOfTalk.Value | date: "%H:%M" }}
+                            -
+                            {{ item.Content.Talk.EndOfTalk.Value | date: "%H:%M" }}
+                        </div>
+                        <div class="col-sm-9">
+                            <strong>
+                                {% if item.Content.Talk.AbstractText.Html != null and item.Content.Talk.AbstractText.Html != "" %}
+                                    <a href="#{{ talkPartId }}" id="{{ talkPartId }}" data-toggle="modal" data-target=".bs-modal-lg-{{ talkPartId }}">{{ item.DisplayText }}</a>
+                                {% else %}
+                                    {{ item.DisplayText }}
+                                {% endif %}
+                            </strong>
+                            {% if item.Content.Talk.Abstract.Paths.first != null %}
+                                <a href="{{ item.Content.Talk.Abstract.Paths.first | asset_url }}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+                            {% endif %}
+                            {% if item.Content.Talk.Slides.Paths.first != null %}
+                                <a href="{{ item.Content.Talk.Slides.Paths.first | asset_url }}" target="_blank"><i class="fa fa-file-o" aria-hidden="true"></i></a>
+                            {% endif %}
+                            {% if item.Content.Talk.RecordingUrl.Text != null %}
+                                <a href="#" id="video" data-id="{{ item.Content.Talk.RecordingUrl.Text }}" data-toggle="modal" data-target=".bs-modal-lg-{{ talkPartId }}-video"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                            {% endif %}
+                        </div>
+                        <div class="event-meta col-sm-12 col-sm-offset-3">
+                            <div class="event-meta-left">
+                                <div class="event-speaker">
+                                    {% if item.Content.Talk.Speaker.ContentItemIds.size > 0 %}
+                                        {% assign speakers = Queries.SpeakersById | query: SpeakerId: item.Content.Talk.Speaker.ContentItemIds.first %}
+                                        {% assign speakerName = speakers.first.DisplayText %}
+                                        {% assign speakerId = speakers.first.DisplayText | replace: " ", "_" %}
+                                        <div class="event-meta-left">
+                                            <div class="event-speaker">
+                                                <a href="#{{ speakerId }}">{{ speakerName }}</a>
+                                                {% if item.Content.Talk.CoSpeaker.ContentItemIds.size > 0 %}
+                                                    {% assign coSpeakers = Queries.SpeakersById | query: SpeakerId: item.Content.Talk.CoSpeaker.ContentItemIds.first %}
+                                                    {% assign coSpeakerName = coSpeakers.first.DisplayText %}
+                                                    {% assign coSpeakerId = coSpeakers.first.DisplayText | replace: " ", "_" %}
+                                                    <span class="comma">,</span> <a href="#{{ coSpeakerId }}">{{ coSpeakerName }}</a>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade bs-modal-lg-{{ talkPartId }}" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h2 class="modal-title">Abstract</h2>
+                        </div>
+                        <div class="modal-body">
+                            {{ item.Content.Talk.AbstractText.Html | raw }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade bs-modal-lg-{{ talkPartId }}-video embedYouTubeModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h2 class="modal-title">Recording</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

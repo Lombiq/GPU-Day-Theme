@@ -1,0 +1,96 @@
+/* Homepages - Index Agency 4 */
+body,
+#wrapper {
+  background-color: #f9f9fe;
+}
+
+body {
+  color: #766957;
+  font-family: "Raleway", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #3b3227;
+}
+
+h1, .h1 {
+  font-size: 28px;
+}
+
+h2, .h2 {
+  font-size: 24px;
+}
+
+h3, .h3 {
+  font-size: 20px;
+}
+
+h4, .h4 {
+  font-size: 17px;
+}
+
+h1, h2, h3, h4, h5, h6,
+.sidebar .widget .widget-title,
+.footer .widget .widget-title,
+.page-header h1 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.015em;
+}
+
+.slider-container-agency4 {
+  background-color: #171717;
+}
+
+@media (min-width: 1200px) {
+  .slider-container-agency4 {
+    height: 600px;
+  }
+}
+
+.slider-container-agency4 .tp-caption strong {
+  font-weight: 700 !important;
+}
+
+.service .service-title {
+  font-size: 18px;
+}
+
+.service p {
+  max-width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service.icon-left .service-title {
+  font-size: 15px;
+}
+
+.portfolio-item .portfolio-title {
+  font-size: 16px;
+}
+
+.count-title {
+  font-size: 15px;
+}
+
+.footer .widget .widget-title {
+  font-size: 17px;
+}
+
+.member.text-center p {
+  max-width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table-row + .table-row {
+  border-top: none !important;
+}
+
+.table-row.no-border-bottom {
+  border-bottom: none;
+}
+
+#map {
+  margin-bottom: 30px;
+}

@@ -1,0 +1,256 @@
+/* Homepages - Index Charity */
+@import '../mixins';
+@import '../variables';
+
+.slider-container-charity {
+	background-color: #111;
+
+	@media (min-width: $minmqlg) {
+		height: 600px;
+	}
+
+	.tp-caption {
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}
+
+.title:after {
+	height: 1px;
+}
+
+.cause {
+	position: relative;
+	margin-bottom:35px;
+
+	.cause-label {
+		position: absolute;
+		right:10px;
+		bottom:10px;
+		background-color: rgba($first-color, 0.8);
+		color: #fff;
+		font-size:13px;
+		padding:4px 9px;
+		z-index:99;
+		border-radius: 4px;
+
+		@media (min-width: $minmqsm) {
+			font-size:14px;
+			padding:5px 12px;
+			right:15px;
+			bottom:15px;
+		}
+	}
+
+	figure {
+		position: relative;
+		margin-bottom: 18px;
+		background-color: $gray;
+
+		a {
+			display:block;
+		}
+
+		img {
+			display:block;
+			height:auto;
+			width:100%;
+		}
+	}
+
+	.cause-title {
+		font-size: 16px;
+		margin-bottom:13px;
+		line-height:1.25;
+
+		a {
+			color: #222;
+
+			&:hover,
+			&:focus {
+				color: $first-color;
+			}
+		}
+	}
+
+	&.wider {
+		.cause-title {
+			@media (min-width: $minmqsm) {
+				font-size:20px;
+				margin-bottom:15px;
+			}
+		}
+	}
+
+	p {
+		margin-bottom:10px;
+	}
+
+	.list-inline {
+		font-size:13px;
+		font-weight: 400;
+		color: #6e6e6e;
+		margin-bottom:12px;
+
+		strong  {
+			color: #222;
+		}
+	}
+
+	&.wider {
+		.list-inline {
+			@media (min-width: $minmqsm) {
+				font-size:15px;
+				margin-bottom:15px;
+			}
+		}
+	}
+
+	.progress {
+		height:3px;
+		padding:0;
+		margin-bottom:18px;
+		background-color: darken($gray2, 3%);
+	}
+
+	.cause-action {
+		font-size:0;
+
+		.btn {
+			font-size:12px;
+			padding:5px 10px;
+			border-radius:8px;
+
+			+ .btn {
+				margin-left:8px;
+			}
+
+			&.btn-border {
+				border-width: 1px;
+			}
+		}
+	}
+
+	&.wider {
+		.cause-action .btn {
+			@media (min-width: $minmqsm) {
+				font-size:13px;
+				padding:6px 12px;
+			}
+		}
+	}
+}
+
+/* jQuery Countdown styles 2.0.0. */
+.countdown-section {
+	display: block;
+	float: left;
+	text-align: inherit;
+}
+
+.countdown-period {
+    display: block;
+}
+
+.countdown-descr {
+	display: block;
+	width: 100%;
+}
+
+.countdown-row {
+	clear: both;
+	width: 100%;
+	padding: 0px;
+	text-align: inherit;
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+.countdown-show1 .countdown-section {
+	width: 98%;
+}
+
+.countdown-show2 .countdown-section {
+	width: 48%;
+}
+
+.countdown-show3 .countdown-section {
+	width: 32.5%;
+}
+
+.countdown-show4 .countdown-section {
+	width: 24.5%;
+}
+
+.countdown-show5 .countdown-section {
+	width: 19.5%;
+}
+
+.countdown-show6 .countdown-section {
+	width: 16.25%;
+}
+
+.countdown-show7 .countdown-section {
+	width: 14%;
+}
+
+.cause-countdown {
+	max-width: 420px;
+	margin:20px 0 25px;
+
+	.text-center & {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+	@media (min-width: $minmqsm) {
+		margin-top:25px;
+		margin-bottom: 22px;
+	}
+
+	@media (min-width: $minmqmd) {
+		font-size: 16px;
+	}
+
+	.countdown-amount {
+	    font-size: 24px;
+	    font-weight:700;
+	    color: #222;
+	    line-height: 0.8;
+
+	    @media (min-width: $minmqsm) {
+			font-size:30px;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size: 36px;
+		}
+	}
+
+	.countdown-period {
+	    font-size:13px;
+	    font-weight: 400;
+	    color: #5e5e5e;
+	    line-height:1.4;
+
+	    @media (min-width: $minmqsm) {
+			font-size:14px;
+	    	line-height:1.6;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size: 15px;
+	    	line-height:1.7;
+		}
+	}
+}
+
+.portfolio-item {
+	margin-bottom:0;
+}

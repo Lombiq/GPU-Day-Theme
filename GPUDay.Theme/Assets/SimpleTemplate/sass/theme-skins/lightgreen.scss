@@ -1,0 +1,14 @@
+/*
+	Simple Theme
+	Skin Name: Light Green
+	First-color: #8BC34A
+	Second-color: #FFEB3B
+*/
+
+@import '../variables';
+@import '../mixins';
+
+$first-color: #8BC34A;
+$second-color: #FFEB3B;
+
+@import 'skin';

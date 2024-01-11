@@ -1,0 +1,30 @@
+/* Checkout */
+.table {
+	tr.total-row {
+		font-size:15px;
+		font-weight: 700;
+		text-transform:uppercase;
+		td {
+			padding:15px 18px;
+			&:first-child {
+				font-weight: 600;
+				text-align: right;
+				background-color: #f6f6fa;
+			}
+		}
+
+		&:last-child {
+			td:last-child {
+				color: #ca1515;
+			}
+		}
+	}
+}
+
+.checkout-action {
+	font-size:0;
+
+	.btn + .btn {
+	margin-left:4px;
+	}
+}

@@ -1,0 +1,14 @@
+/*
+	Simple Theme
+	Skin Name: Blue Grey
+	First-color: #607D8B
+	Second-color: #37474F
+*/
+
+@import '../variables';
+@import '../mixins';
+
+$first-color: #607D8B;
+$second-color: #37474F;
+
+@import 'skin';

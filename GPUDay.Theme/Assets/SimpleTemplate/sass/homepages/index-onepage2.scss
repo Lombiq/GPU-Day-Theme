@@ -1,0 +1,170 @@
+/* Homepages - Index Cafe 2 */
+@import '../mixins';
+@import '../variables';
+
+$font-family: 'Raleway', sans-serif;
+body {
+	font-family: $font-family;
+}
+
+h1,h2,h3,h4,h5,h6,
+.sidebar .widget .widget-title,
+.footer .widget .widget-title {
+	font-family: $font-family;
+	font-weight:300;
+}
+
+h1,.h1 {
+	font-size: 34px;
+}
+
+h2,.h2{
+	font-size: 30px;
+}
+
+h3,.h3 {
+	font-size: 26px;
+}
+
+h4,.h4 {
+	font-size: 22px;
+}
+
+.portfolio-item .portfolio-title {
+	font-size:16px;
+}
+
+.entry .entry-title {
+	font-weight: 400;
+}
+
+.count-title {
+	font-size:16px;
+}
+
+.callout h3 {
+	font-size:20px;
+
+	strong {
+		font-weight:600;
+	}
+}
+
+.slider-container-onepage2 {
+	background-color: $dark;
+	height: 100vh;
+
+	.tp-caption {
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}
+
+.section {
+	padding: 100px 0 100px;
+
+	&#home {
+		padding-top:0;
+		padding-bottom:0;
+	}
+}
+
+.section-edge {
+	@include angled-edge('outside bottom', 'lower left', #fff, 2800, 140);
+
+	&.top-edge {
+		@include angled-edge('inside bottom', 'upper right', #fff, 2800, 140);
+	}
+
+	&.bg-gray {
+		@include angled-edge('outside bottom', 'lower left', #f0f0f0, 2800, 140);
+
+		&.top-edge {
+			@include angled-edge('inside bottom', 'upper right', #f0f0f0, 2800, 140);
+		}
+	}
+
+	&.section {
+		padding-bottom:40px;
+
+		&#about {
+			padding-bottom:30px;
+		}
+	}
+
+	+ .section {
+		padding-top: 160px;
+	}
+
+	+ .footer {
+		padding-top:100px;
+	}
+}
+
+.section-title {
+	font-size:30px;
+	font-weight: 300;
+	margin-bottom:35px;
+
+	@media (min-width: $minmqxs) {
+		font-size:36px;
+	}
+
+	@media (min-width: $minmqsm) {
+		font-size:44px;
+		margin-bottom:45px;
+	}
+
+	@media (min-width: $minmqmd) {
+		font-size:52px;
+		margin-bottom:60px;
+	}
+}
+
+.testimonials-container {
+	background-color: #f6f6fa;
+	border: 1px solid #eaeaea;
+	padding: 25px 15px;
+
+	.testimonial {
+		background-color: transparent;
+		padding-top:0;
+		padding-bottom:0;
+	}
+
+	.owl-dots {
+		margin-top:10px;
+
+		.owl-dot:not(.active) {
+			background-color: #999;
+			border-color: #999;
+		}
+	}
+}
+
+.more-btn-section {
+	background-color: $dark;
+	max-width: 280px;
+	margin:0 auto;
+
+	.btn {
+		display:block;
+		width:100%;
+		padding-top:10px;
+		padding-bottom:10px;
+		font-weight:300;
+		font-size:15px;
+		text-align:center;
+	}
+}
+
+.bg-gray {
+	.contact-box {
+		background-color: #f0f0f0;
+
+		h3 {
+			border-color: #ddd;
+		}
+	}
+}

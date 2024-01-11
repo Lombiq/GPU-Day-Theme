@@ -1,0 +1,37 @@
+/* Homepages - Index Agency */
+@import '../mixins';
+@import '../variables';
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 700;
+}
+
+.split-text {
+	font-weight:700;
+	position: relative;
+	z-index:10;
+	font-size:15px;
+	line-height:1.4;
+	color: #f1f1f1;
+
+	@media (min-width: $minmqsm) {
+		font-size:18px;
+	}
+
+	@media (min-width: $minmqmd) {
+		font-size:20px;
+	}
+
+	@media (min-width: $minmqlg) {
+		font-size:24px;
+	}
+	> span {
+		@media (min-width: $minmqmd) {
+			display:block;
+		}
+	}
+}
+
+.entry.entry-list-sm {
+	margin-bottom:25px;
+}
