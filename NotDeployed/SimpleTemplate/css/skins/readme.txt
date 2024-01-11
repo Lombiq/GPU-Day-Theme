@@ -1,4 +1,0 @@
-/* 
-Layerslider skins
-This folder comes with layerslider plugin 
-*/
