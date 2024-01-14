@@ -69,6 +69,13 @@
               }
             },
             {
+              "Type": "AllWorkflowTypeDeploymentStep",
+              "Step": {
+                "Id": "fd11a2856f5840699310ca5409282ef6",
+                "Name": "AllWorkflowType"
+              }
+            },
+            {
               "Type": "AllQueriesDeploymentStep",
               "Step": {
                 "Id": "87d3f48aa9c549c997e7107b0c7bca37",
@@ -152,6 +159,306 @@
               }
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "WorkflowType",
+      "data": [
+        {
+          "WorkflowTypeId": "41dj971hp3n1wt8s3257c1bv4r",
+          "Name": "Contact Us Posted",
+          "IsEnabled": true,
+          "IsSingleton": false,
+          "LockTimeout": 0,
+          "LockExpiration": 0,
+          "DeleteFinishedWorkflows": false,
+          "Activities": [
+            {
+              "ActivityId": "4mxqy4q1y7a4j2geyh3emm8ang",
+              "Name": "HttpRequestEvent",
+              "X": 0,
+              "Y": 0,
+              "IsStart": true,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Contact Us Form Submitted"
+                },
+                "HttpMethod": "POST",
+                "Url": "/gpuday/workflows/Invoke?token=CfDJ8GvqA6tnIT5GtBdEnQ6k0qWqBEO1PlNROjxu9rpz2es-UQW6mJXDvdE_MofK50zG5iV7QSeuULu_tiW2zOTvTY981wujHL5ruWavMGqo_6i_IB2QaIzz12Y1MMy1EKoIHcwBqzL04J4750u8Jznz4UHItfkdIIRHkgimGJsp800suseptpDHGeL46E9PXpfNjyzvnD-WuoZO1wmY7KPv5eeQUroSvQjpXHNd-McAckxp",
+                "ValidateAntiforgeryToken": true,
+                "TokenLifeSpan": 0
+              }
+            },
+            {
+              "ActivityId": "45s3e4mh415262qncw1p3aptxe",
+              "Name": "BindModelStateTask",
+              "X": 300,
+              "Y": 10,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Bind Form To Model State"
+                }
+              }
+            },
+            {
+              "ActivityId": "41xaj12zfbk4qz8211qnps5cwg",
+              "Name": "ValidateAntiforgeryTokenTask",
+              "X": 610,
+              "Y": 10,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": null
+                }
+              }
+            },
+            {
+              "ActivityId": "486yp4pbft9v9x31ca30fx87mq",
+              "Name": "ValidateFormFieldTask",
+              "X": 1230,
+              "Y": 160,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Validate Subject"
+                },
+                "FieldName": "Subject",
+                "ErrorMessage": "Subject is required."
+              }
+            },
+            {
+              "ActivityId": "4zcc7x6nt2hk1va7sqn002g45k",
+              "Name": "ValidateFormFieldTask",
+              "X": 1010,
+              "Y": 160,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Validate Email"
+                },
+                "FieldName": "Email",
+                "ErrorMessage": "Email is required."
+              }
+            },
+            {
+              "ActivityId": "4akp8ve1hc9cnx40crp1sk99d6",
+              "Name": "ForkTask",
+              "X": 930,
+              "Y": 10,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Validate Form Fields"
+                },
+                "Forks": [
+                  "Email",
+                  "Subject",
+                  "Message",
+                  "Captcha"
+                ]
+              }
+            },
+            {
+              "ActivityId": "47vz8v58kw1k0vcpw44wp1x2m3",
+              "Name": "ValidateFormFieldTask",
+              "X": 1427,
+              "Y": 150,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Validate Message"
+                },
+                "FieldName": "Message",
+                "ErrorMessage": "Message is required."
+              }
+            },
+            {
+              "ActivityId": "4yyp32342awecsbp76ah6khxwx",
+              "Name": "JoinTask",
+              "X": 900,
+              "Y": 320,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Join"
+                },
+                "Mode": 0
+              }
+            },
+            {
+              "ActivityId": "4r2xcksf29mf2056eaa88r0jxh",
+              "Name": "ValidateFormTask",
+              "X": 420,
+              "Y": 310,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": null
+                }
+              }
+            },
+            {
+              "ActivityId": "4j12sqcz81n82vn1cg34jna9my",
+              "Name": "NotifyTask",
+              "X": 80,
+              "Y": 240,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Form Error"
+                },
+                "NotificationType": 3,
+                "Message": {
+                  "Expression": "Please fill out the form before submitting."
+                }
+              }
+            },
+            {
+              "ActivityId": "4bf1thh9xr2w77mr1bxqryftnq",
+              "Name": "NotifyTask",
+              "X": 110,
+              "Y": 360,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Form Success"
+                },
+                "NotificationType": 0,
+                "Message": {
+                  "Expression": "Email has been successfully sent. {{ Request.Form.Message }}"
+                }
+              }
+            },
+            {
+              "ActivityId": "4nqta2fjt6d3qx7xe2t2d248dy",
+              "Name": "HttpRedirectTask",
+              "X": 20,
+              "Y": 120,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Go to Home Page"
+                },
+                "Location": {
+                  "Expression": "{{ '~/' | href }}"
+                },
+                "Permanent": false
+              }
+            },
+            {
+              "ActivityId": "4et4pyhs9zr4vswfjnqd3h8nwv",
+              "Name": "ValidateReCaptchaTask",
+              "X": 780,
+              "Y": 160,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": null
+                }
+              }
+            }
+          ],
+          "Transitions": [
+            {
+              "Id": 0,
+              "SourceActivityId": "4mxqy4q1y7a4j2geyh3emm8ang",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "45s3e4mh415262qncw1p3aptxe"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "45s3e4mh415262qncw1p3aptxe",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "41xaj12zfbk4qz8211qnps5cwg"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "41xaj12zfbk4qz8211qnps5cwg",
+              "SourceOutcomeName": "Valid",
+              "DestinationActivityId": "4akp8ve1hc9cnx40crp1sk99d6"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4akp8ve1hc9cnx40crp1sk99d6",
+              "SourceOutcomeName": "Message",
+              "DestinationActivityId": "47vz8v58kw1k0vcpw44wp1x2m3"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4akp8ve1hc9cnx40crp1sk99d6",
+              "SourceOutcomeName": "Email",
+              "DestinationActivityId": "4zcc7x6nt2hk1va7sqn002g45k"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4akp8ve1hc9cnx40crp1sk99d6",
+              "SourceOutcomeName": "Subject",
+              "DestinationActivityId": "486yp4pbft9v9x31ca30fx87mq"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4zcc7x6nt2hk1va7sqn002g45k",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4yyp32342awecsbp76ah6khxwx"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "486yp4pbft9v9x31ca30fx87mq",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4yyp32342awecsbp76ah6khxwx"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "47vz8v58kw1k0vcpw44wp1x2m3",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4yyp32342awecsbp76ah6khxwx"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4yyp32342awecsbp76ah6khxwx",
+              "SourceOutcomeName": "Joined",
+              "DestinationActivityId": "4r2xcksf29mf2056eaa88r0jxh"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4r2xcksf29mf2056eaa88r0jxh",
+              "SourceOutcomeName": "Invalid",
+              "DestinationActivityId": "4j12sqcz81n82vn1cg34jna9my"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4r2xcksf29mf2056eaa88r0jxh",
+              "SourceOutcomeName": "Valid",
+              "DestinationActivityId": "4bf1thh9xr2w77mr1bxqryftnq"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4j12sqcz81n82vn1cg34jna9my",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4nqta2fjt6d3qx7xe2t2d248dy"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4bf1thh9xr2w77mr1bxqryftnq",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4nqta2fjt6d3qx7xe2t2d248dy"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4akp8ve1hc9cnx40crp1sk99d6",
+              "SourceOutcomeName": "Captcha",
+              "DestinationActivityId": "4et4pyhs9zr4vswfjnqd3h8nwv"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4et4pyhs9zr4vswfjnqd3h8nwv",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4yyp32342awecsbp76ah6khxwx"
+            }
+          ],
+          "Properties": {}
         }
       ]
     },
