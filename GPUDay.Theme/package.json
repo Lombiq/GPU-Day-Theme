@@ -12,6 +12,12 @@
     "assetsToCopy": [
       {
         "sources": [
+          "Assets/Fonts"
+        ],
+        "target": "wwwroot/fonts"
+      },
+      {
+        "sources": [
           "Assets/Images"
         ],
         "target": "wwwroot/images"

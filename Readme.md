@@ -4,8 +4,6 @@
 
 This is the theme for [GPU Day](https://gpuday.com) hosted on [DotNest](https://dotnest.com). It's also a [Media Theme](https://github.com/Lombiq/Hosting-Media-Theme) so it can be used as a sample project for creating your own Media Theme on DotNest.
 
-Description...
-
 ## Documentation
 
 It's recommended to use this theme with your fork of the [DotNest Core SDK](https://github.com/Lombiq/DotNest-Core-SDK). See its readme for more information.
