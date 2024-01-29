@@ -900,7 +900,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Year",
-                  "Position": "10"
+                  "Position": "11"
                 },
                 "LuceneContentIndexSettings": {},
                 "TaxonomyFieldSettings": {
@@ -912,13 +912,26 @@
               }
             },
             {
+              "FieldName": "HtmlField",
+              "Name": "About",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "About",
+                  "Editor": "Wysiwyg",
+                  "Position": "7"
+                },
+                "HtmlFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
               "FieldName": "TextField",
               "Name": "GoogleMapsIFrameSrc",
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "Google Maps IFrame src",
                   "Editor": "CodeMirror",
-                  "Position": "7"
+                  "Position": "8"
                 },
                 "TextFieldSettings": {},
                 "LuceneContentIndexSettings": {}
@@ -931,7 +944,7 @@
                 "ContentPartFieldSettings": {
                   "DisplayName": "Contact Box",
                   "Editor": "Wysiwyg",
-                  "Position": "8"
+                  "Position": "9"
                 },
                 "HtmlFieldSettings": {},
                 "LuceneContentIndexSettings": {}
@@ -944,7 +957,7 @@
                 "ContentPartFieldSettings": {
                   "DisplayName": "Traveling by Public Transport",
                   "Editor": "Wysiwyg",
-                  "Position": "9"
+                  "Position": "10"
                 },
                 "HtmlFieldSettings": {},
                 "LuceneContentIndexSettings": {}
@@ -1450,7 +1463,7 @@
           "ContentItemId": "4q8z8qawbndf34nt7zzqdnjdnn",
           "ContentItemVersionId": "4375s8h9b119awfgtfzne3pnxf",
           "ContentType": "GPUDay",
-          "DisplayText": "GPU Day 2023",
+          "DisplayText": "GPU Day 2024",
           "Latest": true,
           "Published": true,
           "ModifiedUtc": "2024-01-05T12:28:49.0437621Z",
@@ -1463,10 +1476,10 @@
               "Text": "Massive parallel computing for science and industrial application"
             },
             "FromDate": {
-              "Value": "2023-05-15T00:00:00Z"
+              "Value": "2024-05-15T00:00:00Z"
             },
             "ToDate": {
-              "Value": "2023-05-16T00:00:00Z"
+              "Value": "2024-05-16T00:00:00Z"
             },
             "HeaderPhoto": {
               "Paths": [
@@ -1486,6 +1499,9 @@
             "RegistrationURL": {
               "Text": "https://google.com"
             },
+            "About": {
+              "Html": "<h2>GPU Day 2024 - MASSIVE PARALLEL COMPUTING FOR SCIENCE AND INDUSTRIAL APPLICATION</h2>"
+            },
             "Year": {
               "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb",
               "TermContentItemIds": [
@@ -1496,15 +1512,15 @@
               "Text": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.1522359383525!2d18.952773215883717!3d47.48694760422862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741de52cfec418b%3A0x2999aa55455507e6!2sBudapest%2C+Konkoly-Thege+Mikl%C3%B3s+%C3%BAt+29-33%2C+1121!5e0!3m2!1shu!2shu!4v1553775268716"
             },
             "ContactBox": {
-              "Html": "<h3>GPU Day 2023</h3>\n<p><strong>The conference will be held at:</strong><br>Conference centre<br>Hotel Mercure Budapest Castle Hill<br>1013 Budapest, Krisztina Körút 41-43</p>"
+              "Html": "<h3>GPU Day 2024</h3>\n<p><strong>The conference will be held at:</strong><br>Conference centre<br>Hotel Mercure Budapest Castle Hill<br>1013 Budapest, Krisztina Körút 41-43</p>"
             },
             "TravelingByPublicTransport": {
               "Html": "<h3><strong>Traveling by Public Transport:</strong></h3>\n<p>The hotel is next to Budapest-Déli Railway station, which can be reached by Metro 2.<a href=\"http://bkk.hu/apps/menetrend/pdf/0210/20161205/1.pdf\" target=\"_blank\"></a><br>Travel planning of&nbsp;public transport: <a href=\"https://futar.bkk.hu/?toCoord=47.498828200000005%2C19.027051538222295&amp;toName=Mercure%20Budapest%20Buda&amp;toSubName=hotel%2C%20Krisztina%20k%C3%B6r%C3%BAt%2041-43%20Budapest%201013&amp;date=2019-07-11&amp;time=515&amp;arriveBy=false&amp;map=12/47.49883/19.02705&amp;layers=GSVB\">BKK futár</a></p>\n<p><strong></strong></p>\n<h3><strong>Taxi services:</strong></h3>\n<p><a href=\"http://fotaxi.hu/?lang=en\">Fő Taxi</a>:&nbsp;+36 1 222 2222<br><a href=\"http://new.6x6taxi.hu\">6x6 Taxi</a>: +36 1 6666666</p>"
             }
           },
           "AutoroutePart": {
-            "Path": "gpu-day-2023",
-            "SetHomepage": false,
+            "Path": "gpu-day-2024",
+            "SetHomepage": true,
             "Disabled": false,
             "RouteContainedItems": false,
             "Absolute": false
@@ -1797,7 +1813,7 @@
             ]
           },
           "TitlePart": {
-            "Title": "GPU Day 2023"
+            "Title": "GPU Day 2024"
           },
           "Schedule": {
             "ContentItems": [
