@@ -94,17 +94,19 @@
               "Step": {
                 "IncludeAll": false,
                 "ContentTypes": [
-                  "Talk",
                   "EventDay",
                   "GPUDay",
+                  "OldGPUDay",
                   "Speaker",
+                  "Talk",
                   "Year"
                 ],
                 "ContentParts": [
-                  "Talk",
                   "EventDay",
                   "GPUDay",
+                  "OldGPUDay",
                   "Speaker",
+                  "Talk",
                   "Year"
                 ],
                 "Id": "8b9df93d34a9496097ee2128941cfb8b",
@@ -494,7 +496,7 @@
           "Schema": null
         },
         {
-          "Template": "select DocumentId from DateFieldIndex where (ContentType = 'GPUDay' or ContentType = 'OldGPUDay') and ContentField = 'FromDate' order by Date desc",
+          "Template": "select DocumentId from DateFieldIndex where (ContentType = 'GPUDay' or ContentType = 'OldGPUDay') and ContentField = 'FromDate' and Published = 1 order by Date desc",
           "ReturnDocuments": true,
           "Name": "EarlierEvents",
           "Source": "Sql",
@@ -545,7 +547,6 @@
               "Creatable": true,
               "Listable": true,
               "Draftable": true,
-              "Versionable": true,
               "Securable": true
             },
             "FullTextAspectSettings": {},
@@ -661,10 +662,15 @@
               "Name": "HtmlBodyPart",
               "Settings": {
                 "ContentTypePartSettings": {
-                  "Position": "2",
-                  "Editor": "Wysiwyg"
+                  "Position": "3",
+                  "Editor": "Monaco"
                 },
-                "HtmlBodyPartSettings": {}
+                "HtmlBodyPartSettings": {
+                  "SanitizeHtml": false
+                },
+                "HtmlBodyPartMonacoEditorSettings": {
+                  "Options": "{\r\n  \"automaticLayout\": true,\r\n  \"language\": \"html\"\r\n}"
+                }
               }
             }
           ]
@@ -975,7 +981,7 @@
               "Settings": {
                 "ContentPartFieldSettings": {
                   "DisplayName": "From Date",
-                  "Position": "3"
+                  "Position": "0"
                 },
                 "DateFieldSettings": {},
                 "LuceneContentIndexSettings": {}
@@ -1460,423 +1466,6 @@
           }
         },
         {
-          "ContentItemId": "4q8z8qawbndf34nt7zzqdnjdnn",
-          "ContentItemVersionId": "4375s8h9b119awfgtfzne3pnxf",
-          "ContentType": "GPUDay",
-          "DisplayText": "GPU Day 2024",
-          "Latest": true,
-          "Published": true,
-          "ModifiedUtc": "2024-01-05T12:28:49.0437621Z",
-          "PublishedUtc": "2024-01-05T12:28:49.2734234Z",
-          "CreatedUtc": "2023-12-29T16:19:53.8496335Z",
-          "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
-          "Author": "admin",
-          "GPUDay": {
-            "Subtitle": {
-              "Text": "Massive parallel computing for science and industrial application"
-            },
-            "FromDate": {
-              "Value": "2024-05-15T00:00:00Z"
-            },
-            "ToDate": {
-              "Value": "2024-05-16T00:00:00Z"
-            },
-            "HeaderPhoto": {
-              "Paths": [
-                "GPU Days/Sample/gpuday2023.jpg"
-              ],
-              "MediaTexts": [
-                ""
-              ]
-            },
-            "DisplayScheduleButton": {
-              "Value": true
-            },
-            "FooterPhoto": {
-              "Paths": [],
-              "MediaTexts": []
-            },
-            "RegistrationURL": {
-              "Text": "https://google.com"
-            },
-            "About": {
-              "Html": "<h2>GPU Day 2024 - MASSIVE PARALLEL COMPUTING FOR SCIENCE AND INDUSTRIAL APPLICATION</h2>"
-            },
-            "Year": {
-              "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb",
-              "TermContentItemIds": [
-                "4p6mqqbhp1xjfxb4w08fbg60d0"
-              ]
-            },
-            "GoogleMapsIFrameSrc": {
-              "Text": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.1522359383525!2d18.952773215883717!3d47.48694760422862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741de52cfec418b%3A0x2999aa55455507e6!2sBudapest%2C+Konkoly-Thege+Mikl%C3%B3s+%C3%BAt+29-33%2C+1121!5e0!3m2!1shu!2shu!4v1553775268716"
-            },
-            "ContactBox": {
-              "Html": "<h3>GPU Day 2024</h3>\n<p><strong>The conference will be held at:</strong><br>Conference centre<br>Hotel Mercure Budapest Castle Hill<br>1013 Budapest, Krisztina Körút 41-43</p>"
-            },
-            "TravelingByPublicTransport": {
-              "Html": "<h3><strong>Traveling by Public Transport:</strong></h3>\n<p>The hotel is next to Budapest-Déli Railway station, which can be reached by Metro 2.<a href=\"http://bkk.hu/apps/menetrend/pdf/0210/20161205/1.pdf\" target=\"_blank\"></a><br>Travel planning of&nbsp;public transport: <a href=\"https://futar.bkk.hu/?toCoord=47.498828200000005%2C19.027051538222295&amp;toName=Mercure%20Budapest%20Buda&amp;toSubName=hotel%2C%20Krisztina%20k%C3%B6r%C3%BAt%2041-43%20Budapest%201013&amp;date=2019-07-11&amp;time=515&amp;arriveBy=false&amp;map=12/47.49883/19.02705&amp;layers=GSVB\">BKK futár</a></p>\n<p><strong></strong></p>\n<h3><strong>Taxi services:</strong></h3>\n<p><a href=\"http://fotaxi.hu/?lang=en\">Fő Taxi</a>:&nbsp;+36 1 222 2222<br><a href=\"http://new.6x6taxi.hu\">6x6 Taxi</a>: +36 1 6666666</p>"
-            }
-          },
-          "AutoroutePart": {
-            "Path": "gpu-day-2024",
-            "SetHomepage": true,
-            "Disabled": false,
-            "RouteContainedItems": false,
-            "Absolute": false
-          },
-          "FlowPart": {
-            "Widgets": [
-              {
-                "ContentItemId": "4ammgwqf952fn6c7jsrb77kbce",
-                "ContentItemVersionId": null,
-                "ContentType": "HtmlWidget",
-                "DisplayText": "",
-                "Latest": false,
-                "Published": false,
-                "ModifiedUtc": "2024-01-05T12:28:49.1590091Z",
-                "PublishedUtc": null,
-                "CreatedUtc": null,
-                "Owner": "",
-                "Author": "admin",
-                "HtmlBodyPart": {
-                  "Html": "<div class=\"mb30\"></div>\n<h2 class=\"title dark text-center mb25\"><span class=\"light highlight dark\">Schedule</span></h2>"
-                },
-                "AdditionalStylingPart": {
-                  "CustomClasses": null,
-                  "RemoveGridExtensionClasses": false
-                },
-                "@WeldedPartSettings": {
-                  "AdditionalStylingPart": {}
-                },
-                "FlowMetadata": {
-                  "Alignment": 3,
-                  "Size": 100
-                }
-              },
-              {
-                "ContentItemId": "429hwm0p036e870aa89phgec5y",
-                "ContentItemVersionId": null,
-                "ContentType": "ContainerWidget",
-                "DisplayText": "Schedule",
-                "Latest": false,
-                "Published": false,
-                "ModifiedUtc": "2024-01-05T12:28:49.1772022Z",
-                "PublishedUtc": null,
-                "CreatedUtc": null,
-                "Owner": "",
-                "Author": "admin",
-                "TitlePart": {
-                  "Title": "Schedule"
-                },
-                "FlowPart": {
-                  "Widgets": [
-                    {
-                      "ContentItemId": "4jtgj5mbnwxg9137kb9g8e2dx6",
-                      "ContentItemVersionId": null,
-                      "ContentType": "EventDay",
-                      "DisplayText": "First Day",
-                      "Latest": false,
-                      "Published": false,
-                      "ModifiedUtc": "2024-01-05T12:28:49.1833389Z",
-                      "PublishedUtc": null,
-                      "CreatedUtc": null,
-                      "Owner": "",
-                      "Author": "admin",
-                      "EventDay": {
-                        "Date": {
-                          "Value": "2023-05-15T00:00:00Z"
-                        }
-                      },
-                      "TitlePart": {
-                        "Title": "First Day"
-                      },
-                      "AdditionalStylingPart": {
-                        "CustomClasses": null,
-                        "RemoveGridExtensionClasses": false
-                      },
-                      "@WeldedPartSettings": {
-                        "AdditionalStylingPart": {}
-                      },
-                      "FlowMetadata": {
-                        "Alignment": 3,
-                        "Size": 100
-                      }
-                    },
-                    {
-                      "ContentItemId": "4528kp498hf777v38gxyg0kv46",
-                      "ContentItemVersionId": null,
-                      "ContentType": "EventDay",
-                      "DisplayText": "Second Day",
-                      "Latest": false,
-                      "Published": false,
-                      "ModifiedUtc": "2024-01-05T12:28:49.1929293Z",
-                      "PublishedUtc": null,
-                      "CreatedUtc": null,
-                      "Owner": "",
-                      "Author": "admin",
-                      "EventDay": {
-                        "Date": {
-                          "Value": "2023-05-16T00:00:00Z"
-                        }
-                      },
-                      "TitlePart": {
-                        "Title": "Second Day"
-                      },
-                      "AdditionalStylingPart": {
-                        "CustomClasses": null,
-                        "RemoveGridExtensionClasses": false
-                      },
-                      "@WeldedPartSettings": {
-                        "AdditionalStylingPart": {}
-                      },
-                      "FlowMetadata": {
-                        "Alignment": 3,
-                        "Size": 100
-                      }
-                    }
-                  ]
-                },
-                "AdditionalStylingPart": {
-                  "CustomClasses": null,
-                  "RemoveGridExtensionClasses": false
-                },
-                "@WeldedPartSettings": {
-                  "AdditionalStylingPart": {}
-                },
-                "FlowMetadata": {
-                  "Alignment": 3,
-                  "Size": 100
-                }
-              },
-              {
-                "ContentItemId": "4zdhyg7at47caxxrr5ck2demmq",
-                "ContentItemVersionId": null,
-                "ContentType": "ContainerWidget",
-                "DisplayText": "Speakers",
-                "Latest": false,
-                "Published": false,
-                "ModifiedUtc": "2024-01-05T12:28:49.2084931Z",
-                "PublishedUtc": null,
-                "CreatedUtc": null,
-                "Owner": "",
-                "Author": "admin",
-                "TitlePart": {
-                  "Title": "Speakers"
-                },
-                "FlowPart": {
-                  "Widgets": [
-                    {
-                      "ContentItemId": "4x7mpwepw1dkwspk0armj91mcd",
-                      "ContentItemVersionId": null,
-                      "ContentType": "SpeakersWidget",
-                      "DisplayText": "",
-                      "Latest": false,
-                      "Published": false,
-                      "ModifiedUtc": "2024-01-05T12:28:49.2136622Z",
-                      "PublishedUtc": null,
-                      "CreatedUtc": null,
-                      "Owner": "",
-                      "Author": "admin",
-                      "SpeakersWidget": {
-                        "Year": {
-                          "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb",
-                          "TermContentItemIds": [
-                            "4p6mqqbhp1xjfxb4w08fbg60d0"
-                          ]
-                        }
-                      },
-                      "AdditionalStylingPart": {
-                        "CustomClasses": null,
-                        "RemoveGridExtensionClasses": false
-                      },
-                      "@WeldedPartSettings": {
-                        "AdditionalStylingPart": {}
-                      },
-                      "FlowMetadata": {
-                        "Alignment": 3,
-                        "Size": 100
-                      }
-                    }
-                  ]
-                },
-                "AdditionalStylingPart": {
-                  "CustomClasses": null,
-                  "RemoveGridExtensionClasses": false
-                },
-                "@WeldedPartSettings": {
-                  "AdditionalStylingPart": {}
-                },
-                "FlowMetadata": {
-                  "Alignment": 3,
-                  "Size": 100
-                }
-              },
-              {
-                "ContentItemId": "4sw9910mcc9xd1ph4ee3t13ycf",
-                "ContentItemVersionId": null,
-                "ContentType": "ContainerWidget",
-                "DisplayText": "Contact Us",
-                "Latest": false,
-                "Published": false,
-                "ModifiedUtc": "2024-01-05T12:28:49.2279713Z",
-                "PublishedUtc": null,
-                "CreatedUtc": null,
-                "Owner": "",
-                "Author": "admin",
-                "TitlePart": {
-                  "Title": "Contact Us"
-                },
-                "FlowPart": {
-                  "Widgets": [
-                    {
-                      "ContentItemId": "4dfyaa44hrnyh7fmhdxhb8bbxs",
-                      "ContentItemVersionId": null,
-                      "ContentType": "ContactUsWidget",
-                      "DisplayText": "",
-                      "Latest": false,
-                      "Published": false,
-                      "ModifiedUtc": "2024-01-05T12:28:49.2353299Z",
-                      "PublishedUtc": null,
-                      "CreatedUtc": null,
-                      "Owner": "",
-                      "Author": "admin",
-                      "ContactUsWidget": {
-                        "ContactBox": {
-                          "Html": "<h3>GPU Day 2023</h3>\n<p><strong>The conference will be held at:</strong><br>Conference centre<br>Hotel Mercure Budapest Castle Hill<br>1013 Budapest, Krisztina Körút 41-43</p>"
-                        },
-                        "TravelingByPublicTransport": {
-                          "Html": "<h3><strong>Traveling by Public Transport:</strong></h3>\n<p>The hotel is next to Budapest-Déli Railway station, which can be reached by Metro 2.<a href=\"http://bkk.hu/apps/menetrend/pdf/0210/20161205/1.pdf\" target=\"_blank\"></a><br>Travel planning of&nbsp;public transport: <a href=\"https://futar.bkk.hu/?toCoord=47.498828200000005%2C19.027051538222295&amp;toName=Mercure%20Budapest%20Buda&amp;toSubName=hotel%2C%20Krisztina%20k%C3%B6r%C3%BAt%2041-43%20Budapest%201013&amp;date=2019-07-11&amp;time=515&amp;arriveBy=false&amp;map=12/47.49883/19.02705&amp;layers=GSVB\">BKK futár</a></p>\n<p><strong></strong></p>\n<h3><strong>Taxi services:</strong></h3>\n<p><a href=\"http://fotaxi.hu/?lang=en\">Fő Taxi</a>:&nbsp;+36 1 222 2222<br><a href=\"http://new.6x6taxi.hu\">6x6 Taxi</a>: +36 1 6666666</p>"
-                        }
-                      },
-                      "AdditionalStylingPart": {
-                        "CustomClasses": null,
-                        "RemoveGridExtensionClasses": false
-                      },
-                      "@WeldedPartSettings": {
-                        "AdditionalStylingPart": {}
-                      },
-                      "FlowMetadata": {
-                        "Alignment": 3,
-                        "Size": 100
-                      }
-                    }
-                  ]
-                },
-                "AdditionalStylingPart": {
-                  "CustomClasses": null,
-                  "RemoveGridExtensionClasses": false
-                },
-                "@WeldedPartSettings": {
-                  "AdditionalStylingPart": {}
-                },
-                "FlowMetadata": {
-                  "Alignment": 3,
-                  "Size": 100
-                }
-              },
-              {
-                "ContentItemId": "4bn0dw5xmb8r2tedww6y187244",
-                "ContentItemVersionId": null,
-                "ContentType": "GoogleMapsWidget",
-                "DisplayText": "",
-                "Latest": false,
-                "Published": false,
-                "ModifiedUtc": "2024-01-05T12:28:49.2497184Z",
-                "PublishedUtc": null,
-                "CreatedUtc": null,
-                "Owner": "",
-                "Author": "admin",
-                "GoogleMapsWidget": {
-                  "IFrameSrc": {
-                    "Text": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.1522359383525!2d18.952773215883717!3d47.48694760422862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741de52cfec418b%3A0x2999aa55455507e6!2sBudapest%2C+Konkoly-Thege+Mikl%C3%B3s+%C3%BAt+29-33%2C+1121!5e0!3m2!1shu!2shu!4v1553775268716",
-                    "Html": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.1522359383525!2d18.952773215883717!3d47.48694760422862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741de52cfec418b%3A0x2999aa55455507e6!2sBudapest%2C+Konkoly-Thege+Mikl%C3%B3s+%C3%BAt+29-33%2C+1121!5e0!3m2!1shu!2shu!4v1553775268716"
-                  },
-                  "Location": {
-                    "ContentItemIds": [
-                      "4x233wn0vvnsd5d76chcbr45w0"
-                    ]
-                  }
-                },
-                "AdditionalStylingPart": {
-                  "CustomClasses": null,
-                  "RemoveGridExtensionClasses": false
-                },
-                "@WeldedPartSettings": {
-                  "AdditionalStylingPart": {}
-                },
-                "FlowMetadata": {
-                  "Alignment": 3,
-                  "Size": 100
-                }
-              }
-            ]
-          },
-          "TitlePart": {
-            "Title": "GPU Day 2024"
-          },
-          "Schedule": {
-            "ContentItems": [
-              {
-                "ContentItemId": "4kz9wggv8f4xv4wp3797dsqpdn",
-                "ContentItemVersionId": null,
-                "ContentType": "EventDay",
-                "DisplayText": "First Day",
-                "Latest": false,
-                "Published": false,
-                "ModifiedUtc": "2024-01-05T12:28:49.1360461Z",
-                "PublishedUtc": null,
-                "CreatedUtc": null,
-                "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
-                "Author": "admin",
-                "EventDay": {
-                  "Date": {
-                    "Value": "2023-05-15T00:00:00Z"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "First Day"
-                },
-                "AdditionalStylingPart": {
-                  "CustomClasses": null,
-                  "RemoveGridExtensionClasses": false
-                },
-                "@WeldedPartSettings": {
-                  "AdditionalStylingPart": {}
-                }
-              },
-              {
-                "ContentItemId": "4n2fsvxn0vb0hwmvsy9rna7nxb",
-                "ContentItemVersionId": null,
-                "ContentType": "EventDay",
-                "DisplayText": "Second Day",
-                "Latest": false,
-                "Published": false,
-                "ModifiedUtc": "2024-01-05T12:28:49.147173Z",
-                "PublishedUtc": null,
-                "CreatedUtc": null,
-                "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
-                "Author": "admin",
-                "EventDay": {
-                  "Date": {
-                    "Value": "2023-05-16T00:00:00Z"
-                  }
-                },
-                "TitlePart": {
-                  "Title": "Second Day"
-                },
-                "AdditionalStylingPart": {
-                  "CustomClasses": null,
-                  "RemoveGridExtensionClasses": false
-                },
-                "@WeldedPartSettings": {
-                  "AdditionalStylingPart": {}
-                }
-              }
-            ]
-          }
-        },
-        {
           "ContentItemId": "4vzer121trf396mecpmjjr1tc5",
           "ContentItemVersionId": "4zj47v6h19vrx62jr6yz83qzwg",
           "ContentType": "LiquidWidget",
@@ -2267,6 +1856,423 @@
           },
           "TitlePart": {
             "Title": "Sample Talk 2"
+          }
+        },
+        {
+          "ContentItemId": "4q8z8qawbndf34nt7zzqdnjdnn",
+          "ContentItemVersionId": "44wb350952aq21g7102hwqhcdw",
+          "ContentType": "GPUDay",
+          "DisplayText": "GPU Day 2024",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2024-01-30T13:45:31.6157342Z",
+          "PublishedUtc": "2024-01-30T15:20:06.1565804Z",
+          "CreatedUtc": "2023-12-29T16:19:53.8496335Z",
+          "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+          "Author": "admin",
+          "GPUDay": {
+            "Subtitle": {
+              "Text": "Massive parallel computing for science and industrial application"
+            },
+            "FromDate": {
+              "Value": "2024-05-15T00:00:00Z"
+            },
+            "ToDate": {
+              "Value": "2024-05-16T00:00:00Z"
+            },
+            "HeaderPhoto": {
+              "Paths": [
+                "GPU Days/Sample/gpuday2023.jpg"
+              ],
+              "MediaTexts": [
+                ""
+              ]
+            },
+            "DisplayScheduleButton": {
+              "Value": true
+            },
+            "FooterPhoto": {
+              "Paths": [],
+              "MediaTexts": []
+            },
+            "RegistrationURL": {
+              "Text": "https://google.com"
+            },
+            "About": {
+              "Html": "<h2>GPU Day 2024 - MASSIVE PARALLEL COMPUTING FOR SCIENCE AND INDUSTRIAL APPLICATION</h2>"
+            },
+            "Year": {
+              "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb",
+              "TermContentItemIds": [
+                "4p6mqqbhp1xjfxb4w08fbg60d0"
+              ]
+            },
+            "GoogleMapsIFrameSrc": {
+              "Text": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.1522359383525!2d18.952773215883717!3d47.48694760422862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741de52cfec418b%3A0x2999aa55455507e6!2sBudapest%2C+Konkoly-Thege+Mikl%C3%B3s+%C3%BAt+29-33%2C+1121!5e0!3m2!1shu!2shu!4v1553775268716"
+            },
+            "ContactBox": {
+              "Html": "<h3>GPU Day 2023</h3>\n<p><strong>The conference will be held at:</strong><br>Conference centre<br>Hotel Mercure Budapest Castle Hill<br>1013 Budapest, Krisztina Körút 41-43</p>"
+            },
+            "TravelingByPublicTransport": {
+              "Html": "<h3><strong>Traveling by Public Transport:</strong></h3>\n<p>The hotel is next to Budapest-Déli Railway station, which can be reached by Metro 2.<a href=\"http://bkk.hu/apps/menetrend/pdf/0210/20161205/1.pdf\" target=\"_blank\"></a><br>Travel planning of&nbsp;public transport: <a href=\"https://futar.bkk.hu/?toCoord=47.498828200000005%2C19.027051538222295&amp;toName=Mercure%20Budapest%20Buda&amp;toSubName=hotel%2C%20Krisztina%20k%C3%B6r%C3%BAt%2041-43%20Budapest%201013&amp;date=2019-07-11&amp;time=515&amp;arriveBy=false&amp;map=12/47.49883/19.02705&amp;layers=GSVB\">BKK futár</a></p>\n<p><strong></strong></p>\n<h3><strong>Taxi services:</strong></h3>\n<p><a href=\"http://fotaxi.hu/?lang=en\">Fő Taxi</a>:&nbsp;+36 1 222 2222<br><a href=\"http://new.6x6taxi.hu\">6x6 Taxi</a>: +36 1 6666666</p>"
+            }
+          },
+          "AutoroutePart": {
+            "Path": "gpu-day-2024",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "FlowPart": {
+            "Widgets": [
+              {
+                "ContentItemId": "4ammgwqf952fn6c7jsrb77kbce",
+                "ContentItemVersionId": null,
+                "ContentType": "HtmlWidget",
+                "DisplayText": "",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2024-01-05T12:28:49.1590091Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "HtmlBodyPart": {
+                  "Html": "<div class=\"mb30\"></div>\n<h2 class=\"title dark text-center mb25\"><span class=\"light highlight dark\">Schedule</span></h2>"
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              },
+              {
+                "ContentItemId": "429hwm0p036e870aa89phgec5y",
+                "ContentItemVersionId": null,
+                "ContentType": "ContainerWidget",
+                "DisplayText": "Schedule",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2024-01-05T12:28:49.1772022Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "TitlePart": {
+                  "Title": "Schedule"
+                },
+                "FlowPart": {
+                  "Widgets": [
+                    {
+                      "ContentItemId": "4jtgj5mbnwxg9137kb9g8e2dx6",
+                      "ContentItemVersionId": null,
+                      "ContentType": "EventDay",
+                      "DisplayText": "First Day",
+                      "Latest": false,
+                      "Published": false,
+                      "ModifiedUtc": "2024-01-05T12:28:49.1833389Z",
+                      "PublishedUtc": null,
+                      "CreatedUtc": null,
+                      "Owner": "",
+                      "Author": "admin",
+                      "EventDay": {
+                        "Date": {
+                          "Value": "2023-05-15T00:00:00Z"
+                        }
+                      },
+                      "TitlePart": {
+                        "Title": "First Day"
+                      },
+                      "AdditionalStylingPart": {
+                        "CustomClasses": null,
+                        "RemoveGridExtensionClasses": false
+                      },
+                      "@WeldedPartSettings": {
+                        "AdditionalStylingPart": {}
+                      },
+                      "FlowMetadata": {
+                        "Alignment": 3,
+                        "Size": 100
+                      }
+                    },
+                    {
+                      "ContentItemId": "4528kp498hf777v38gxyg0kv46",
+                      "ContentItemVersionId": null,
+                      "ContentType": "EventDay",
+                      "DisplayText": "Second Day",
+                      "Latest": false,
+                      "Published": false,
+                      "ModifiedUtc": "2024-01-05T12:28:49.1929293Z",
+                      "PublishedUtc": null,
+                      "CreatedUtc": null,
+                      "Owner": "",
+                      "Author": "admin",
+                      "EventDay": {
+                        "Date": {
+                          "Value": "2023-05-16T00:00:00Z"
+                        }
+                      },
+                      "TitlePart": {
+                        "Title": "Second Day"
+                      },
+                      "AdditionalStylingPart": {
+                        "CustomClasses": null,
+                        "RemoveGridExtensionClasses": false
+                      },
+                      "@WeldedPartSettings": {
+                        "AdditionalStylingPart": {}
+                      },
+                      "FlowMetadata": {
+                        "Alignment": 3,
+                        "Size": 100
+                      }
+                    }
+                  ]
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              },
+              {
+                "ContentItemId": "4zdhyg7at47caxxrr5ck2demmq",
+                "ContentItemVersionId": null,
+                "ContentType": "ContainerWidget",
+                "DisplayText": "Speakers",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2024-01-05T12:28:49.2084931Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "TitlePart": {
+                  "Title": "Speakers"
+                },
+                "FlowPart": {
+                  "Widgets": [
+                    {
+                      "ContentItemId": "4x7mpwepw1dkwspk0armj91mcd",
+                      "ContentItemVersionId": null,
+                      "ContentType": "SpeakersWidget",
+                      "DisplayText": "",
+                      "Latest": false,
+                      "Published": false,
+                      "ModifiedUtc": "2024-01-05T12:28:49.2136622Z",
+                      "PublishedUtc": null,
+                      "CreatedUtc": null,
+                      "Owner": "",
+                      "Author": "admin",
+                      "SpeakersWidget": {
+                        "Year": {
+                          "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb",
+                          "TermContentItemIds": [
+                            "4p6mqqbhp1xjfxb4w08fbg60d0"
+                          ]
+                        }
+                      },
+                      "AdditionalStylingPart": {
+                        "CustomClasses": null,
+                        "RemoveGridExtensionClasses": false
+                      },
+                      "@WeldedPartSettings": {
+                        "AdditionalStylingPart": {}
+                      },
+                      "FlowMetadata": {
+                        "Alignment": 3,
+                        "Size": 100
+                      }
+                    }
+                  ]
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              },
+              {
+                "ContentItemId": "4sw9910mcc9xd1ph4ee3t13ycf",
+                "ContentItemVersionId": null,
+                "ContentType": "ContainerWidget",
+                "DisplayText": "Contact Us",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2024-01-05T12:28:49.2279713Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "TitlePart": {
+                  "Title": "Contact Us"
+                },
+                "FlowPart": {
+                  "Widgets": [
+                    {
+                      "ContentItemId": "4dfyaa44hrnyh7fmhdxhb8bbxs",
+                      "ContentItemVersionId": null,
+                      "ContentType": "ContactUsWidget",
+                      "DisplayText": "",
+                      "Latest": false,
+                      "Published": false,
+                      "ModifiedUtc": "2024-01-05T12:28:49.2353299Z",
+                      "PublishedUtc": null,
+                      "CreatedUtc": null,
+                      "Owner": "",
+                      "Author": "admin",
+                      "ContactUsWidget": {
+                        "ContactBox": {
+                          "Html": "<h3>GPU Day 2023</h3>\n<p><strong>The conference will be held at:</strong><br>Conference centre<br>Hotel Mercure Budapest Castle Hill<br>1013 Budapest, Krisztina Körút 41-43</p>"
+                        },
+                        "TravelingByPublicTransport": {
+                          "Html": "<h3><strong>Traveling by Public Transport:</strong></h3>\n<p>The hotel is next to Budapest-Déli Railway station, which can be reached by Metro 2.<a href=\"http://bkk.hu/apps/menetrend/pdf/0210/20161205/1.pdf\" target=\"_blank\"></a><br>Travel planning of&nbsp;public transport: <a href=\"https://futar.bkk.hu/?toCoord=47.498828200000005%2C19.027051538222295&amp;toName=Mercure%20Budapest%20Buda&amp;toSubName=hotel%2C%20Krisztina%20k%C3%B6r%C3%BAt%2041-43%20Budapest%201013&amp;date=2019-07-11&amp;time=515&amp;arriveBy=false&amp;map=12/47.49883/19.02705&amp;layers=GSVB\">BKK futár</a></p>\n<p><strong></strong></p>\n<h3><strong>Taxi services:</strong></h3>\n<p><a href=\"http://fotaxi.hu/?lang=en\">Fő Taxi</a>:&nbsp;+36 1 222 2222<br><a href=\"http://new.6x6taxi.hu\">6x6 Taxi</a>: +36 1 6666666</p>"
+                        }
+                      },
+                      "AdditionalStylingPart": {
+                        "CustomClasses": null,
+                        "RemoveGridExtensionClasses": false
+                      },
+                      "@WeldedPartSettings": {
+                        "AdditionalStylingPart": {}
+                      },
+                      "FlowMetadata": {
+                        "Alignment": 3,
+                        "Size": 100
+                      }
+                    }
+                  ]
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              },
+              {
+                "ContentItemId": "4bn0dw5xmb8r2tedww6y187244",
+                "ContentItemVersionId": null,
+                "ContentType": "GoogleMapsWidget",
+                "DisplayText": "",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2024-01-05T12:28:49.2497184Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "GoogleMapsWidget": {
+                  "IFrameSrc": {
+                    "Text": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.1522359383525!2d18.952773215883717!3d47.48694760422862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741de52cfec418b%3A0x2999aa55455507e6!2sBudapest%2C+Konkoly-Thege+Mikl%C3%B3s+%C3%BAt+29-33%2C+1121!5e0!3m2!1shu!2shu!4v1553775268716",
+                    "Html": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.1522359383525!2d18.952773215883717!3d47.48694760422862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741de52cfec418b%3A0x2999aa55455507e6!2sBudapest%2C+Konkoly-Thege+Mikl%C3%B3s+%C3%BAt+29-33%2C+1121!5e0!3m2!1shu!2shu!4v1553775268716"
+                  },
+                  "Location": {
+                    "ContentItemIds": [
+                      "4x233wn0vvnsd5d76chcbr45w0"
+                    ]
+                  }
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              }
+            ]
+          },
+          "TitlePart": {
+            "Title": "GPU Day 2024"
+          },
+          "Schedule": {
+            "ContentItems": [
+              {
+                "ContentItemId": "4kz9wggv8f4xv4wp3797dsqpdn",
+                "ContentItemVersionId": null,
+                "ContentType": "EventDay",
+                "DisplayText": "First Day",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2024-01-30T13:45:31.6906809Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+                "Author": "admin",
+                "EventDay": {
+                  "Date": {
+                    "Value": "2023-05-15T00:00:00Z"
+                  }
+                },
+                "TitlePart": {
+                  "Title": "First Day"
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                }
+              },
+              {
+                "ContentItemId": "4n2fsvxn0vb0hwmvsy9rna7nxb",
+                "ContentItemVersionId": null,
+                "ContentType": "EventDay",
+                "DisplayText": "Second Day",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2024-01-30T13:45:31.6956049Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+                "Author": "admin",
+                "EventDay": {
+                  "Date": {
+                    "Value": "2023-05-16T00:00:00Z"
+                  }
+                },
+                "TitlePart": {
+                  "Title": "Second Day"
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                }
+              }
+            ]
           }
         }
       ]
