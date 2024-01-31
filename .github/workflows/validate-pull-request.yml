@@ -7,5 +7,8 @@ jobs:
   validate-pull-request:
     name: Validate Pull Request
     uses: Lombiq/GitHub-Actions/.github/workflows/validate-submodule-pull-request.yml@issue/SITE-45
+    secrets:
+      PARENT_TOKEN: ${{ secrets.LOMBIQBOT_GITHUB_PERSONAL_ACCESS_TOKEN }}
     with:
       repository: Lombiq/DotNest-Core-Sites-SDK
+
