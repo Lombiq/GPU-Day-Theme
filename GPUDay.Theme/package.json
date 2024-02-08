@@ -39,12 +39,6 @@
           "Assets/SimpleTemplate/fonts"
         ],
         "target": "wwwroot/vendors/SimpleTemplate/css/fonts"
-      },
-      {
-        "sources": [
-          "Assets/SimpleTemplate/images"
-        ],
-        "target": "wwwroot/vendors/SimpleTemplate/images"
       }
     ],
     "styles": {
