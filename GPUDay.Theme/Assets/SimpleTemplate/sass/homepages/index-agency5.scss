@@ -1,0 +1,54 @@
+/* Homepages - Index Agency 5 */
+@import '../mixins';
+@import '../variables';
+
+.slider-container-agency5 {
+	background-color: $dark;
+	height: 100vh;
+
+	.tp-caption {
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}
+
+.portfolio-item {
+	margin-bottom:0;
+}
+
+.man-jump2-img {
+	@media (min-width: $minmqlg) {
+		margin-top:-70px;
+		margin-left:-30px;
+	}
+}
+
+.testimonial {
+	blockquote cite {
+		margin-top:9px;
+	}
+}
+
+.agency-contact-edge {
+	padding-top:110px;
+	padding-bottom:120px;
+	@include angled-edge('inside top', 'lower left', #fff, 2800, 140);
+	@include angled-edge('inside bottom', 'upper left', #fff, 2800, 140);
+
+	@media (min-width: $minmqlg) {
+		padding-top:140px;
+	}
+}
+
+.agency-testimonials-edge {
+	padding-top:140px;
+	padding-bottom:140px;
+	@include angled-edge('inside top', 'lower left', #fff, 2800, 140);
+	@include angled-edge('inside bottom', 'upper left', #fff, 2800, 140);
+}
+
+.agency-counter-edge  {
+	padding-top:140px;
+	@include angled-edge('inside top', 'lower left', #fff, 2800, 140);
+}

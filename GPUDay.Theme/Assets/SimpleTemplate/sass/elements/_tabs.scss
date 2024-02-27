@@ -1,0 +1,304 @@
+/* Elements Tabs */
+.nav {
+	&.nav-tabs,
+	&.nav-pills {
+		> li {
+			> a {
+				padding:9px 15px;
+				color:#323232;
+				transition: background 0.35s;
+
+				&:hover {
+					background-color: #f6f6fa;
+				}
+			}
+
+		}
+		
+		&:not(.nav-justified) {
+			>li {
+				> a {
+					@media (max-width: $maxmqxs) {
+						padding-left:7px;
+						padding-right:7px;
+						max-width:70px;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						overflow: hidden;
+					}
+				}
+			}
+		}
+	}
+
+	&.nav-justified {
+		> li {
+			> a {
+				margin:0;
+				border-radius:0;
+			}
+			
+			+ li {
+				margin-left:0 !important;
+			}
+		}
+	}
+}
+
+.nav-tabs {
+	margin-bottom:15px;
+	border-bottom-color: #e1e1e1;
+
+	li {
+		a {
+			border-radius:0;
+			position: relative;
+
+			i {
+				margin-right: 7px;
+			}
+
+			&:before {
+				content:'';
+				position:absolute;
+				display:block;
+				left:50%;
+				right:50%;
+				height:2px;
+				top:-1px;
+				background-color: $first-color;
+				visibility:hidden;
+				transition: all 0.4s;
+			}
+
+			&:hover {
+				border-color: #e1e1e1;
+			}
+		}
+
+		&.active {
+			a {
+				&,
+				&:hover,
+				&:focus {
+					background-color: #fff;
+					border-color:#e1e1e1;
+					border-bottom-color: transparent;
+
+					.bg-lightgray & {
+						background-color: $lightgray;
+					}
+				}
+
+				&:before {
+					visibility:visible;
+					left:-1px;
+					right:-1px;
+				}
+			}
+		}
+	}
+}
+
+.tab-content {
+
+	&.bordered {
+		padding:15px;
+		border:1px solid #e1e1e1;
+		border-top: none;
+		margin-top: -15px;
+
+		p:last-child {
+			margin-bottom:0;
+		}
+	}
+
+	& + .nav-tabs {
+		border-bottom:none;
+		border-top:1px solid #e1e1e1;
+		> li {
+			> a {
+				border-top:none;
+
+				&:before {
+					top:auto;
+					bottom:-1px;
+				}
+			}
+
+			&.active {
+				a {
+					&,
+					&:hover,
+					&:focus {
+						margin-top:-1px;
+						border: 1px solid #eee;
+						border-top-color: transparent;
+					}
+
+					&:before {
+						visibility:visible;
+						left:0;
+						right:0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.vertical-tab {
+	@media (min-width: $minmqsm) {
+		display: table;
+
+		.nav-tabs,
+		.nav-pils,
+		.tab-content {
+			display:table-cell;
+
+			> li {
+				float:none;
+				white-space: nowrap;
+			}
+		}
+
+		&.left {
+			.tab-content {
+				padding-left:15px;
+			}
+		}
+
+		&.right {
+			.tab-content {
+				padding-right:15px;
+			}
+		}
+
+		.nav-tabs {
+			margin-bottom:0;
+			border:none;
+		}
+
+		&.left {
+			.nav-tabs {
+				border-right: 1px solid #eee;
+
+				> li {
+					margin:0;
+
+					a {
+						margin:0;
+
+						&:before {
+							top:50%;
+							bottom:50%;
+							left:-1px;
+							right:auto;
+							height:auto;
+							width:2px;
+						}
+					}
+
+					&.active {
+						a,
+						a:hover,
+						a:focus {
+							border: 1px solid #eee;
+							margin:0;
+							margin-right:-1px;
+							border-right-color: transparent;
+
+							&:before {
+								top:-1px;
+								bottom:-1px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.right {
+
+			.tab-content + .nav-tabs {
+				> li {
+					> a {
+						border-top:1px solid transparent;
+					}
+				}
+			}
+			.nav-tabs {
+				border-left: 1px solid #eee;
+
+				> li {
+					a {
+						margin:0;
+						border-width: 1px;
+
+						&:before {
+							top:50%;
+							bottom:50%;
+							right:-1px;
+							left:auto;
+							height:auto;
+							width:2px;
+						}
+					}
+
+					&.active {
+						a,
+						a:hover,
+						a:focus {
+							border: 1px solid #eee;
+							margin:0;
+							margin-left:-1px;
+							border-left-color: transparent;
+
+							&:before {
+								top:-1px;
+								bottom:-1px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.nav-pills {
+			min-width:110px;
+			> li {
+				display: block;
+				width:100%;
+
+				+ li {
+					margin-left:0;
+				}
+			}
+		}
+
+	}
+}
+
+
+.nav-pills {
+	margin-bottom:15px;
+
+	> li {
+		> a {
+			border-radius: 0;
+		}
+
+		+ li {
+			margin-left:3px;
+		}
+
+		&.active {
+			a,
+			a:hover,
+			a:focus {
+				color: #fff;
+				background-color: $first-color;
+			}
+		}
+	}
+}

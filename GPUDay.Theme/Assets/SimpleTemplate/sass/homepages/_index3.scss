@@ -1,0 +1,77 @@
+/* Homepages - Index3*/
+.slider-container-index3 {
+	background-color: $dark;
+	height: 100vh;
+
+	.tp-caption {
+		strong {
+			font-weight: 700 !important;
+		}
+	}
+}
+
+.services-section-edge {
+	padding-top:70px;
+	padding-bottom:110px;
+	@include angled-edge('inside bottom', 'upper right', #fff, 2800, 150);
+
+}
+
+.about-section-edge {
+	padding-bottom:130px;
+	@include angled-edge('inside bottom', 'upper left', $gray, 2800, 150);
+
+	.container {
+		position: relative;
+	}
+}
+
+.more-about-section-edge {
+	padding-bottom:130px;
+	@include angled-edge('inside bottom', 'upper right', #fff, 2800, 150);
+
+	.money-bag-img {
+		position: relative;
+		display:block;
+		max-width:100%;
+		height: auto;
+		margin-top: -150px;
+		z-index:900;
+	}
+}
+
+.team-section-edge {
+	padding-bottom: 135px;
+	@include angled-edge('inside bottom', 'upper left', $gray, 2800, 150);
+
+	.member {
+		margin-bottom:0;
+	}
+}
+
+.portfolio-section-edge {
+	padding-bottom: 130px;
+	@include angled-edge('inside bottom', 'upper right', #fff, 2800, 150);
+
+	.portfolio-item {
+		margin-bottom:0;
+	}
+}
+
+.extra-info-section-edge {
+	padding-bottom: 130px;
+	@include angled-edge('inside bottom', 'upper left', $gray, 2800, 150);
+
+	.extra-img {
+		position: relative;
+		z-index:900;
+		display:block;
+		max-width:100%;
+		height: auto;
+		margin-top: -90px;
+	}
+}
+
+.news-section-edge {
+	padding-bottom: 60px;
+}

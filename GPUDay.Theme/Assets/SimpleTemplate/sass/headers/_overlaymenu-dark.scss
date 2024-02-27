@@ -1,0 +1,75 @@
+/* Navbar Nav - Overlay Menu Dark */
+.navbar-container.dark {
+	background-color: rgba(0, 0, 0, 0.82);
+
+	.header & a {
+		color: #fff;
+	}
+
+	.social-icons {
+		label {
+			color: #b7b7b7;
+		}
+
+		.social-icon {
+			color: #eee;
+			background-color: $darker;
+
+			&:hover,
+			&:focus {
+				color: #fff;
+				background-color: $first-color;
+			}
+		}
+	}
+
+	.menu-toggle {
+		background-color: $darker;
+		border-color: $darker;
+		color:#fff;
+
+		&:hover,
+		&:focus {
+			color: #fff;
+			background-color: $first-color;
+			border-color: $first-color;
+		}
+	}
+
+	.navbar-nav.nav-overlay  {
+		li {
+			a {
+				color: #fafafa;
+			}
+
+			&:hover,
+			&.open,
+			&.active {
+				> a {
+					color: $first-color !important;
+					background-color: transparent !important;
+
+					&:hover,
+					&:focus {
+						color: $first-color !important;
+						background-color: transparent !important;
+					}
+				}
+			}
+		}
+
+		.search-dropdown {
+			.dropdown-menu {
+				.form-control {
+					border-color: $dark;
+					background-color: $dark;
+					color: #777;
+
+					&::placeholder {
+						color: #777;
+					}
+				}
+			}
+		}
+	}
+}

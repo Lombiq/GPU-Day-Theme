@@ -1,0 +1,14 @@
+/*
+	Simple Theme
+	Skin Name: Orange 2
+	First-color: #FF5722
+	Second-color: #FF9800
+*/
+
+@import '../variables';
+@import '../mixins';
+
+$first-color: #FF5722;
+$second-color: #FF9800;
+
+@import 'skin';

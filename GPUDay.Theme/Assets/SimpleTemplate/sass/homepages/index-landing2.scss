@@ -1,0 +1,274 @@
+/* Homepages - Index Landing 2 */
+@import '../mixins';
+@import '../variables';
+
+$font-family: 'Open Sans Condensed', sans-serif;
+
+body,
+h1,h2,h3,h4,h5,h6,
+.h1.h2.h3.h4.h5.h6,
+.widget .widget-title,
+.footer .widget .widget-ttile {
+	font-family: $font-family;
+}
+
+body {
+	font-size: 16px;
+	font-weight: 300;
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1.h2.h3.h4.h5.h6 {
+	font-weight:700;
+	margin-bottom:30px;
+}
+
+h1,
+.h1 {
+	font-size: 36px;
+}
+
+h2,
+.h2{
+	font-size: 30px;
+}
+
+h3,
+.h3 {
+	font-size: 24px;
+}
+
+h4,
+.h4 {
+	font-size: 20px;
+}
+
+h5,
+.h5 {
+	font-size: 16x;
+	margin-bottom:15px;
+}
+
+h6,
+.h6 {
+	font-size: 14px;
+}
+
+blockquote {
+	font-size:17px;
+
+	cite {
+		font-size:15px;
+	}
+}
+
+.count-title {
+	font-size:18px;
+	font-weight: 300;
+}
+
+.navbar-nav > li > a {
+	@media (min-width: $minmqsm) {
+		font-weight: 300;
+	}
+}
+
+.navbar-nav .dropdown-menu {
+	font-size:14px;
+}
+
+.header.header2.transparent.dark {
+	border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.header.header2 .navbar-collapse {
+	@media (max-width: $maxmqmd) and (min-width: $minmqsm) {
+		float:right !important;
+		width: auto;
+
+		.navbar-nav > li {
+			padding-top: 33px;
+			padding-bottom: 33px;
+		}
+	}
+}
+
+.section {
+	padding: 60px 0 30px;
+
+	@media (min-width: $minmqsm) {
+		padding: 70px 0 40px;
+	}
+
+	@media (min-width: $minmqmd) {
+		padding: 80px 0 50px;
+	}
+
+	@media (min-width: $minmqlg) {
+		padding: 90px 0 60px;
+	}
+}
+
+.section-title {
+	font-size:30px;
+	font-weight: 300;
+	margin-bottom:35px;
+	text-transform: uppercase ;
+
+	@media (min-width: $minmqxs) {
+		font-size:36px;
+	}
+
+	@media (min-width: $minmqsm) {
+		font-size:44px;
+		margin-bottom:50px;
+	}
+
+	@media (min-width: $minmqmd) {
+		font-size:56px;
+		margin-bottom:60px;
+	}
+
+	@media (min-width: $minmqlg) {
+		font-size:60px;
+		margin-bottom:70px;
+	}
+}
+
+#home.section {
+	padding:150px 0 80px;
+	overflow:hidden;
+
+	@media (min-width: $minmqsm) {
+		padding:210px 0 90px;
+	}
+
+	@media (min-width: $minmqmd) {
+		padding:250px 0 110px;
+	}
+
+	@media (min-width: $minmqlg) {
+		padding:260px 0 150px;
+	}
+
+	color:#fff;
+
+	h1 {
+		color:#fff;
+		margin-bottom:14px;
+
+		@media (min-width: $minmqmd) {
+			font-size:42px;
+			margin-bottom:16px;
+		}
+
+		@media (min-width: $minmqlg) {
+			font-size:52px;
+			margin-bottom:22px;
+		}
+	}
+	p {
+
+		@media (min-width: $minmqsm) {
+			font-size:15px;
+			margin-bottom:20px;
+		}
+
+		@media (min-width: $minmqmd) {
+			font-size:17px;
+			margin-bottom:25px;
+		}
+
+		@media (min-width: $minmqlg) {
+			font-size:19px;
+			margin-bottom:35px;
+		}
+	}
+}
+
+.title:after {
+	height:1px;
+}
+
+.actions-btn-container {
+	font-size:0;
+
+	.btn {
+		position: relative;
+
+		i {
+			margin-right:6px;
+		}
+
+		+ .btn {
+			margin-left:4px;
+
+			@media (min-width: $minmqmd) {
+				margin-left:6px;
+			}
+
+			@media (min-width: $minmqlg) {
+				margin-left:8px;
+			}
+
+			@media (max-width: $maxmqxs) {
+				margin-left:0;
+				margin-top:5px;
+			}
+		}
+
+		@media (max-width: $maxmqxs) {
+			&:before {
+				content:'';
+				display:table;
+				clear: left;
+			}
+		}
+	}
+}
+
+.btn.btn-lg {
+	padding-top:14px;
+	padding-bottom:14px;
+	font-weight:400;
+	font-size:17px;
+	text-align:center;
+	border-radius:8px;
+	min-width: 170px;
+
+	&.btn-border {
+		padding-top:13px;
+		padding-bottom:13px;
+	}
+}
+
+.more-btn-section {
+	margin-top:-1px;
+	text-align: center;
+	margin:50px auto 30px;
+}
+
+.pricing-table .pricing-body .desc {
+	font-size:14px;
+}
+
+.footer .widget {
+	&.landing-widget {
+		@media (min-width: $minmqmd) {
+			text-align: right;
+		}
+
+		select.form-control {
+			display:inline-block;
+			max-width: 240px;
+		}
+
+		address {
+			margin-bottom:10px;
+		}
+
+		.social-icons {
+			margin-top:10px;
+		}
+	}
+}

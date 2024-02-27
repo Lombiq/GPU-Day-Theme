@@ -1,0 +1,2298 @@
+{
+  "name": "GPUDay.Export",
+  "displayName": "GPU Day - Export",
+  "description": "Contents and configuration required for initializing the GPU Day site.",
+  "author": "Lombiq",
+  "version": "1.0",
+  "categories": [ "export" ],
+  "tags": [ "export" ],
+  "steps": [
+    {
+      "name": "Settings",
+      "MaxPagedCount": 0,
+      "MaxPageSize": 100,
+      "PageSize": 10,
+      "SiteName": "GPU Day",
+      "PageTitleFormat": "{% page_title Site.SiteName, position: \"after\", separator: \" - \" %}",
+      "HomeRoute": {
+        "Area": "OrchardCore.Contents",
+        "Controller": "Item",
+        "Action": "Display",
+        "contentItemId": "4q8z8qawbndf34nt7zzqdnjdnn"
+      },
+      "AppendVersion": true,
+      "CacheMode": 0,
+      "AdminSettings": {
+        "DisplayThemeToggler": true,
+        "DisplayMenuFilter": false,
+        "DisplayNewMenu": false,
+        "DisplayTitlesInTopbar": false
+      }
+    },
+    {
+      "name": "deployment",
+      "Plans": [
+        {
+          "Name": "Export",
+          "Steps": [
+            {
+              "Type": "SiteSettingsDeploymentStep",
+              "Step": {
+                "Settings": [
+                  "MaxPagedCount",
+                  "MaxPageSize",
+                  "PageSize",
+                  "SiteName",
+                  "PageTitleFormat",
+                  "HomeRoute",
+                  "AppendVersion",
+                  "CacheMode"
+                ],
+                "Id": "679962efadb643b5b599b7d99aa4be76",
+                "Name": "SiteSettings"
+              }
+            },
+            {
+              "Type": "AdminSettings_SiteSettingsPropertyDeploymentStep",
+              "Step": {
+                "Id": "316b4adcad9046639a75fb21827ec835",
+                "Name": "AdminSettings_SiteSettingsPropertyDeploymentStep"
+              }
+            },
+            {
+              "Type": "DeploymentPlanDeploymentStep",
+              "Step": {
+                "IncludeAll": true,
+                "DeploymentPlanNames": [],
+                "Id": "e61f40396da0462d872565d76a3ede27",
+                "Name": "DeploymentPlan"
+              }
+            },
+            {
+              "Type": "AllWorkflowTypeDeploymentStep",
+              "Step": {
+                "Id": "fd11a2856f5840699310ca5409282ef6",
+                "Name": "AllWorkflowType"
+              }
+            },
+            {
+              "Type": "AllQueriesDeploymentStep",
+              "Step": {
+                "Id": "87d3f48aa9c549c997e7107b0c7bca37",
+                "Name": "AllQueries"
+              }
+            },
+            {
+              "Type": "AllLayersDeploymentStep",
+              "Step": {
+                "Id": "5f9f65d217b441ad89dca06a6a5b87c9",
+                "Name": "AllLayers"
+              }
+            },
+            {
+              "Type": "ContentDefinitionDeploymentStep",
+              "Step": {
+                "IncludeAll": false,
+                "ContentTypes": [
+                  "EventDay",
+                  "GPUDay",
+                  "OldGPUDay",
+                  "Speaker",
+                  "Talk",
+                  "Year"
+                ],
+                "ContentParts": [
+                  "EventDay",
+                  "GPUDay",
+                  "OldGPUDay",
+                  "Speaker",
+                  "Talk",
+                  "Year"
+                ],
+                "Id": "8b9df93d34a9496097ee2128941cfb8b",
+                "Name": "ContentDefinition"
+              }
+            },
+            {
+              "Type": "ContentDeploymentStep",
+              "Step": {
+                "ContentTypes": [
+                  "Talk",
+                  "EventDay",
+                  "GPUDay",
+                  "LiquidWidget",
+                  "Menu",
+                  "Page",
+                  "Speaker",
+                  "Taxonomy",
+                  "Year"
+                ],
+                "ExportAsSetupRecipe": false,
+                "Id": "c2f72459c9ee4f4e8e522fba11088e5e",
+                "Name": "ContentDeploymentStep"
+              }
+            },
+            {
+              "Type": "MediaDeploymentStep",
+              "Step": {
+                "IncludeAll": false,
+                "FilePaths": [],
+                "DirectoryPaths": [
+                  "GPU Days"
+                ],
+                "Id": "d23a50c9a09b4fc88afee09461be1301",
+                "Name": "Media"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Old GPU Days",
+          "Steps": [
+            {
+              "Type": "ContentDeploymentStep",
+              "Step": {
+                "ContentTypes": [
+                  "OldGPUDay"
+                ],
+                "ExportAsSetupRecipe": false,
+                "Id": "cafc0a15e1af4bb39cca7e6db85d2e82",
+                "Name": "ContentDeploymentStep"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "WorkflowType",
+      "data": [
+        {
+          "WorkflowTypeId": "41dj971hp3n1wt8s3257c1bv4r",
+          "Name": "Contact Us Posted",
+          "IsEnabled": true,
+          "IsSingleton": false,
+          "LockTimeout": 0,
+          "LockExpiration": 0,
+          "DeleteFinishedWorkflows": false,
+          "Activities": [
+            {
+              "ActivityId": "4mxqy4q1y7a4j2geyh3emm8ang",
+              "Name": "HttpRequestEvent",
+              "X": 0,
+              "Y": 0,
+              "IsStart": true,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Contact Us Form Submitted"
+                },
+                "HttpMethod": "POST",
+                "Url": "/gpuday/workflows/Invoke?token=CfDJ8GvqA6tnIT5GtBdEnQ6k0qWqBEO1PlNROjxu9rpz2es-UQW6mJXDvdE_MofK50zG5iV7QSeuULu_tiW2zOTvTY981wujHL5ruWavMGqo_6i_IB2QaIzz12Y1MMy1EKoIHcwBqzL04J4750u8Jznz4UHItfkdIIRHkgimGJsp800suseptpDHGeL46E9PXpfNjyzvnD-WuoZO1wmY7KPv5eeQUroSvQjpXHNd-McAckxp",
+                "ValidateAntiforgeryToken": true,
+                "TokenLifeSpan": 0
+              }
+            },
+            {
+              "ActivityId": "45s3e4mh415262qncw1p3aptxe",
+              "Name": "BindModelStateTask",
+              "X": 300,
+              "Y": 10,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Bind Form To Model State"
+                }
+              }
+            },
+            {
+              "ActivityId": "41xaj12zfbk4qz8211qnps5cwg",
+              "Name": "ValidateAntiforgeryTokenTask",
+              "X": 610,
+              "Y": 10,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": null
+                }
+              }
+            },
+            {
+              "ActivityId": "486yp4pbft9v9x31ca30fx87mq",
+              "Name": "ValidateFormFieldTask",
+              "X": 1230,
+              "Y": 160,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Validate Subject"
+                },
+                "FieldName": "Subject",
+                "ErrorMessage": "Subject is required."
+              }
+            },
+            {
+              "ActivityId": "4zcc7x6nt2hk1va7sqn002g45k",
+              "Name": "ValidateFormFieldTask",
+              "X": 1010,
+              "Y": 160,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Validate Email"
+                },
+                "FieldName": "Email",
+                "ErrorMessage": "Email is required."
+              }
+            },
+            {
+              "ActivityId": "4akp8ve1hc9cnx40crp1sk99d6",
+              "Name": "ForkTask",
+              "X": 930,
+              "Y": 10,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Validate Form Fields"
+                },
+                "Forks": [
+                  "Email",
+                  "Subject",
+                  "Message",
+                  "Captcha"
+                ]
+              }
+            },
+            {
+              "ActivityId": "47vz8v58kw1k0vcpw44wp1x2m3",
+              "Name": "ValidateFormFieldTask",
+              "X": 1427,
+              "Y": 150,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Validate Message"
+                },
+                "FieldName": "Message",
+                "ErrorMessage": "Message is required."
+              }
+            },
+            {
+              "ActivityId": "4yyp32342awecsbp76ah6khxwx",
+              "Name": "JoinTask",
+              "X": 900,
+              "Y": 320,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Join"
+                },
+                "Mode": 0
+              }
+            },
+            {
+              "ActivityId": "4r2xcksf29mf2056eaa88r0jxh",
+              "Name": "ValidateFormTask",
+              "X": 420,
+              "Y": 310,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": null
+                }
+              }
+            },
+            {
+              "ActivityId": "4j12sqcz81n82vn1cg34jna9my",
+              "Name": "NotifyTask",
+              "X": 80,
+              "Y": 240,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Form Error"
+                },
+                "NotificationType": 3,
+                "Message": {
+                  "Expression": "Please fill out the form before submitting."
+                }
+              }
+            },
+            {
+              "ActivityId": "4bf1thh9xr2w77mr1bxqryftnq",
+              "Name": "NotifyTask",
+              "X": 110,
+              "Y": 360,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Form Success"
+                },
+                "NotificationType": 0,
+                "Message": {
+                  "Expression": "Email has been successfully sent. {{ Request.Form.Message }}"
+                }
+              }
+            },
+            {
+              "ActivityId": "4nqta2fjt6d3qx7xe2t2d248dy",
+              "Name": "HttpRedirectTask",
+              "X": 20,
+              "Y": 120,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Go to Home Page"
+                },
+                "Location": {
+                  "Expression": "{{ '~/' | href }}"
+                },
+                "Permanent": false
+              }
+            },
+            {
+              "ActivityId": "4et4pyhs9zr4vswfjnqd3h8nwv",
+              "Name": "ValidateReCaptchaTask",
+              "X": 780,
+              "Y": 160,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": null
+                }
+              }
+            }
+          ],
+          "Transitions": [
+            {
+              "Id": 0,
+              "SourceActivityId": "4mxqy4q1y7a4j2geyh3emm8ang",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "45s3e4mh415262qncw1p3aptxe"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "45s3e4mh415262qncw1p3aptxe",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "41xaj12zfbk4qz8211qnps5cwg"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "41xaj12zfbk4qz8211qnps5cwg",
+              "SourceOutcomeName": "Valid",
+              "DestinationActivityId": "4akp8ve1hc9cnx40crp1sk99d6"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4akp8ve1hc9cnx40crp1sk99d6",
+              "SourceOutcomeName": "Message",
+              "DestinationActivityId": "47vz8v58kw1k0vcpw44wp1x2m3"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4akp8ve1hc9cnx40crp1sk99d6",
+              "SourceOutcomeName": "Email",
+              "DestinationActivityId": "4zcc7x6nt2hk1va7sqn002g45k"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4akp8ve1hc9cnx40crp1sk99d6",
+              "SourceOutcomeName": "Subject",
+              "DestinationActivityId": "486yp4pbft9v9x31ca30fx87mq"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4zcc7x6nt2hk1va7sqn002g45k",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4yyp32342awecsbp76ah6khxwx"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "486yp4pbft9v9x31ca30fx87mq",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4yyp32342awecsbp76ah6khxwx"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "47vz8v58kw1k0vcpw44wp1x2m3",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4yyp32342awecsbp76ah6khxwx"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4yyp32342awecsbp76ah6khxwx",
+              "SourceOutcomeName": "Joined",
+              "DestinationActivityId": "4r2xcksf29mf2056eaa88r0jxh"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4r2xcksf29mf2056eaa88r0jxh",
+              "SourceOutcomeName": "Invalid",
+              "DestinationActivityId": "4j12sqcz81n82vn1cg34jna9my"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4r2xcksf29mf2056eaa88r0jxh",
+              "SourceOutcomeName": "Valid",
+              "DestinationActivityId": "4bf1thh9xr2w77mr1bxqryftnq"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4j12sqcz81n82vn1cg34jna9my",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4nqta2fjt6d3qx7xe2t2d248dy"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4bf1thh9xr2w77mr1bxqryftnq",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4nqta2fjt6d3qx7xe2t2d248dy"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4akp8ve1hc9cnx40crp1sk99d6",
+              "SourceOutcomeName": "Captcha",
+              "DestinationActivityId": "4et4pyhs9zr4vswfjnqd3h8nwv"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4et4pyhs9zr4vswfjnqd3h8nwv",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4yyp32342awecsbp76ah6khxwx"
+            }
+          ],
+          "Properties": {}
+        }
+      ]
+    },
+    {
+      "name": "Queries",
+      "Queries": [
+        {
+          "Template": "select DocumentId from DateTimeFieldIndex where ContentType = 'Talk' and Published = 1 and ContentField = 'StartOfTalk' and DateTime >= '{{ EventDate | date:\"%Y-%m-%d\" }}' and DateTime < '{{ EventDate | date:\"%s\" | plus:86400 | date:\"%Y-%m-%d\" }}' order by DateTime",
+          "ReturnDocuments": true,
+          "Name": "TalksByDate",
+          "Source": "Sql",
+          "Schema": null
+        },
+        {
+          "Template": "select DocumentId from ContentItemIndex where ContentItemId = '{{ SpeakerId }}' and ContentType = 'Speaker' and Published = 1",
+          "ReturnDocuments": true,
+          "Name": "SpeakersById",
+          "Source": "Sql",
+          "Schema": null
+        },
+        {
+          "Template": "select ti.DocumentId from TaxonomyIndex ti join NumericFieldIndex tfi on ti.DocumentId = tfi.DocumentId where ti.Published = 1 and ti.ContentType = 'Speaker' and ti.ContentField = 'Year' and ti.TermContentItemId = '{{ YearId }}' and tfi.ContentField = 'Order' order by tfi.Numeric",
+          "ReturnDocuments": true,
+          "Name": "SpeakersByYear",
+          "Source": "Sql",
+          "Schema": null
+        },
+        {
+          "Template": "select DocumentId from ContentItemIndex where ContentItemId = '{{ LocationId }}' and ContentType = 'GoogleMapsLocation' and Published = 1",
+          "ReturnDocuments": true,
+          "Name": "GoogleMapsLocationsById",
+          "Source": "Sql",
+          "Schema": null
+        },
+        {
+          "Template": "select DocumentId from DateFieldIndex where (ContentType = 'GPUDay' or ContentType = 'OldGPUDay') and ContentField = 'FromDate' and Published = 1 order by Date desc",
+          "ReturnDocuments": true,
+          "Name": "EarlierEvents",
+          "Source": "Sql",
+          "Schema": null
+        }
+      ]
+    },
+    {
+      "name": "Layers",
+      "Layers": [
+        {
+          "Name": "Always",
+          "Rule": null,
+          "Description": null,
+          "LayerRule": {
+            "Conditions": [
+              {
+                "$type": "OrchardCore.Rules.Models.BooleanCondition, OrchardCore.Rules",
+                "Value": true,
+                "Name": "BooleanCondition",
+                "ConditionId": "4gvnx3gcnq49439hhfvtherp4z"
+              }
+            ],
+            "Name": null,
+            "ConditionId": "4qpy5429d7y3a559y0hx0szany"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Settings",
+      "LayerSettings": {
+        "Zones": [
+          "Messages",
+          "Content",
+          "Footer"
+        ]
+      }
+    },
+    {
+      "name": "ContentDefinition",
+      "ContentTypes": [
+        {
+          "Name": "GPUDay",
+          "DisplayName": "GPU Day",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Creatable": true,
+              "Listable": true,
+              "Draftable": true,
+              "Securable": true
+            },
+            "FullTextAspectSettings": {},
+            "GraphQLContentTypeSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "GPUDay",
+              "Name": "GPUDay",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                },
+                "GraphQLContentTypePartSettings": {},
+                "AutoroutePartSettings": {
+                  "AllowCustomPath": true,
+                  "ShowHomepageOption": true,
+                  "AllowUpdatePath": true
+                },
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "BagPart",
+              "Name": "Schedule",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "DisplayName": "Schedule",
+                  "Description": "Provides a collection behavior for your content item where you can place other content items.",
+                  "Position": "3"
+                },
+                "GraphQLContentTypePartSettings": {},
+                "BagPartSettings": {
+                  "ContainedContentTypes": [
+                    "EventDay"
+                  ],
+                  "ContainedStereotypes": []
+                },
+                "LuceneContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "OldGPUDay",
+          "DisplayName": "Old GPU Day",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Creatable": true,
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true
+            },
+            "FullTextAspectSettings": {},
+            "GraphQLContentTypeSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "OldGPUDay",
+              "Name": "OldGPUDay",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "2"
+                }
+              }
+            },
+            {
+              "PartName": "AutoroutePart",
+              "Name": "AutoroutePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                },
+                "GraphQLContentTypePartSettings": {},
+                "AutoroutePartSettings": {
+                  "AllowCustomPath": true,
+                  "ShowHomepageOption": true,
+                  "AllowUpdatePath": true
+                },
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            },
+            {
+              "PartName": "HtmlBodyPart",
+              "Name": "HtmlBodyPart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "3",
+                  "Editor": "Monaco"
+                },
+                "HtmlBodyPartSettings": {
+                  "SanitizeHtml": false
+                },
+                "HtmlBodyPartMonacoEditorSettings": {
+                  "Options": "{\r\n  \"automaticLayout\": true,\r\n  \"language\": \"html\"\r\n}"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Speaker",
+          "DisplayName": "Speaker",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Creatable": true,
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true
+            },
+            "FullTextAspectSettings": {},
+            "GraphQLContentTypeSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Speaker",
+              "Name": "Speaker",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Year",
+          "DisplayName": "Year",
+          "Settings": {
+            "ContentTypeSettings": {},
+            "FullTextAspectSettings": {},
+            "GraphQLContentTypeSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Year",
+              "Name": "Year",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Talk",
+          "DisplayName": "Talk",
+          "Settings": {
+            "ContentTypeSettings": {
+              "Creatable": true,
+              "Listable": true,
+              "Draftable": true,
+              "Versionable": true,
+              "Securable": true
+            },
+            "FullTextAspectSettings": {},
+            "GraphQLContentTypeSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "Talk",
+              "Name": "Talk",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "EventDay",
+          "DisplayName": "Event Day",
+          "Settings": {
+            "ContentTypeSettings": {},
+            "FullTextAspectSettings": {},
+            "GraphQLContentTypeSettings": {}
+          },
+          "ContentTypePartDefinitionRecords": [
+            {
+              "PartName": "EventDay",
+              "Name": "EventDay",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "1"
+                }
+              }
+            },
+            {
+              "PartName": "TitlePart",
+              "Name": "TitlePart",
+              "Settings": {
+                "ContentTypePartSettings": {
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "ContentParts": [
+        {
+          "Name": "GPUDay",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "Subtitle",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Subtitle",
+                  "Position": "0"
+                },
+                "TextFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "DateField",
+              "Name": "FromDate",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "From Date",
+                  "Position": "3"
+                },
+                "DateFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "DateField",
+              "Name": "ToDate",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "To Date",
+                  "Position": "4"
+                }
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "HeaderPhoto",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Header Photo",
+                  "Position": "1"
+                },
+                "MediaFieldSettings": {
+                  "Required": true,
+                  "Multiple": false,
+                  "AllowedExtensions": []
+                },
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "BooleanField",
+              "Name": "DisplayScheduleButton",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Display Schedule Button",
+                  "Editor": "Switch",
+                  "Position": "5"
+                },
+                "BooleanFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "FooterPhoto",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Footer Photo",
+                  "Position": "2"
+                },
+                "MediaFieldSettings": {
+                  "Multiple": false,
+                  "AllowedExtensions": []
+                },
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "RegistrationURL",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Registration URL",
+                  "Editor": "Url",
+                  "Position": "6"
+                },
+                "TextFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TaxonomyField",
+              "Name": "Year",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Year",
+                  "Position": "11"
+                },
+                "LuceneContentIndexSettings": {},
+                "TaxonomyFieldSettings": {
+                  "Hint": "Relevant speakers will be selected based on this value.",
+                  "Required": true,
+                  "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb",
+                  "Unique": true
+                }
+              }
+            },
+            {
+              "FieldName": "HtmlField",
+              "Name": "About",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "About",
+                  "Editor": "Wysiwyg",
+                  "Position": "7"
+                },
+                "HtmlFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "GoogleMapsIFrameSrc",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Google Maps IFrame src",
+                  "Editor": "CodeMirror",
+                  "Position": "8"
+                },
+                "TextFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "HtmlField",
+              "Name": "ContactBox",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Contact Box",
+                  "Editor": "Wysiwyg",
+                  "Position": "9"
+                },
+                "HtmlFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "HtmlField",
+              "Name": "TravelingByPublicTransport",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Traveling by Public Transport",
+                  "Editor": "Wysiwyg",
+                  "Position": "10"
+                },
+                "HtmlFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "OldGPUDay",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "DateField",
+              "Name": "FromDate",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "From Date",
+                  "Position": "0"
+                },
+                "DateFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Speaker",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "TextField",
+              "Name": "AboutTheSpeaker",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "About The Speaker",
+                  "Editor": "TextArea",
+                  "Position": "2"
+                },
+                "TextFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "Photo",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Photo",
+                  "Position": "1"
+                },
+                "MediaFieldSettings": {
+                  "Required": true,
+                  "Multiple": false,
+                  "AllowedExtensions": []
+                },
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "Company",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Company",
+                  "Position": "3"
+                },
+                "TextFieldSettings": {
+                  "Required": true
+                },
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "EmailAddress",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Email Address",
+                  "Editor": "Email",
+                  "Position": "4"
+                },
+                "TextFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "WebsiteUrl",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Website URL",
+                  "Editor": "Url",
+                  "Position": "5"
+                },
+                "TextFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "LinkedInProfileUrl",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "LinkedIn Profile URL",
+                  "Editor": "Url",
+                  "Position": "6"
+                },
+                "TextFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TaxonomyField",
+              "Name": "Year",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Year",
+                  "Editor": "Tags",
+                  "Position": "7"
+                },
+                "LuceneContentIndexSettings": {},
+                "TaxonomyFieldSettings": {
+                  "Required": true,
+                  "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb"
+                },
+                "TaxonomyFieldTagsEditorSettings": {}
+              }
+            },
+            {
+              "FieldName": "NumericField",
+              "Name": "Order",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Order",
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Talk",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "ContentPickerField",
+              "Name": "Speaker",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Speaker",
+                  "Position": "2"
+                },
+                "ContentPickerFieldSettings": {
+                  "DisplayedContentTypes": [
+                    "Speaker"
+                  ],
+                  "DisplayedStereotypes": []
+                },
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "ContentPickerField",
+              "Name": "CoSpeaker",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Co-Speaker",
+                  "Position": "3"
+                },
+                "ContentPickerFieldSettings": {
+                  "DisplayedContentTypes": [
+                    "Speaker"
+                  ],
+                  "DisplayedStereotypes": []
+                },
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "HtmlField",
+              "Name": "AbstractText",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Abstract Text",
+                  "Editor": "Wysiwyg",
+                  "Position": "4"
+                },
+                "HtmlFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "Abstract",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Abstract",
+                  "Position": "5"
+                },
+                "MediaFieldSettings": {
+                  "Multiple": false,
+                  "AllowMediaText": false,
+                  "AllowedExtensions": []
+                },
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "MediaField",
+              "Name": "Slides",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Slides",
+                  "Position": "6"
+                },
+                "MediaFieldSettings": {
+                  "Multiple": false,
+                  "AllowedExtensions": []
+                },
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "TextField",
+              "Name": "RecordingUrl",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Recording URL",
+                  "Editor": "Url",
+                  "Position": "7"
+                },
+                "TextFieldSettings": {},
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "DateTimeField",
+              "Name": "StartOfTalk",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Start of Talk",
+                  "Position": "0"
+                },
+                "DateTimeFieldSettings": {
+                  "Required": true
+                },
+                "LuceneContentIndexSettings": {}
+              }
+            },
+            {
+              "FieldName": "DateTimeField",
+              "Name": "EndOfTalk",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "End of Talk",
+                  "Position": "1"
+                },
+                "DateTimeFieldSettings": {
+                  "Required": true
+                },
+                "LuceneContentIndexSettings": {}
+              }
+            }
+          ]
+        },
+        {
+          "Name": "EventDay",
+          "Settings": {},
+          "ContentPartFieldDefinitionRecords": [
+            {
+              "FieldName": "DateField",
+              "Name": "Date",
+              "Settings": {
+                "ContentPartFieldSettings": {
+                  "DisplayName": "Date",
+                  "Position": "0"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "content",
+      "data": [
+        {
+          "ContentItemId": "40cjcsbprnd53s3xt51akd2fnb",
+          "ContentItemVersionId": "40je2hk3qfr6b3h0108p0azxcx",
+          "ContentType": "Taxonomy",
+          "DisplayText": "Year",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2023-12-29T14:56:17.3073718Z",
+          "PublishedUtc": "2023-12-29T14:56:17.3178813Z",
+          "CreatedUtc": "2023-12-29T14:50:39.4141649Z",
+          "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+          "Author": "admin",
+          "TitlePart": {
+            "Title": "Year"
+          },
+          "AliasPart": {
+            "Alias": "year"
+          },
+          "AutoroutePart": {
+            "Path": "year",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "TaxonomyPart": {
+            "TermContentType": "Year",
+            "Terms": [
+              {
+                "ContentItemId": "4st256dxx43kc37vgq0b2k7dm9",
+                "ContentItemVersionId": null,
+                "ContentType": "Year",
+                "DisplayText": "2016",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-12-29T14:55:39.8748459Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Year": {},
+                "TitlePart": {
+                  "Title": "2016"
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "4avzwcsrnfjmrsz2jkmqde7mnt",
+                "ContentItemVersionId": null,
+                "ContentType": "Year",
+                "DisplayText": "2017",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-12-29T14:55:43.4840764Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Year": {},
+                "TitlePart": {
+                  "Title": "2017"
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "41wep8ye7hs82t6y0ja9dpb2n9",
+                "ContentItemVersionId": null,
+                "ContentType": "Year",
+                "DisplayText": "2018",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-12-29T14:55:47.4406092Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Year": {},
+                "TitlePart": {
+                  "Title": "2018"
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "41h98g6c9r8q6s70htqyd33f5x",
+                "ContentItemVersionId": null,
+                "ContentType": "Year",
+                "DisplayText": "2019",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-12-29T14:55:57.1659007Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Year": {},
+                "TitlePart": {
+                  "Title": "2019"
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "4nh1kz8gd9kk6rd2xz9yh4ypwk",
+                "ContentItemVersionId": null,
+                "ContentType": "Year",
+                "DisplayText": "2020",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-12-29T14:56:00.5372987Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Year": {},
+                "TitlePart": {
+                  "Title": "2020"
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "47m9r4n0zd86e5fndqkz7rhdwr",
+                "ContentItemVersionId": null,
+                "ContentType": "Year",
+                "DisplayText": "2021",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-12-29T14:56:03.3337557Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Year": {},
+                "TitlePart": {
+                  "Title": "2021"
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "4zr9je52sfsarxw04nrxm2jmdk",
+                "ContentItemVersionId": null,
+                "ContentType": "Year",
+                "DisplayText": "2022",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-12-29T14:56:05.9153664Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Year": {},
+                "TitlePart": {
+                  "Title": "2022"
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              },
+              {
+                "ContentItemId": "4p6mqqbhp1xjfxb4w08fbg60d0",
+                "ContentItemVersionId": null,
+                "ContentType": "Year",
+                "DisplayText": "2023",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2023-12-29T14:56:09.7850307Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": null,
+                "Author": "admin",
+                "Year": {},
+                "TitlePart": {
+                  "Title": "2023"
+                },
+                "TermPart": {
+                  "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb"
+                },
+                "@WeldedPartSettings": {
+                  "TermPart": {}
+                }
+              }
+            ]
+          }
+        },
+        {
+          "ContentItemId": "4vzer121trf396mecpmjjr1tc5",
+          "ContentItemVersionId": "4zj47v6h19vrx62jr6yz83qzwg",
+          "ContentType": "LiquidWidget",
+          "DisplayText": "Footer",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2024-01-10T14:33:23.2762232Z",
+          "PublishedUtc": "2024-01-10T14:33:23.2951609Z",
+          "CreatedUtc": "2024-01-08T17:22:15.4992132Z",
+          "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+          "Author": "admin",
+          "LiquidPart": {
+            "Liquid": "<footer class=\"footer\">\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 col-sm-6\">\r\n                <div class=\"widget about-widget\">\r\n                    <img src=\"{{ \"~/mediatheme/images/wigner-logo.png\" | href }}\" alt=\"Wigner Logo\"/>\r\n                    <hr>\r\n                    <address>\r\n                        <label>Contact Us Today:</label><br>\r\n                        Wigner Research Centre for Physics<br>\r\n                        1121 Budapest, Konkoly-Thege Miklós út 29-33.<br><br>\r\n                        Email: gpu '@' wigner.hu\r\n                    </address>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md-6 col-sm-6\">\r\n                <div class=\"widget\">\r\n                    <h4 class=\"widget-title\">EARLIER EVENTS</h4>\r\n                  \t\t{% assign events = Queries.EarlierEvents | query %}\r\n                        {% for item in events %}\r\n                  \t\t\t<div><strong><a href=\"{{ item | display_url }}\">{{ item.DisplayText }}</a></strong></div>\r\n        \t\t\t\t{% endfor %}\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"footer-bottom\">\r\n        <div class=\"container\">\r\n            <div class=\"social-icons\">\r\n                <label>Find Us:</label>\r\n                <a href=\"https://github.com/Wigner-GPU-Lab\" target=\"_blank\" class=\"social-icon\" title=\"Github\"><i class=\"fa fa-github\"></i></a>\r\n                <a href=\"https://www.kfki.hu/\" target=\"_blank\" class=\"social-icon\" title=\"KFKI\"><i class=\"fa fa-home\"></i></a>\r\n                <a href=\"https://wigner.hu/\" target=\"_blank\" class=\"social-icon\" title=\"Wigner\"><i class=\"fa fa-ge\"></i></a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</footer>"
+          },
+          "AdditionalStylingPart": {
+            "CustomClasses": null,
+            "RemoveGridExtensionClasses": false
+          },
+          "@WeldedPartSettings": {
+            "AdditionalStylingPart": {}
+          },
+          "LayerMetadata": {
+            "RenderTitle": false,
+            "Position": 1.0,
+            "Zone": "Footer",
+            "Layer": "Always"
+          }
+        },
+        {
+          "ContentItemId": "4sa7780s05c4441ysk52bg61xv",
+          "ContentItemVersionId": "4vjng66hd07znyyfnd9bctbdxh",
+          "ContentType": "Speaker",
+          "DisplayText": "Jack Doe",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2024-01-08T18:16:32.6525177Z",
+          "PublishedUtc": "2024-01-08T18:16:32.6715132Z",
+          "CreatedUtc": "2023-12-29T17:58:22.7526944Z",
+          "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+          "Author": "admin",
+          "Speaker": {
+            "AboutTheSpeaker": {
+              "Text": "Lorem ipsum."
+            },
+            "Photo": {
+              "Paths": [
+                "GPU Days/Sample/example.png"
+              ],
+              "MediaTexts": [
+                ""
+              ]
+            },
+            "Company": {
+              "Text": "Sample Company"
+            },
+            "EmailAddress": {
+              "Text": "jackdoe@example.com"
+            },
+            "WebsiteUrl": {
+              "Text": "https://example.com"
+            },
+            "LinkedInProfileUrl": {
+              "Text": "https://linkedin.com"
+            },
+            "Year": {
+              "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb",
+              "TermContentItemIds": [
+                "4p6mqqbhp1xjfxb4w08fbg60d0"
+              ],
+              "TagNames": [
+                "2023"
+              ]
+            },
+            "Order": {
+              "Value": 2.0
+            }
+          },
+          "TitlePart": {
+            "Title": "Jack Doe"
+          }
+        },
+        {
+          "ContentItemId": "49n2w3dh4tpkzrsd6fjqy3shnb",
+          "ContentItemVersionId": "4avbh4rxnhp6h286q47qz6atc0",
+          "ContentType": "Speaker",
+          "DisplayText": "John Doe",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2024-01-08T18:16:45.9218475Z",
+          "PublishedUtc": "2024-01-08T18:16:45.9395466Z",
+          "CreatedUtc": "2023-12-29T17:59:47.3961198Z",
+          "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+          "Author": "admin",
+          "Speaker": {
+            "AboutTheSpeaker": {
+              "Text": "Lorem ipsum."
+            },
+            "Photo": {
+              "Paths": [
+                "GPU Days/Sample/example.png"
+              ],
+              "MediaTexts": [
+                ""
+              ]
+            },
+            "Company": {
+              "Text": "Sample Company"
+            },
+            "EmailAddress": {
+              "Text": "johndoe@example.com"
+            },
+            "WebsiteUrl": {
+              "Text": "https://example.com"
+            },
+            "LinkedInProfileUrl": {
+              "Text": "https://linkedin.com"
+            },
+            "Year": {
+              "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb",
+              "TermContentItemIds": [
+                "4p6mqqbhp1xjfxb4w08fbg60d0"
+              ],
+              "TagNames": [
+                "2023"
+              ]
+            },
+            "Order": {
+              "Value": 3.0
+            }
+          },
+          "TitlePart": {
+            "Title": "John Doe"
+          }
+        },
+        {
+          "ContentItemId": "48r4vctvv4aeh42pyjxrgwqfnx",
+          "ContentItemVersionId": "4jf8g6fkaz5w8tdzh4yc9zxcnm",
+          "ContentType": "Speaker",
+          "DisplayText": "Jane Doe",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2024-01-08T18:16:59.5498029Z",
+          "PublishedUtc": "2024-01-08T18:16:59.5703544Z",
+          "CreatedUtc": "2023-12-29T17:55:42.6117576Z",
+          "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+          "Author": "admin",
+          "Speaker": {
+            "AboutTheSpeaker": {
+              "Text": "Lorem ipsum."
+            },
+            "Photo": {
+              "Paths": [
+                "GPU Days/Sample/example.png"
+              ],
+              "MediaTexts": [
+                ""
+              ]
+            },
+            "Company": {
+              "Text": "Sample Company"
+            },
+            "EmailAddress": {
+              "Text": "janedoe@example.com"
+            },
+            "WebsiteUrl": {
+              "Text": "https://example.com"
+            },
+            "LinkedInProfileUrl": {
+              "Text": "https://linkedin.com"
+            },
+            "Year": {
+              "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb",
+              "TermContentItemIds": [
+                "4p6mqqbhp1xjfxb4w08fbg60d0"
+              ],
+              "TagNames": [
+                "2023"
+              ]
+            },
+            "Order": {
+              "Value": 4.0
+            }
+          },
+          "TitlePart": {
+            "Title": "Jane Doe"
+          }
+        },
+        {
+          "ContentItemId": "48jt3qgfwfskdzgnkxj2z3w7dt",
+          "ContentItemVersionId": "49h2bbq7bks6m1xxbb6rkc2xxq",
+          "ContentType": "Speaker",
+          "DisplayText": "Jim Doe",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2024-01-08T18:18:06.0833431Z",
+          "PublishedUtc": "2024-01-08T18:18:06.110433Z",
+          "CreatedUtc": "2023-12-29T17:56:21.3330589Z",
+          "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+          "Author": "admin",
+          "Speaker": {
+            "AboutTheSpeaker": {
+              "Text": "Lorem ipsum."
+            },
+            "Photo": {
+              "Paths": [
+                "GPU Days/Sample/example.png"
+              ],
+              "MediaTexts": [
+                ""
+              ]
+            },
+            "Company": {
+              "Text": "Sample Company"
+            },
+            "EmailAddress": {
+              "Text": "jimdoe@example.com"
+            },
+            "WebsiteUrl": {
+              "Text": "https://example.com"
+            },
+            "LinkedInProfileUrl": {
+              "Text": "https://linkedin.com"
+            },
+            "Year": {
+              "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb",
+              "TermContentItemIds": [
+                "4p6mqqbhp1xjfxb4w08fbg60d0"
+              ],
+              "TagNames": [
+                "2023"
+              ]
+            },
+            "Order": {
+              "Value": null
+            }
+          },
+          "TitlePart": {
+            "Title": "Jim Doe"
+          }
+        },
+        {
+          "ContentItemId": "4pmcz2bnwj5g72y81ehwt9w54a",
+          "ContentItemVersionId": "43cdppdnsmn894gsz0jq57h05j",
+          "ContentType": "Talk",
+          "DisplayText": "Sample Talk 1",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2024-01-08T18:22:16.5767634Z",
+          "PublishedUtc": "2024-01-08T18:22:16.6358666Z",
+          "CreatedUtc": "2023-12-29T18:02:46.623483Z",
+          "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+          "Author": "admin",
+          "Talk": {
+            "Speaker": {
+              "ContentItemIds": [
+                "4sa7780s05c4441ysk52bg61xv"
+              ]
+            },
+            "CoSpeaker": {
+              "ContentItemIds": []
+            },
+            "AbstractText": {
+              "Html": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae magna augue. Praesent ut scelerisque massa. Vestibulum viverra ante metus, rhoncus cursus leo efficitur sit amet. Mauris mattis a ante in semper. Nulla pulvinar facilisis quam, feugiat egestas est condimentum sit amet. Aenean aliquam lectus at dignissim rhoncus. Nam luctus posuere orci ut tincidunt. Morbi sodales metus nulla, id accumsan tellus pharetra ut.</p><p>Curabitur laoreet, augue a sollicitudin auctor, mauris justo iaculis diam, id condimentum massa ligula in est. Duis rhoncus, libero ac bibendum efficitur, lacus massa laoreet massa, nec tempus dolor arcu sed orci. Mauris nec elit pellentesque, dictum ipsum malesuada, venenatis metus. Integer ac odio vel felis vehicula hendrerit id eget mi. In vitae ante hendrerit, porta ante egestas, cursus quam. Aliquam ac viverra nibh. Cras a ullamcorper dui. Aenean pharetra tellus iaculis volutpat egestas. Praesent suscipit non quam eu mattis. Aliquam eget posuere est.</p>"
+            },
+            "Abstract": {
+              "Paths": [
+                "GPU Days/Sample/document.pdf"
+              ],
+              "MediaTexts": []
+            },
+            "Slides": {
+              "Paths": [
+                "GPU Days/Sample/document.pdf"
+              ],
+              "MediaTexts": [
+                ""
+              ]
+            },
+            "RecordingUrl": {
+              "Text": "https://example.com"
+            },
+            "StartOfTalk": {
+              "Value": "2023-05-15T07:15:00Z"
+            },
+            "EndOfTalk": {
+              "Value": "2023-05-15T07:35:00Z"
+            }
+          },
+          "TitlePart": {
+            "Title": "Sample Talk 1"
+          }
+        },
+        {
+          "ContentItemId": "4wbckct3bzkf4z2axxd9a8gpdz",
+          "ContentItemVersionId": "43e54164sas56y2qnyw1wnr144",
+          "ContentType": "Talk",
+          "DisplayText": "Opening Talk",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2024-01-08T18:22:37.4311333Z",
+          "PublishedUtc": "2024-01-08T18:22:37.4563383Z",
+          "CreatedUtc": "2023-12-29T18:01:26.567831Z",
+          "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+          "Author": "admin",
+          "Talk": {
+            "Speaker": {
+              "ContentItemIds": [
+                "48r4vctvv4aeh42pyjxrgwqfnx"
+              ]
+            },
+            "CoSpeaker": {
+              "ContentItemIds": [
+                "48jt3qgfwfskdzgnkxj2z3w7dt"
+              ]
+            },
+            "AbstractText": {
+              "Html": ""
+            },
+            "Abstract": {
+              "Paths": [],
+              "MediaTexts": []
+            },
+            "Slides": {
+              "Paths": [],
+              "MediaTexts": []
+            },
+            "RecordingUrl": {
+              "Text": null
+            },
+            "StartOfTalk": {
+              "Value": "2023-05-15T07:00:00Z"
+            },
+            "EndOfTalk": {
+              "Value": "2023-05-15T07:15:00Z"
+            }
+          },
+          "TitlePart": {
+            "Title": "Opening Talk"
+          }
+        },
+        {
+          "ContentItemId": "4kh839gh3m82eryg7v3a42cv5k",
+          "ContentItemVersionId": "4rkdx8c5whkjp2b74prbjwtyxz",
+          "ContentType": "Talk",
+          "DisplayText": "Sample Talk 2",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2024-01-08T18:23:20.2240131Z",
+          "PublishedUtc": "2024-01-08T18:23:20.2510401Z",
+          "CreatedUtc": "2023-12-29T18:05:34.609974Z",
+          "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+          "Author": "admin",
+          "Talk": {
+            "Speaker": {
+              "ContentItemIds": [
+                "49n2w3dh4tpkzrsd6fjqy3shnb"
+              ]
+            },
+            "CoSpeaker": {
+              "ContentItemIds": []
+            },
+            "AbstractText": {
+              "Html": "<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas ultricies ornare imperdiet. Morbi velit diam, tincidunt a laoreet venenatis, convallis et risus. Mauris nunc felis, elementum nec elementum sit amet, ullamcorper maximus lacus. Duis vel risus elementum, porttitor diam vel, fringilla ante. Nullam vel laoreet libero. Morbi nec libero a turpis molestie facilisis sit amet eu diam. Sed tristique feugiat varius. Fusce euismod massa malesuada tincidunt placerat. Nulla finibus vestibulum urna, in ultricies metus accumsan nec. Sed malesuada orci quis turpis luctus, eu molestie risus sollicitudin. Pellentesque interdum ipsum nisl, ornare euismod dui luctus id. Aenean sit amet velit diam. Sed diam est, lacinia vel nunc iaculis, consectetur fermentum urna. Ut quis urna euismod, porttitor risus sed, feugiat ex.</p><p>Curabitur mauris felis, bibendum id vestibulum in, tempor vitae magna. Nunc semper dui a tellus imperdiet consectetur. Morbi aliquam turpis justo, pharetra varius dolor suscipit sed. Vestibulum varius lobortis placerat. Curabitur tincidunt, lacus et gravida imperdiet, ipsum tortor egestas ex, quis porta nisi velit eu ante. Ut condimentum semper nulla, sed pellentesque orci ornare quis. Aenean imperdiet fermentum posuere. Nulla vulputate urna eget elit fermentum accumsan. Vivamus lobortis nibh id odio posuere accumsan. Nunc risus lacus, sollicitudin id venenatis vel, bibendum id lectus. Nunc aliquam leo nec turpis pharetra, nec pulvinar nunc elementum.</p>"
+            },
+            "Abstract": {
+              "Paths": [
+                "GPU Days/Sample/document.pdf"
+              ],
+              "MediaTexts": []
+            },
+            "Slides": {
+              "Paths": [
+                "GPU Days/Sample/document.pdf"
+              ],
+              "MediaTexts": [
+                ""
+              ]
+            },
+            "RecordingUrl": {
+              "Text": "https://example.com"
+            },
+            "StartOfTalk": {
+              "Value": "2023-05-16T07:00:00Z"
+            },
+            "EndOfTalk": {
+              "Value": "2023-05-16T07:25:00Z"
+            }
+          },
+          "TitlePart": {
+            "Title": "Sample Talk 2"
+          }
+        },
+        {
+          "ContentItemId": "4q8z8qawbndf34nt7zzqdnjdnn",
+          "ContentItemVersionId": "44wb350952aq21g7102hwqhcdw",
+          "ContentType": "GPUDay",
+          "DisplayText": "GPU Day 2024",
+          "Latest": true,
+          "Published": true,
+          "ModifiedUtc": "2024-01-30T13:45:31.6157342Z",
+          "PublishedUtc": "2024-01-30T15:20:06.1565804Z",
+          "CreatedUtc": "2023-12-29T16:19:53.8496335Z",
+          "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+          "Author": "admin",
+          "GPUDay": {
+            "Subtitle": {
+              "Text": "Massive parallel computing for science and industrial application"
+            },
+            "FromDate": {
+              "Value": "2024-05-15T00:00:00Z"
+            },
+            "ToDate": {
+              "Value": "2024-05-16T00:00:00Z"
+            },
+            "HeaderPhoto": {
+              "Paths": [
+                "GPU Days/Sample/gpuday2023.jpg"
+              ],
+              "MediaTexts": [
+                ""
+              ]
+            },
+            "DisplayScheduleButton": {
+              "Value": true
+            },
+            "FooterPhoto": {
+              "Paths": [],
+              "MediaTexts": []
+            },
+            "RegistrationURL": {
+              "Text": "https://google.com"
+            },
+            "About": {
+              "Html": "<h2>GPU Day 2024 - MASSIVE PARALLEL COMPUTING FOR SCIENCE AND INDUSTRIAL APPLICATION</h2>"
+            },
+            "Year": {
+              "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb",
+              "TermContentItemIds": [
+                "4p6mqqbhp1xjfxb4w08fbg60d0"
+              ]
+            },
+            "GoogleMapsIFrameSrc": {
+              "Text": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.1522359383525!2d18.952773215883717!3d47.48694760422862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741de52cfec418b%3A0x2999aa55455507e6!2sBudapest%2C+Konkoly-Thege+Mikl%C3%B3s+%C3%BAt+29-33%2C+1121!5e0!3m2!1shu!2shu!4v1553775268716"
+            },
+            "ContactBox": {
+              "Html": "<h3>GPU Day 2023</h3>\n<p><strong>The conference will be held at:</strong><br>Conference centre<br>Hotel Mercure Budapest Castle Hill<br>1013 Budapest, Krisztina Körút 41-43</p>"
+            },
+            "TravelingByPublicTransport": {
+              "Html": "<h3><strong>Traveling by Public Transport:</strong></h3>\n<p>The hotel is next to Budapest-Déli Railway station, which can be reached by Metro 2.<a href=\"http://bkk.hu/apps/menetrend/pdf/0210/20161205/1.pdf\" target=\"_blank\"></a><br>Travel planning of&nbsp;public transport: <a href=\"https://futar.bkk.hu/?toCoord=47.498828200000005%2C19.027051538222295&amp;toName=Mercure%20Budapest%20Buda&amp;toSubName=hotel%2C%20Krisztina%20k%C3%B6r%C3%BAt%2041-43%20Budapest%201013&amp;date=2019-07-11&amp;time=515&amp;arriveBy=false&amp;map=12/47.49883/19.02705&amp;layers=GSVB\">BKK futár</a></p>\n<p><strong></strong></p>\n<h3><strong>Taxi services:</strong></h3>\n<p><a href=\"http://fotaxi.hu/?lang=en\">Fő Taxi</a>:&nbsp;+36 1 222 2222<br><a href=\"http://new.6x6taxi.hu\">6x6 Taxi</a>: +36 1 6666666</p>"
+            }
+          },
+          "AutoroutePart": {
+            "Path": "gpu-day-2024",
+            "SetHomepage": false,
+            "Disabled": false,
+            "RouteContainedItems": false,
+            "Absolute": false
+          },
+          "FlowPart": {
+            "Widgets": [
+              {
+                "ContentItemId": "4ammgwqf952fn6c7jsrb77kbce",
+                "ContentItemVersionId": null,
+                "ContentType": "HtmlWidget",
+                "DisplayText": "",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2024-01-05T12:28:49.1590091Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "HtmlBodyPart": {
+                  "Html": "<div class=\"mb30\"></div>\n<h2 class=\"title dark text-center mb25\"><span class=\"light highlight dark\">Schedule</span></h2>"
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              },
+              {
+                "ContentItemId": "429hwm0p036e870aa89phgec5y",
+                "ContentItemVersionId": null,
+                "ContentType": "ContainerWidget",
+                "DisplayText": "Schedule",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2024-01-05T12:28:49.1772022Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "TitlePart": {
+                  "Title": "Schedule"
+                },
+                "FlowPart": {
+                  "Widgets": [
+                    {
+                      "ContentItemId": "4jtgj5mbnwxg9137kb9g8e2dx6",
+                      "ContentItemVersionId": null,
+                      "ContentType": "EventDay",
+                      "DisplayText": "First Day",
+                      "Latest": false,
+                      "Published": false,
+                      "ModifiedUtc": "2024-01-05T12:28:49.1833389Z",
+                      "PublishedUtc": null,
+                      "CreatedUtc": null,
+                      "Owner": "",
+                      "Author": "admin",
+                      "EventDay": {
+                        "Date": {
+                          "Value": "2023-05-15T00:00:00Z"
+                        }
+                      },
+                      "TitlePart": {
+                        "Title": "First Day"
+                      },
+                      "AdditionalStylingPart": {
+                        "CustomClasses": null,
+                        "RemoveGridExtensionClasses": false
+                      },
+                      "@WeldedPartSettings": {
+                        "AdditionalStylingPart": {}
+                      },
+                      "FlowMetadata": {
+                        "Alignment": 3,
+                        "Size": 100
+                      }
+                    },
+                    {
+                      "ContentItemId": "4528kp498hf777v38gxyg0kv46",
+                      "ContentItemVersionId": null,
+                      "ContentType": "EventDay",
+                      "DisplayText": "Second Day",
+                      "Latest": false,
+                      "Published": false,
+                      "ModifiedUtc": "2024-01-05T12:28:49.1929293Z",
+                      "PublishedUtc": null,
+                      "CreatedUtc": null,
+                      "Owner": "",
+                      "Author": "admin",
+                      "EventDay": {
+                        "Date": {
+                          "Value": "2023-05-16T00:00:00Z"
+                        }
+                      },
+                      "TitlePart": {
+                        "Title": "Second Day"
+                      },
+                      "AdditionalStylingPart": {
+                        "CustomClasses": null,
+                        "RemoveGridExtensionClasses": false
+                      },
+                      "@WeldedPartSettings": {
+                        "AdditionalStylingPart": {}
+                      },
+                      "FlowMetadata": {
+                        "Alignment": 3,
+                        "Size": 100
+                      }
+                    }
+                  ]
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              },
+              {
+                "ContentItemId": "4zdhyg7at47caxxrr5ck2demmq",
+                "ContentItemVersionId": null,
+                "ContentType": "ContainerWidget",
+                "DisplayText": "Speakers",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2024-01-05T12:28:49.2084931Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "TitlePart": {
+                  "Title": "Speakers"
+                },
+                "FlowPart": {
+                  "Widgets": [
+                    {
+                      "ContentItemId": "4x7mpwepw1dkwspk0armj91mcd",
+                      "ContentItemVersionId": null,
+                      "ContentType": "SpeakersWidget",
+                      "DisplayText": "",
+                      "Latest": false,
+                      "Published": false,
+                      "ModifiedUtc": "2024-01-05T12:28:49.2136622Z",
+                      "PublishedUtc": null,
+                      "CreatedUtc": null,
+                      "Owner": "",
+                      "Author": "admin",
+                      "SpeakersWidget": {
+                        "Year": {
+                          "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb",
+                          "TermContentItemIds": [
+                            "4p6mqqbhp1xjfxb4w08fbg60d0"
+                          ]
+                        }
+                      },
+                      "AdditionalStylingPart": {
+                        "CustomClasses": null,
+                        "RemoveGridExtensionClasses": false
+                      },
+                      "@WeldedPartSettings": {
+                        "AdditionalStylingPart": {}
+                      },
+                      "FlowMetadata": {
+                        "Alignment": 3,
+                        "Size": 100
+                      }
+                    }
+                  ]
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              },
+              {
+                "ContentItemId": "4sw9910mcc9xd1ph4ee3t13ycf",
+                "ContentItemVersionId": null,
+                "ContentType": "ContainerWidget",
+                "DisplayText": "Contact Us",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2024-01-05T12:28:49.2279713Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "TitlePart": {
+                  "Title": "Contact Us"
+                },
+                "FlowPart": {
+                  "Widgets": [
+                    {
+                      "ContentItemId": "4dfyaa44hrnyh7fmhdxhb8bbxs",
+                      "ContentItemVersionId": null,
+                      "ContentType": "ContactUsWidget",
+                      "DisplayText": "",
+                      "Latest": false,
+                      "Published": false,
+                      "ModifiedUtc": "2024-01-05T12:28:49.2353299Z",
+                      "PublishedUtc": null,
+                      "CreatedUtc": null,
+                      "Owner": "",
+                      "Author": "admin",
+                      "ContactUsWidget": {
+                        "ContactBox": {
+                          "Html": "<h3>GPU Day 2023</h3>\n<p><strong>The conference will be held at:</strong><br>Conference centre<br>Hotel Mercure Budapest Castle Hill<br>1013 Budapest, Krisztina Körút 41-43</p>"
+                        },
+                        "TravelingByPublicTransport": {
+                          "Html": "<h3><strong>Traveling by Public Transport:</strong></h3>\n<p>The hotel is next to Budapest-Déli Railway station, which can be reached by Metro 2.<a href=\"http://bkk.hu/apps/menetrend/pdf/0210/20161205/1.pdf\" target=\"_blank\"></a><br>Travel planning of&nbsp;public transport: <a href=\"https://futar.bkk.hu/?toCoord=47.498828200000005%2C19.027051538222295&amp;toName=Mercure%20Budapest%20Buda&amp;toSubName=hotel%2C%20Krisztina%20k%C3%B6r%C3%BAt%2041-43%20Budapest%201013&amp;date=2019-07-11&amp;time=515&amp;arriveBy=false&amp;map=12/47.49883/19.02705&amp;layers=GSVB\">BKK futár</a></p>\n<p><strong></strong></p>\n<h3><strong>Taxi services:</strong></h3>\n<p><a href=\"http://fotaxi.hu/?lang=en\">Fő Taxi</a>:&nbsp;+36 1 222 2222<br><a href=\"http://new.6x6taxi.hu\">6x6 Taxi</a>: +36 1 6666666</p>"
+                        }
+                      },
+                      "AdditionalStylingPart": {
+                        "CustomClasses": null,
+                        "RemoveGridExtensionClasses": false
+                      },
+                      "@WeldedPartSettings": {
+                        "AdditionalStylingPart": {}
+                      },
+                      "FlowMetadata": {
+                        "Alignment": 3,
+                        "Size": 100
+                      }
+                    }
+                  ]
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              },
+              {
+                "ContentItemId": "4bn0dw5xmb8r2tedww6y187244",
+                "ContentItemVersionId": null,
+                "ContentType": "GoogleMapsWidget",
+                "DisplayText": "",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2024-01-05T12:28:49.2497184Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "",
+                "Author": "admin",
+                "GoogleMapsWidget": {
+                  "IFrameSrc": {
+                    "Text": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.1522359383525!2d18.952773215883717!3d47.48694760422862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741de52cfec418b%3A0x2999aa55455507e6!2sBudapest%2C+Konkoly-Thege+Mikl%C3%B3s+%C3%BAt+29-33%2C+1121!5e0!3m2!1shu!2shu!4v1553775268716",
+                    "Html": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.1522359383525!2d18.952773215883717!3d47.48694760422862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741de52cfec418b%3A0x2999aa55455507e6!2sBudapest%2C+Konkoly-Thege+Mikl%C3%B3s+%C3%BAt+29-33%2C+1121!5e0!3m2!1shu!2shu!4v1553775268716"
+                  },
+                  "Location": {
+                    "ContentItemIds": [
+                      "4x233wn0vvnsd5d76chcbr45w0"
+                    ]
+                  }
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                },
+                "FlowMetadata": {
+                  "Alignment": 3,
+                  "Size": 100
+                }
+              }
+            ]
+          },
+          "TitlePart": {
+            "Title": "GPU Day 2024"
+          },
+          "Schedule": {
+            "ContentItems": [
+              {
+                "ContentItemId": "4kz9wggv8f4xv4wp3797dsqpdn",
+                "ContentItemVersionId": null,
+                "ContentType": "EventDay",
+                "DisplayText": "First Day",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2024-01-30T13:45:31.6906809Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+                "Author": "admin",
+                "EventDay": {
+                  "Date": {
+                    "Value": "2023-05-15T00:00:00Z"
+                  }
+                },
+                "TitlePart": {
+                  "Title": "First Day"
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                }
+              },
+              {
+                "ContentItemId": "4n2fsvxn0vb0hwmvsy9rna7nxb",
+                "ContentItemVersionId": null,
+                "ContentType": "EventDay",
+                "DisplayText": "Second Day",
+                "Latest": false,
+                "Published": false,
+                "ModifiedUtc": "2024-01-30T13:45:31.6956049Z",
+                "PublishedUtc": null,
+                "CreatedUtc": null,
+                "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
+                "Author": "admin",
+                "EventDay": {
+                  "Date": {
+                    "Value": "2023-05-16T00:00:00Z"
+                  }
+                },
+                "TitlePart": {
+                  "Title": "Second Day"
+                },
+                "AdditionalStylingPart": {
+                  "CustomClasses": null,
+                  "RemoveGridExtensionClasses": false
+                },
+                "@WeldedPartSettings": {
+                  "AdditionalStylingPart": {}
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "media",
+      "Files": [
+        {
+          "SourcePath": "GPU Days/Sample/document.pdf",
+          "TargetPath": "GPU Days/Sample/document.pdf"
+        },
+        {
+          "SourcePath": "GPU Days/Sample/example.png",
+          "TargetPath": "GPU Days/Sample/example.png"
+        },
+        {
+          "SourcePath": "GPU Days/Sample/gpuday2023.jpg",
+          "TargetPath": "GPU Days/Sample/gpuday2023.jpg"
+        }
+      ]
+    }
+  ]
+}

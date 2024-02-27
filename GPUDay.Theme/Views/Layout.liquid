@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ Culture.Name }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ "PageTitle" | shape_new | shape_stringify }}</title>
+    {% shape "Metas" %}
+    {% resources type: "Meta" %}
+    {% script src:"~/mediatheme/vendors/SimpleTemplate/js/plugins/jquery.min.js", at:"Foot" %}
+    {% style src:"~/mediatheme/vendors/SimpleTemplate/css/plugins/bootstrap.css" %}
+    {% script src:"~/mediatheme/vendors/SimpleTemplate/js/plugins/bootstrap.min.js", at:"Foot" %}
+    {% style src:"~/mediatheme/vendors/SimpleTemplate/css/plugins/vspacing.min.css" %}
+    {% style src:"~/mediatheme/css/style.min.css" %}
+    {% style src:"~/mediatheme/css/index-event.min.css" %}
+    {% style src:"~/mediatheme/css/custom-style.min.css" %}
+    {% style src:"~/mediatheme/vendors/SimpleTemplate/css/plugins/font-awesome.css" %}
+    {% resources type: "HeadScript" %}
+    {% resources type: "HeadLink" %}
+    {% resources type: "Stylesheet" %}
+    {% render_section "HeadMeta", required: false %}
+</head>
+<body dir="{{ Culture.Dir }}">
+<div id="page">
+    <div id="main">
+        <div id="content-wrapper">
+            {% if Model.Messages != null %}
+                <div id="messages">
+                    {% render_section "Messages" %}
+                </div>
+            {% endif %}
+            <div id="content">
+                {% render_section "Content" %}
+            </div>
+        </div>
+    </div>
+    <div id="footer-wrapper">
+        <footer>
+            {% render_section "Footer" %}
+        </footer>
+    </div>
+</div>
+{% resources type: "FootScript" %}
+{% render_section "Scripts", required: false %}
+</body>
+</html>

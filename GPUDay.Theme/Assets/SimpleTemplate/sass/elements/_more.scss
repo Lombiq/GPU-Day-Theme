@@ -1,0 +1,102 @@
+/* More Elements */
+
+/* Bootstrap Carousel */
+.carousel {
+	.item {
+		img {
+			max-width:none;
+			width:100%;
+		}
+
+		.carousel-caption {
+			font-size: 15px;
+			text-shadow: none;
+		}
+	}
+}
+
+.carousel-control {
+	top: 50%;
+	bottom: auto;
+	width: 38px;
+	height:48px;
+	margin-top:-24px;
+	font-size: 18px;
+	line-height: 48px;
+	color:#fff;
+	opacity:1;
+	text-shadow:none;
+	@include background-opacity($first-color);
+	transition: background 0.4s;
+
+	&:hover,
+	&:focus {
+		@include background-opacity(#101010);
+	}
+
+	&.left {
+		border-radius: 0;
+		background-image: none;
+	}
+
+	&.right {
+		border-radius: 0;
+		background-image: none;
+	}
+}
+
+
+/* Bootstrap Tooltip */
+.tooltip {
+	font-family: $font-family;
+}
+
+.tooltip-inner {
+	 padding: 4px 9px;
+	 border-radius:0;
+}
+
+
+/* Bootstrap Modal*/
+.modal-dialog {
+	@media (min-width: $minmqsm) {
+		width:480px;
+
+		&.modal-sm {
+			width:360px;
+		}
+	}
+}
+
+.modal-content {
+	border: none;
+	border-radius: 0;
+
+	.modal-header {
+		background-color: $first-color;
+		border:none;
+
+		.modal-title {
+			color :#fff;
+		}
+
+		.close {
+			margin-top:2px;
+		}
+	}
+}
+
+.modal-body {
+	.form-group {
+		&:last-child {
+			&,
+			.form-control {
+				margin-bottom:6px;
+			}
+		}
+	}
+}
+
+.modal-footer {
+	padding:10px 15px;
+}

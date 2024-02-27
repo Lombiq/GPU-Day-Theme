@@ -1,0 +1,449 @@
+/* Elements Sass */
+.service {
+	margin-bottom:30px;
+
+	i {
+		display:inline-block;
+		font-size: 18px;
+		margin-bottom:17px;
+
+		// Custom
+		&.custom {
+			color: $first-color;
+		}
+
+		// Custom 2
+		&.custom2 {
+			color: $second-color;
+		}
+
+		// Gray
+		&.gray {
+			color: #b7b7b7;
+		}
+
+		&.icon-bg {
+			width: 46px;
+			height:46px;
+			line-height: 46px;
+			text-align: center;
+			color: #3e3e3e;
+			background-color: #e6e6e6;
+			border-radius: 50%;
+			transition: all 0.4s;
+			
+			// Custom
+			&.custom {
+				color: #fff;
+				background-color: $first-color;
+			}
+
+			// Custom 2
+			&.custom2 {
+				color: #fff;
+				background-color: $second-color;
+			}
+
+			// Dark
+			&.dark {
+				color: #fff;
+				background-color: $dark;
+			}
+		}
+	}
+
+	img {
+		display: inline-block;
+		max-width: 100%;
+		height: auto;
+		margin-bottom:20px;
+	}
+
+	.service-title {
+		font-size:15px;
+		margin-bottom:10px;
+		font-weight:600;
+
+		&:last-child {
+			margin-bottom:0;
+		}
+	}
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+
+	&.service-box {
+		position: relative;
+		background-color: #f6f6fa;
+		padding:25px 17px;
+		text-align: center;
+		transition: all 0.4s;
+
+		&.service-icon-top {
+			padding-top:45px;
+			margin-bottom:50px;
+
+			.icon-bg {
+				position: absolute;
+				left:50%;
+				top:-23px;
+				margin-left:-23px;
+			}
+		}
+
+		&:hover {
+			color:#fff;
+			background-color: $first-color !important;
+
+			.icon-bg {
+				color: #fff;
+				background-color: darken($first-color, 10%);
+			}
+
+			.service-title {
+				color:#fff;
+			}
+		}
+		
+		.fullwidth-row [class*="col-"]:nth-of-type(2n) & {
+			background-color: #eee;
+		}
+
+		// Custom 
+		&.custom:not(.service-border) {
+			color:#fff;
+			background-color: $first-color !important;
+
+			.icon-bg {
+				color: #fff;
+				background-color: darken($first-color, 10%);
+			}
+
+			.service-title {
+				color:#fff;
+			}
+
+			&:hover {
+				background-color: darken($first-color, 10%) !important;
+
+				.icon-bg {
+					background-color: darken($first-color, 20%);
+				}
+			}
+		}
+
+		// Custom  2
+		&.custom2:not(.service-border) {
+			color:#fff;
+			background-color: $second-color !important;
+
+			.icon-bg {
+				color: #fff;
+				background-color: darken($second-color, 10%);
+			}
+
+			.service-title {
+				color:#fff;
+			}
+
+			&:hover {
+				background-color: darken($second-color, 10%) !important;
+
+				.icon-bg {
+					background-color: darken($second-color, 20%);
+				}
+			}
+		}
+
+		// Dark
+		&.dark:not(.service-border) {
+			color:#fff;
+			background-color: $dark !important;
+
+			.icon-bg {
+				color: #fff;
+				background-color: lighten($dark, 8%);
+			}
+
+			.service-title {
+				color:#fff;
+			}
+
+			&:hover {
+				background-color: $darker !important;
+
+				.icon-bg {
+					background-color: lighten($dark, 11%);
+				}
+			}
+		}
+	}
+
+	&.service-border {
+		background-color: transparent;
+		border:1px solid #eee;
+
+		.icon-bg {
+			background-color: #eee;
+		}
+
+		&:hover {
+			border-color:darken($first-color, 10%);
+		}
+		
+		// Custom
+		&.custom {
+			background-color: transparent !important;
+			border-color: $first-color;
+
+			.icon-bg {
+				color:#fff;
+				background-color: $first-color;
+			}
+
+			&:hover {
+				background-color: $first-color !important;
+				border-color: darken($first-color, 10%);
+
+				.icon-bg {
+					background-color: darken($first-color, 10%);
+				}
+			}
+		}
+
+		// Custom 2
+		&.custom2 {
+			background-color: transparent !important;
+			border-color: $second-color;
+
+			.icon-bg {
+				color:#fff;
+				background-color: $second-color;
+			}
+
+			&:hover {
+				background-color: $second-color !important;
+				border-color: darken($second-color, 10%);
+
+				.icon-bg {
+					background-color: darken($second-color, 10%);
+				}
+			}
+		}
+
+		// Dark
+		&.dark {
+			background-color: transparent !important;
+			border-color: $dark;
+
+			.icon-bg {
+				color:#fff;
+				background-color: $dark;
+			}
+
+			&:hover {
+				background-color: $dark !important;
+				border-color: darken($dark, 10%);
+
+				.icon-bg {
+					background-color: lighten($dark, 10%);
+				}
+			}
+		}
+	}
+
+	&.icon-left {
+		i {
+			float:left;
+			min-width:30px;
+
+			&.icon-bg {
+				& + .service-title,
+				& + .service-title + p {
+					margin-left: 66px;
+				}
+			}
+		}
+
+		.service-title,
+		p {
+			margin-left: 45px;
+		}
+
+		&.reverse {
+			text-align: right;
+
+			i {
+				float:right;
+
+				&.icon-bg {
+					& + .service-title,
+					& + .service-title + p {
+						margin-right: 66px;
+						margin-left:0;
+					}
+				}
+			}
+
+			.service-title,
+			p {
+				margin-right: 45px;
+				margin-left:0;
+			}
+		}
+
+		&:hover {
+			.icon-bg {
+				color:#fff;
+				background-color: $first-color;
+				
+				// Custom
+				&.custom {
+					color:#fff;
+					background-color: darken($first-color, 10%);
+				}
+
+				// Custom 2
+				&.custom2 {
+					color:#fff;
+					background-color: darken($second-color, 10%);
+				}
+
+				// Dark
+				&.dark {
+					color:#fff;
+					background-color: lighten($dark, 8%);
+				}
+			}
+		}
+	}
+}
+
+.services-group {
+	margin-bottom:50px;
+	.service-row {
+		margin:0;
+
+		&:after {
+			content:'';
+			display: table;
+			clear: both;
+		}
+
+		&:nth-child(2n) {
+			.service.service-box {
+				background-color: #f1f1fa;
+				&:nth-child(2n) {
+					background-color: #f6f6fa;
+				}
+			}
+		}
+		&:nth-child(2n+1) {
+			.service.service-box {
+				&:nth-child(2n) {
+					background-color: #f1f1fa;
+				}
+			}
+		}
+	}
+
+	.service {
+		width:100%;
+		margin-bottom:0;
+
+		@media (min-width: $minmqsm) {
+			width:50%;
+			float:left;
+			padding-left:25px;
+			padding-right:25px;
+		}
+
+		@media (min-width: $minmqmd) {
+			width:25%;
+		}
+	}
+	
+	// custom services group
+	&.custom {
+		.service-row {
+			margin:0;
+
+			&:nth-child(2n) {
+				.service.service-box {
+					background-color: darken($first-color, 4%);
+					&:nth-child(2n) {
+						background-color: $first-color;
+					}
+				}
+			}
+			&:nth-child(2n+1) {
+				.service.service-box {
+					background-color: $first-color;
+					&:nth-child(2n) {
+						background-color: darken($first-color, 4%);
+					}
+				}
+			}
+		}
+
+		.service {
+			color: #eee;
+			.service-title {
+				color: #fff;
+			}
+
+			& .icon-bg {
+				color: #fff;
+				background-color: darken($first-color, 10%);
+			}
+
+			&:hover {
+				background-color: darken($first-color, 7%) !important;
+			}
+		}
+	}
+
+	// Dark services group
+	&.dark {
+		.service-row {
+			margin:0;
+
+			&:nth-child(2n) {
+				.service.service-box {
+					background-color: lighten($dark, 2%);
+					&:nth-child(2n) {
+						background-color: $dark;
+					}
+				}
+			}
+			&:nth-child(2n+1) {
+				.service.service-box {
+					background-color: $dark;
+					&:nth-child(2n) {
+						background-color: lighten($dark, 2%);
+					}
+				}
+			}
+		}
+
+		.service {
+			color: #eee;
+			.service-title {
+				color: #fff;
+			}
+
+			& .icon-bg {
+				color: #fff;
+				background-color: darken($dark, 12%);
+			}
+
+			&:hover {
+				background-color: darken($dark, 4%) !important;
+			}
+		}
+	}
+}

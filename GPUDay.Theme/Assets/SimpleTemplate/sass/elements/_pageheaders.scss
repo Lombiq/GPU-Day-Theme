@@ -1,0 +1,287 @@
+/* Breadcrumbs */
+.breadcrumb {
+	padding:18px 0;
+	margin:0;
+	background-color: transparent;
+	border-radius:0;
+	font-size: 1.25rem;
+	font-weight:400;
+		
+	li {
+		a {
+			color:$first-color;
+
+			&:hover,
+			&:focus {
+				color: darken($first-color, 10%);
+			}
+		}
+	}
+
+	> .active {
+		color:#222;
+	}
+
+	li + li {
+		&:before {
+			color:#333;
+			content: "\f101";
+			font-family: 'FontAwesome';
+			padding:0 13px 0 6px;
+		}
+	}
+}
+
+/* Page Headers */
+.page-header {
+	padding:25px 0;
+	margin: 0 0 50px;
+	background-color: #f6f6fa;
+	border-bottom:1px solid #eeeeee;
+
+	@media (min-width: $minmqsm) {
+		margin-bottom: 60px;
+	}
+
+	@media (min-width: $minmqmd) {
+		margin-bottom: 70px;
+	}
+
+	.breadcrumb {
+		padding:0;
+	}
+
+	h1 {
+		font-family: $second-font-family;
+		font-size: 28px;
+		line-height:1.15;
+		font-weight: 700;
+		color: #333;
+		text-transform: uppercase;
+		margin:0;
+
+		& + .breadcrumb {
+			margin-top: 6px;
+		}
+	}
+
+	p {
+		font-size: 1.25rem;
+		font-weight: 400;
+		line-height:1.5;
+		margin:0;
+	}
+
+	&.larger {
+		padding:40px 0;
+	}
+
+	&.largest {
+		padding:80px  0;
+
+		h1 {
+			font-size:32px;
+		}
+	}
+
+	&.larger-top {
+		padding-top:130px;
+
+		@media (min-width: $minmqsm) and (max-width: $maxmqmd) {
+			padding-top: 200px;
+		}
+
+		@media (min-width: $minmqmd) {
+			padding-top: 160px;
+		}
+	}
+
+	&.largest-top {
+		padding-top:160px;
+
+		@media (min-width: $minmqsm) and (max-width: $maxmqmd) {
+			padding-top: 230px;
+		}
+
+		@media (min-width: $minmqmd) {
+			padding-top: 200px;
+		}
+	}
+
+	&.fullheight,
+	&.fullscreen {
+
+		> .container-fluid {
+			display: table;
+			width:100%;
+			height:100%;
+		}
+
+		> .container {
+			@media (max-width: $maxmqsm) {
+				width:100%;
+			}
+		}
+
+		.page-header-cell{
+			display:table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	/* Parallax + overlay */
+	&.parallax,
+	&.bg-image {
+		position: relative;
+
+		&:before {
+			content:'';
+			display:block;
+			position: absolute;
+			left:0;
+			top:0;
+			bottom:0;
+			right:0;
+			z-index:0;
+			background-color: #fff;
+			opacity:0.65;
+		}
+
+		.container,
+		.container-fluid {
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	/* Dark background */
+	&.dark {
+		background-color: #171717;
+		color: #9a9a9a;
+		border-color: #101010;
+
+		h1 {
+			color: #fff;
+		}
+
+		.breadcrumb {
+			li {
+				a {
+					color: #9a9a9a;
+
+					&:hover,
+					&:focus {
+						color: #fff;
+					}
+				}
+			}
+
+			> .active {
+				color: #fff;
+			}
+
+			li + li {
+				&:before {
+					color: #bbb;
+				}
+			}
+		}
+
+		&.parallax,
+		&.bg-image {
+			&:before {
+				background-color: #000;
+				opacity:0.6;
+			}
+		}
+	}
+	
+	/* Custom background */
+	&.custom {
+		background-color: $first-color;
+		color: lighten($first-color, 10%);
+		border-color: lighten($first-color, 5%);
+
+		h1 {
+			color: #fff;
+		}
+
+		.breadcrumb {
+			li {
+				a {
+					color: lighten($first-color, 32%);
+
+					&:hover,
+					&:focus {
+						color: #fff;
+					}
+				}
+			}
+
+			> .active {
+				color: #fff;
+			}
+
+			li + li {
+				&:before {
+					color: lighten($first-color, 18%);
+				}
+			}
+		}
+
+		&.parallax,
+		&.bg-image {
+			&:before {
+				background-color: $first-color;
+			}
+		}
+	}
+	
+	/* Custom2 background */
+	&.custom2 {
+		background-color: $second-color;
+		color: lighten($second-color, 10%);
+		border-color: lighten($second-color, 5%);
+
+		h1 {
+			color: #fff;
+		}
+
+		.breadcrumb {
+			li {
+				a {
+					color: lighten($second-color, 24%);
+
+					&:hover,
+					&:focus {
+						color: #fff;
+					}
+				}
+			}
+
+			> .active {
+				color: #fff;
+			}
+
+			li + li {
+				&:before {
+					color: lighten($second-color, 18%);
+				}
+			}
+		}
+
+		&.parallax,
+		&.bg-image {
+			&:before {
+				background-color: $second-color;
+			}
+		}
+	}
+}
+
+/* Added this for elements page to clear margin bottom just for this page */ 
+.elements-page {
+	.page-header {
+		margin-bottom:0;
+	}
+}

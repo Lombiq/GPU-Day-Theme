@@ -1,0 +1,64 @@
+/* Homepages - Index Creative */
+@import '../mixins';
+@import '../variables';
+
+$third-font-family: 'Permanent Marker', cursive;
+
+#particles-js {
+	position: absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	z-index:1;
+}
+
+.fullscreen,
+.fullheight {
+	&.vertical-center {
+		.vcenter-content {
+			h1 {
+				font-size:38px;
+				font-family: $third-font-family;
+
+				@media (min-width: $minmqxs) {
+					font-size:54px;
+				}
+
+				@media (min-width: $minmqsm) {
+					font-size:72px;
+				}
+
+				@media (min-width: $minmqmd) {
+					font-size:96px;
+				}
+
+				@media (min-width: $minmqlg) {
+					font-size:120px;
+				}
+			}
+
+			p {
+				font-weight:300;
+			}
+		}
+	}
+}
+
+.video-box-section-wrapper {
+	max-width:540px;
+}
+
+.testimonials-container {
+	margin-top: -1px;
+}
+
+.form-control {
+	background-color: $gray;
+	border-color: $gray;
+
+	&:focus {
+		background-color: darken($gray, 6%);
+		border-color: darken($gray, 6%);
+	}
+}

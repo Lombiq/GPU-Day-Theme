@@ -1,0 +1,187 @@
+<div id="wrapper">
+    <div class ="main">
+        <div class="fullscreen vertical-center bg-image overlay-container text-center"
+             style="background-image:url('{{ Model.ContentItem.Content.GPUDay.HeaderPhoto.Paths.first | asset_url }}')">
+            <div class="overlay dark"></div>
+            <div class ="overlay-container">
+                <div class="overlay light"></div>
+                <img src="{{ "~/mediatheme/images/wigner-logo.png" | href }}" class="overlay-container"/>
+            </div>
+            <div class="vcenter-content">
+                <div class="container">
+                    <h1 class="text-white">
+                        {{ Model.ContentItem.DisplayText }}
+                    </h1>
+                    {% if Model.ContentItem.Content.GPUDay.Subtitle.Text != null %}
+                        <h2 class="text-white">
+                            {{ Model.ContentItem.Content.GPUDay.Subtitle.Text }}
+                        </h2>
+                    {% endif %}
+                    <div class="event-countdown is-countdown">
+                        <span class="countdown-row countdown-show1">
+                        <span class="countdown-section">
+                        <span class="countdown-amount">
+                        {{ Model.ContentItem.Content.GPUDay.FromDate.Value | date: "%d" }}{{ Model.ContentItem.Content.GPUDay.ToDate.Value | date: "-%d %m %Y" }}
+                        </span>
+                        </span>
+                        </span>
+                    </div>
+                    {% if Model.ContentItem.Content.GPUDay.RegistrationURL.Text != null %}
+                        <a href="{{ Model.ContentItem.Content.GPUDay.RegistrationURL.Text }}" target="_blank" class="btn btn-custom btn-lg min-width-lg">Register</a>
+                    {% endif %}
+                    {% if Model.ContentItem.Content.GPUDay.DisplayScheduleButton.Value == true %}
+                        <a id="scheduleButton" href="#schedule" class="btn btn-custom btn-lg min-width-lg">Schedule</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="mb60"></div>
+        </div>
+        <div>
+            <div class="bg-gray2 border pt60 pb45">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2 class="title dark mb25">
+                                About the <span class="light highlight dark">GPU Day</span>
+                            </h2>
+                        </div>
+                        <div class="col-sm-12">
+                            {{ Model.ContentItem.Content.GPUDay.About.Html | raw }}
+                            <div class="mb5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table">
+            <div class="row">
+                <div class=" span-12 cell">
+                    <div id="schedule">
+                        <div class="mb30"></div>
+                        <h2 class="title dark text-center mb25"><span class="light highlight dark">Schedule</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" span-12 cell container">
+                    {% for item in Model.ContentItem.Content.Schedule.ContentItems %}
+                        {{ item | shape_build_display: "Detail" | shape_render }}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="table">
+            <div class="row">
+                <div class=" span-12 cell container">
+                    {% assign speakers = Queries.SpeakersByYear | query: YearId: Model.ContentItem.Content.GPUDay.Year.TermContentItemIds.first %}
+                    <div class="span-12 cell col-md-12">
+                        <div class="mb20"></div>
+                        <h2 class="title text-center mb25">Speakers</h2>
+                        {% for item in speakers %}
+                            {% assign speakerId = item.DisplayText | replace: " ", "_" %}
+                            <div class="col-md-2 col-xs-6 col-xss-12">
+                                <a id="{{ speakerId }}"></a>
+                                <div class="member text-center">
+                                    <div class="member-top">
+                                        <figure>
+                                            <img src="{{ item.Content.Speaker.Photo.Paths.first | asset_url }}" alt="{{ item.DisplayText }}">
+                                        </figure>
+                                        <div class="social-icons">
+                                            <label>Contact:</label>
+                                            {% if item.Content.Speaker.EmailAddress.Text != null and item.Content.Speaker.EmailAddress.Text != "" %}
+                                                <a href="mailto:{{ item.Content.Speaker.EmailAddress.Text | replace: "@", "(_at_)" }}" target="_top" class="social-icon speakerEmail" title="E-mail"><i class="fa fa-envelope"></i></a>
+                                            {% endif %}
+                                            {% if item.Content.Speaker.WebsiteUrl.Text != null and item.Content.Speaker.WebsiteUrl.Text != "" %}
+                                                <a href="{{ item.Content.Speaker.WebsiteUrl.Text }}" target="_blank" class="social-icon" title="Website"><i class="fa fa-user"></i></a>
+                                            {% endif %}
+                                            {% if item.Content.Speaker.LinkedInProfileUrl.Text != null and item.Content.Speaker.LinkedInProfileUrl.Text != "" %}
+                                                <a href="{{ item.Content.Speaker.LinkedInProfileUrl.Text }}" target="_blank" class="social-icon" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <h3 class="member-title">{{ item.DisplayText }}<small>{{ item.Content.Speaker.Company.Value }}</small></h3>
+                                    <p>{{ item.Content.Speaker.AboutTheSpeaker.Value }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="mb20"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb60"></div>
+        <div class="table">
+            <div class="row">
+                <div class=" span-12 cell container">
+                    <div>
+                        <div class="col-md-8">
+                            <h1 class="title dark">Contact <span class="light highlight dark">Us</span></h1>
+                            <div class="dynamic-form" id="contact-form">
+                                <form action="{{ "~/workflows/Invoke?token=CfDJ8C7I_ww5B1FDuxsTG0s7jV6APWCLpNokAsDvdtBQxpxRuMl29T08nhBs1YDqyQWDLZaasDX9yBqIY1XZMT0g3FHFeOENdePkJ5dIcf_3vozc9Q7h2wtitIL3htKSWU-lmjDEpTrC2Npbp3b7tsQvjG2_vtl33OkIKVp7-kuq_70Z3y4n91fiqn90wYou1JGMSR15BGSk5u0O8rdpm2tzUiN-hap3Yu2CW82fAV3ErfrB" | href }}" method="POST" enctype="multipart/form-data"><!-- #spell-check-ignore-line -->
+                                    <div class="table">
+                                        <div class="row row">
+                                            <div class=" span-6 cell col-md-6">
+                                                <div class="form-field-element form-field-element-text-field">
+                                                    <label for="contactsubject">Subject</label>
+                                                    <input class="text form-control" id="contactsubject" name="Subject" type="text" value="">
+                                                </div>
+                                            </div>
+                                            <div class=" span-6 cell col-md-6">
+                                                <div class="form-field-element form-field-element-email-field">
+                                                    <label for="contactemail">Email</label>
+                                                    <input class="text form-control" id="contactemail" name="Email" type="email" value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row row">
+                                            <div class=" span-12 cell col-md-12">
+                                                <div class="form-field-element form-field-element-text-area">
+                                                    <label for="contactmessage">Message</label>
+                                                    <textarea class="text form-control" id="contactmessage" name="Message"></textarea>
+                                                </div>
+                                                <div class="form-field-element form-field-element-re-captcha form-field-element-re-captcha">
+                                                    <div>
+                                                        <fieldset>
+                                                            {% shape "ReCaptcha" %}
+                                                        </fieldset>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-field-element form-field-element-button">
+                                        <button class="btn btn-black min-width submit-contact-form" name="" type="submit">Submit</button>
+                                    </div>
+                                    {% antiforgerytoken %}
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix mb65 visible-sm visible-xs"></div>
+                    <div class="col-md-4">
+                        <div class="contact-box mb20">
+                            {{ Model.ContentItem.Content.GPUDay.ContactBox.Html | raw }}
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-box">
+                            {{ Model.ContentItem.Content.GPUDay.TravelingByPublicTransport.Html | raw }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb70"></div>
+        <div id="map" class="mb0" style="position: relative; overflow: hidden;">
+            <iframe src="{{ Model.ContentItem.Content.GPUDay.GoogleMapsIFrameSrc.Text }}" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        {% if Model.ContentItem.Content.GPUDay.FooterPhoto.Paths.first != null %}
+            <div class="mb30"></div>
+            <img src="{{ Model.ContentItem.Content.GPUDay.FooterPhoto.Paths.first | asset_url }}" alt="{{ Model.ContentItem.DisplayText }}"
+                 class="img-responsive center-block" style="width: 100%">
+        {% endif %}
+        <a id="scroll-top" href="#top" title="Scroll top" class="fixed">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+</div>
