@@ -60,10 +60,6 @@
         <Content Include=".config\dotnet-tools.json" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Assets\Fonts\" />
-    </ItemGroup>
-
     <Import Condition="Exists($(LombiqHostingMediaThemeTargetsProps))" Project="../../../../../Lombiq.Hosting.MediaTheme/Lombiq.Hosting.MediaTheme.Targets/Lombiq.Hosting.MediaTheme.Targets.props" />
     <Import Condition="Exists($(LombiqHostingMediaThemeTargetsTargets))" Project="../../../../../Lombiq.Hosting.MediaTheme/Lombiq.Hosting.MediaTheme.Targets/Lombiq.Hosting.MediaTheme.Targets.targets" />
 

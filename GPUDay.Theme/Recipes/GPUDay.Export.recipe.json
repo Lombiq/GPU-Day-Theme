@@ -187,7 +187,7 @@
                   "Title": "Contact Us Form Submitted"
                 },
                 "HttpMethod": "POST",
-                "Url": "/gpuday/workflows/Invoke?token=CfDJ8GvqA6tnIT5GtBdEnQ6k0qWqBEO1PlNROjxu9rpz2es-UQW6mJXDvdE_MofK50zG5iV7QSeuULu_tiW2zOTvTY981wujHL5ruWavMGqo_6i_IB2QaIzz12Y1MMy1EKoIHcwBqzL04J4750u8Jznz4UHItfkdIIRHkgimGJsp800suseptpDHGeL46E9PXpfNjyzvnD-WuoZO1wmY7KPv5eeQUroSvQjpXHNd-McAckxp",
+                "Url": "/workflows/Invoke?token=CfDJ8C7I_ww5B1FDuxsTG0s7jV6APWCLpNokAsDvdtBQxpxRuMl29T08nhBs1YDqyQWDLZaasDX9yBqIY1XZMT0g3FHFeOENdePkJ5dIcf_3vozc9Q7h2wtitIL3htKSWU-lmjDEpTrC2Npbp3b7tsQvjG2_vtl33OkIKVp7-kuq_70Z3y4n91fiqn90wYou1JGMSR15BGSk5u0O8rdpm2tzUiN-hap3Yu2CW82fAV3ErfrB",
                 "ValidateAntiforgeryToken": true,
                 "TokenLifeSpan": 0
               }
@@ -320,8 +320,8 @@
             {
               "ActivityId": "4bf1thh9xr2w77mr1bxqryftnq",
               "Name": "NotifyTask",
-              "X": 110,
-              "Y": 360,
+              "X": 170,
+              "Y": 440,
               "IsStart": false,
               "Properties": {
                 "ActivityMetadata": {
@@ -329,7 +329,7 @@
                 },
                 "NotificationType": 0,
                 "Message": {
-                  "Expression": "Email has been successfully sent. {{ Request.Form.Message }}"
+                  "Expression": "Email has been successfully sent."
                 }
               }
             },
@@ -358,6 +358,59 @@
               "Properties": {
                 "ActivityMetadata": {
                   "Title": null
+                }
+              }
+            },
+            {
+              "ActivityId": "4bv87v1wz3kvg5bvz4gv4ghb5n",
+              "Name": "EmailTask",
+              "X": 630,
+              "Y": 430,
+              "IsStart": false,
+              "Properties": {
+                "Sender": {
+                  "Expression": null
+                },
+                "Author": {
+                  "Expression": null
+                },
+                "Recipients": {
+                  "Expression": "gpu@wigner.mta.hu"
+                },
+                "ReplyTo": {
+                  "Expression": "{{ Request.Form.Email }}"
+                },
+                "Subject": {
+                  "Expression": "Contact form submitted: {{ Request.Form.Subject }}"
+                },
+                "Body": {
+                  "Expression": "E-mail: {{ Request.Form.Email }}<br><br>\r\n\r\nMessage:<br>\r\n{{ Request.Form.Message }}"
+                },
+                "IsHtmlBody": true,
+                "Bcc": {
+                  "Expression": null
+                },
+                "Cc": {
+                  "Expression": null
+                },
+                "ActivityMetadata": {
+                  "Title": "Send Email"
+                }
+              }
+            },
+            {
+              "ActivityId": "4sfmnnm5q9s1ws88pwp3j5q658",
+              "Name": "NotifyTask",
+              "X": 1020,
+              "Y": 440,
+              "IsStart": false,
+              "Properties": {
+                "ActivityMetadata": {
+                  "Title": "Email Sending Failed"
+                },
+                "NotificationType": 3,
+                "Message": {
+                  "Expression": "Couldn't send the email. Please try again later."
                 }
               }
             }
@@ -431,12 +484,6 @@
             },
             {
               "Id": 0,
-              "SourceActivityId": "4r2xcksf29mf2056eaa88r0jxh",
-              "SourceOutcomeName": "Valid",
-              "DestinationActivityId": "4bf1thh9xr2w77mr1bxqryftnq"
-            },
-            {
-              "Id": 0,
               "SourceActivityId": "4j12sqcz81n82vn1cg34jna9my",
               "SourceOutcomeName": "Done",
               "DestinationActivityId": "4nqta2fjt6d3qx7xe2t2d248dy"
@@ -458,6 +505,30 @@
               "SourceActivityId": "4et4pyhs9zr4vswfjnqd3h8nwv",
               "SourceOutcomeName": "Done",
               "DestinationActivityId": "4yyp32342awecsbp76ah6khxwx"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4bv87v1wz3kvg5bvz4gv4ghb5n",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4bf1thh9xr2w77mr1bxqryftnq"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4r2xcksf29mf2056eaa88r0jxh",
+              "SourceOutcomeName": "Valid",
+              "DestinationActivityId": "4bv87v1wz3kvg5bvz4gv4ghb5n"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4bv87v1wz3kvg5bvz4gv4ghb5n",
+              "SourceOutcomeName": "Failed",
+              "DestinationActivityId": "4sfmnnm5q9s1ws88pwp3j5q658"
+            },
+            {
+              "Id": 0,
+              "SourceActivityId": "4sfmnnm5q9s1ws88pwp3j5q658",
+              "SourceOutcomeName": "Done",
+              "DestinationActivityId": "4nqta2fjt6d3qx7xe2t2d248dy"
             }
           ],
           "Properties": {}
@@ -1478,7 +1549,7 @@
           "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
           "Author": "admin",
           "LiquidPart": {
-            "Liquid": "<footer class=\"footer\">\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 col-sm-6\">\r\n                <div class=\"widget about-widget\">\r\n                    <img src=\"{{ \"~/mediatheme/images/wigner-logo.png\" | href }}\" alt=\"Wigner Logo\"/>\r\n                    <hr>\r\n                    <address>\r\n                        <label>Contact Us Today:</label><br>\r\n                        Wigner Research Centre for Physics<br>\r\n                        1121 Budapest, Konkoly-Thege Miklós út 29-33.<br><br>\r\n                        Email: gpu '@' wigner.hu\r\n                    </address>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md-6 col-sm-6\">\r\n                <div class=\"widget\">\r\n                    <h4 class=\"widget-title\">EARLIER EVENTS</h4>\r\n                  \t\t{% assign events = Queries.EarlierEvents | query %}\r\n                        {% for item in events %}\r\n                  \t\t\t<div><strong><a href=\"{{ item | display_url }}\">{{ item.DisplayText }}</a></strong></div>\r\n        \t\t\t\t{% endfor %}\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"footer-bottom\">\r\n        <div class=\"container\">\r\n            <div class=\"social-icons\">\r\n                <label>Find Us:</label>\r\n                <a href=\"https://github.com/Wigner-GPU-Lab\" target=\"_blank\" class=\"social-icon\" title=\"Github\"><i class=\"fa fa-github\"></i></a>\r\n                <a href=\"https://www.kfki.hu/\" target=\"_blank\" class=\"social-icon\" title=\"KFKI\"><i class=\"fa fa-home\"></i></a>\r\n                <a href=\"https://wigner.hu/\" target=\"_blank\" class=\"social-icon\" title=\"Wigner\"><i class=\"fa fa-ge\"></i></a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</footer>"
+            "Liquid": "<footer class=\"footer\">\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-6 col-sm-6\">\r\n                <div class=\"widget about-widget\">\r\n                    <img src=\"{{ \"~/mediatheme/images/wigner-logo.png\" | href }}\" alt=\"Wigner Logo\"/>&nbsp;\r\n                    <img src=\"{{ \"~/mediatheme/images/hunren.png\" | href }}\" alt=\"Wigner Logo\"/>\r\n                    <hr>\r\n                    <address>\r\n                        <label>Contact Us Today:</label><br>\r\n                        Wigner Research Centre for Physics<br>\r\n                        1121 Budapest, Konkoly-Thege Miklós út 29-33.<br><br>\r\n                        Email: gpu '@' wigner.hu\r\n                    </address>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md-6 col-sm-6\">\r\n                <div class=\"widget\">\r\n                    <h4 class=\"widget-title\">EARLIER EVENTS</h4>\r\n                  \t\t{% assign events = Queries.EarlierEvents | query %}\r\n                        {% for item in events %}\r\n                  \t\t\t<div><strong><a href=\"{{ item | display_url }}\">{{ item.DisplayText }}</a></strong></div>\r\n        \t\t\t\t{% endfor %}\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <div class=\"footer-bottom\">\r\n        <div class=\"container\">\r\n            <div class=\"social-icons\">\r\n                <label>Find Us:</label>\r\n                <a href=\"https://github.com/Wigner-GPU-Lab\" target=\"_blank\" class=\"social-icon\" title=\"Github\"><i class=\"fa fa-github\"></i></a>\r\n                <a href=\"https://www.kfki.hu/\" target=\"_blank\" class=\"social-icon\" title=\"KFKI\"><i class=\"fa fa-home\"></i></a>\r\n                <a href=\"https://wigner.hu/\" target=\"_blank\" class=\"social-icon\" title=\"Wigner\"><i class=\"fa fa-ge\"></i></a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</footer>"
           },
           "AdditionalStylingPart": {
             "CustomClasses": null,
@@ -1865,20 +1936,20 @@
           "DisplayText": "GPU Day 2024",
           "Latest": true,
           "Published": true,
-          "ModifiedUtc": "2024-01-30T13:45:31.6157342Z",
-          "PublishedUtc": "2024-01-30T15:20:06.1565804Z",
+          "ModifiedUtc": "2024-02-29T19:49:26.5290743Z",
+          "PublishedUtc": "2024-02-29T19:49:26.6775135Z",
           "CreatedUtc": "2023-12-29T16:19:53.8496335Z",
           "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
-          "Author": "admin",
+          "Author": "balazs.kacskovics",
           "GPUDay": {
             "Subtitle": {
               "Text": "Massive parallel computing for science and industrial application"
             },
             "FromDate": {
-              "Value": "2024-05-15T00:00:00Z"
+              "Value": "2024-05-30T00:00:00Z"
             },
             "ToDate": {
-              "Value": "2024-05-16T00:00:00Z"
+              "Value": "2024-05-31T00:00:00Z"
             },
             "HeaderPhoto": {
               "Paths": [
@@ -1896,10 +1967,10 @@
               "MediaTexts": []
             },
             "RegistrationURL": {
-              "Text": "https://google.com"
+              "Text": "https://indico.wigner.hu/e/gpuday2024"
             },
             "About": {
-              "Html": "<h2>GPU Day 2024 - MASSIVE PARALLEL COMPUTING FOR SCIENCE AND INDUSTRIAL APPLICATION</h2>"
+              "Html": "<div class=\"col-sm-6\"><h2>GPU Day 2024 - MASSIVE PARALLEL COMPUTING FOR SCIENCE AND INDUSTRIAL APPLICATION</h2><p><br><br>The&nbsp;<a href=\"https://wsclab.wigner.hu\">WSC Laboratory</a>\n of the Wigner Research Centre for Physics is organizing the 14th GPU \nDay dedicated to the fields of massively parallel computing, \nvisualization, and data analysis in scientific and industrial \napplications.</p><p><br></p><h4>Sponsors of the GPU Day:</h4><p><br></p><table width=\"497\" height=\"390\" cellpadding=\"10\" class=\"mce-item-table\"><tbody><tr><td><a href=\"https://lombiq.com\"><img src=\"https://dotneststatic.com/media/gpuday/GPUDay2019/logos/LombiqTechnologies.png\" style=\"display: block; margin-left: auto; margin-right: auto\" width=\"120\" height=\"120\"></a><br></td><td style=\"text-align: right\"><p><a href=\"https://lombiq.com\">Lombiq Technologies Ltd.</a><br></p></td></tr><tr><td><br></td></tr><tr><td style=\"text-align: center\"><img src=\"https://dotneststatic.com/media/gpuday/Logo%20images/excellence.png\" alt=\"\" width=\"120\" height=\"117\"></td><td style=\"text-align: right\"><a href=\"http://gpu.wigner.hu/hu/news/top-50-hungrian-resarch-infrastructure\">Wigner Scientific Computational Laboratory</a><br></td></tr><tr><td>&nbsp;</td><td style=\"text-align: right\"><br></td></tr><tr><td><br></td><td style=\"text-align: right\"><br></td></tr><tr><td>&nbsp;</td><td style=\"text-align: right\"><br></td></tr><tr><td><br></td><td style=\"text-align: right\"><br></td></tr><tr><td><br></td><td style=\"text-align: right\"><br></td></tr><tr><td><br></td><td style=\"text-align: right\"><br></td></tr><tr><td style=\"height: 20px\"><br></td><td style=\"height: 20px\"><br></td></tr><tr><td><br></td><td style=\"text-align: right\"><br></td></tr></tbody></table><br><p style=\"margin-bottom: 2cm\"><strong>Helpful pieces of information for sponsors.</strong></p><h4>TOPICS INCLUDE:</h4><ul><li>&nbsp;&nbsp;&nbsp; Current status and near-future of parallel and high-performance hardware and software</li><li>&nbsp;&nbsp;&nbsp; Field Programmable Gate Arrays (FPGA)</li><li>&nbsp;&nbsp;&nbsp; Many-core computing in physics and other fields of science</li><li>&nbsp;&nbsp;&nbsp; Medical applications of parallel technologies</li><li>&nbsp;&nbsp;&nbsp; Graphics, rendering, and image synthesis</li><li>&nbsp;&nbsp;&nbsp; Machine Learning, Neural Networks, feature recognition</li><li>&nbsp;&nbsp;&nbsp; Image processing, computer vision, and reconstruction</li><li>&nbsp;&nbsp;&nbsp; Industrial applications</li><li>&nbsp;&nbsp;&nbsp; Quantum computing</li><li>&nbsp;&nbsp;&nbsp; Computing and Visualization in Education</li><li>&nbsp;&nbsp;&nbsp; Mobile and embedded computing</li><li>&nbsp;&nbsp;&nbsp; Emerging accelerator platforms</li><li>&nbsp;&nbsp;&nbsp; Development technologies (languages, compilers, tools)</li></ul><p><span><br></span></p><p><span>GPU Day adopts the <a href=\"https://dotneststatic.com/media/gpuday/Policies/CoC.html\">Berlin Code of Conduct</a>.</span></p><p><span></span><br></p></div><div class=\"col-sm-6\"><h4>KEYNOTE SPEAKER:</h4><strong></strong><h4>PATRON OF THE GPU Day 2024:</h4><b>Péter J. Lévai</b></div><div class=\"col-sm-6\">General Director - HUN-REN Wigner Research Centre for Physics</div><div class=\"col-sm-6\"><br></div><div class=\"col-sm-6\"><b>István Szabó</b><br><p>President of the Advisory Committee - HUN-REN</p><p><b>István Csabai</b><br>Professor - ELTE <span>Dept. of Physics of Complex Systems</span></p><h4>Highlighted Talks:</h4><p><br></p><p>Contributions to the conference are welcome.</p><p>Abstracts\n must contain a title shorter than 100 characters, the name and \naffiliation of the presenter and coauthors, and a maximum of 4000 \ncharacters of body text. Images should be sent separately from the text \nas the abstract will be reprocessed for display on the website.</p><p><strong>The&nbsp;<a href=\"https://indico.wigner.hu/e/gpuday2024\">call for abstracts</a> is open.<br>Talk submission deadline: 2024 May 15</strong>.</p><p><strong></strong><br></p><p><strong><a href=\"https://indico.wigner.hu/e/gpuday2024\">Registration</a>&nbsp;is now open.</strong></p><p>Participation is free for students, members of academic institutions, research centers, and universities.<br>The registration fee is 300EUR or 120.000HUF. Participants can pay via bank transfer or card at the registration desk.</p><p><br></p><table class=\"mce-item-table\"><tbody><tr><td>Account holder</td><td>&nbsp; &nbsp;&nbsp;</td><td>Wigner Research Centre for Physics</td></tr><tr><td>Tax number</td><td>&nbsp;&nbsp;&nbsp;</td><td>15327064-2-43</td></tr><tr><td><span class=\"tlid-translation translation\" lang=\"en\"><span title=\"\" class=\"\">Bank name<br></span></span></td><td>&nbsp;&nbsp;&nbsp;</td><td>Magyar Államkincstár (Hungarian State Treasury)</td></tr><tr><td>Announcement</td><td>&nbsp;&nbsp;&nbsp;</td><td>{your name}, GPU Day 2022</td></tr><tr><td>Account number</td><td>&nbsp;&nbsp;&nbsp;</td><td>10032000-01731134-00000000</td></tr><tr><td>IBAN</td><td>&nbsp;&nbsp;&nbsp;</td><td>HU15 1003 2000 0173 1134 0000 0000</td></tr><tr><td><b>SEPA transfer</b></td><td>&nbsp;&nbsp;&nbsp;</td><td><br></td></tr><tr><td>SWIFT code 1</td><td>&nbsp;&nbsp;&nbsp;</td><td>HUSTHUHB</td></tr><tr><td><b>non-SEPA transfer</b></td><td>&nbsp;&nbsp;&nbsp;</td><td><br></td></tr><tr><td>Correspondent bank</td><td>&nbsp;&nbsp;&nbsp;</td><td>Magyar Nemzeti Bank (Hungarian National Bank)</td></tr><tr><td>SWIFT code 2</td><td>&nbsp;&nbsp;&nbsp;</td><td>MANEHUHB</td></tr></tbody></table><p><br></p><h3>ORGANIZERS:</h3><div class=\"col-sm-6\"><p>Gergely Gábor BARNAFÖLDI (Wigner RCP)<br><br>Balázs KACSKOVICS (Wigner RCP)<br>Balázs SZIGETI (Wigner RCP)<br>Gábor BÍRÓ (Wigner RCP)</p></div></div><p></p><p></p>"
             },
             "Year": {
               "TaxonomyContentItemId": "40cjcsbprnd53s3xt51akd2fnb",
@@ -1911,10 +1982,10 @@
               "Text": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.1522359383525!2d18.952773215883717!3d47.48694760422862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741de52cfec418b%3A0x2999aa55455507e6!2sBudapest%2C+Konkoly-Thege+Mikl%C3%B3s+%C3%BAt+29-33%2C+1121!5e0!3m2!1shu!2shu!4v1553775268716"
             },
             "ContactBox": {
-              "Html": "<h3>GPU Day 2023</h3>\n<p><strong>The conference will be held at:</strong><br>Conference centre<br>Hotel Mercure Budapest Castle Hill<br>1013 Budapest, Krisztina Körút 41-43</p>"
+              "Html": "<h3>GPU Day 2024</h3>\n<p><strong>The conference will be held at:</strong><br>Conference room<br>Wigner Data Center<br>1121 Budapest, Konkoly-Thege Miklós út 29-33.<br></p>"
             },
             "TravelingByPublicTransport": {
-              "Html": "<h3><strong>Traveling by Public Transport:</strong></h3>\n<p>The hotel is next to Budapest-Déli Railway station, which can be reached by Metro 2.<a href=\"http://bkk.hu/apps/menetrend/pdf/0210/20161205/1.pdf\" target=\"_blank\"></a><br>Travel planning of&nbsp;public transport: <a href=\"https://futar.bkk.hu/?toCoord=47.498828200000005%2C19.027051538222295&amp;toName=Mercure%20Budapest%20Buda&amp;toSubName=hotel%2C%20Krisztina%20k%C3%B6r%C3%BAt%2041-43%20Budapest%201013&amp;date=2019-07-11&amp;time=515&amp;arriveBy=false&amp;map=12/47.49883/19.02705&amp;layers=GSVB\">BKK futár</a></p>\n<p><strong></strong></p>\n<h3><strong>Taxi services:</strong></h3>\n<p><a href=\"http://fotaxi.hu/?lang=en\">Fő Taxi</a>:&nbsp;+36 1 222 2222<br><a href=\"http://new.6x6taxi.hu\">6x6 Taxi</a>: +36 1 6666666</p>"
+              "Html": "<h3><strong>Traveling by Public Transport:</strong></h3>\n<p>The campus can be reached from Széll Kálmán square with bus 221, which can be reached by Metro 2.<br>Travel planning of&nbsp;public transport: <a href=\"https://futar.bkk.hu/?toCoord=47.498828200000005%2C19.027051538222295&amp;toName=Mercure%20Budapest%20Buda&amp;toSubName=hotel%2C%20Krisztina%20k%C3%B6r%C3%BAt%2041-43%20Budapest%201013&amp;date=2019-07-11&amp;time=515&amp;arriveBy=false&amp;map=12/47.49883/19.02705&amp;layers=GSVB\">BKK futár</a></p>\n<p><strong></strong></p>\n<h3><strong>Taxi services:</strong></h3>\n<p><a href=\"http://fotaxi.hu/?lang=en\">Fő Taxi</a>:&nbsp;+36 1 222 2222<br><a href=\"http://new.6x6taxi.hu\">6x6 Taxi</a>: +36 1 6666666</p>"
             }
           },
           "AutoroutePart": {
@@ -2223,14 +2294,14 @@
                 "DisplayText": "First Day",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2024-01-30T13:45:31.6906809Z",
+                "ModifiedUtc": "2024-02-29T19:49:26.6290554Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
-                "Author": "admin",
+                "Author": "balazs.kacskovics",
                 "EventDay": {
                   "Date": {
-                    "Value": "2023-05-15T00:00:00Z"
+                    "Value": "2024-05-30T00:00:00Z"
                   }
                 },
                 "TitlePart": {
@@ -2251,14 +2322,14 @@
                 "DisplayText": "Second Day",
                 "Latest": false,
                 "Published": false,
-                "ModifiedUtc": "2024-01-30T13:45:31.6956049Z",
+                "ModifiedUtc": "2024-02-29T19:49:26.6485485Z",
                 "PublishedUtc": null,
                 "CreatedUtc": null,
                 "Owner": "4e23pb4g4nc7zzwz75wreq5ax7",
-                "Author": "admin",
+                "Author": "balazs.kacskovics",
                 "EventDay": {
                   "Date": {
-                    "Value": "2023-05-16T00:00:00Z"
+                    "Value": "2024-05-31T00:00:00Z"
                   }
                 },
                 "TitlePart": {
