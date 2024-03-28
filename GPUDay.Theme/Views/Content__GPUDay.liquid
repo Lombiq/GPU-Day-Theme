@@ -5,6 +5,7 @@
             <div class="overlay dark"></div>
             <div class ="overlay-container">
                 <div class="overlay light"></div>
+                <img src="{{ "~/mediatheme/images/hunren.png" | href }}" class="overlay-container"/>&nbsp;
                 <img src="{{ "~/mediatheme/images/wigner-logo.png" | href }}" class="overlay-container"/>
             </div>
             <div class="vcenter-content">
@@ -45,7 +46,7 @@
                                 About the <span class="light highlight dark">GPU Day</span>
                             </h2>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-12 about-gpu-day">
                             {{ Model.ContentItem.Content.GPUDay.About.Html | raw }}
                             <div class="mb5"></div>
                         </div>
