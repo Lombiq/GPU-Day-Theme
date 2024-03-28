@@ -7,8 +7,8 @@ using OrchardCore.DisplayManagement.Manifest;
     Website = "https://orchardcore.net",
     Version = "0.0.1",
     Description = "GPUDay.Theme",
-    Dependencies = new[]
-    {
+    Dependencies =
+    [
         FeatureNames.MediaThemeBridge,
-    }
+    ]
 )]
