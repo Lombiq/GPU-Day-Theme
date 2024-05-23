@@ -10,9 +10,9 @@
                 <div class="event-part">
                     <div class="row">
                         <div class="event-time col-sm-3">
-                            {{ item.Content.Talk.StartOfTalk.Value | date: "%H:%M" }}
+                            {{ item.Content.Talk.StartOfTalk.Value | local | date: "%H:%M" }}
                             -
-                            {{ item.Content.Talk.EndOfTalk.Value | date: "%H:%M" }}
+                            {{ item.Content.Talk.EndOfTalk.Value | local | date: "%H:%M" }}
                         </div>
                         <div class="col-sm-9">
                             <strong>
