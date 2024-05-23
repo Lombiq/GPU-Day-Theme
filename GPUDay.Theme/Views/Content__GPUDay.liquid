@@ -22,7 +22,7 @@
                         <span class="countdown-row countdown-show1">
                         <span class="countdown-section">
                         <span class="countdown-amount">
-                        {{ Model.ContentItem.Content.GPUDay.FromDate.Value | date: "%d" }}{{ Model.ContentItem.Content.GPUDay.ToDate.Value | date: "-%d %m %Y" }}
+                        {{ Model.ContentItem.Content.GPUDay.FromDate.Value | local | date: "%d" }}{{ Model.ContentItem.Content.GPUDay.ToDate.Value | local | date: "-%d %m %Y" }}
                         </span>
                         </span>
                         </span>
