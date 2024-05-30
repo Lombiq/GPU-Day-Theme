@@ -40,11 +40,6 @@
     <Content Include=".config\dotnet-tools.json" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Recipes\_MediaTheme\" />
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
   <Import Condition="Exists($(LombiqNodeJsExtensionsPath))" Project="../../../../../../Utilities/Lombiq.NodeJs.Extensions/Lombiq.NodeJs.Extensions/Lombiq.NodeJs.Extensions.props" />
   <Import Condition="Exists($(LombiqNodeJsExtensionsPath))" Project="../../../../../../Utilities/Lombiq.NodeJs.Extensions/Lombiq.NodeJs.Extensions/Lombiq.NodeJs.Extensions.targets" />
   <Import Condition="Exists($(LombiqHostingMediaThemeTargetsProps))" Project="../../../../../Lombiq.Hosting.MediaTheme/Lombiq.Hosting.MediaTheme.Targets/Lombiq.Hosting.MediaTheme.Targets.props" />
