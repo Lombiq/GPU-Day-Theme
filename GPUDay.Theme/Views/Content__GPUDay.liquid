@@ -47,7 +47,7 @@
                             </h2>
                         </div>
                         <div class="col-sm-12 about-gpu-day">
-                            {{ Model.ContentItem.Content.GPUDay.About.Html | raw }}
+                            {{ Model.ContentItem.Content.GPUDay.About.Html | shortcode | raw }}
                             <div class="mb5"></div>
                         </div>
                     </div>
@@ -161,12 +161,12 @@
                     <div class="clearfix mb65 visible-sm visible-xs"></div>
                     <div class="col-md-4">
                         <div class="contact-box mb20">
-                            {{ Model.ContentItem.Content.GPUDay.ContactBox.Html | raw }}
+                            {{ Model.ContentItem.Content.GPUDay.ContactBox.Html | shortcode | raw }}
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="contact-box">
-                            {{ Model.ContentItem.Content.GPUDay.TravelingByPublicTransport.Html | raw }}
+                            {{ Model.ContentItem.Content.GPUDay.TravelingByPublicTransport.Html | shortcode | raw }}
                         </div>
                     </div>
                 </div>
