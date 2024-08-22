@@ -28,7 +28,7 @@
                             {% if item.Content.Talk.Slides.Paths.first != null %}
                                 <a href="{{ item.Content.Talk.Slides.Paths.first | asset_url }}" target="_blank"><i class="fa fa-file-o" aria-hidden="true"></i></a>
                             {% endif %}
-                            {% if item.Content.Talk.RecordingUrl.Text != null %}
+                            {% if item.Content.Talk.RecordingUrl.Text != null and item.Content.Talk.RecordingUrl.Text != "" %}
                                 <a href="#" id="video" data-id="{{ item.Content.Talk.RecordingUrl.Text }}" data-toggle="modal" data-target=".bs-modal-lg-{{ talkPartId }}-video"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                             {% endif %}
                         </div>
