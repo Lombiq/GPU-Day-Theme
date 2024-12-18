@@ -75,14 +75,13 @@
         "Lombiq.Privacy.FormConsent",
 
         // Themes
-        "TheAdmin",
-        "GPUDay.Theme"
+        "TheAdmin"
       ]
     },
     {
       "name": "themes",
       "admin": "TheAdmin",
-      "site": "GPUDay.Theme"
+      "site": "Lombiq.Hosting.MediaTheme"
     },
     {
       "name": "mediatheme",
