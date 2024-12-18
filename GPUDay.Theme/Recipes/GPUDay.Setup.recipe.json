@@ -75,13 +75,14 @@
         "Lombiq.Privacy.FormConsent",
 
         // Themes
-        "TheAdmin"
+        "TheAdmin",
+        "GPUDay.Theme"
       ]
     },
     {
       "name": "themes",
       "admin": "TheAdmin",
-      "site": "Lombiq.Hosting.MediaTheme"
+      "site": "GPUDay.Theme"
     },
     {
       "name": "mediatheme",
@@ -112,10 +113,6 @@
         {
           "executionid": "DotNest.Core.SDK.Web",
           "name": "GPUDay.Export"
-        },
-        {
-          "executionid": "DotNest.Core.SDK.Web",
-          "name": "GPUDay.MediaTheme"
         }
       ]
     }
