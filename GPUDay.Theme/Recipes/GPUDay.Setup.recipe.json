@@ -75,7 +75,8 @@
         "Lombiq.Privacy.FormConsent",
 
         // Themes
-        "TheAdmin"
+        "TheAdmin",
+        "Lombiq.BaseTheme"
       ]
     },
     {
@@ -85,7 +86,8 @@
     },
     {
       "name": "mediatheme",
-      "ClearMediaThemeFolder": false
+      "ClearMediaThemeFolder": false,
+      "BaseThemeId": "Lombiq.BaseTheme"
     },
     {
       "name": "Roles",
