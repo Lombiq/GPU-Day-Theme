@@ -12,4 +12,5 @@ node_modules/
 # Mac
 .DS_Store
 
+GPUDay.Theme/Recipes/GPUDay.MediaTheme.recipe.json
 GPUDay.Theme/Recipes/_MediaTheme/
