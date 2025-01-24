@@ -114,6 +114,10 @@
         {
           "executionid": "DotNest.Core.SDK.Web",
           "name": "GPUDay.Export"
+        },
+        {
+          "executionid": "DotNest.Core.SDK.Web",
+          "name": "GPUDay.MediaTheme"
         }
       ]
     }
