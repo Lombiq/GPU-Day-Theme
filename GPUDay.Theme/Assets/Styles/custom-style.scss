@@ -68,9 +68,51 @@ body {
     text-align: center;
 }
 
+.col-sm-3,
+.col-sm-6,
+.col-sm-9,
+.col-sm-12,
+.col-md-2,
+.col-md-4,
+.col-md-8 {
+    padding: 0 15px;
+}
+
 .about-gpu-day {
     ul {
         list-style-type: disc;
         padding-left: 30px;
+    }
+}
+
+.row > .container {
+    @media (width >= 768px) {
+        max-width: 720px;
+    }
+
+    @media (width >= 992px) {
+        max-width: 960px;
+    }
+
+    @media (width >= 1200px) {
+        max-width: 1140px;
+    }
+
+    @media (width >= 1400px) {
+        max-width: 1320px;
+    }
+}
+
+.event-meta {
+    margin-left: 25%;
+}
+
+.dynamic-form .form-field-element {
+    padding-left: 0;
+}
+
+.container > .row .col-sm-12 > .col-sm-6 {
+    @media (width >= 768px) {
+        float: left;
     }
 }

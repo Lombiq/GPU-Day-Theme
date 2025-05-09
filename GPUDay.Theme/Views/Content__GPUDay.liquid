@@ -80,7 +80,7 @@
                         <h2 class="title text-center mb25">Speakers</h2>
                         {% for item in speakers %}
                             {% assign speakerId = item.DisplayText | replace: " ", "_" %}
-                            <div class="col-md-2 col-xs-6 col-xss-12">
+                            <div class="col-12 col-sm-6 col-lg-2 float-sm-start">
                                 <a id="{{ speakerId }}"></a>
                                 <div class="member text-center">
                                     <div class="member-top">
@@ -115,7 +115,7 @@
             <div class="row">
                 <div class=" span-12 cell container">
                     <div>
-                        <div class="col-md-8">
+                        <div class="col-lg-8 float-lg-start">
                             <h1 class="title dark">Contact <span class="light highlight dark">Us</span></h1>
                             <div class="dynamic-form" id="contact-form">
                                 <form action="{{ "~/workflows/Invoke?token=CfDJ8C7I_ww5B1FDuxsTG0s7jV6APWCLpNokAsDvdtBQxpxRuMl29T08nhBs1YDqyQWDLZaasDX9yBqIY1XZMT0g3FHFeOENdePkJ5dIcf_3vozc9Q7h2wtitIL3htKSWU-lmjDEpTrC2Npbp3b7tsQvjG2_vtl33OkIKVp7-kuq_70Z3y4n91fiqn90wYou1JGMSR15BGSk5u0O8rdpm2tzUiN-hap3Yu2CW82fAV3ErfrB" | href }}" method="POST" enctype="multipart/form-data">
@@ -158,13 +158,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="clearfix mb65 visible-sm visible-xs"></div>
-                    <div class="col-md-4">
+                    <div class="mb65 d-block d-lg-none"></div>
+                    <div class="col-lg-4 float-lg-start">
                         <div class="contact-box mb20">
                             {{ Model.ContentItem.Content.GPUDay.ContactBox.Html | shortcode | raw }}
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4 float-lg-start">
                         <div class="contact-box">
                             {{ Model.ContentItem.Content.GPUDay.TravelingByPublicTransport.Html | shortcode | raw }}
                         </div>
