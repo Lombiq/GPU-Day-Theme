@@ -1,7 +1,7 @@
 {% assign eventDate = Model.ContentItem.Content.EventDay.Date.Value %}
 {% assign talks = Queries.TalksByDate | query: EventDate: eventDate %}
 <div class="mb20"></div>
-<div class="span-6 cell col-md-6">
+<div class="span-6 cell col-lg-6 float-lg-start">
     <h2 class="title text-center mb25">{{ Model.ContentItem.DisplayText }}</h2>
     {% for item in talks %}
         {% assign talkPartId = item.ContentItemId %}
