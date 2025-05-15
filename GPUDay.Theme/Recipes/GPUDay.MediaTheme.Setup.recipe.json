@@ -1,7 +1,7 @@
 {
-  "name": "GPUDay.Setup",
-  "displayName": "GPU Day - Setup (Base)",
-  "description": "Setup recipe for GPU Day.",
+  "name": "GPUDay.MediaTheme.Setup",
+  "displayName": "GPU Day - Media Theme - Setup (Base)",
+  "description": "Setup recipe for GPU Day with Media Theme.",
   "author": "Lombiq",
   "website": "https://www.gpuday.com",
   "version": "1.0",
@@ -18,10 +18,6 @@
           "name": "GPUDay.Common"
         }
       ]
-    },
-    {
-      "name": "themes",
-      "site": "GPUDay.Theme"
     }
   ]
 }

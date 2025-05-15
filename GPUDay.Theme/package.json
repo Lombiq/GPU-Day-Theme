@@ -46,14 +46,6 @@
       "target": "wwwroot/css"
     }
   },
-  "pnpm": {
-    "overrides": {
-      "nodejs-extensions": "link:node_modules/.nx"
-    }
-  },
-  "dependencies": {
-    "nodejs-extensions": "link:node_modules/.nx"
-  },
   "devDependencies": {
     "eslint": "9.26.0",
     "eslint-config-airbnb-base": "15.0.0",
