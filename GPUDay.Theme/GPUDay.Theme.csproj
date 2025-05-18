@@ -31,7 +31,7 @@
     <ProjectReference Condition="Exists($(LombiqNodeJsExtensionsPath))" Include="$(LombiqNodeJsExtensionsPath)" />
     <ProjectReference Condition="Exists($(LombiqHostingMediaThemePath))" Include="$(LombiqHostingMediaThemePath)" />
     <PackageReference Condition="!Exists($(LombiqHelpfulExtensionsPath))" Include="Lombiq.HelpfulExtensions" Version="10.0.1-alpha.0.osoe-935" />
-    <PackageReference Condition="!Exists($(LombiqNodeJsExtensionsPath))" Include="Lombiq.NodeJs.Extensions" Version="2.1.3-alpha.1.osoe-1057" />
+    <PackageReference Condition="!Exists($(LombiqNodeJsExtensionsPath))" Include="Lombiq.NodeJs.Extensions" Version="2.2.0" />
     <PackageReference Condition="!Exists($(LombiqHostingMediaThemePath))" Include="Lombiq.Hosting.MediaTheme" Version="8.0.1-alpha.3.nest-562" />
     <PackageReference Condition="!Exists($(LombiqHostingMediaThemeTargetsProps))" Include="Lombiq.Hosting.MediaTheme.Targets" Version="8.0.1-alpha.3.nest-562" />
   </ItemGroup>
