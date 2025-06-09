@@ -173,8 +173,9 @@
             </div>
         </div>
         <div class="mb70"></div>
+        {% capture ui_testing %}{% is_ui_testing %}{% endcapture %}
         
-        {% if is_ui_testing %}
+        {% if ui_testing == "true" %}
             <!-- Hide map during UI Testing. -->
         {% else %}
             <div id="map" class="mb0" style="position: relative; overflow: hidden;">
