@@ -173,9 +173,15 @@
             </div>
         </div>
         <div class="mb70"></div>
-        <div id="map" class="mb0" style="position: relative; overflow: hidden;">
-            <iframe src="{{ Model.ContentItem.Content.GPUDay.GoogleMapsIFrameSrc.Text }}" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
+        
+        {% if is_ui_testing %}
+            <!-- Hide map during UI Testing. -->
+        {% else %}
+            <div id="map" class="mb0" style="position: relative; overflow: hidden;">
+                <iframe src="{{ Model.ContentItem.Content.GPUDay.GoogleMapsIFrameSrc.Text }}" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        {% endif %}
+
         {% if Model.ContentItem.Content.GPUDay.FooterPhoto.Paths.first != null %}
             <div class="mb30"></div>
             <img src="{{ Model.ContentItem.Content.GPUDay.FooterPhoto.Paths.first | asset_url }}" alt="{{ Model.ContentItem.DisplayText }}"
