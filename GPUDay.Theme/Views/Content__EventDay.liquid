@@ -29,7 +29,7 @@
                                 <a href="{{ item.Content.Talk.Slides.Paths.first | asset_url }}" target="_blank"><i class="fa fa-file-o" aria-hidden="true"></i></a>
                             {% endif %}
                             {% if item.Content.Talk.RecordingUrl.Text != null and item.Content.Talk.RecordingUrl.Text != "" %}
-                                <a href="#" id="video" data-id="{{ item.Content.Talk.RecordingUrl.Text }}" data-toggle="modal" data-target=".bs-modal-lg-{{ talkPartId }}-video"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                <a href="#" id="video" data-id="{{ item.Content.Talk.RecordingUrl.Text }}" data-bs-toggle="modal" data-bs-target=".bs-modal-lg-{{ talkPartId }}-video"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                             {% endif %}
                         </div>
                         <div class="event-meta col-sm-12 col-sm-offset-3">
@@ -61,8 +61,8 @@
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <h2 class="modal-title">Abstract</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             {{ item.Content.Talk.AbstractText.Html | shortcode | raw }}
@@ -74,11 +74,11 @@
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <h2 class="modal-title">Recording</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="embed-responsive embed-responsive-16by9">
+                            <div class="ratio ratio-16x9">
                                 <iframe
                                     src="{{ item.Content.Talk.RecordingUrl.Text }}"
                                     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
