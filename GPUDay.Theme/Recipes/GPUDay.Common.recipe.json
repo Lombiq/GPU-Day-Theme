@@ -35,7 +35,6 @@
         "OrchardCore.HomeRoute",
         "OrchardCore.Html",
         "OrchardCore.Https",
-        "OrchardCore.Indexing",
         "OrchardCore.Layers",
         "OrchardCore.Liquid",
         "OrchardCore.Lists",
