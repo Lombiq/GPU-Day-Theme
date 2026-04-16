@@ -16,6 +16,7 @@
     <PackageReference Include="OrchardCore.DisplayManagement" Version="3.0.0-preview-18979" />
     <PackageReference Include="OrchardCore.ResourceManagement" Version="3.0.0-preview-18979" />
     <PackageReference Include="OrchardCore.Taxonomies" Version="3.0.0-preview-18979" />
+    <PackageReference Include="OrchardCore.Media" Version="3.0.0-preview-18979" />
   </ItemGroup>
 
   <PropertyGroup>
@@ -53,4 +54,9 @@
     <!-- This must be defined after the Lombiq.Hosting.MediaTheme.Targets import to override property. -->
     <MediaThemeRecipeFileName>GPUDay.MediaTheme</MediaThemeRecipeFileName>
   </PropertyGroup>
+
+  <!-- Fixes "NU1901: Package has a known low severity vulnerability" errors. -->
+  <ItemGroup>
+    <PackageReference Include="MimeKit" Version="4.16.0" NoWarn="NU1510" />
+  </ItemGroup>
 </Project>
