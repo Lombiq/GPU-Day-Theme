@@ -39,6 +39,20 @@
           "Assets/SimpleTemplate/fonts"
         ],
         "target": "wwwroot/vendors/SimpleTemplate/css/fonts"
+      },
+      {
+        "sequence": 1,
+        "sources": [
+          "wwwroot"
+        ],
+        "target": "Recipes/_MediaTheme/Assets"
+      },
+      {
+        "sequence": 1,
+        "sources": [
+          "Views"
+        ],
+        "target": "Recipes/_MediaTheme/Templates"
       }
     ],
     "styles": {
