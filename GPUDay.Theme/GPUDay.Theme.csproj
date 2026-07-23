@@ -34,8 +34,8 @@
   <ItemGroup>
     <PackageReference Condition="!Exists($(LombiqHelpfulExtensionsPath))" Include="Lombiq.HelpfulExtensions" Version="12.0.0" />
     <PackageReference Condition="!Exists($(LombiqNodeJsExtensionsPath))" Include="Lombiq.NodeJs.Extensions" Version="3.0.1-alpha.3.nest-608" />
-    <PackageReference Condition="!Exists($(LombiqHostingMediaThemePath))" Include="Lombiq.Hosting.MediaTheme" Version="9.0.0" />
-    <PackageReference Condition="!Exists($(LombiqHostingMediaThemeTargetsProps))" Include="Lombiq.Hosting.MediaTheme.Targets" Version="9.0.0" />
+    <PackageReference Condition="!Exists($(LombiqHostingMediaThemePath))" Include="Lombiq.Hosting.MediaTheme" Version="9.0.1-alpha.0.osoe-925" />
+    <PackageReference Condition="!Exists($(LombiqHostingMediaThemeTargetsProps))" Include="Lombiq.Hosting.MediaTheme.Targets" Version="9.0.1-alpha.0.osoe-925" />
   </ItemGroup>
 
   <ItemGroup>
@@ -46,9 +46,5 @@
   <Import Condition="Exists($(LombiqNodeJsExtensionsPath))" Project="$(LombiqNodeJsExtensionsDirectory)Lombiq.NodeJs.Extensions.targets" />
   <Import Condition="Exists($(LombiqHostingMediaThemeTargetsProps))" Project="$(LombiqHostingMediaThemeTargetsProps)" />
   <Import Condition="Exists($(LombiqHostingMediaThemeTargetsTargets))" Project="$(LombiqHostingMediaThemeTargetsTargets)" />
-
-  <!-- Overriding to change the dependency order of the targets. -->
-  <Target Name="MediaThemeDeploymentBeforeTargets" BeforeTargets="EmbeddModuleAssets;OrchardCoreEmbedModuleAssets" />
-  <Target Name="MediaThemeDeploymentAfterTargets" AfterTargets="NpmDotnetPrebuild" />
 
 </Project>
