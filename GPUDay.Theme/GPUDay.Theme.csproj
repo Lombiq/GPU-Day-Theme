@@ -12,8 +12,6 @@
     <LombiqHostingMediaThemePath>$(ThemesDirectory)Lombiq.Hosting.MediaTheme/Lombiq.Hosting.MediaTheme/Lombiq.Hosting.MediaTheme.csproj</LombiqHostingMediaThemePath>
     <LombiqHostingMediaThemeTargetsProps>$(ThemesDirectory)Lombiq.Hosting.MediaTheme/Lombiq.Hosting.MediaTheme.Targets/Lombiq.Hosting.MediaTheme.Targets.props</LombiqHostingMediaThemeTargetsProps>
     <LombiqHostingMediaThemeTargetsTargets>$(ThemesDirectory)Lombiq.Hosting.MediaTheme/Lombiq.Hosting.MediaTheme.Targets/Lombiq.Hosting.MediaTheme.Targets.targets</LombiqHostingMediaThemeTargetsTargets>
-
-    <MediaThemeRecipeFileName>GPUDay.MediaTheme</MediaThemeRecipeFileName>
   </PropertyGroup>
 
   <ItemGroup>
